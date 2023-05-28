@@ -12,6 +12,7 @@
 	
 	//Speed up
 	if(!render_bg) timer = 32;
+	
 	//Disable flags
 	Input.DisableInput = true;
 	obj_level.disable_timer = true;

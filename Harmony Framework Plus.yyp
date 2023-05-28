@@ -323,6 +323,7 @@
     {"id":{"name":"spr_monitor_icon_electric_shield","path":"sprites/spr_monitor_icon_electric_shield/spr_monitor_icon_electric_shield.yy",},},
     {"id":{"name":"spr_spikes_horizontal","path":"sprites/spr_spikes_horizontal/spr_spikes_horizontal.yy",},},
     {"id":{"name":"spr_electric_sparks","path":"sprites/spr_electric_sparks/spr_electric_sparks.yy",},},
+    {"id":{"name":"spr_dust_effect","path":"sprites/spr_dust_effect/spr_dust_effect.yy",},},
     {"id":{"name":"spr_fire_shield_back","path":"sprites/spr_fire_shield_back/spr_fire_shield_back.yy",},},
     {"id":{"name":"player_control","path":"scripts/player_control/player_control.yy",},},
     {"id":{"name":"player_state_lookup","path":"scripts/player_state_lookup/player_state_lookup.yy",},},

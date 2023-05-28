@@ -264,6 +264,7 @@
     {"name":"spr_monitor_icon_electric_shield","order":6,"path":"sprites/spr_monitor_icon_electric_shield/spr_monitor_icon_electric_shield.yy",},
     {"name":"spr_spikes_horizontal","order":1,"path":"sprites/spr_spikes_horizontal/spr_spikes_horizontal.yy",},
     {"name":"spr_electric_sparks","order":5,"path":"sprites/spr_electric_sparks/spr_electric_sparks.yy",},
+    {"name":"spr_dust_effect","order":37,"path":"sprites/spr_dust_effect/spr_dust_effect.yy",},
     {"name":"spr_fire_shield_back","order":7,"path":"sprites/spr_fire_shield_back/spr_fire_shield_back.yy",},
     {"name":"player_control","order":2,"path":"scripts/player_control/player_control.yy",},
     {"name":"player_state_lookup","order":2,"path":"scripts/player_state_lookup/player_state_lookup.yy",},

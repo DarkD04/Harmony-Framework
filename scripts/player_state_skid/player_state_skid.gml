@@ -14,6 +14,9 @@ function player_state_skid(){
 	//If not skidding stop
 	if(state != ST_SKID) exit;
 	
+	//Create dust effect
+	if(global.object_timer mod 4 = 0 && animation = ANIM_SKID) create_effect(x - hitbox_w * -facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, irandom_range(0.4, 1.2) * facing, -2, 0, 0.15);
+	
 	//Change flags
 	direction_allow = false;
 	movement_allow = false;
