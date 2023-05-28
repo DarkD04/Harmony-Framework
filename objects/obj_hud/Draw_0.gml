@@ -32,10 +32,10 @@
 	draw_set_halign(fa_right);
 	
 	//Draw number
-	draw_text(120 + offset[0], 10, string(global.score));
-	draw_text(120 + offset[1], 26, string(minute)+" "+(sec > 9 ? "" : "0") + string(sec)+" "+(milsec > 9 ? "" : "0") + string(milsec));
-	draw_text(96 + offset[2], 42, string(global.rings));
-	draw_text(56 + offset[3], global.window_height - 23, (global.life > 9 ? "" : "0") + string(global.life));
+	draw_text(120 + offset[0], 9, string(global.score));
+	draw_text(120 + offset[1], 25, string(minute)+" "+(sec > 9 ? "" : "0") + string(sec)+" "+(milsec > 9 ? "" : "0") + string(milsec));
+	draw_text(96 + offset[2], 41, string(global.rings));
+	draw_text(56 + offset[3], global.window_height - 24, (global.life > 9 ? "" : "0") + string(global.life));
 	
 	surface_reset_target();
 	
