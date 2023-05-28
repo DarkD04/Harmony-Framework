@@ -9,5 +9,5 @@
 	//Storage array
 
 	Presentation = [];
-	Stages = [rm_arboreal_agate1, rm_prime_pacific1];
+	Stages = [rm_arboreal_agate1];
 	Unfinished = [];

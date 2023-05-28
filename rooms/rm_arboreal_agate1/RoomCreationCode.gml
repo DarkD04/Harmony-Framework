@@ -6,7 +6,7 @@
 		loop_end = 120.020;
 		
 		//Set level name
-		stage_name = "PRIME PACIFIC";
+		stage_name = "ARBOREAL AGATE";
 		
 		//Set stage act
 		act = 1;
