@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 1.143039,
+  "duration": 0.449637,
   "parent": {
     "name": "Objects",
     "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sfx_destroy.ogg",
+  "soundFile": "sfx_destroy.wav",
   "type": 0,
   "volume": 1.0,
 }

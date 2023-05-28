@@ -15,7 +15,6 @@
 			destroyed = true;	
 			ground = false;
 			y_speed = -2;
-			obj_camera.camera_shake = 8;
 			obj_player.y_speed = abs(obj_player.y_speed)*-1;
 			create_effect(x, y, spr_effect_explosion01, 0.3);
 			play_sound(sfx_destroy);

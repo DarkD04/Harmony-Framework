@@ -30,7 +30,7 @@ function player_state_skid(){
 	}
 	
 	//Decelerate
-	if(mov = -facing && mode = 0) ground_speed = approach(ground_speed, -1 * facing, 0.5);
+	if(mov = -facing && mode = 0) ground_speed = approach(ground_speed, -1 * facing, 0.5) else approach(ground_speed, -1 * facing, friction_speed);
 	
 	//Done
 	if(animation = ANIM_SKIDTURN && animation_frame >= 1){

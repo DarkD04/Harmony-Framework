@@ -20,7 +20,7 @@
 	if(sign(image_yscale) = 1)
 	{
 		//Hit from the bottom
-		if(player_collide_object(C_BOTTOM))
+		if(player_collide_object(C_BOTTOM) && obj_player.y_speed >= 0)
 		{
 			//Spring code
 			triggered = true;

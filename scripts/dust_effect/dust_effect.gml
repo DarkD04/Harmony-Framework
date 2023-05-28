@@ -21,8 +21,8 @@ function dust_effect(type = 0){
 			obj.timer_end = 4+random(20);
 			if(type = 1)
 			{
-				obj.time = 2 * j;
-				obj.timer_end = 16+random(20);
+				obj.time = 3 * j;
+				obj.timer_end = 32;
 			}
 		}
 	}

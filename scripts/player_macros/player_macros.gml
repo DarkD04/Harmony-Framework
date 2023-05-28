@@ -8,7 +8,8 @@ function player_macros(){
 	#macro ST_SPINDASH 5
 	#macro ST_SKID 6
 	#macro ST_KNOCKOUT 7
-	#macro ST_SPRING 10
+	#macro ST_SPRING 8
+	#macro ST_PEELOUT 9
 	
 	//Animation macros:
 	#macro ANIM_STAND 0

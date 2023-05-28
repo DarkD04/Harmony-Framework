@@ -8,6 +8,7 @@
 		
 		case "Shield":
 			obj_player.shield = S_NORMAL;
+			play_sound(sfx_shield);
 		break;
 		
 		case "Electric Shield":

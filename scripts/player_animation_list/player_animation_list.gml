@@ -1,7 +1,7 @@
 function player_animation_list(){
 	add_animation(ANIM_STAND, spr_sonic_idle, 0.25, 0, true);
 	add_animation(ANIM_WALK, spr_sonic_walk, 0.25, 0, true);
-	add_animation(ANIM_RUN, spr_sonic_run, 0.25, 0, true);
+	add_animation(ANIM_RUN, spr_sonic_run, 0.5, 0, true);
 	add_animation(ANIM_MAXRUN, spr_sonic_peelout, 1, 0, true);
 	add_animation(ANIM_ROLL, spr_sonic_roll, 0.25, 0, true);
 	add_animation(ANIM_LOOKDOWN, spr_sonic_lookdown, 0.4, 0, false);
