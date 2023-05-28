@@ -1,0 +1,42 @@
+/// @description Script
+	//Animation speed
+	image_speed = 0.65;
+	
+	//Order change
+	if(image_index <= 12 || image_index >= 20) depth = obj_player.depth - 10; else depth = obj_player.depth + 10;
+	
+	//Double jump
+	if(Input.ActionPress && !obj_player.ground && obj_player.state = ST_JUMP && shield_state = 0) 
+	{
+		//Player double jump
+		obj_player.y_speed = -5.5;
+		
+		//Switch shield state
+		shield_state = 1;
+		
+		//Play sound
+		play_sound(sfx_electric_shield_jump)
+		
+		//Make shield sparkles
+		for (var i = 0; i < 4; ++i) {
+		    create_effect(x, y, spr_electric_sparks, 0.35, depth + 1, 2 * dsin(45+(90*i)), 2 * dcos(45+(90*i)))
+		}
+	}
+	
+	//Reset state flag
+	if(shield_state = 1 && obj_player.ground)
+	{
+		shield_state = false;	
+	}
+	
+	//Ring magnet
+	with(obj_ring)
+	{
+		if(distance_to_object(other) < 48)
+		{
+			magnet = true;
+		}
+	}
+	
+	//Begone when underwater
+	if(obj_player.underwater) obj_player.shield = S_NONE;

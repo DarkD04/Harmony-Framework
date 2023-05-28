@@ -1,0 +1,20 @@
+/// @description Values
+	bg_id = 0;
+	
+	background_sprite[bg_id] = 0;
+	background_frame[bg_id] = 0;
+	factor_x[bg_id] = 0;
+	factor_y[bg_id] = 0;
+	offset_x[bg_id] = 0;
+	offset_y[bg_id] = 0;
+	speed_x[bg_id] = 0;
+	speed_y[bg_id] = 0;
+	pos_x[bg_id] = 0;
+	pos_y[bg_id] = 0;
+	background_vertical[bg_id] = false;
+	line_scroll[bg_id] = false;
+	line_gap[bg_id] = 1;
+	line_steps[bg_id] = 1;
+	bg_scale[bg_id] = 1;
+	diff_x[bg_id] = 0;
+	trigger[bg_id] = false;
