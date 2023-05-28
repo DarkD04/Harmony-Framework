@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "sfx_break1",
+  "name": "sfx_spike",
   "audioGroupId": {
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 2.431338,
+  "duration": 0.701655,
   "parent": {
-    "name": "Objects",
-    "path": "folders/Sounds/Sound Effects/Objects.yy",
+    "name": "Player",
+    "path": "folders/Sounds/Sound Effects/Player.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sfx_break1.ogg",
+  "soundFile": "sfx_spike.wav",
   "type": 0,
   "volume": 1.0,
 }

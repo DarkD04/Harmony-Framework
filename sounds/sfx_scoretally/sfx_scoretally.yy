@@ -13,7 +13,7 @@
   "duration": 1.75,
   "parent": {
     "name": "Objects",
-    "path": "folders/Sounds/Objects.yy",
+    "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,

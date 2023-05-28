@@ -1,4 +1,4 @@
-function player_movement(){
+function player_movement(){	
 	//Change angle modes
 	if(ground_angle >= 0 && ground_angle <= 45 || ground_angle >= 315 && ground_angle <= 360) mode = 0;
 	if(ground_angle >= 46 && ground_angle <= 134) mode = 1;
@@ -37,6 +37,14 @@ function player_movement(){
 	//Update position with speed:
 	x += x_speed/steps;
 	y += y_speed/steps;
+	
+	//Don't allow player to go off screen
+	x = clamp(x, obj_camera.limit_left + 16, obj_camera.limit_right - 16)
+	if(x <= obj_camera.limit_left + 16 && ground_speed < 0 || x >= obj_camera.limit_right - 16 && ground_speed > 0)
+	{
+		ground_speed = 0;
+		x_speed = 0;
+	}
 	
 	//Falling case
 	if(ground_angle >= 45 && ground_angle <= 360-45 && control_lock = 0 && abs(ground_speed) < 2.5) control_lock = 30;

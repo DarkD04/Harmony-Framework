@@ -2,7 +2,7 @@
 	surf_bg = surface_create(global.window_width, global.window_height);
 	surf = surface_create(global.window_width, global.window_height);
 	timer = 0;
-	render_bg = false;
+	render_bg = true;
 	
 	//Offset values
 	offset[0] = global.window_height + 32;

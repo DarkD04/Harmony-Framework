@@ -1,3 +1,3 @@
 /// @description Draw rings
 
-	if(!ringloss || ringloss && timer < 160 || ringloss && timer >= 160 && global.object_timer mod 4 >= 2) draw_self();
+	if(!ringloss || ringloss && timer < 200 || ringloss && timer >= 200 && global.object_timer mod 4 >= 2) draw_self();

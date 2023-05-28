@@ -2,11 +2,14 @@
     //Set in front of the player
     depth = obj_player.depth - 1;
     
-    //Sync the animation
-    image_index = global.object_timer / 5;
-    
+	if(!ringloss)
+	{
+	    //Sync the animation
+	    image_index = global.object_timer / 5;
+	}
+	
     //Collect
-    if(player_collide_object(C_MAIN) && !ringloss)
+    if(player_collide_object(C_MAIN) && obj_player.state != ST_KNOCKOUT)
     {
 		//Play the sound
 		play_sound(sfx_ring);
@@ -51,14 +54,23 @@
 		//Ring loss physics
 		else
 		{
+			//Update sprite frame
+			image_index += animation_speed;
+			
+			//Change ringloss animation speed
+			if(timer > 32)animation_speed -= 0.0045;
+			
+			//Limit the speed
+			animation_speed = max(animation_speed, 0.01);
+			
 			//Add timer
 			timer += 1;
 			
 			//Destroy
-			if(timer > 200) instance_destroy();
+			if(timer > 256) instance_destroy();
 			
 			//Gravity
-			y_speed += 0.2;
+			y_speed += 0.09375;
 			
 			//Collision offset
 			var offx, offy;

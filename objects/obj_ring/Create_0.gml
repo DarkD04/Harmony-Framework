@@ -4,3 +4,4 @@
 	magnet = false;
 	ringloss = false;
 	timer = 0;
+	animation_speed = 0.55;
