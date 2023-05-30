@@ -40,6 +40,7 @@
 	underwater = false;
 	detach_allow = true;
 	collision_allow = true;
+	attacking = false;
 	ceiling_lock = 0;
 	knockout_type = 0;
 	facing = 1;

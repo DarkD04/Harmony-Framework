@@ -5,5 +5,5 @@
 	global.stage_timer = 0;
 	global.life = 3;
 	disable_timer = false;
-	
+	badnik_chain = 0;
 	

@@ -16,6 +16,9 @@ function player_state_jump(){
 	//Stop if its not jump state
 	if(state != ST_JUMP) exit;
 	
+	//Change flags
+	attacking = true;
+	
 	//Limit the jump when key is released
 	if(!Input.Action && y_speed < -4 / (1 + underwater) && jump_flag)
 	{

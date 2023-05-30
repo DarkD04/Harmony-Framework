@@ -15,10 +15,10 @@ function dust_effect(type = 0){
 			obj.type = type;
 			obj.w = i;
 			obj.h = j;
-			obj.x_speed = ( random_range(0.5, 3) * dsin(random_range( - 45, 45 )) ) / 1.5
+			obj.x_speed = ( random_range(0.5, 3) * dsin(random_range( - 35, 35 )) ) / 1.5
 			obj.y_speed = ( random_range(0.5, 3) * dcos(random_range( - 80, 80 )) ) / 1.5
 			if(type = 0)
-			obj.timer_end = 4+random(20);
+			obj.timer_end = 4+random(16);
 			if(type = 1)
 			{
 				obj.time = 3 * j;

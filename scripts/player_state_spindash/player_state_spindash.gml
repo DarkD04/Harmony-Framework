@@ -20,6 +20,7 @@ function player_state_spindash(){
 	//Change flags
 	direction_allow = false;
 	movement_allow = false;
+	attacking = true;
 	
 	//Change animation
 	animation = ANIM_SPINDASH;

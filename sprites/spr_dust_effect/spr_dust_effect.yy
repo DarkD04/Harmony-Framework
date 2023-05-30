@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Harmony Framework Plus",
-    "path": "Harmony Framework Plus.yyp",
+    "name": "Effects",
+    "path": "folders/Sprites/Stage/Effects.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

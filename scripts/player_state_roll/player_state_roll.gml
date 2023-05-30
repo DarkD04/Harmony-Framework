@@ -17,6 +17,7 @@ function player_state_roll(){
 	if(ground) animation_speed = 0.15+abs(ground_speed/16);
 	
 	//Change flags
+	attacking = true;
 	if(ground)
 	{
 		movement_allow = false;

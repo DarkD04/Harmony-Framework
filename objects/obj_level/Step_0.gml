@@ -5,3 +5,6 @@
 	
 	//Hide collision layer
 	//layer_set_visible("Collision", false);
+	
+	//Reset score combo when player lands
+	if(obj_player.landed) badnik_chain = 0;

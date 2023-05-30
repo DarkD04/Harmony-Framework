@@ -106,7 +106,7 @@ function check_object(x1, y1, x2, y2, semi_solid = false)
 				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && semi_solid && y < Solid.bbox_top - 5)
 				{
 					ds_list_destroy(solidCollisions);
-					return true;
+					return Solid;
 				}
 			}
 		}

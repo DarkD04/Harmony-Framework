@@ -23,6 +23,9 @@ function player_state_knockout(){
 		break;
 		
 		case K_DIE:
+			//Change player depth
+			depth = layer_get_depth("Utilities");
+			
 			//Change animation
 			animation = ANIM_DIE;
 			

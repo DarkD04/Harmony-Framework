@@ -3,6 +3,7 @@ function player_states(){
 	direction_allow = true;
 	movement_allow = true;
 	collision_allow = true;
+	attacking = false;
 	
 	//Common states:
 	player_state_normal();

@@ -21,6 +21,11 @@
 	global.bgm_volume = 1;
 	global.sfx_volume = 1;
 	
+	//Checkpoint values
+	global.checkpoint = ds_list_create();
+	global.checkpoint_id = noone;
+	global.time_store = 0;
+	
 	//Font setup:
 	global.hud_number = font_add_sprite(spr_hud_numbers, ord("0"), false, 0);
 	global.text_font = font_add_sprite_ext(spr_hud_font,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)

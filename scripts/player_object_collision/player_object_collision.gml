@@ -1,5 +1,5 @@
 function player_object_collision(){
-	var object = collision_rectangle(floor(x) - wall_w, floor(y) - hitbox_h, floor(x) + wall_w, floor(y) + hitbox_h, par_solid_object, true, true)
+	var object = check_object(wall_w, hitbox_h, wall_w, hitbox_h)
 	
 	
 	if(object && y + hitbox_h >= object.bbox_top)
@@ -17,7 +17,7 @@ function player_object_collision(){
 		
 	
 		//Ceiling collision
-		while(check_object(wall_w, hitbox_h, wall_w, 0) && y_speed <= 0){
+		while(check_object(wall_w, hitbox_h, wall_w, 0) && y_speed <= 0 && !ground){
 			y+=1;
 			if(!ground)y_speed = 0;
 		}
