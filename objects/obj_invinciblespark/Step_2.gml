@@ -1,4 +1,6 @@
 /// @description Script
+	flicker = 1 - flicker
+	
 	angle = (angle + 16*obj_player.facing) mod 360;
 	
 	switch(mode){

@@ -34,7 +34,6 @@ function player_handle_hurt(){
 			play_sound(sfx_hurt);
 		}
 	}
-	
 	//Death events
 	if(state != ST_KNOCKOUT && knockout_type = K_DIE)
 	{
@@ -46,10 +45,12 @@ function player_handle_hurt(){
 		play_sound(sfx_hurt);
 	}
 	
+	if(invincible_timer != 0 && knockout_type != 0 && state != ST_KNOCKOUT) knockout_type = 0;
+	
 	//Bottomless pit
 	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom)
 	{
 		knockout_type = K_DIE;
 	}
-	if(invincible_timer != 0 && knockout_type != 0 && state != ST_KNOCKOUT) knockout_type = 0;
+
 }

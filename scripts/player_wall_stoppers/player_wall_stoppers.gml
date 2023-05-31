@@ -24,7 +24,7 @@ function player_wall_stoppers(){
 				
 		}
 		//Left wall collision
-		if(point_check(-wall_w-1, wall_h) && ground_speed < 0 && control_lock = 0)
+		if(point_check(-wall_w-1, wall_h) && x_speed < 0 && control_lock = 0)
 		{
 			ground_speed = 0;
 			x_speed = 0;
@@ -32,7 +32,7 @@ function player_wall_stoppers(){
 		}
 	
 		//Right wall collision
-		if(point_check(wall_w+1, wall_h)&& ground_speed > 0 && control_lock = 0)
+		if(point_check(wall_w+1, wall_h)&& x_speed > 0 && control_lock = 0)
 		{
 			ground_speed = 0;
 			x_speed = 0;

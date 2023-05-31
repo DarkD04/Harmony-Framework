@@ -5,6 +5,7 @@ function player_collision(){
 	{
 		x += y_dir;	
 		y -= x_dir;
+		
 	}
 	
 	//Right wall collision
@@ -12,6 +13,7 @@ function player_collision(){
 	{
 		x -= y_dir;	
 		y += x_dir;
+		
 	}
 	
 	if(!on_object)

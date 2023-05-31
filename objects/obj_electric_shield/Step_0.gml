@@ -32,7 +32,7 @@
 	//Ring magnet
 	with(obj_ring)
 	{
-		if(distance_to_object(other) < 48)
+		if(distance_to_object(other) < 64)
 		{
 			magnet = true;
 		}

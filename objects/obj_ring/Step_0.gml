@@ -38,13 +38,15 @@
 		var arrayx = (sign(x_speed) == signx);
 		var arrayy = (sign(y_speed) == signy);
 		
+		x += x_speed;
+		y += y_speed;
+		
 		if(!ringloss)
 		{
 		//add to speed
 		x_speed += (ringacceleration[arrayx] * signx)
 		y_speed += (ringacceleration[arrayy] * signy)
-		x += x_speed;
-		y += y_speed;
+		
 		}
 		//Ring loss physics
 		else

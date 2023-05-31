@@ -59,11 +59,13 @@
 			
 			//Change animation
 			sprite_index = spr_fire_shield_dash;
+			image_speed = 1;
 			
 			//Change direction
 			if(obj_player.x_speed != 0)image_xscale = sign(obj_player.x_speed);
 			
 			//Make back shield gone
+			visible = true;
 			back.visible = false;
 		}
 	}

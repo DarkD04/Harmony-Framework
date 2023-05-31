@@ -35,6 +35,13 @@ function player_state_knockout(){
 			//Add death timer
 			death_timer += 1;
 			
+			//Remove effects
+			shield = S_NONE;
+			invincible_timer = 0;
+			speed_shoes = 0;
+			invincible = false;
+			speed_shoes_flag = false;
+			
 			//Fade out
 			if(death_timer = 80)
 			{
