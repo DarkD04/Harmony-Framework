@@ -30,8 +30,6 @@ function player_movement(){
 		//Add gravity to y speed:
 		y_speed += y_accel/steps;	
 		
-		//Match ground speed to x speed:
-		ground_speed = x_speed;
 	}
 	
 	//Update position with speed:

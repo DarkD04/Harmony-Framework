@@ -12,6 +12,20 @@
 	depth = obj_player.depth - 10;
 	back.depth = obj_player.depth + 10;
 	
+	//flicker effect
+	flickercount = (flickercount + 1) mod 4;
+	
+	if (flickercount < 2)
+	{
+		back.visible = false;
+		visible = true;
+	} else
+	{
+		back.visible = true;
+		visible = false;
+	}
+	
+	
 	//Sync back shield's animation
 	back.image_index = image_index;
 	

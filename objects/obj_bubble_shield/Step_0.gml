@@ -6,7 +6,17 @@
 		image_speed = 0.35;
 		
 		//Change sprite
-		sprite_index = spr_bubble_shield;
+		flickercount = (flickercount + 1 )mod 4;
+		bubbleframe = (flickercount == 0) ? bubbleframe + 1 : bubbleframe; //every 2 frames increase animation frame
+		bubbleframe = bubbleframe mod 18
+		
+		if flickercount < 2{
+			sprite_index = spr_bubble_shield;
+			image_index = bubbleframe mod 2;
+		}else{
+			sprite_index = spr_bubble_shield_other;
+			image_index = bubbleframe mod 9;
+		}
 	}
 	
 	//Double jump
@@ -39,7 +49,7 @@
 			obj_player.y_speed = -7.5 * dcos(obj_player.ground_angle);
 			obj_player.ground = false;
 			obj_player.state = ST_JUMP;
-			obj_player.jump_flag = false;
+			obj_player.jump_flag = true;
 			
 			//Play sound
 			play_sound(sfx_bubble_jump)

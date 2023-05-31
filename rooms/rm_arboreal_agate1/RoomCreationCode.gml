@@ -1,9 +1,9 @@
 	with(obj_level)
 	{
 		//Set stage music and loop points
-		stage_music = bgm_arboreal_agate1;
-		loop_start = 8.040;
-		loop_end = 120.020;
+		stage_music = bgm_test;
+		loop_start = 3.557;
+		loop_end = 81.193;
 		
 		//Set level name
 		stage_name = "ARBOREAL AGATE";

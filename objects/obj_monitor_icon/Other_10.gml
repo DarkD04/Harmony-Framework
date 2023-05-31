@@ -13,14 +13,17 @@
 		
 		case "Electric Shield":
 			obj_player.shield = S_ELECTRIC;
+			play_sound(sfx_shieldelec);
 		break;
 		
 		case "Fire Shield":
 			obj_player.shield = S_FIRE;
+			play_sound(sfx_shieldfire);
 		break;
 		
 		case "Bubble Shield":
 			obj_player.shield = S_BUBBLE;
+			play_sound(sfx_shieldbubble);
 		break;
 		
 		case "Invincible":

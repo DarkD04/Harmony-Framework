@@ -27,29 +27,24 @@
 	//Ring physics
 	if(magnet || ringloss)
 	{
-		//Speeds
-		x += x_speed;
-		y += y_speed;
+		//when i steal from the physics guide (:exploding_head:)
+		var ringacceleration = [0.75, 0.1875];
 		
-		//Ring magnet
+		//relative positions
+		var signx = sign(obj_player.x - x);
+		var signy = sign(obj_player.y - y);
+		
+		//check relative movement
+		var arrayx = (sign(x_speed) == signx);
+		var arrayy = (sign(y_speed) == signy);
+		
 		if(!ringloss)
 		{
-			//Magnet physics
-			if(x >= obj_player.x){
-				if(x_speed < 0) x_speed -= 0.1875 else x_speed -= 0.75
-			}
-				
-			if(x <= obj_player.x){
-				if(x_speed > 0) x_speed += 0.1875 else x_speed += 0.75
-			}
-				
-			if(y >= obj_player.y){
-				if(x_speed < 0) y_speed -= 0.1875 else y_speed -= 0.75
-			}
-				
-			if(y <= obj_player.y){
-				if(y_speed > 0) y_speed += 0.1875 else y_speed += 0.75
-			}
+		//add to speed
+		x_speed += (ringacceleration[arrayx] * signx)
+		y_speed += (ringacceleration[arrayy] * signy)
+		x += x_speed;
+		y += y_speed;
 		}
 		//Ring loss physics
 		else

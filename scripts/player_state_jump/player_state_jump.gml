@@ -8,7 +8,7 @@ function player_state_jump(){
 			jump_flag = true;
 			ground = false;
 			state = ST_JUMP
-			jump_anim_speed = 0.25+abs(x_speed/15);
+			jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
 			play_sound(sfx_jump);
 		}
 	}
@@ -30,7 +30,7 @@ function player_state_jump(){
 	animation = ANIM_ROLL;
 	
 	//Change animation speed
-	animation_speed = jump_anim_speed;
+	animation_set_speed = jump_anim_speed;
 	
 	//Reset when grounded
 	if(ground) state = ST_NORMAL;

@@ -5,6 +5,7 @@ function animation_init(){
 	animation_loop_start = 0;
 	animation_sprite = noone;
 	animation_loop = true;
+	animation_legacy = false;
 	animation_previous = animation;
 	animation_set_speed = 0;
 }

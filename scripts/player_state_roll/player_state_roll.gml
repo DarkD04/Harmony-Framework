@@ -14,7 +14,7 @@ function player_state_roll(){
 	
 	//Change animation and speed
 	animation = ANIM_ROLL;
-	if(ground) animation_speed = 0.15+abs(ground_speed/16);
+	animation_set_speed = floor(max(0, 4-abs(obj_player.ground_speed)));
 	
 	//Change flags
 	attacking = true;

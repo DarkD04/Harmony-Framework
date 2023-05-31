@@ -23,7 +23,7 @@ function player_collision(){
 			{
 				ground = true;
 				landed = true;
-				
+				ground_speed = x_speed;
 				player_angle_detection()
 			
 				//Landing speed (From 24 to 90 degrees)

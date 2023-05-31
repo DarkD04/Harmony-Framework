@@ -3,29 +3,29 @@ function player_state_normal(){
 	if(state != ST_NORMAL) exit;
 	
 	//Change animations:
-	if(ground)
-	{
+
 		//Default animation:
-		animation = ANIM_STAND;
+		if (ground) animation = ANIM_STAND;
 		
 		//Walking animation:
 		if(ground_speed != 0 || animation = ANIM_SKIDTURN)
 		{
 			animation = ANIM_WALK;
-			animation_speed = 0.05+abs(ground_speed/20);
+			animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed)));//mfw im an accuracy whore
 		}
 		
 		//Running animation:
 		if(abs(ground_speed) >= 6)
 		{
 			animation = ANIM_RUN;
-			animation_speed = 0.1+abs(ground_speed/16);
+			animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed)));//mfw im an accuracy whore
 		}
 		
 		//Running animation:
 		if(abs(ground_speed) >= 12)
 		{
 			animation = ANIM_MAXRUN;
+			animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed)));//mfw im an accuracy whore
 		}
-	}
+	
 }
