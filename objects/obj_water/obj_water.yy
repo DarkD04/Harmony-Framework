@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Objects/Stage/Important.yy",
+    "name": "Water",
+    "path": "folders/Objects/Stage/Important/Water.yy",
   },
   "parentObjectId": null,
   "persistent": false,

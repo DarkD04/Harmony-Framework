@@ -10,8 +10,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"par_solid_object","path":"objects/par_solid_object/par_solid_object.yy",},"propertyId":{"name":"collision_type","path":"objects/par_solid_object/par_solid_object.yy",},"value":"\"Semi Solid\"",},
   ],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Water",
+    "path": "folders/Objects/Stage/Important/Water.yy",
   },
   "parentObjectId": {
     "name": "par_solid_object",

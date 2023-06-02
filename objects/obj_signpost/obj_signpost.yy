@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Objects/Stage/Important.yy",
+    "name": "Stage End",
+    "path": "folders/Objects/Stage/Common Objects/Stage End.yy",
   },
   "parentObjectId": null,
   "persistent": false,

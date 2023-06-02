@@ -11,8 +11,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"par_shield","path":"objects/par_shield/par_shield.yy",},"propertyId":{"name":"shield_id","path":"objects/par_shield/par_shield.yy",},"value":"3",},
   ],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Shields",
+    "path": "folders/Objects/Player/Shields.yy",
   },
   "parentObjectId": {
     "name": "par_shield",

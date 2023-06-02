@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Objects/Stage/Important.yy",
+    "name": "Breakables",
+    "path": "folders/Objects/Stage/Common Objects/Breakables.yy",
   },
   "parentObjectId": {
     "name": "par_solid_object",

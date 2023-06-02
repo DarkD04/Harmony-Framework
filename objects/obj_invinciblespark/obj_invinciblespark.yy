@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Effects",
+    "path": "folders/Objects/Stage/Effects.yy",
   },
   "parentObjectId": null,
   "persistent": false,

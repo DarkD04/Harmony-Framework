@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Important",
-    "path": "folders/Objects/Stage/Important.yy",
+    "name": "HUD",
+    "path": "folders/Objects/Stage/Important/HUD.yy",
   },
   "parentObjectId": null,
   "persistent": false,
