@@ -10,6 +10,7 @@ function player_macros(){
 	#macro ST_KNOCKOUT 7
 	#macro ST_SPRING 8
 	#macro ST_PEELOUT 9
+	#macro ST_TAILSFLY 10
 	
 	//Animation macros:
 	#macro ANIM_STAND 0
@@ -25,6 +26,10 @@ function player_macros(){
 	#macro ANIM_SKIDTURN 10
 	#macro ANIM_HURT 11
 	#macro ANIM_DIE 12
+	#macro ANIM_TAILSFLY 20
+	#macro ANIM_TAILSTIRED 21
+	#macro ANIM_TAILSSWIM 22
+	#macro ANIM_TAILSSWIMTIRED 23
 	
 	//Shield macros
 	#macro S_NONE -1
@@ -32,6 +37,11 @@ function player_macros(){
 	#macro S_FIRE 1
 	#macro S_ELECTRIC 2
 	#macro S_BUBBLE 3
+	
+	//Player macro
+	#macro CHAR_SONIC 0
+	#macro CHAR_TAILS 1
+	#macro CHAR_KNUX 2
 	
 	//Misc.
 	#macro K_HURT 1

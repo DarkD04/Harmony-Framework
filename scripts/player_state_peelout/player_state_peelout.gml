@@ -1,6 +1,6 @@
 function player_state_peelout(){
 	//Trigger peel out
-	if(state = ST_LOOKUP && Input.ActionPress && ground)
+	if(state = ST_LOOKUP && Input.ActionPress && ground && character = CHAR_SONIC)
 	{
 		play_sound(sfx_peelout_charge)
 		state = ST_PEELOUT

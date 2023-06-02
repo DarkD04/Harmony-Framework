@@ -32,7 +32,7 @@
 	if(!is_back)
 	{
 		//Double jump
-		if(Input.ActionPress && !obj_player.ground && obj_player.state = ST_JUMP && shield_state = 0) 
+		if(Input.ActionPress && !obj_player.ground && obj_player.state = ST_JUMP && shield_state = 0 && use_allow) 
 		{
 			//Dash the player
 			obj_player.x_speed = 8 * obj_player.facing;

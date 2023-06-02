@@ -1,4 +1,5 @@
 function player_wall_stoppers(){
+	
 		//Wall stopper
 		while(check_object(0, hitbox_h, wall_w+1, hitbox_h) && ground_speed > 0){
 			ground_speed = 0;

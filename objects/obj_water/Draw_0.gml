@@ -19,7 +19,7 @@
 	//Draw tint surface
 	gpu_set_blendenable(false);
 	surface_copy(surf, 0, 0, application_surface);
-	set_color_grading(tex_ppz_underwater_lut, 17);
+	//set_color_grading(tex_ppz_underwater_lut, 17);
 
 	//Done
 	surface_reset_target();

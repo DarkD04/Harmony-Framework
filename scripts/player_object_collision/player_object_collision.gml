@@ -24,7 +24,7 @@ function player_object_collision(){
 	}
 	//Landing
 	if(check_object(wall_w, 0, wall_w, hitbox_h, true) && !on_object && y_speed >= 0 && mode = 0){
-		
+		ground_speed = x_speed;
 		ground = true;
 		landed = true;
 		on_object = true;

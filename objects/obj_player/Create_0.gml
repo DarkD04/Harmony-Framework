@@ -1,4 +1,5 @@
 /// @description Values
+	character = CHAR_SONIC;
 	
 	//Movement values:
 	x_speed = 0;		//Horizontal movement speed.
@@ -58,6 +59,9 @@
 	speed_shoes_flag = false;
 	invincible = false;
 	invincible_timer = 0;
+	
+	//Character specifics:
+	tails_timer = 480;
 	
 	//Misc:
 	control_lock = 0;

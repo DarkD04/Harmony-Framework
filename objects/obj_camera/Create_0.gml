@@ -25,3 +25,5 @@
 	limit_top = 0;
 	target_top = 0;
 	
+	camera_type = 1; //Type 0 is classic megadrive camera. Type 1 is mania camera
+	ground_offset = 0;

@@ -26,6 +26,9 @@ function player_state_knockout(){
 			//Change player depth
 			depth = layer_get_depth("Utilities");
 			
+			//Remove underwater physics
+			underwater = false;
+			
 			//Change animation
 			animation = ANIM_DIE;
 			

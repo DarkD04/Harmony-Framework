@@ -40,6 +40,9 @@
 	//Player facing direction
 	player_direction();
 	
+	//Players animation list
+	player_animation_list();
+	
 	//Handle animation system
 	animation_system();
 	

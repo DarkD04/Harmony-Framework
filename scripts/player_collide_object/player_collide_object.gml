@@ -12,72 +12,75 @@ function player_collide_object(side){
 	var player, left, top, right, bottom;
 	
 	//Get nearest player object:
-	var player = instance_nearest(x, y, obj_player);
-	
-	//Define hitbox size:
-	switch(side)
+	for (var i = 0; i < instance_number(obj_player); ++i)
 	{
-		//Main hitbox:
-		case C_MAIN: 
-			left = -player.wall_w;
-			top = -player.hitbox_h;
-			right = player.wall_w;
-			bottom = player.hitbox_h;
-		break;
-		
-		//Bottom side of the hitbox:
-		case C_BOTTOM: 
-			left = -player.wall_w;
-			top = 0;
-			right = player.wall_w;
-			bottom = player.hitbox_h + 1;
-		break;
-		
-		//Bottom side of the hitbox:
-		case C_BOTTOM_EXT: 
-			left = -player.wall_w;
-			top = 0;
-			right = player.wall_w;
-			bottom = player.hitbox_h + 16;
-		break;
-		
-		//Top side of the hitbox:
-		case C_TOP: 
-			left = -player.wall_w;
-			top = -player.hitbox_h - 1;
-			right = player.wall_w;
-			bottom = 0;
-		break;
-		
-		//Top side of the hitbox:
-		case C_TOP_EXT: 
-			left = -player.wall_w;
-			top = -player.hitbox_h - 16;
-			right = player.wall_w;
-			bottom = 0;
-		break;
-		
-		//Left side of the hitbox:
-		case C_LEFT: 
-			left = -player.wall_w - 1;
-			top = 1;
-			right = 0;
-			bottom = 5;
-		break;
-		
-		//Right side of the hitbox:
-		case C_RIGHT:
-			left = 0;
-			top = 1;
-			right = player.wall_w + 1;
-			bottom = 5;
-		break;
-	}
+		player[i] = instance_find(obj_player, i)
 	
-	//Player events:
-	with(player)
-	{
-		//Check for player's collision with the object:
-		if(collision_rectangle(floor(x)+left, floor(y)+top, floor(x)+right, floor(y)+bottom, other, true, true) && collision_allow) return true;
+		//Define hitbox size:
+		switch(side)
+		{
+			//Main hitbox:
+			case C_MAIN: 
+				left = -player[i].wall_w;
+				top = -player[i].hitbox_h;
+				right = player[i].wall_w;
+				bottom = player[i].hitbox_h;
+			break;
+		
+			//Bottom side of the hitbox:
+			case C_BOTTOM: 
+				left = -player[i].wall_w;
+				top = 0;
+				right = player[i].wall_w;
+				bottom = player[i].hitbox_h + 1;
+			break;
+		
+			//Bottom side of the hitbox:
+			case C_BOTTOM_EXT: 
+				left = -player[i].wall_w;
+				top = 0;
+				right = player[i].wall_w;
+				bottom = player[i].hitbox_h + 16;
+			break;
+		
+			//Top side of the hitbox:
+			case C_TOP: 
+				left = -player[i].wall_w;
+				top = -player[i].hitbox_h - 1;
+				right = player[i].wall_w;
+				bottom = 0;
+			break;
+		
+			//Top side of the hitbox:
+			case C_TOP_EXT: 
+				left = -player[i].wall_w;
+				top = -player[i].hitbox_h - 16;
+				right = player[i].wall_w;
+				bottom = 0;
+			break;
+		
+			//Left side of the hitbox:
+			case C_LEFT: 
+				left = -player[i].wall_w - 1;
+				top = 1;
+				right = 0;
+				bottom = 5;
+			break;
+		
+			//Right side of the hitbox:
+			case C_RIGHT:
+				left = 0;
+				top = 1;
+				right = player[i].wall_w + 1;
+				bottom = 5;
+			break;
+		}
+
+		//player[i] events:
+		with(player[i])
+		{
+			//Check for player[i]'s collision with the object:
+			if(collision_rectangle(floor(x)+left, floor(y)+top, floor(x)+right, floor(y)+bottom, other, true, true) && collision_allow) return id;
+		}
 	}
 }

@@ -14,9 +14,9 @@
 	//Add angle and modulate it
 	angle_x = (angle_x + x_speed) mod 360;
 	angle_y = (angle_y + y_speed) mod 360;
-	
+	var col = player_collide_object(C_BOTTOM_EXT);
 	//Sink the platform
-	if(sink && player_collide_object(C_BOTTOM_EXT) && obj_player.ground)
+	if(sink && col && col.ground)
 	{
 		sink_offset = lerp(sink_offset, 8, 0.2);
 	}else
@@ -25,10 +25,10 @@
 	}
 	
 	//Move the player
-	if(player_collide_object(C_BOTTOM_EXT) && obj_player.ground)
+	if(col && col.ground)
 	{
-		obj_player.x += round(x - old_x);
-		obj_player.y += round(y - old_y);
+		col.x += round(x - old_x);
+		col.y += round(y - old_y);
 	}
 	
 	//Move the objects

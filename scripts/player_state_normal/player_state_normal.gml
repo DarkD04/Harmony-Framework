@@ -5,7 +5,10 @@ function player_state_normal(){
 	//Change animations:
 
 		//Default animation:
-		if (ground) animation = ANIM_STAND;
+		if (ground)
+		{
+			animation = ANIM_STAND;
+		}
 		
 		//Walking animation:
 		if(ground_speed != 0 || animation = ANIM_SKIDTURN)
@@ -18,14 +21,18 @@ function player_state_normal(){
 		if(abs(ground_speed) >= 6)
 		{
 			animation = ANIM_RUN;
-			animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed)));//mfw im an accuracy whore
+			switch(character)
+			{
+				case CHAR_TAILS: animation_set_speed = 1; break;
+				default: animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed))); break;
+			}
 		}
 		
 		//Running animation:
 		if(abs(ground_speed) >= 12)
 		{
 			animation = ANIM_MAXRUN;
-			animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed)));//mfw im an accuracy whore
+			animation_set_speed = 1;
 		}
 	
 }

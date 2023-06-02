@@ -3,7 +3,7 @@
 	global.dev_mode = true;
 	
 	// Screen values:
-	global.window_width  = 320;
+	global.window_width  = 426;
 	global.window_height = 240;
 	global.window_size   = 2;
 	
@@ -31,7 +31,7 @@
 	global.text_font = font_add_sprite_ext(spr_hud_font,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)
 	
 	//Misc.
-	global.legacy_rotation = true;
+	global.legacy_rotation = false;
 	
 	//Create controllers:
 	instance_create_depth(0, 0, 0, obj_window);

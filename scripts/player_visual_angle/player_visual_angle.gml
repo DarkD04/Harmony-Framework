@@ -4,19 +4,17 @@ function player_visual_angle(){
 	{
 		if(!global.legacy_rotation)
 		{
-			//Visual angle wraping
-			if(ground_angle <= 45 && visual_angle >= 180) visual_angle = 0;
-			if(ground_angle >= 180 && visual_angle <= 45) visual_angle = 360;
-		
-			//Rorate to the target
-			if(ground_angle >= 40 && ground_angle <= 320)
-				visual_angle = visual_angle + (0.15 + abs(ground_speed * 0.03)) * (ground_angle - visual_angle);
+			//Reset rotation target value
+			var rot = 0;
 			
-			//Return back to 0
-			if(ground_angle < 40) visual_angle = max(visual_angle - 2 - abs(ground_speed * 0.8), 0);
-			if(ground_angle > 320) visual_angle = min(visual_angle + 2 + abs(ground_speed * 0.8), 360);
+			//Change rotation value if its at specific angle
+			if(ground_angle > 33.75 && ground_angle < 333.50) rot = ground_angle;
 			
-
+			//Rotate the player
+			if(abs(ground_speed < 6))
+			visual_angle += (((rot - visual_angle + 540) mod 360)-180) / 4;
+			else
+			visual_angle += (((rot - visual_angle + 540) mod 360)-180) / 2;
 		}
 		if(global.legacy_rotation)
 		{

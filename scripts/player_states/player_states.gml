@@ -4,6 +4,11 @@ function player_states(){
 	movement_allow = true;
 	collision_allow = true;
 	attacking = false;
+	//Sonic states:
+	player_state_peelout();
+	
+	//Tails states:
+	player_state_tailsfly();
 	
 	//Common states:
 	player_state_normal();
@@ -16,6 +21,6 @@ function player_states(){
 	player_state_skid();
 	player_state_knockout();
 	
-	//Sonic states:
-	player_state_peelout();
+	//Tails object
+	player_handle_tails();
 }

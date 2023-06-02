@@ -14,7 +14,7 @@ function player_state_roll(){
 	
 	//Change animation and speed
 	animation = ANIM_ROLL;
-	animation_set_speed = floor(max(0, 4-abs(obj_player.ground_speed)));
+	if(ground && character != CHAR_TAILS)animation_set_speed = floor(max(0, 4-abs(ground_speed)));
 	
 	//Change flags
 	attacking = true;
@@ -32,7 +32,7 @@ function player_state_roll(){
 	//Stop rolling
 	if(ground_angle < 40 || ground_angle > 360 - 40)
 	{
-		if(ground_speed = 0 && !force_roll || landed && !force_roll) state = ST_NORMAL;
+		if(ground_speed = 0 && !force_roll && ground|| landed && !force_roll) state = ST_NORMAL;
 	}
 	if(landed && !force_roll) state = ST_NORMAL;
 	

@@ -18,7 +18,6 @@ function player_state_jump(){
 	
 	//Change flags
 	attacking = true;
-	
 	//Limit the jump when key is released
 	if(!Input.Action && y_speed < -4 / (1 + underwater) && jump_flag)
 	{
@@ -30,7 +29,7 @@ function player_state_jump(){
 	animation = ANIM_ROLL;
 	
 	//Change animation speed
-	animation_set_speed = jump_anim_speed;
+	if(character != CHAR_TAILS)animation_set_speed = jump_anim_speed;
 	
 	//Reset when grounded
 	if(ground) state = ST_NORMAL;

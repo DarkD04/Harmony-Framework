@@ -3,7 +3,7 @@
 	//Destroy the enemy
 	if(player_collide_object(C_MAIN))
 	{
-		if(obj_player.attacking)
+		if(obj_player.attacking || obj_player.invincible)
 		{
 		//Create battery ring TODO: add flicky support
 		var ring = instance_create_depth(x, y, depth, obj_battery_ring);
