@@ -10,7 +10,7 @@
 		visible = false
 	}else
 	{
-		use_allow = false;
+		use_allow = true;
 		visible = true;
 	}
 	
