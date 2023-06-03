@@ -16,6 +16,22 @@
 	//Sync back shield's animation
 	back.image_index = image_index;
 	
+	//flicker effect (i love code repositioning!)
+	flickercount = (flickercount + 1) mod 4;
+	
+	if (shield_state = 0 && !obj_player.invincible)
+	{
+		if (flickercount < 2)
+		{
+			back.visible = false;
+			visible = true;
+		} else
+		{
+			back.visible = true;
+			visible = false;
+		}
+	}
+	
 	if(!is_back)
 	{
 		//Double jump
