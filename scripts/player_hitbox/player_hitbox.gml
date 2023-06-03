@@ -34,7 +34,22 @@ function player_hitbox(){
 			hitbox_h = 14;
 		}
 		break;
+		
+		case CHAR_KNUX:
+		//Original hitbox values
+		hitbox_w = 9;
+		hitbox_h = 19;
+	
+		//Roll hitboxes
+		if(animation = ANIM_ROLL)
+		{
+			if(ground || landed)obj_camera.roll_offset = 5;
+			hitbox_w = 7;
+			hitbox_h = 14;
+		}
+		break;
 	}
+	
 	//Change floor position fix
 	if(mode = 0 && ceiling_lock = 0)
 	{

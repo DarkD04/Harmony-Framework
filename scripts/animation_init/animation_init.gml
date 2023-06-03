@@ -8,4 +8,5 @@ function animation_init(){
 	animation_legacy = false;
 	animation_previous = animation;
 	animation_set_speed = 0;
+	animation_set_duration = 0;
 }

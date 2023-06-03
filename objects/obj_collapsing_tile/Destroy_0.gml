@@ -23,6 +23,8 @@
 	col.start_left = bbox_left;
 	col.facing = facing;
 	
+	surface_resize(application_surface, 0, 0)
+	
 	//Now destroy
 	for(var i = 0; i < size_x; i++)
 	{
@@ -53,3 +55,4 @@
 		}
 		col.timer_end[i] = obj.delay;
 	}
+	

@@ -6,6 +6,7 @@ function animation_system(){
 		{
 			//Get previous animation
 			animation_previous = animation;
+			animation_set_speed = animation_set_duration;
 			animation_speed = animation_set_speed;
 			animation_frame = 0;	
 		}

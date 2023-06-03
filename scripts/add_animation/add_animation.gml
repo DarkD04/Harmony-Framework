@@ -21,6 +21,8 @@ function add_animation(anim_id, sprite, anim_speed, loop_start, loop, legacy){
 		if (animation_legacy == false)
 		{
 			animation_set_speed = anim_speed;
+		}else{
+			animation_set_duration = anim_speed;
 		}
 	}
 }

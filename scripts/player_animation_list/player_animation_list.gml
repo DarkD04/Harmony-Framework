@@ -41,5 +41,23 @@ function player_animation_list(){
 			add_animation(ANIM_TAILSTIRED, spr_tails_swim_tired, 0.2, 0, true, false);	
 		}
 		break;
+		
+		case CHAR_KNUX:
+		add_animation(ANIM_STAND, spr_knuckles_idle, 0.2, 0, true, false);
+		add_animation(ANIM_WALK, spr_knuckles_walk, 1, 0, true, true);
+		add_animation(ANIM_RUN, spr_knuckles_run, 0, 0, true, true);
+		add_animation(ANIM_MAXRUN, spr_knuckles_maxrun, 0, 0, true, true);
+		add_animation(ANIM_ROLL, spr_knuckles_roll, 0, 0, true, true);
+		add_animation(ANIM_LOOKDOWN, spr_knuckles_lookdown, 0.4, 0, false, false);
+		add_animation(ANIM_LOOKUP, spr_knuckles_lookup, 0.4, 0, false, false);
+		add_animation(ANIM_SPINDASH, spr_knuckles_spindash, 0.6, 0, true, false);
+		add_animation(ANIM_SPRING, spr_knuckles_spring, 0.4, 0, true, false);
+		add_animation(ANIM_SKID, spr_knuckles_skid, 0.4, 0, false, false);
+		add_animation(ANIM_SKIDTURN, spr_knuckles_skidturn, 0.3, 0, false, false);
+		add_animation(ANIM_HURT, spr_knuckles_hurt, 0.3, 0, false, false);
+		add_animation(ANIM_DIE, spr_knuckles_death, 0.3, 0, false, false);
+		add_animation(ANIM_KNUXGLIDE, spr_knuckles_glide, 0.3, 0, true, false);
+		add_animation(ANIM_KNUXGLIDETURN, spr_knuckles_turn, 0.15, 0, false, false);
+		break;
 	}
 }

@@ -4,11 +4,15 @@ function player_states(){
 	movement_allow = true;
 	collision_allow = true;
 	attacking = false;
+	
 	//Sonic states:
 	player_state_peelout();
 	
 	//Tails states:
 	player_state_tailsfly();
+	
+	//Knuckles states:
+	player_state_glide();
 	
 	//Common states:
 	player_state_normal();

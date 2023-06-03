@@ -1,5 +1,5 @@
 /// @description Values
-	character = CHAR_SONIC;
+	character = CHAR_KNUX;
 	
 	//Movement values:
 	x_speed = 0;		//Horizontal movement speed.
@@ -63,6 +63,9 @@
 	
 	//Character specifics:
 	tails_timer = 480;
+	knuckles_angle = 90;
+	glide_speed = 2.5;
+	knux_frame = 0;
 	
 	//Misc:
 	control_lock = 0;
