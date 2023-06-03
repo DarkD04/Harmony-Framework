@@ -9,11 +9,11 @@ function player_semisolids(){
 		//NEW METHOD! [Always trigger flag back]
 		with(par_solid){
 			if(collision_type = "Semi Solid"){
-				collision_flag = true;	
+				platform_check = true;	
 			
 				//Check if player is colliding from the top
 				if(player_collide_object(C_TOP)){
-					collision_flag = false;	
+					platform_check = false;	
 				}
 			}
 		}

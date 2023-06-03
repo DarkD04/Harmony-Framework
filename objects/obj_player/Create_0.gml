@@ -46,6 +46,7 @@
 	knockout_type = 0;
 	facing = 1;
 	death_timer = 0;
+	debug = false;
 	
 	//Hitbox values:
 	hitbox_w = 9;

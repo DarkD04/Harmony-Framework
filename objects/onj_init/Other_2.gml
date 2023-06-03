@@ -29,6 +29,7 @@
 	//Font setup:
 	global.hud_number = font_add_sprite(spr_hud_numbers, ord("0"), false, 0);
 	global.text_font = font_add_sprite_ext(spr_hud_font,"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)
+	global.font_small = font_add_sprite_ext(fontDebug," ! #$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)
 	
 	//Misc.
 	global.legacy_rotation = false;

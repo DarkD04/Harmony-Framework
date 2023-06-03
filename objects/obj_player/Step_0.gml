@@ -6,6 +6,13 @@
 	//Reset landing flag
 	if(ground)landed = false;
 	
+	//Cancel when in debug mode
+	if(debug)
+	{
+		player_debug();
+		exit;	
+	}
+	
 	//Include step movement
 	repeat(steps)
 	{

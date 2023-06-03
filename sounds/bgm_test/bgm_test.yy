@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 104.144806,
+  "duration": 95.71262,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "bgm_test.ogg",
+  "soundFile": "bgm_test.mp3",
   "type": 1,
   "volume": 1.0,
 }

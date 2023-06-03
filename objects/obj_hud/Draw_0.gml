@@ -46,7 +46,9 @@
 	{
 		for(var i = 0; i <= 3; i++)
 		{
-			offset[i] = approach(offset[i], 0, 8);	
+			var debug_offset = 0;
+			if(instance_exists(obj_dev)) debug_offset = -128 * obj_dev.debug;
+			offset[i] = approach(offset[i], debug_offset, 8);	
 		}
 	}
 	

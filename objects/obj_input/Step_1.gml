@@ -23,5 +23,3 @@
 	CPress = keyboard_check_pressed(global.c)
 	ActionPress = keyboard_check_pressed(global.a) || keyboard_check_pressed(global.b) || keyboard_check_pressed(global.c)
 	StartPress = keyboard_check_pressed(global.start)
-
-	if(keyboard_check_pressed(vk_f2)) game_restart();

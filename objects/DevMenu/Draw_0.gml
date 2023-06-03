@@ -27,8 +27,7 @@
 	surface_set_target(Surface)
 	
 	//Font
-	Font = font_add_sprite_ext(fontDebug," ! #$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ",false,0)
-	draw_set_font(Font);
+	draw_set_font(global.font_small);
 	draw_set_halign(fa_center);
 	
 	draw_clear_alpha(c_black,0);

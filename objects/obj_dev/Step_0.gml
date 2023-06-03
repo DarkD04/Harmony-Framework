@@ -1,6 +1,22 @@
 /// @description Scripts
+
 	//No judas you will not memory hack my game asshole:blushed_emoji:
 	if(!global.dev_mode) instance_destroy();
+	
+	//Toggle debug mode
+	if(keyboard_check_pressed(vk_tab)) debug = !debug;
+	if(keyboard_check_pressed(vk_f9)) show_collision = !show_collision;
+	if(keyboard_check_pressed(vk_f8)) show_hitbox = !show_hitbox;
+	if(keyboard_check_pressed(vk_f7)) show_fps = !show_fps;
+	if(keyboard_check_pressed(vk_f5)) show_player = !show_player;
+	if(keyboard_check_pressed(vk_f2)) room_restart();
+	if(keyboard_check_pressed(vk_f1)) game_restart();
+	
+	//Change player debug flag
+	obj_player.debug = debug;
+	
+	//Disable not in debug mode
+	if(!debug) exit;
 	
 	//The scroll!
 	if(mouse_wheel_up()) object_select += 1;

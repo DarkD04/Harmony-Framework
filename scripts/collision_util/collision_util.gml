@@ -14,7 +14,7 @@ function point_check(radius_x, radius_y, semi_solid = false){
 				if (Solid.collision_type = "Full Solid" && Solid.collision_layer = "Both Layers"||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer A" && plane = 0 ||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer B" && plane = 1 ||
-				Solid.collision_type = "Semi Solid" && semi_solid && platform_check)
+				Solid.collision_type = "Semi Solid" && Solid.platform_check && semi_solid && platform_check)
 				{
 					ds_list_destroy(solidCollisions);
 					return true;
@@ -41,7 +41,7 @@ function angle_sensor(X, Y){
 				if (Solid.collision_type = "Full Solid" && Solid.collision_layer = "Both Layers"||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer A" && plane = 0 ||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer B" && plane = 1 ||
-				Solid.collision_type = "Semi Solid" && platform_check)
+				Solid.collision_type = "Semi Solid" && Solid.platform_check && platform_check)
 				{
 					ds_list_destroy(solidCollisions);
 					return true;
@@ -77,7 +77,7 @@ function line_check(radius_x, radius_y, semi_solid = false){
 				if (Solid.collision_type = "Full Solid" && Solid.collision_layer = "Both Layers"||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer A" && plane = 0 ||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer B" && plane = 1 ||
-				Solid.collision_type = "Semi Solid" && semi_solid && platform_check)
+				Solid.collision_type = "Semi Solid" && semi_solid && Solid.platform_check && platform_check)
 				{
 					ds_list_destroy(solidCollisions);
 					return true;

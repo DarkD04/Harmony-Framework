@@ -1,18 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_solid_object",
-  "eventList": [],
+  "name": "obj_collision_area",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Misc",
-    "path": "folders/Objects/Stage/Common Objects/Misc.yy",
+    "name": "Harmony Framework Plus",
+    "path": "Harmony Framework Plus.yyp",
   },
-  "parentObjectId": {
-    "name": "par_solid_object",
-    "path": "objects/par_solid_object/par_solid_object.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -29,9 +29,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_editor_eggman",
-    "path": "sprites/spr_editor_eggman/spr_editor_eggman.yy",
+    "name": "spr_trigger",
+    "path": "sprites/spr_trigger/spr_trigger.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
