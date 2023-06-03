@@ -1,6 +1,6 @@
 /// @description Values
 	//Object values:
-	object_list = [obj_ring, obj_monitor, obj_spring_vertical];
+	object_list = [obj_ring, obj_monitor, obj_spring_vertical, obj_spring_horizontal, obj_spring_vertical, obj_spikes_vertical, obj_spikes_horizontal, obj_checkpoint, obj_battery_ring];
 	object_select = 0;
 	debug = false;
 	show_collision = false;
