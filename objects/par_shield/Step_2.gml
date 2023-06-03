@@ -11,7 +11,6 @@
 	}else
 	{
 		use_allow = true;
-		visible = true;
 	}
 	
 	//Disable when player is not sonic

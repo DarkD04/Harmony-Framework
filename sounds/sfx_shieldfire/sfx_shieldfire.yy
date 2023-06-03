@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 0.0,
+  "duration": 0.716939,
   "parent": {
     "name": "Shield",
     "path": "folders/Sounds/Sound Effects/Shield.yy",
