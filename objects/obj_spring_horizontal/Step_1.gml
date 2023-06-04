@@ -38,6 +38,9 @@
 					x_speed = -other.spring_power;
 					ground_speed = -other.spring_power;
 					control_lock = 20;
+					
+					//Knuckles fix
+					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) state = ST_NORMAL;
 					break;
 					
 					case 2:
@@ -70,6 +73,9 @@
 					ground_speed = other.spring_power;
 					x_speed = other.spring_power;
 					control_lock = 20;
+					
+					//Knuckles fix
+					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) state = ST_NORMAL;
 					break;
 					
 					case 2:

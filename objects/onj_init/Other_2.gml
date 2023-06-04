@@ -2,6 +2,9 @@
 	//Dev stuff:
 	global.dev_mode = true;
 	
+	//Character globals:
+	global.character = CHAR_SONIC;
+	
 	// Screen values:
 	global.window_width  = 426;
 	global.window_height = 240;

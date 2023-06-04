@@ -8,6 +8,9 @@ function player_state_normal(){
 		if (ground)
 		{
 			animation = ANIM_STAND;
+		}else
+		{
+			animation = ANIM_WALK;
 		}
 		
 		//Walking animation:

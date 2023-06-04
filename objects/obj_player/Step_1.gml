@@ -1,4 +1,6 @@
 /// @description Pre-main player
+	//Change character
+	character = global.character;
 	
 	//Water run object
 	if(instance_exists(obj_water) && !instance_exists(obj_water_run)) instance_create_depth(x, obj_water.y, 0, obj_water_run);

@@ -11,6 +11,10 @@
 	if(keyboard_check_pressed(vk_f5)) show_player = !show_player;
 	if(keyboard_check_pressed(vk_f2)) room_restart();
 	if(keyboard_check_pressed(vk_f1)) game_restart();
+	if(keyboard_check_pressed(vk_f10))
+	{
+		global.character = (global.character + 1) mod 3;
+	}
 	
 	//Change player debug flag
 	obj_player.debug = debug;

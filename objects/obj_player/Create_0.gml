@@ -1,5 +1,5 @@
 /// @description Values
-	character = CHAR_KNUX;
+	character = global.character;
 	
 	//Movement values:
 	x_speed = 0;		//Horizontal movement speed.
@@ -43,6 +43,7 @@
 	collision_allow = true;
 	attacking = false;
 	gravity_allow = true;
+	ground_collision_allow = true;
 	ceiling_lock = 0;
 	knockout_type = 0;
 	facing = 1;

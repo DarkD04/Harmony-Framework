@@ -23,34 +23,50 @@
 		
 				//Vertical scroll on the ground:
 				if(instance_exists(obj_bubble_shield) && obj_bubble_shield.shield_state = 0 || !instance_exists(obj_bubble_shield)){
-					if(target.y < target_y && target.ground && target.mode != 0) target_y = max(target_y - min(1+abs(y_scroll_speed), 16), target.y - roll_offset)
-					if(target.y < target_y && target.ground && target.mode = 0) target_y = max(target_y - min(6+abs(y_scroll_speed), 16), target.y - roll_offset)
-					if(target.y > target_y && target.ground) target_y = min(target_y + min(6+abs(y_scroll_speed), 16), target.y - roll_offset);
+					if(target.y < target_y && target.ground && target.mode != 0 && target.state != ST_KNUXSLIDE) target_y = max(target_y - min(1+abs(y_scroll_speed), 16), target.y - roll_offset)
+					if(target.y < target_y && target.ground && target.mode = 0 && target.state != ST_KNUXSLIDE) target_y = max(target_y - min(6+abs(y_scroll_speed), 16), target.y - roll_offset)
+					if(target.y > target_y && target.ground && target.state != ST_KNUXSLIDE) target_y = min(target_y + min(6+abs(y_scroll_speed), 16), target.y - roll_offset);
 				}
 		
 				//Scroll camera upwards:
-				if(target.y < target_y-32 && !target.ground) target_y = max(target_y - 16, target.y + 32);
+				if(target.y < target_y-32)
+				{
+					if(!target.ground || target.state = ST_KNUXSLIDE)
+					target_y = max(target_y - 16, target.y + 32);
+				}
 		
 				//Scroll camera downwards:
-				if(target.y > target_y+32 && !target.ground) target_y = min(target_y + 16, target.y - 32 );
+				if(target.y > target_y+32)
+				{
+					if(!target.ground || target.state = ST_KNUXSLIDE)
+					target_y = min(target_y + 16, target.y - 32 );
+				}
 			break;
 			
 			
 			case 1: //Sonic mania camera
 				//That mania smooth focusing
-				if(!target.ground)
+				if(!target.ground || target.state = ST_KNUXSLIDE)
 				{
 					ground_offset = 32;
-				}else
+					
+					//Scroll camera upwards
+					if(target.y < target_y-ground_offset) target_y = max(target_y - 16, target.y + ground_offset);
+		
+					//Scroll camera downwards:
+					if(target.y > target_y+ground_offset) target_y = min(target_y + 16, target.y - ground_offset);
+				}
+				
+				if(target.ground && target.state != ST_KNUXSLIDE)
 				{
 					ground_offset = ground_offset - ground_offset / 8;
+					
+					//Scroll camera upwards
+					if(target.y < target_y-ground_offset+roll_offset) target_y = max(target_y - 16, target.y + ground_offset - roll_offset);
+		
+					//Scroll camera downwards:
+					if(target.y > target_y+ground_offset+roll_offset) target_y = min(target_y + 16, target.y - ground_offset - roll_offset);
 				}
-		
-				//Scroll camera upwards
-				if(target.y < target_y-ground_offset+roll_offset) target_y = max(target_y - 16, target.y + ground_offset - roll_offset);
-		
-				//Scroll camera downwards:
-				if(target.y > target_y+ground_offset+roll_offset) target_y = min(target_y + 16, target.y - ground_offset - roll_offset);
 			break;
 		}
 	}

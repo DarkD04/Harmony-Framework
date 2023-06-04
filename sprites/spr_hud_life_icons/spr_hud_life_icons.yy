@@ -14,6 +14,8 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d842a32f-d8c6-418f-b1b0-3a023db471da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad26cb7a-fcbb-4fcc-a9eb-384691ee434f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db12c6b1-d923-418e-8b84-22a2019ed227",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -43,7 +45,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 3.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -55,6 +57,8 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d842a32f-d8c6-418f-b1b0-3a023db471da","path":"sprites/spr_hud_life_icons/spr_hud_life_icons.yy",},},},"Disabled":false,"id":"81eeaf11-a947-4c8f-8fb4-4a27aff62559","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ad26cb7a-fcbb-4fcc-a9eb-384691ee434f","path":"sprites/spr_hud_life_icons/spr_hud_life_icons.yy",},},},"Disabled":false,"id":"92de2221-1436-4453-9f8b-b08e84bd4559","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"db12c6b1-d923-418e-8b84-22a2019ed227","path":"sprites/spr_hud_life_icons/spr_hud_life_icons.yy",},},},"Disabled":false,"id":"c3b6b0aa-1946-4140-9cba-f44956d78be1","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

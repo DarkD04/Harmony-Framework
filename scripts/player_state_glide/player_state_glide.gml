@@ -1,6 +1,6 @@
 function player_state_glide(){
 	//Trigger the glide
-	if(state = ST_JUMP && Input.ActionPress)
+	if(state = ST_JUMP && Input.ActionPress && character = CHAR_KNUX)
 	{
 		control_lock = 4;
 		glide_speed = 4;
@@ -20,7 +20,13 @@ function player_state_glide(){
 	direction_allow = false;
 	gravity_allow = false;
 	attacking = true;
-
+	
+	//Trigger the slide
+	if(ground)
+	{
+		state = ST_KNUXSLIDE;	
+	}
+	
 	//Adjust y speed
 	if(y_speed < 0.5) y_speed += 0.125;
 	if(y_speed > 0.5) y_speed -= 0.125;
@@ -68,8 +74,9 @@ function player_state_glide(){
 	}
 	
 	//Attach to the wall
-	if(point_check((wall_w + 1) * facing, 0, false))
+	if(point_check((wall_w + 1) * facing, 0, false) && !line_check(wall_w * facing, -hitbox_h - 16) && !line_check(wall_w * facing, hitbox_h + 6))
 	{
+		play_sound(sfx_grab);
 		state = ST_KNUXCLIMB;
 	}
 	
@@ -78,6 +85,15 @@ function player_state_glide(){
 	{
 		state = ST_NORMAL;
 		control_lock = 4;
+	}
+	
+	//Trigger falling if player is not pressing action button
+	if(!Input.Action)
+	{
+		ceiling_lock = 4;
+		x_speed = 0.25 * facing;
+		y_speed = 0;
+		state = ST_KNUXFALL;
 	}
 	
 }

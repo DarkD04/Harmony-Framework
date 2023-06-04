@@ -6,30 +6,36 @@ function player_state_wallclimb(){
 	movement_allow = false;
 	direction_allow = false;
 	gravity_allow = false;
-
 	
 	//Change animation
 	animation = ANIM_KNUXCLIMB;
+	
+	//Standing still
+	if(y_speed = 0) animation = ANIM_KNUXCLIMBIDLE;
 	
 	//Get input presses
 	var mov = Input.Down - Input.Up;
 	
 	//Move up and down
 	y_speed = 1 * mov;
+	x_speed = 0;
 	
 	//When there's no more wall
 	if(!point_check((wall_w + 1) * facing, wall_h, false))
 	{
-		//CHOPP PLEASEEEEE
-		control_lock = 5;
-		//store last position 
-		clamp_storex = x
-		clamp_storey = y
-		state = ST_KNUXLEDGE;
-		//This really depends on how you handle your animation, you must modify this yourself
-		///Remove this if not needed
-		//while(!line_check(wall_w, hitbox_h, true)) y += 1;
-		//while(line_check(wall_w, hitbox_h, true)) y -= 1;
+		if(Input.Up && !Input.Down && !check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h) && !line_check(wall_w * facing, -hitbox_h - 16))
+		{
+			if(obj_camera.smooth_knux_cam)obj_camera.mode = 2;
+			control_lock = 5;
+			clamp_storex = x
+			clamp_storey = y
+			state = ST_KNUXLEDGE;
+		}
+		
+		if(!Input.Up && Input.Down || check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h))
+		{
+			state = ST_KNUXFALL;
+		}
 	}
 	
 	//Jump off the wall

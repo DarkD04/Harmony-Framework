@@ -48,9 +48,15 @@ function player_handle_hurt(){
 	if(invincible_timer != 0 && knockout_type != 0 && state != ST_KNOCKOUT) knockout_type = 0;
 	
 	//Bottomless pit
-	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom)
+	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom && knockout_type != K_DIE)
 	{
+		state = ST_KNOCKOUT;
+		y_speed = -7;
+		x_speed = 0;
+		ground = false;
 		knockout_type = K_DIE;
+		obj_camera.mode = 99;
+		play_sound(sfx_hurt);
 	}
 
 }

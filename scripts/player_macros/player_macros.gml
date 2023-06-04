@@ -40,6 +40,8 @@ function player_macros(){
 	#macro ANIM_KNUXSLIDE 26
 	#macro ANIM_KNUXGETUP 27
 	#macro ANIM_KNUXLEDGE 28
+	#macro ANIM_KNUXLAND 29
+	#macro ANIM_KNUXCLIMBIDLE 30
 	
 	//Shield macros
 	#macro S_NONE -1

@@ -48,6 +48,12 @@ function player_hitbox(){
 			hitbox_h = 14;
 		}
 		
+		//During glide
+		if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE)
+		{
+			hitbox_h = 10;
+		}
+		
 		//Specifically wall climb wall collision offset
 		if(state = ST_KNUXCLIMB)
 		{

@@ -16,7 +16,7 @@ function player_collision(){
 		
 	}
 	
-	if(!on_object)
+	if(!on_object && ground_collision_allow)
 	{
 		//Check landing
 		if(y_speed >= 0 && !ground)

@@ -25,7 +25,7 @@
 	draw_sprite(spr_hudtext, 2, 16 + offset[2], 40);
 	
 	//Draw life icon
-	draw_sprite(spr_hud_life_icons, 0, 16 + offset[3], global.window_height - 26);
+	draw_sprite(spr_hud_life_icons, global.character, 16 + offset[3], global.window_height - 26);
 	
 	//Set font numbers
 	draw_set_font(global.hud_number);

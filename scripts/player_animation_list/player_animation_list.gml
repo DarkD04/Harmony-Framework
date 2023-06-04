@@ -3,7 +3,7 @@ function player_animation_list(){
 	{
 		case CHAR_SONIC:
 		add_animation(ANIM_STAND, spr_sonic_idle, 0.2, 0, true, false);
-		add_animation(ANIM_WALK, spr_sonic_walk, 0, 0, true, true);
+		add_animation(ANIM_WALK, spr_sonic_walk, 3, 0, true, true);
 		add_animation(ANIM_RUN, spr_sonic_run, 0, 0, true, true);
 		add_animation(ANIM_MAXRUN, spr_sonic_peelout, 0, 0, true, true);
 		add_animation(ANIM_ROLL, spr_sonic_roll, 0, 0, true, true);
@@ -19,7 +19,7 @@ function player_animation_list(){
 		
 		case CHAR_TAILS:
 		add_animation(ANIM_STAND, spr_tails_idle, 0.2, 0, true, false);
-		add_animation(ANIM_WALK, spr_tails_walk, 0, 0, true, true);
+		add_animation(ANIM_WALK, spr_tails_walk, 3, 0, true, true);
 		add_animation(ANIM_RUN, spr_tails_run, 0, 0, true, true);
 		add_animation(ANIM_MAXRUN, spr_tails_maxrun, 1, 0, true, true);
 		add_animation(ANIM_ROLL, spr_tails_roll, 0.4, 0, true, false);
@@ -44,7 +44,7 @@ function player_animation_list(){
 		
 		case CHAR_KNUX:
 		add_animation(ANIM_STAND, spr_knuckles_idle, 0.2, 0, true, false);
-		add_animation(ANIM_WALK, spr_knuckles_walk, 1, 0, true, true);
+		add_animation(ANIM_WALK, spr_knuckles_walk, 3, 0, true, true);
 		add_animation(ANIM_RUN, spr_knuckles_run, 0, 0, true, true);
 		add_animation(ANIM_MAXRUN, spr_knuckles_maxrun, 0, 0, true, true);
 		add_animation(ANIM_ROLL, spr_knuckles_roll, 0, 0, true, true);
@@ -58,8 +58,14 @@ function player_animation_list(){
 		add_animation(ANIM_DIE, spr_knuckles_death, 0.3, 0, false, false);
 		add_animation(ANIM_KNUXGLIDE, spr_knuckles_glide, 0.15, 0, true, false);
 		add_animation(ANIM_KNUXGLIDETURN, spr_knuckles_turn, 0.12, 0, false, false);
-		add_animation(ANIM_KNUXCLIMB, spr_knuckles_climb, 0.12, 0, false, false);
+		if(y_speed < 0)add_animation(ANIM_KNUXCLIMB, spr_knuckles_climb, 0.12, 0, true, false);
+		else add_animation(ANIM_KNUXCLIMB, spr_knuckles_climb_down, 0.12, 0, true, false);
+		add_animation(ANIM_KNUXCLIMBIDLE, spr_knuckles_climb_idle, 0.12, 0, false, false);
 		add_animation(ANIM_KNUXLEDGE, spr_knuckles_edge_climb, 4, 0, false, true);
+		add_animation(ANIM_KNUXFALL, spr_knuckles_fall, 0.2, 0, false, false);
+		add_animation(ANIM_KNUXLAND, spr_knuckles_landed, 0.2, 0, false, false);
+		add_animation(ANIM_KNUXSLIDE, spr_knuckles_slide, 0.2, 0, false, false);
+		add_animation(ANIM_KNUXGETUP, spr_knuckles_getup, 0.2, 0, false, false);
 		break;
 	}
 }

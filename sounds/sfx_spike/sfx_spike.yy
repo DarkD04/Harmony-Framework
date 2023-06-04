@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.701655,
   "parent": {
-    "name": "Player",
-    "path": "folders/Sounds/Sound Effects/Player.yy",
+    "name": "Objects",
+    "path": "folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload": false,
   "sampleRate": 44100,

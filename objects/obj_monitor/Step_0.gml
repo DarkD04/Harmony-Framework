@@ -3,7 +3,7 @@
 	collision_flag = true;
 	
 	//Disable flag when attacking
-	if(obj_player.animation = ANIM_ROLL && obj_player.y_speed >= 0 || obj_player.state = ST_SPINDASH || obj_player.state = ST_ROLL)
+	if(obj_player.animation = ANIM_ROLL && obj_player.y_speed >= 0 || obj_player.state = ST_SPINDASH || obj_player.state = ST_ROLL || obj_player.state = ST_KNUXGLIDE)
 		collision_flag = false;
 	
 	

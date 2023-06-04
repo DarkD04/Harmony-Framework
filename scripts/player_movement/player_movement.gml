@@ -58,5 +58,8 @@ function player_movement(){
 	touching_ceiling = false;
 	
 	//If player is inside ceiling
-	if(line_check(-hitbox_w, -hitbox_h-1) || line_check(hitbox_w, -hitbox_h-1)) touching_ceiling = true
+	if(line_check(-hitbox_w, -hitbox_h-8) || line_check(hitbox_w, -hitbox_h-8))
+	{
+		touching_ceiling = true
+	}
 }
