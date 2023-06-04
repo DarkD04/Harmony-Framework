@@ -2,8 +2,8 @@
 	{
 		//Set stage music and loop points
 		stage_music = bgm_test;
-		loop_start = 1.261;
-		loop_end = 48.469;
+		loop_start = 5.354;
+		loop_end = 78.056;
 		
 		//Set level name
 		stage_name = "ARBOREAL AGATE";
