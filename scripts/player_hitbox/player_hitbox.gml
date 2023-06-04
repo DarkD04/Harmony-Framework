@@ -47,6 +47,12 @@ function player_hitbox(){
 			hitbox_w = 7;
 			hitbox_h = 14;
 		}
+		
+		//Specifically wall climb wall collision offset
+		if(state = ST_KNUXCLIMB)
+		{
+			wall_h = 6 * sign(y_speed)
+		}
 		break;
 	}
 	

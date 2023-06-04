@@ -42,6 +42,7 @@
 	detach_allow = true;
 	collision_allow = true;
 	attacking = false;
+	gravity_allow = true;
 	ceiling_lock = 0;
 	knockout_type = 0;
 	facing = 1;

@@ -56,8 +56,10 @@ function player_animation_list(){
 		add_animation(ANIM_SKIDTURN, spr_knuckles_skidturn, 0.3, 0, false, false);
 		add_animation(ANIM_HURT, spr_knuckles_hurt, 0.3, 0, false, false);
 		add_animation(ANIM_DIE, spr_knuckles_death, 0.3, 0, false, false);
-		add_animation(ANIM_KNUXGLIDE, spr_knuckles_glide, 0.3, 0, true, false);
-		add_animation(ANIM_KNUXGLIDETURN, spr_knuckles_turn, 0.15, 0, false, false);
+		add_animation(ANIM_KNUXGLIDE, spr_knuckles_glide, 0.15, 0, true, false);
+		add_animation(ANIM_KNUXGLIDETURN, spr_knuckles_turn, 0.12, 0, false, false);
+		add_animation(ANIM_KNUXCLIMB, spr_knuckles_climb, 0.12, 0, false, false);
+		add_animation(ANIM_KNUXLEDGE, spr_knuckles_edge_climb, 4, 0, false, true);
 		break;
 	}
 }

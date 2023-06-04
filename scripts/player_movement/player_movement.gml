@@ -25,7 +25,7 @@ function player_movement(){
 	}
 	
 	//Airborn events:
-	if(!ground && state != ST_KNUXGLIDE)
+	if(!ground && gravity_allow)
 	{
 		//Add gravity to y speed:
 		y_speed += y_accel/steps;	

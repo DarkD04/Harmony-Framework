@@ -35,6 +35,11 @@ function player_macros(){
 	#macro ANIM_TAILSTIRED 21
 	#macro ANIM_KNUXGLIDE 22
 	#macro ANIM_KNUXGLIDETURN 23
+	#macro ANIM_KNUXCLIMB 24
+	#macro ANIM_KNUXFALL 25
+	#macro ANIM_KNUXSLIDE 26
+	#macro ANIM_KNUXGETUP 27
+	#macro ANIM_KNUXLEDGE 28
 	
 	//Shield macros
 	#macro S_NONE -1
