@@ -6,6 +6,7 @@ function player_state_wallclimb(){
 	movement_allow = false;
 	direction_allow = false;
 	gravity_allow = false;
+
 	
 	//Change animation
 	animation = ANIM_KNUXCLIMB;
@@ -20,10 +21,12 @@ function player_state_wallclimb(){
 	if(!point_check((wall_w + 1) * facing, wall_h, false))
 	{
 		//CHOPP PLEASEEEEE
-		obj_camera.mode = 2;
-		control_lock = 4;
+		control_lock = 5;
+		//store last position 
+		clamp_storex = x
+		clamp_storey = y
 		state = ST_KNUXLEDGE;
-		x += 22 * facing; //This really depends on how you handle your animation, you must modify this yourself
+		//This really depends on how you handle your animation, you must modify this yourself
 		///Remove this if not needed
 		//while(!line_check(wall_w, hitbox_h, true)) y += 1;
 		//while(line_check(wall_w, hitbox_h, true)) y -= 1;
