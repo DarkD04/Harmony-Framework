@@ -30,5 +30,5 @@ function player_state_ledgeclimb(){
 	obj_camera.knux_offset_y = clamp_storey + positionarrayy[length];
 	
 	//Animation is over, return to normal state
-	if(animation_frame = image_number - 1 && control_lock = 0) state = ST_NORMAL;
+	if(animation_frame == image_number - 1 && control_lock = 0) state = ST_NORMAL;
 }

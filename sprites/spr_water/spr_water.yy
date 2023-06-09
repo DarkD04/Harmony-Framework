@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Effects",
-    "path": "folders/Sprites/Stage/Effects.yy",
+    "name": "Water",
+    "path": "folders/Sprites/Stage/Common Objects/Water.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,6 +1,6 @@
 function player_state_lookup(){
 	//Trigger look down:
-	if(state = ST_NORMAL && ground && abs(ground_speed) < 0.5 && mode = 0 && Input.Up)
+	if(state == ST_NORMAL && ground && abs(ground_speed) < 0.5 && mode = 0 && Input.Up)
 	{
 		animation = ANIM_LOOKUP;
 		state = ST_LOOKUP;

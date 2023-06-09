@@ -31,6 +31,8 @@ function player_macros(){
 	#macro ANIM_SKIDTURN 10
 	#macro ANIM_HURT 11
 	#macro ANIM_DIE 12
+	#macro ANIM_DROWN 13
+	#macro ANIM_BREATHE 14
 	#macro ANIM_TAILSFLY 20
 	#macro ANIM_TAILSTIRED 21
 	#macro ANIM_KNUXGLIDE 22
@@ -58,4 +60,5 @@ function player_macros(){
 	//Misc.
 	#macro K_HURT 1
 	#macro K_DIE 2
+	#macro K_DROWN 3
 }

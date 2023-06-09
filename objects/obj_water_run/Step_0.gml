@@ -3,7 +3,7 @@
 	y = obj_water.y + (1 * abs(1-obj_player.on_object));
 	
 	//Change collision size
-	image_xscale = 2;
+	image_xscale = 4;
 	image_yscale = 0.5;
 	
 	//Disable flag

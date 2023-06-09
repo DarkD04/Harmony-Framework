@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 147.1552,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Stage Music",
+    "path": "folders/Sounds/Music/Stage Music.yy",
   },
   "preload": false,
   "sampleRate": 44100,

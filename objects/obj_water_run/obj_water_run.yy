@@ -8,14 +8,15 @@
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"par_solid_object","path":"objects/par_solid_object/par_solid_object.yy",},"propertyId":{"name":"collision_type","path":"objects/par_solid_object/par_solid_object.yy",},"value":"\"Semi Solid\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"par_solid","path":"objects/par_solid/par_solid.yy",},"propertyId":{"name":"collision_type","path":"objects/par_solid/par_solid.yy",},"value":"\"Semi Solid\"",},
   ],
   "parent": {
     "name": "Water",
     "path": "folders/Objects/Stage/Important/Water.yy",
   },
   "parentObjectId": {
-    "name": "par_solid_object",
-    "path": "objects/par_solid_object/par_solid_object.yy",
+    "name": "par_solid",
+    "path": "objects/par_solid/par_solid.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

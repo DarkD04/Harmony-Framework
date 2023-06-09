@@ -1,6 +1,6 @@
 function player_state_lookdown(){
 	//Trigger look down:
-	if(state = ST_NORMAL && ground && abs(ground_speed) < 1 && mode = 0 && Input.Down)
+	if(state == ST_NORMAL && ground && abs(ground_speed) < 1 && mode = 0 && Input.Down)
 	{
 		animation = ANIM_LOOKDOWN;
 		state = ST_LOOKDOWN;

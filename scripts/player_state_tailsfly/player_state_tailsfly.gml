@@ -1,6 +1,6 @@
 function player_state_tailsfly(){
 	//Trigger fly
-	if(state = ST_JUMP && Input.ActionPress && character = CHAR_TAILS)
+	if(state == ST_JUMP && Input.ActionPress && character == CHAR_TAILS)
 	{
 		tails_timer = 480;
 		y_accel = 0.03125;
@@ -23,7 +23,7 @@ function player_state_tailsfly(){
 	
 	//Changing gravity depending on the action
 	if(Input.ActionPress && tails_timer != 0) y_accel = -0.125;
-	if(y_speed <= -1 || touching_ceiling || tails_timer = 0) y_accel = 0.03125;
+	if(y_speed <= -1 || touching_ceiling || tails_timer == 0) y_accel = 0.03125;
 	
 	//Subtract timer
 	tails_timer--;
@@ -33,7 +33,7 @@ function player_state_tailsfly(){
 	if(ground) state = ST_NORMAL;
 	
 	//Tired tails
-	if(tails_timer = 0)
+	if(tails_timer == 0)
 	{
 		animation = ANIM_TAILSTIRED;
 	}
@@ -57,5 +57,5 @@ function player_state_tailsfly(){
 		audio_stop_sound(sfx_tailstired);
 	}
 	//Weird gravity fix
-	if(tails_timer = 480-1) y_accel = 0.03125;
+	if(tails_timer == 480-1) y_accel = 0.03125;
 }

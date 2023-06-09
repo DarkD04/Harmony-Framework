@@ -63,7 +63,7 @@ function player_hitbox(){
 	}
 	
 	//Change floor position fix
-	if(mode = 0 && ceiling_lock = 0)
+	if(mode = 0 && ceiling_lock = 0 && ground || state = ST_JUMP)
 	{
 		y += (old_hitbox_h - hitbox_h) * y_dir;
 	}

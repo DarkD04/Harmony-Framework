@@ -74,6 +74,7 @@
 	visual_angle = 0;
 	ceiling_landing = 0;
 	plane = 0;
+	air = 0;
 	jump_anim_speed = 0;
 	shield = S_NONE;
 	shield_list = [obj_shield, obj_fire_shield, obj_electric_shield, obj_bubble_shield];

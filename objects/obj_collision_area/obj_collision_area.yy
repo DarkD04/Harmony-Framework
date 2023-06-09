@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Harmony Framework Plus",
-    "path": "Harmony Framework Plus.yyp",
+    "name": "Breakables",
+    "path": "folders/Objects/Stage/Common Objects/Breakables.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -23,7 +23,7 @@ function player_state_knuxslide(){
 		ground_speed = approach(ground_speed, 0, 0.125);
 		
 		//Create dust effect
-		if(global.object_timer mod 8 = 0 && ground_speed != 0)
+		if(global.object_timer mod 8 == 0 && ground_speed != 0)
 		{
 			play_sound(sfx_slide);
 			create_effect(x+random_range(-8, 8), y + hitbox_h, spr_dust_effect, 0.4, depth-1, random_range(0.8, 1.2) * facing, -2, 0, 0.15);
@@ -31,8 +31,8 @@ function player_state_knuxslide(){
 	}
 	
 	//Change animation
-	if(ground_speed = 0) animation = ANIM_KNUXGETUP;
+	if(ground_speed == 0) animation = ANIM_KNUXGETUP;
 	
 	//Reset the state
-	if(animation = ANIM_KNUXGETUP && animation_frame = image_number-1) state = ST_NORMAL;
+	if(animation == ANIM_KNUXGETUP && animation_frame == image_number-1) state = ST_NORMAL;
 }

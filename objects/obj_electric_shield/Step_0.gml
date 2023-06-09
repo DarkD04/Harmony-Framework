@@ -6,7 +6,7 @@
 	if(image_index <= 12 || image_index >= 20) depth = obj_player.depth - 10; else depth = obj_player.depth + 10;
 	
 	//Double jump
-	if(Input.ActionPress && !obj_player.ground && obj_player.state = ST_JUMP && shield_state = 0 && use_allow) 
+	if(Input.ActionPress && !obj_player.ground && obj_player.state == ST_JUMP && shield_state == 0 && use_allow) 
 	{
 		//Player double jump
 		obj_player.y_speed = -5.5;
@@ -24,7 +24,7 @@
 	}
 	
 	//Reset state flag
-	if(shield_state = 1 && obj_player.ground)
+	if(shield_state == 1 && obj_player.ground)
 	{
 		shield_state = false;	
 	}

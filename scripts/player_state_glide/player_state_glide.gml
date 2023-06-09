@@ -1,6 +1,6 @@
 function player_state_glide(){
 	//Trigger the glide
-	if(state = ST_JUMP && Input.ActionPress && character = CHAR_KNUX)
+	if(state == ST_JUMP && Input.ActionPress && character == CHAR_KNUX)
 	{
 		control_lock = 4;
 		glide_speed = 4;
@@ -35,7 +35,7 @@ function player_state_glide(){
 	x_speed = glide_speed * dsin(knuckles_angle);
 	
 	//Accelerate
-	if(knuckles_angle = 90 || knuckles_angle = -90)glide_speed += 0.015625;
+	if(knuckles_angle == 90 || knuckles_angle == -90)glide_speed += 0.015625;
 	
 	//Limit the glide speed
 	glide_speed = clamp(glide_speed, -24, 24);
@@ -44,7 +44,7 @@ function player_state_glide(){
 	var mov = Input.Right - Input.Left;
 	
 	//Glide turn animation
-	if(mov = -1 && facing = 1 || mov = 1 && facing = -1)
+	if(mov == -1 && facing == 1 || mov == 1 && facing == -1)
 	{
 		animation = ANIM_KNUXGLIDETURN;
 	}
@@ -56,7 +56,7 @@ function player_state_glide(){
 	knuckles_angle = approach(knuckles_angle, 90 * facing, 2.8125);
 	
 	//glide turning
-	if(animation = ANIM_KNUXGLIDETURN)
+	if(animation == ANIM_KNUXGLIDETURN)
 	{
 		animation_frame = knux_frame;	
 		knux_frame = clamp(knux_frame - animation_speed * facing, 0, sprite_get_number(spr_knuckles_turn)-1);

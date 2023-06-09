@@ -1,8 +1,8 @@
 function player_state_roll(){
 	//Trigger rolling
-	if(state = ST_NORMAL && Input.Down && abs(ground_speed) > 1 && ground && !landed
-	|| state = ST_JUMP && Input.Down && abs(ground_speed) > 1 && ground
-	|| state = ST_LOOKDOWN && abs(ground_speed) > 1 && ground)
+	if(state == ST_NORMAL && Input.Down && abs(ground_speed) > 1 && ground && !landed
+	|| state == ST_JUMP && Input.Down && abs(ground_speed) > 1 && ground
+	|| state == ST_LOOKDOWN && abs(ground_speed) > 1 && ground)
 	{
 		play_sound(sfx_roll);
 		animation = ANIM_ROLL;
@@ -32,7 +32,7 @@ function player_state_roll(){
 	//Stop rolling
 	if(ground_angle < 40 || ground_angle > 360 - 40)
 	{
-		if(ground_speed = 0 && !force_roll && ground|| landed && !force_roll) state = ST_NORMAL;
+		if(ground_speed == 0 && !force_roll && ground|| landed && !force_roll) state = ST_NORMAL;
 	}
 	if(landed && !force_roll) state = ST_NORMAL;
 	

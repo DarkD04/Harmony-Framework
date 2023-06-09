@@ -10,11 +10,11 @@ function player_state_normal(){
 			animation = ANIM_STAND;
 		}else
 		{
-			animation = ANIM_WALK;
+			if(animation != ANIM_BREATHE)animation = ANIM_WALK;
 		}
 		
 		//Walking animation:
-		if(ground_speed != 0 || animation = ANIM_SKIDTURN)
+		if(ground_speed != 0 || animation == ANIM_SKIDTURN)
 		{
 			animation = ANIM_WALK;
 			if(ground)animation_set_speed = floor(max(0, 8-abs(obj_player.ground_speed)));//mfw im an accuracy whore

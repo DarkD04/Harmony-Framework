@@ -10,17 +10,18 @@
 		bubbleframe = (flickercount == 0) ? bubbleframe + 1 : bubbleframe; //every 2 frames increase animation frame
 		bubbleframe = bubbleframe mod 18
 		
-		if flickercount < 2{
+		if (flickercount < 2)
+		{
 			sprite_index = spr_bubble_shield;
-			image_index = bubbleframe mod 2;
+			image_index = bubbleframe mod image_number;
 		}else{
 			sprite_index = spr_bubble_shield_other;
-			image_index = bubbleframe mod 9;
+			image_index = bubbleframe mod image_number;
 		}
 	}
 	
 	//Double jump
-	if(Input.ActionPress && !obj_player.ground && obj_player.state = ST_JUMP && shield_state = 0 && use_allow) 
+	if(Input.ActionPress && !obj_player.ground && obj_player.state == ST_JUMP && shield_state == 0 && use_allow) 
 	{
 		//Player double jump
 		obj_player.x_speed = 0;
@@ -40,13 +41,13 @@
 	}
 	
 	//Reset state flag
-	if(shield_state = 1 && obj_player.ground || shield_state = 1 && obj_player.y_speed < 0)
+	if(shield_state == 1 && obj_player.ground || shield_state == 1 && obj_player.y_speed < 0)
 	{
 		//Player bounce
 		if(obj_player.ground)
 		{
-			obj_player.x_speed = -7.5 * dsin(obj_player.ground_angle);
-			obj_player.y_speed = -7.5 * dcos(obj_player.ground_angle);
+			obj_player.x_speed = (-7.5 / (1 + obj_player.underwater)) * dsin(obj_player.ground_angle);
+			obj_player.y_speed = (-7.5 / (1 + obj_player.underwater)) * dcos(obj_player.ground_angle);
 			obj_player.ground = false;
 			obj_player.state = ST_JUMP;
 			obj_player.jump_flag = true;
@@ -66,14 +67,17 @@
 	}
 	
 	//Bounce stop loop point
-	if(sprite_index = spr_bubble_shield_bounce && image_index >= image_number - 1)
+	if(sprite_index == spr_bubble_shield_bounce && image_index >= image_number - 1)
 	{
 		image_index = image_number-1;	
 	}
 	
 	//Bounce reverse end
-	if(sprite_index = spr_bubble_shield_bounce_reverse && image_index >= image_number - 1)
+	if(sprite_index == spr_bubble_shield_bounce_reverse && image_index >= image_number - 1)
 	{
 		sprite_index = spr_bubble_shield;
 		image_index = 0;
 	}
+	
+	//Reset players air
+	obj_player.air = 0;

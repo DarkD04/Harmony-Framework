@@ -7,7 +7,7 @@
 	if(keyboard_check_pressed(vk_tab)) debug = !debug;
 	if(keyboard_check_pressed(vk_f9)) show_collision = !show_collision;
 	if(keyboard_check_pressed(vk_f8)) show_hitbox = !show_hitbox;
-	if(keyboard_check_pressed(vk_f7)) show_fps = !show_fps;
+	if(keyboard_check_pressed(vk_f3)) show_fps = !show_fps;
 	if(keyboard_check_pressed(vk_f5)) show_player = !show_player;
 	if(keyboard_check_pressed(vk_f2)) room_restart();
 	if(keyboard_check_pressed(vk_f1)) game_restart();
@@ -15,6 +15,7 @@
 	{
 		global.character = (global.character + 1) mod 3;
 	}
+	if(keyboard_check(vk_f6)) room_speed = 10 else room_speed = 60
 	
 	//Change player debug flag
 	obj_player.debug = debug;

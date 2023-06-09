@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 19.11374,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Jingle",
+    "path": "folders/Sounds/Music/Jingle.yy",
   },
   "preload": false,
   "sampleRate": 44100,

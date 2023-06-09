@@ -15,6 +15,8 @@ function player_animation_list(){
 		add_animation(ANIM_SKIDTURN, spr_sonic_skidturn, 0.3, 0, false, false);
 		add_animation(ANIM_HURT, spr_sonic_hurt, 0.3, 0, false, false);
 		add_animation(ANIM_DIE, spr_sonic_death, 0.3, 0, false, false);
+		add_animation(ANIM_DROWN, spr_sonic_drown, 0.3, 0, false, false);
+		add_animation(ANIM_BREATHE, spr_sonic_breathe, 0.3, 0, false, false);
 		break;
 		
 		case CHAR_TAILS:
@@ -40,6 +42,8 @@ function player_animation_list(){
 			add_animation(ANIM_TAILSFLY, spr_tails_swim, 0.3, 0, true, false);
 			add_animation(ANIM_TAILSTIRED, spr_tails_swim_tired, 0.2, 0, true, false);	
 		}
+		add_animation(ANIM_DROWN, spr_tails_drown, 0.3, 0, false, false);
+		add_animation(ANIM_BREATHE, spr_tails_breathe, 0.3, 0, false, false);
 		break;
 		
 		case CHAR_KNUX:
@@ -66,6 +70,8 @@ function player_animation_list(){
 		add_animation(ANIM_KNUXLAND, spr_knuckles_landed, 0.2, 0, false, false);
 		add_animation(ANIM_KNUXSLIDE, spr_knuckles_slide, 0.2, 0, false, false);
 		add_animation(ANIM_KNUXGETUP, spr_knuckles_getup, 0.2, 0, false, false);
+		add_animation(ANIM_DROWN, spr_knuckles_drown, 0.3, 0, false, false);
+		add_animation(ANIM_BREATHE, spr_knuckles_breathe, 0.3, 0, false, false);
 		break;
 	}
 }

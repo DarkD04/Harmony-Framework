@@ -11,7 +11,7 @@ function player_state_wallclimb(){
 	animation = ANIM_KNUXCLIMB;
 	
 	//Standing still
-	if(y_speed = 0) animation = ANIM_KNUXCLIMBIDLE;
+	if(y_speed == 0) animation = ANIM_KNUXCLIMBIDLE;
 	
 	//Get input presses
 	var mov = Input.Down - Input.Up;

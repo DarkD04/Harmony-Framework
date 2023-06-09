@@ -20,5 +20,5 @@ function player_state_knuxfall(){
 	}
 	
 	//The end of animation
-	if(animation = ANIM_KNUXLAND && animation_frame = image_number-1 && !landed) state = ST_NORMAL;
+	if(animation == ANIM_KNUXLAND && animation_frame == image_number-1 && !landed) state = ST_NORMAL;
 }

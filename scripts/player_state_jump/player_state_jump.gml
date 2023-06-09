@@ -1,6 +1,6 @@
 function player_state_jump(){
 	//Trigger jump
-	if(state = ST_NORMAL || state = ST_ROLL || state = ST_SKID)
+	if(state == ST_NORMAL || state == ST_ROLL || state == ST_SKID)
 	{
 		if(Input.ActionPress && ground && !touching_ceiling && !force_roll){
 			y_speed -= jump_strenght*dcos(ground_angle);	

@@ -1,6 +1,6 @@
 function player_state_spindash(){
 	//Trigger the spindash
-	if(state = ST_LOOKDOWN && Input.ActionPress)
+	if(state == ST_LOOKDOWN && Input.ActionPress)
 	{
 		audio_sound_pitch(sfx_spindash, 1);
 		spindash_rev = 0;
@@ -12,7 +12,7 @@ function player_state_spindash(){
 	if(state != ST_SPINDASH) exit;
 	
 	//Create dust effect
-	if(global.object_timer mod 4 = 0) create_effect(x - hitbox_w * facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, (2.5 * facing) * dcos(random_range(180, 270)), 2.5 * dsin(random_range(180, 270)));
+	if(global.object_timer mod 4 == 0) create_effect(x - hitbox_w * facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, (2.5 * facing) * dcos(random_range(180, 270)), 2.5 * dsin(random_range(180, 270)));
 	
 	//Stop the movement
 	ground_speed = 0;

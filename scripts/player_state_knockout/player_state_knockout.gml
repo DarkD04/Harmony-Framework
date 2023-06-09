@@ -23,14 +23,16 @@ function player_state_knockout(){
 		break;
 		
 		case K_DIE:
+		
+		case K_DROWN:
 			//Change player depth
 			depth = layer_get_depth("Utilities");
 			
 			//Remove underwater physics
-			underwater = false;
+			if(knockout_type == K_DIE)underwater = false;
 			
 			//Change animation
-			animation = ANIM_DIE;
+			if(knockout_type == K_DIE)animation = ANIM_DIE; else animation = ANIM_DROWN;
 			
 			//Disable collision
 			collision_allow = false;
@@ -46,7 +48,7 @@ function player_state_knockout(){
 			speed_shoes_flag = false;
 			
 			//Fade out
-			if(death_timer = 80)
+			if(death_timer == 80)
 			{
 				obj_fade.fade_speed = 3;
 				obj_fade.fade_type = fade_out;
@@ -54,8 +56,15 @@ function player_state_knockout(){
 				obj_music.fade = MusicFadeOut;
 			}
 			
+			//Create bunch of bubbles for drowning event
+			if(global.object_timer mod 4 == 0 && knockout_type == K_DROWN){
+				var bubble = instance_create_depth(x, y-12, depth-1, obj_bubble);
+				bubble.type = 0;	
+				bubble.angle = random(360);
+			}
+			
 			//Restart
-			if(death_timer = 140)
+			if(death_timer == 140)
 			{
 				room_restart();
 			}

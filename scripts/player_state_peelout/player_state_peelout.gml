@@ -1,6 +1,6 @@
 function player_state_peelout(){
 	//Trigger peel out
-	if(state = ST_LOOKUP && Input.ActionPress && ground && character = CHAR_SONIC)
+	if(state == ST_LOOKUP && Input.ActionPress && ground && character == CHAR_SONIC)
 	{
 		play_sound(sfx_peelout_charge)
 		state = ST_PEELOUT
@@ -11,7 +11,7 @@ function player_state_peelout(){
 	if(state != ST_PEELOUT) exit;
 	
 	//Create dust effect
-	if(global.object_timer mod 3 = 0) create_effect(x - hitbox_w * facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, (3 * facing) * dcos(random_range(180, 270)), 3 * dsin(random_range(180, 270)));
+	if(global.object_timer mod 3 == 0) create_effect(x - hitbox_w * facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, (3 * facing) * dcos(random_range(180, 270)), 3 * dsin(random_range(180, 270)));
 	
 	//Stop movement
 	ground_speed = 0;

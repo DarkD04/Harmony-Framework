@@ -43,11 +43,11 @@ function player_handle_tails(){
 			with(obj_player)
 			{
 				//Rotating by speed
-				if(state = ST_JUMP || state = ST_ROLL && !ground)
+				if(state == ST_JUMP || state == ST_ROLL && !ground)
 				{
 					if(sign(x_speed) != 0)other.facing = sign(x_speed);
-					if(other.facing = 1) other.visual_angle = darctan2(y_speed, -x_speed)-180;
-					if(other.facing = -1) other.visual_angle = darctan2(-y_speed, x_speed)-180;
+					if(other.facing == 1) other.visual_angle = darctan2(y_speed, -x_speed)-180;
+					if(other.facing == -1) other.visual_angle = darctan2(-y_speed, x_speed)-180;
 				}
 				
 				//Ground angle
