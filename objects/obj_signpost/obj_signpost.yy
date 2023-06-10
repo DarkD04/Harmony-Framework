@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_signpost_base",
-    "path": "sprites/spr_signpost_base/spr_signpost_base.yy",
+    "name": "spr_signpost_editor",
+    "path": "sprites/spr_signpost_editor/spr_signpost_editor.yy",
   },
   "spriteMaskId": null,
   "visible": true,

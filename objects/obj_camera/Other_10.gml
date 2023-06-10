@@ -19,13 +19,12 @@
 				var y_scroll_speed;
 	
 				//Get vertical y speed:
-				y_scroll_speed = (target.ground_speed * dsin(target.ground_angle))
+				y_scroll_speed = max(abs(target.ground_speed * dsin(target.ground_angle)), 6)
 		
 				//Vertical scroll on the ground:
 				if(instance_exists(obj_bubble_shield) && obj_bubble_shield.shield_state = 0 || !instance_exists(obj_bubble_shield)){
-					if(target.y < target_y && target.ground && target.mode != 0 && target.state != ST_KNUXSLIDE) target_y = max(target_y - min(1+abs(y_scroll_speed), 16), target.y - roll_offset)
-					if(target.y < target_y && target.ground && target.mode = 0 && target.state != ST_KNUXSLIDE) target_y = max(target_y - min(6+abs(y_scroll_speed), 16), target.y - roll_offset)
-					if(target.y > target_y && target.ground && target.state != ST_KNUXSLIDE) target_y = min(target_y + min(6+abs(y_scroll_speed), 16), target.y - roll_offset);
+					if(target.y < target_y && target.ground && target.state != ST_KNUXSLIDE) target_y = max(target_y - min(y_scroll_speed, 16), target.y - roll_offset)
+					if(target.y > target_y && target.ground && target.state != ST_KNUXSLIDE) target_y = min(target_y + min(y_scroll_speed, 16), target.y - roll_offset);
 				}
 		
 				//Scroll camera upwards:
@@ -70,3 +69,5 @@
 			break;
 		}
 	}
+	
+	

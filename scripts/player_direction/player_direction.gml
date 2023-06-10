@@ -3,7 +3,7 @@ function player_direction(){
 	if(!direction_allow) exit;
 	
 	//Get input difference:
-	var input_press = Input.Right - Input.Left;
+	var input_press = hold_right - hold_left;
 	
 	//On ground direction:
 	if(ground)

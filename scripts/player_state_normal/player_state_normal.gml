@@ -40,5 +40,26 @@ function player_state_normal(){
 			animation = ANIM_MAXRUN;
 			animation_set_speed = 1;
 		}
-	
+		
+		//Ledge animation
+		if(!line_check(0, hitbox_h+16) && ground_speed == 0 && ground && !on_object ||
+		!check_object(0, 0, 1, hitbox_h+2) && ground_speed == 0 && ground && on_object)
+		{
+			//Change animation
+			animation = ANIM_LEDGE;
+			
+			//Change direction
+			if(!line_check(hitbox_w, hitbox_h+16) && !check_object(-wall_w, 0, wall_w, hitbox_h+2)) facing = 1;
+			if(!line_check(-hitbox_w, hitbox_h+16) && !check_object(wall_w, 0, -wall_w, hitbox_h+2)) facing = -1;
+		}
+		
+	//Get input presses
+	var mov = hold_right - hold_left;
+		
+	//Pushing animation
+	if(point_check((wall_w + 1) * facing, wall_h) && mov = facing && mov != 0 && ground && abs(ground_speed) <= x_accel||
+	check_object((wall_w + 1) * facing, hitbox_h, (wall_w + 1) * facing, hitbox_h) && mov = facing && mov != 0 && ground && abs(ground_speed) <= x_accel)
+	{
+		animation = ANIM_PUSH;	
+	}
 }

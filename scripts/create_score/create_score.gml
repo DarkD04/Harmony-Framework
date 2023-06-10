@@ -1,6 +1,6 @@
-function create_score(){
+function create_score(offx = 0, offy = 0){
 	//Crate score object
-	var Object = instance_create_depth(x, y, depth-1, obj_score_effect);
+	var Object = instance_create_depth(x+offx, y+offy, depth-1, obj_score_effect);
 	
 	//Add score depending on the chain
 	if(obj_level.badnik_chain = 1){

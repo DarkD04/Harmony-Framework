@@ -1,7 +1,7 @@
 function player_state_roll(){
 	//Trigger rolling
-	if(state == ST_NORMAL && Input.Down && abs(ground_speed) > 1 && ground && !landed
-	|| state == ST_JUMP && Input.Down && abs(ground_speed) > 1 && ground
+	if(state == ST_NORMAL && hold_down && abs(ground_speed) > 1 && ground && !landed
+	|| state == ST_JUMP && hold_down && abs(ground_speed) > 1 && ground
 	|| state == ST_LOOKDOWN && abs(ground_speed) > 1 && ground)
 	{
 		play_sound(sfx_roll);
@@ -36,9 +36,11 @@ function player_state_roll(){
 	}
 	if(landed && !force_roll) state = ST_NORMAL;
 	
+	//Get input
+	var mov = hold_right - hold_left;
+	
 	//Turning to different direction
-	if(ground_speed > 0 && Input.Left && !Input.Right && !force_roll) ground_speed -= 0.125;
-	if(ground_speed < 0 && !Input.Left && Input.Right && !force_roll) ground_speed += 0.125;	
+	if(mov = -sign(ground_speed) && !force_roll) ground_speed -= 0.125 * -mov;	
 	
 	//Force roll push
 	if(abs(ground_speed) < 0.5 && force_roll)

@@ -1,7 +1,7 @@
 function player_control(){
 	if(!movement_allow) exit;
 	//Temp value
-	var movement = obj_input.Right - obj_input.Left;
+	var movement = hold_right - hold_left;
 	
 	//Ground movement:
 	if(ground)

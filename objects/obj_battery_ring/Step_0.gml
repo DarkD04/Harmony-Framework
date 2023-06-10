@@ -7,7 +7,7 @@
 	//Bounce physics
 	while(obj_check_point(x, bbox_bottom, true) && y_speed > 0)
 	{
-		y_speed *= -1;
+		y_speed = -4;
 		y -= 1;
 		bounce = true;
 	}

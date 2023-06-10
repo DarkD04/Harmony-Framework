@@ -67,8 +67,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Player",
-    "path": "texturegroups/Player",
+    "name": "Sonic",
+    "path": "texturegroups/Sonic",
   },
   "type": 0,
   "VTile": false,

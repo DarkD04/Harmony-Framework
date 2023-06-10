@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Effects",
-    "path": "folders/Sprites/Effects.yy",
+    "name": "Water",
+    "path": "folders/Sprites/Stage/Common Objects/Water.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -75,8 +75,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "HUD",
+    "path": "texturegroups/HUD",
   },
   "type": 0,
   "VTile": false,

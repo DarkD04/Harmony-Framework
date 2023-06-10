@@ -1,7 +1,7 @@
 /// @description Script
 	//Animation speed
 	image_speed = 0.65;
-	back.image_speed = 0.65;
+	back.image_index = image_index;
 	
 	//Reset stuff
 	sprite_index = spr_fire_shield_front
@@ -35,7 +35,7 @@
 	if(!is_back)
 	{
 		//Double jump
-		if(Input.ActionPress && !obj_player.ground && obj_player.state == ST_JUMP && shield_state == 0 && use_allow) 
+		if(obj_player.press_action && !obj_player.ground && obj_player.state == ST_JUMP && shield_state == 0 && use_allow) 
 		{
 			//Dash the player
 			obj_player.x_speed = 8 * obj_player.facing;

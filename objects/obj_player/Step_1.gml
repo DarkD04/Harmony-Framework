@@ -14,6 +14,9 @@
 	ceiling_allow = true;
 	detach_allow = true;
 	
+	//Player input scripts
+	player_get_input();
+	
 	//Hande player physics values
 	player_handle_physics();
 	

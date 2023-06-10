@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sprInvSpark",
-    "path": "sprites/sprInvSpark/sprInvSpark.yy",
+    "name": "spr_inv_sparkle",
+    "path": "sprites/spr_inv_sparkle/spr_inv_sparkle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

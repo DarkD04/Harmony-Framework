@@ -1,6 +1,6 @@
 function player_state_tailsfly(){
 	//Trigger fly
-	if(state == ST_JUMP && Input.ActionPress && character == CHAR_TAILS)
+	if(state == ST_JUMP && press_action && character == CHAR_TAILS)
 	{
 		tails_timer = 480;
 		y_accel = 0.03125;
@@ -22,7 +22,7 @@ function player_state_tailsfly(){
 	y_speed = max(y_speed , -4);
 	
 	//Changing gravity depending on the action
-	if(Input.ActionPress && tails_timer != 0) y_accel = -0.125;
+	if(press_action && tails_timer != 0) y_accel = -0.125;
 	if(y_speed <= -1 || touching_ceiling || tails_timer == 0) y_accel = 0.03125;
 	
 	//Subtract timer

@@ -8,3 +8,6 @@
 	
 	//Reset score combo when player lands
 	if(obj_player.landed) badnik_chain = 0;
+	
+	//Reset act transition flag
+	global.act_transition = false;

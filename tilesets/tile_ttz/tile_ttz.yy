@@ -21,8 +21,8 @@
   },
   "spriteNoExport": true,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "ArborealAgate",
+    "path": "texturegroups/ArborealAgate",
   },
   "tile_count": 2560,
   "tileAnimation": {

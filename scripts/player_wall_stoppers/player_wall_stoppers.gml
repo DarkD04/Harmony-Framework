@@ -1,4 +1,5 @@
 function player_wall_stoppers(){
+	
 	//Wall stopper
 	if(check_object(0, hitbox_h, wall_w+1, hitbox_h) && ground_speed > 0 && ground || check_object(0, hitbox_h, wall_w+1, hitbox_h) && x_speed > 0 && !ground){
 		if(ground)ground_speed = 0;
@@ -40,4 +41,6 @@ function player_wall_stoppers(){
 		if(ground)ground_speed = 0;
 		x_speed = 0;
 	}
+	
+
 }

@@ -44,9 +44,9 @@
 	if(keyboard_check_pressed(vk_enter) && CoolDown = 0){
 		instance_activate_all();
 		switch(Section){
-			case 1: room_goto(Presentation[Select]) break;
-			case 2: room_goto(Stages[Select]) break;
-			case 3: room_goto(Unfinished[Select]) break;
+			case 1: room_goto(Presentation[Select]) reset_stage_data() break;
+			case 2: room_goto(Stages[Select]) reset_stage_data() break;
+			case 3: room_goto(Unfinished[Select]) reset_stage_data() break;
 		}
 	
 	}

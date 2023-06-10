@@ -33,6 +33,9 @@ function player_macros(){
 	#macro ANIM_DIE 12
 	#macro ANIM_DROWN 13
 	#macro ANIM_BREATHE 14
+	#macro ANIM_VICTORY 15
+	#macro ANIM_PUSH 16
+	#macro ANIM_LEDGE 17
 	#macro ANIM_TAILSFLY 20
 	#macro ANIM_TAILSTIRED 21
 	#macro ANIM_KNUXGLIDE 22

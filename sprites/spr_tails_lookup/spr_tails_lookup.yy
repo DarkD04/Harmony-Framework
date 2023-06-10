@@ -65,8 +65,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Player",
-    "path": "texturegroups/Player",
+    "name": "Tails",
+    "path": "texturegroups/Tails",
   },
   "type": 0,
   "VTile": false,

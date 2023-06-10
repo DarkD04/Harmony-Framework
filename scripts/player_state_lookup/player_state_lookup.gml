@@ -1,6 +1,6 @@
 function player_state_lookup(){
 	//Trigger look down:
-	if(state == ST_NORMAL && ground && abs(ground_speed) < 0.5 && mode = 0 && Input.Up)
+	if(state == ST_NORMAL && ground && abs(ground_speed) < 0.5 && mode = 0 && hold_up)
 	{
 		animation = ANIM_LOOKUP;
 		state = ST_LOOKUP;
@@ -20,5 +20,5 @@ function player_state_lookup(){
 	ground_speed = approach(ground_speed, 0, friction_speed);
 	
 	//Release
-	if(!Input.Up) state = ST_NORMAL;
+	if(!hold_up) state = ST_NORMAL;
 }

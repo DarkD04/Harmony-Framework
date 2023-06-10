@@ -73,8 +73,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "CommonObjects",
+    "path": "texturegroups/CommonObjects",
   },
   "type": 0,
   "VTile": false,

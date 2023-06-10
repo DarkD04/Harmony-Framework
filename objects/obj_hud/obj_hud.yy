@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "HUD",
-    "path": "folders/Objects/Stage/Important/HUD.yy",
+    "path": "folders/Objects/Stage/Common Objects/HUD.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -1,4 +1,4 @@
-/// @description Commit act transition
+/// @description Commit act transition	
 	//Get important objects
 	var marker, player;
 	
@@ -8,6 +8,9 @@
 	//Position player
 	player.x = marker.x + player_pos[0];
 	player.y = marker.y + player_pos[1];
+	
+	//Player musc
+	player.shield = shield_store;
 	
 	//Position the signpost
 	var _sign = instance_create_depth(player.x, player.y, player.depth, obj_fake_sign);
@@ -45,5 +48,13 @@
 		offset[i] = 0;	
 	}
 	
-	//Bye 
-	instance_destroy();
+	for (var i = 0; i < monitor_len; ++i) {
+		var new_monitor;
+		new_monitor = instance_create_depth(x, y, depth, obj_monitor)
+	    new_monitor.x = marker.x + monitor_x[i];
+		new_monitor.y = marker.y + monitor_y[i];
+		new_monitor.monitor_type = monitor_type[i];
+		new_monitor.destroyed = monitor_destroy[i];
+		new_monitor.depth = monitor_depth[i];
+	}
+	

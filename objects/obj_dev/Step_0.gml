@@ -35,6 +35,10 @@
 	if(mouse_check_button_pressed(mb_left))
 	{
 		instance_create_layer(mouse_x, mouse_y, "Objects", object_list[object_select]);
+		if(object_select = 10)
+		{
+			obj_level.act_transition = false;	
+		}
 	}
 	
 	//Object loop

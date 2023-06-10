@@ -7,6 +7,9 @@ function player_state_wallclimb(){
 	direction_allow = false;
 	gravity_allow = false;
 	
+	//Change direction
+	image_xscale = facing;
+	
 	//Change animation
 	animation = ANIM_KNUXCLIMB;
 	
@@ -14,7 +17,7 @@ function player_state_wallclimb(){
 	if(y_speed == 0) animation = ANIM_KNUXCLIMBIDLE;
 	
 	//Get input presses
-	var mov = Input.Down - Input.Up;
+	var mov = hold_down - hold_up;
 	
 	//Move up and down
 	y_speed = 1 * mov;
@@ -23,7 +26,7 @@ function player_state_wallclimb(){
 	//When there's no more wall
 	if(!point_check((wall_w + 1) * facing, wall_h, false))
 	{
-		if(Input.Up && !Input.Down && !check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h) && !line_check(wall_w * facing, -hitbox_h - 16))
+		if(hold_up && !hold_down && !check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h) && !line_check(wall_w * facing, -hitbox_h - 16))
 		{
 			if(obj_camera.smooth_knux_cam)obj_camera.mode = 2;
 			control_lock = 5;
@@ -32,14 +35,14 @@ function player_state_wallclimb(){
 			state = ST_KNUXLEDGE;
 		}
 		
-		if(!Input.Up && Input.Down || check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h))
+		if(!hold_up && hold_down || check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h))
 		{
 			state = ST_KNUXFALL;
 		}
 	}
 	
 	//Jump off the wall
-	if(Input.ActionPress && control_lock = 0)
+	if(press_action && control_lock = 0)
 	{
 		facing *= -1;
 		x_speed = 4 * facing;

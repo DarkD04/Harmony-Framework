@@ -71,8 +71,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Player",
-    "path": "texturegroups/Player",
+    "name": "Knuckles",
+    "path": "texturegroups/Knuckles",
   },
   "type": 0,
   "VTile": false,

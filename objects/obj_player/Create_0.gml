@@ -10,7 +10,7 @@
 	point_x = [x, x];	
 	point_y = [y, y];
 	x_dir = 0;
-	y_dir = 0;
+	y_dir = 1;
 	steps = 1;
 	
 	//Physics values
@@ -49,6 +49,7 @@
 	facing = 1;
 	death_timer = 0;
 	debug = false;
+	input_disable = false;
 	
 	//Hitbox values:
 	hitbox_w = 9;
@@ -85,6 +86,4 @@
 	//Additional stuff:
 	animation_init();
 	player_recorder_setup();
-	
-
-	
+	player_get_input();

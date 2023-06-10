@@ -1,6 +1,6 @@
 function player_state_peelout(){
 	//Trigger peel out
-	if(state == ST_LOOKUP && Input.ActionPress && ground && character == CHAR_SONIC)
+	if(state == ST_LOOKUP && press_action && ground && character == CHAR_SONIC)
 	{
 		play_sound(sfx_peelout_charge)
 		state = ST_PEELOUT
@@ -30,7 +30,7 @@ function player_state_peelout(){
 	if(spindash_rev = 30) animation = ANIM_MAXRUN;
 	
 	//Release the peel out
-	if(!Input.Up)
+	if(!hold_up)
 	{
 		audio_stop_sound(sfx_peelout_charge);
 		play_sound(sfx_peelout_release);

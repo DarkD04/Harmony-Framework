@@ -15,7 +15,7 @@
 	//Clear alpha
 	draw_clear_alpha(c_black, 0)
 	
-	if(render_bg)
+	if(act_card)
 	{
 		//Draw black part of the rectanle
 		if(timer < 64)

@@ -21,7 +21,7 @@
 	}
 	
 	//Double jump
-	if(Input.ActionPress && !obj_player.ground && obj_player.state == ST_JUMP && shield_state == 0 && use_allow) 
+	if(obj_player.press_action && !obj_player.ground && obj_player.state == ST_JUMP && shield_state == 0 && use_allow) 
 	{
 		//Player double jump
 		obj_player.x_speed = 0;

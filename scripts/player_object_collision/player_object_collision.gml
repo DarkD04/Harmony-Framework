@@ -30,11 +30,13 @@ function player_object_collision(){
 		on_object = true;
 	}
 	
+	//FIX: Extending bottom
+	var bottom_ext = 4+max(y-yprevious, 0)
+	show_debug_message(bottom_ext);
 	//Switch on object flags fix
 	if(line_check(-wall_w, hitbox_h+8) || line_check(wall_w, hitbox_h+8)) on_object = false;
-	if(check_object(wall_w, 0, wall_w, hitbox_h+8, true) && mode = 0) 
+	if(check_object(wall_w, 0, wall_w, hitbox_h+2, true) && mode = 0) 
 	{
-		if(!line_check(-wall_w, hitbox_h+8) || !line_check(wall_w, hitbox_h+8))
 		on_object = true;
 	}
 	
@@ -44,7 +46,7 @@ function player_object_collision(){
 	
 	//Full ground collision POST
 	if(ground && on_object && mode = 0){
-		while(check_object(wall_w, 0, wall_w, hitbox_h+8, true) && !check_object(wall_w, 0, wall_w, hitbox_h, true)){
+		while(check_object(wall_w, 0, wall_w, hitbox_h+bottom_ext, true) && !check_object(wall_w, 0, wall_w, hitbox_h, true)){
 			y += 1;	
 		}
 		
@@ -52,7 +54,7 @@ function player_object_collision(){
 			y -= 1;	
 		}
 		
-		if(!check_object(wall_w, 0, wall_w, hitbox_h+2, true)){
+		if(!check_object(wall_w, 0, wall_w, hitbox_h+bottom_ext, true)){
 			on_object = false;
 		}
 	}

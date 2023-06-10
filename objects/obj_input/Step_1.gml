@@ -1,7 +1,4 @@
-/// @description Input checks	
-	//Disable input flag
-	if(DisableInput) exit;
-	
+/// @description Input checks		
 	//Hold keys
 	Up = keyboard_check(global.up)
 	Down = keyboard_check(global.down)

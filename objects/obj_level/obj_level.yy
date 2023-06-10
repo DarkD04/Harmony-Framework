@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Important",
-    "path": "folders/Objects/Stage/Important.yy",
+    "path": "folders/Objects/Stage/Common Objects/Important.yy",
   },
   "parentObjectId": null,
   "persistent": false,

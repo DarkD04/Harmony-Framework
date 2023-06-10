@@ -1,6 +1,6 @@
 function player_state_lookdown(){
 	//Trigger look down:
-	if(state == ST_NORMAL && ground && abs(ground_speed) < 1 && mode = 0 && Input.Down)
+	if(state == ST_NORMAL && ground && abs(ground_speed) < 1 && mode = 0 && hold_down)
 	{
 		animation = ANIM_LOOKDOWN;
 		state = ST_LOOKDOWN;
@@ -23,5 +23,5 @@ function player_state_lookdown(){
 	if(ground_angle >= 40 && ground_angle <= 320) ground_speed -= 0.125 * dsin(ground_angle);
 	
 	//Release
-	if(!Input.Down) state = ST_NORMAL;
+	if(!hold_down) state = ST_NORMAL;
 }

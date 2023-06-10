@@ -2,7 +2,7 @@ function player_state_jump(){
 	//Trigger jump
 	if(state == ST_NORMAL || state == ST_ROLL || state == ST_SKID)
 	{
-		if(Input.ActionPress && ground && !touching_ceiling && !force_roll){
+		if(press_action && ground && !touching_ceiling && !force_roll){
 			y_speed -= jump_strenght*dcos(ground_angle);	
 			x_speed -= jump_strenght*dsin(ground_angle);	
 			jump_flag = true;
@@ -19,7 +19,7 @@ function player_state_jump(){
 	//Change flags
 	attacking = true;
 	//Limit the jump when key is released
-	if(!Input.Action && y_speed < -4 / (1 + underwater) && jump_flag)
+	if(!hold_action && y_speed < -4 / (1 + underwater) && jump_flag)
 	{
 		jump_flag = false;
 		y_speed = -4 / (1 + underwater);

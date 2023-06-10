@@ -2,6 +2,18 @@
 	//Add timer
 	timer += 1;
 	
+	//Force to victory state
+	with(obj_player)
+	{
+		if(ground)
+		{
+			ground_speed = 0;
+			input_disable = true;
+			facing = 1;
+			state = -1;
+			animation = ANIM_VICTORY;
+		}
+	}
 	//Fade out
 	if(timer = 1 && state = 0){
 		obj_music.fade = MusicFadeOut;
@@ -69,16 +81,20 @@
 	}
 	
 	//Ending events
-	/*if(state = 1){
+	if(state = 1 && !obj_level.act_transition){
 		if(timer = 80){
-			FadeManager.FadeMode = 1;
-			FadeManager.FadeSpeed = 5;
+			obj_fade.fade_type = fade_out;
+			obj_fade.fade_speed = 5;
 		}
 		
 		//Go to the next stage
-		//if(timer = 140) StageResetData();
+		if(timer = 110)
+		{
+			reset_stage_data();
+			room_goto(obj_level.next_level);
+		}
 	}
-	*/
+	
 	if(state = 1 && obj_level.act_transition){
 		//Move in card stuff
 		if(timer >= 24+64)	offset_x[0] += 16;

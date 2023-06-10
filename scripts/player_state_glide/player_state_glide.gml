@@ -1,6 +1,6 @@
 function player_state_glide(){
 	//Trigger the glide
-	if(state == ST_JUMP && Input.ActionPress && character == CHAR_KNUX)
+	if(state == ST_JUMP && press_action && character == CHAR_KNUX)
 	{
 		control_lock = 4;
 		glide_speed = 4;
@@ -41,7 +41,7 @@ function player_state_glide(){
 	glide_speed = clamp(glide_speed, -24, 24);
 	
 	//Get input
-	var mov = Input.Right - Input.Left;
+	var mov = hold_right - hold_left;
 	
 	//Glide turn animation
 	if(mov == -1 && facing == 1 || mov == 1 && facing == -1)
@@ -76,6 +76,8 @@ function player_state_glide(){
 	//Attach to the wall
 	if(point_check((wall_w + 1) * facing, 0, false) && !line_check(wall_w * facing, -hitbox_h - 16) && !line_check(wall_w * facing, hitbox_h + 6))
 	{
+		//Change direction
+		image_xscale = facing;
 		play_sound(sfx_grab);
 		state = ST_KNUXCLIMB;
 	}
@@ -88,7 +90,7 @@ function player_state_glide(){
 	}
 	
 	//Trigger falling if player is not pressing action button
-	if(!Input.Action)
+	if(!hold_action)
 	{
 		ceiling_lock = 4;
 		x_speed = 0.25 * facing;

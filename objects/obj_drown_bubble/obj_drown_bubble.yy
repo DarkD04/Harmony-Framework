@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Common",
-    "path": "folders/Objects/Stage/Common.yy",
+    "name": "Water",
+    "path": "folders/Objects/Stage/Common Objects/Water.yy",
   },
   "parentObjectId": null,
   "persistent": false,

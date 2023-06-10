@@ -1,6 +1,6 @@
 function player_state_spindash(){
 	//Trigger the spindash
-	if(state == ST_LOOKDOWN && Input.ActionPress)
+	if(state == ST_LOOKDOWN && press_action)
 	{
 		audio_sound_pitch(sfx_spindash, 1);
 		spindash_rev = 0;
@@ -26,7 +26,7 @@ function player_state_spindash(){
 	animation = ANIM_SPINDASH;
 	
 	//Rev up!
-	if(Input.ActionPress)
+	if(press_action)
 	{
 		play_sound(sfx_spindash);
 		if(spindash_rev >= 2) audio_sound_pitch(sfx_spindash, 1 + spindash_rev / 10);
@@ -35,7 +35,7 @@ function player_state_spindash(){
 	}
 	
 	//Release
-	if(!Input.Down && ground)
+	if(!hold_down && ground)
 	{
 		audio_stop_sound(sfx_spindash);
 		play_sound(sfx_release);

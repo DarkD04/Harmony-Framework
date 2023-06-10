@@ -26,14 +26,14 @@
 		}
 		
 		//Bump
-		if(player_collide_object(C_TOP) && !obj_player.ground)
+		if(player_collide_object(C_TOP))
 		{
-			if(ground)
-			{
-				ground = false;
-				y_speed = -3;	
-				obj_player.y_speed = 0;
-			}
+			//y -= ((obj_player.y - obj_player.hitbox_h) - bbox_bottom)
+			collision_flag = false;
+			ground = false;
+			y_speed = -3;	
+			obj_player.y_speed = 0;
+			
 		}
 	}else
 	{
@@ -43,7 +43,6 @@
 		//Destroyed sprite
 		sprite_index = spr_monitor_broken;
 	}
-	if(!ground && y_speed >= 0) collision_flag = false
 	if(!ground)
 	{
 		//Update position by speed
@@ -54,7 +53,7 @@
 		
 		
 		//Collision
-		while(instance_place(x, y, par_solid) || instance_place(x, y, par_solid_object) || instance_place(x, y, obj_player) && !destroyed)
+		while(instance_place(x, y, par_solid) && y_speed >= 0|| instance_place(x, y, par_solid_object) && y_speed >= 0)
 		{
 			y_speed = 0;
 			if(!instance_place(x, y, obj_player))ground = true;

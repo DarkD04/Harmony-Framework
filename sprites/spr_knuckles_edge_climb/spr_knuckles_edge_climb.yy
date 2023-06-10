@@ -100,8 +100,8 @@
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "Knuckles",
+    "path": "texturegroups/Knuckles",
   },
   "type": 0,
   "VTile": false,

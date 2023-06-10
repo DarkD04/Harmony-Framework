@@ -30,6 +30,9 @@
 		
 		//Handle player collision with solid objects:
 		player_object_collision();
+		
+		//Handle how player changes floor modes:
+		player_mode();	
 	}
 	
 	//Handle how player is controlled:
