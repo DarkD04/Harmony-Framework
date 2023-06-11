@@ -7,7 +7,7 @@
 			{
 				if((global.object_timer + 5*i) mod 8 < 4 )
 				{
-					if(x_speed == 0 || y_speed == 0)
+					if(x_speed != 0 || y_speed != 0)
 					{
 						var gap = 9 - (3 * i);
 						with(obj_tails_object)
