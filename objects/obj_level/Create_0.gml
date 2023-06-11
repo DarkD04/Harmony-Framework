@@ -4,7 +4,7 @@
 	badnik_chain = 0;
 	
 	//====================================================//
-	//				  **DEFAULT STAGE SETUP				  //
+	//				 **DEFAULT STAGE SETUP**			  //
 	//====================================================//
 	
 	//Set stage music and loop points

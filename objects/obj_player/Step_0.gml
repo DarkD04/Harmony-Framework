@@ -38,9 +38,6 @@
 	//Handle how player is controlled:
 	player_control();
 
-	//Handle partial visual rotation
-	player_visual_angle();
-	
 	//Handle player's hurt system
 	player_handle_hurt()
 	
@@ -55,6 +52,9 @@
 	
 	//Handle animation system
 	animation_system();
+	
+	//Handle partial visual rotation
+	player_visual_angle();
 	
 	//Various hitbox cases
 	player_hitbox();

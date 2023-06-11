@@ -25,11 +25,23 @@
 			audio_pause_sound(playing[BGM]);
 			
 	}
-
+	
+	//Drowning jingle
 	if(audio_is_playing(j_drowning) || obj_player.air > 20*60)
 	{
 		audio_pause_sound(playing[BGM]);
 		audio_sound_gain(playing[Jingle], 0, 0);
+		audio_sound_gain(j_drowning, 1, 0);
+	}
+	
+	//Handle extra life jingle
+	if(audio_is_playing(j_extra_life))
+	{
+		audio_pause_sound(playing[BGM]);
+		audio_sound_gain(playing[Jingle], 0, 0);
+		audio_sound_gain(j_drowning, 0, 0);
+		fade_offset = 0;
+		fade_speed = 2;
 	}
 	
 	if(global.dev_mode && keyboard_check_pressed(vk_control)) audio_sound_set_track_position(playing[0], loop_end[0]-2.00);

@@ -13,7 +13,7 @@ function player_hitbox(){
 		hitbox_h = 19;
 	
 		//Roll hitboxes
-		if(animation = ANIM_ROLL)
+		if(animation == ANIM_ROLL)
 		{
 			if(ground || landed)obj_camera.roll_offset = 5;
 			hitbox_w = 7;
@@ -27,7 +27,7 @@ function player_hitbox(){
 		hitbox_h = 15;
 	
 		//Roll hitboxes
-		if(animation = ANIM_ROLL)
+		if(animation == ANIM_ROLL)
 		{
 			if(ground || landed)obj_camera.roll_offset = 1;
 			hitbox_w = 7;
@@ -41,7 +41,7 @@ function player_hitbox(){
 		hitbox_h = 19;
 	
 		//Roll hitboxes
-		if(animation = ANIM_ROLL)
+		if(animation == ANIM_ROLL)
 		{
 			if(ground || landed)obj_camera.roll_offset = 5;
 			hitbox_w = 7;
@@ -49,7 +49,7 @@ function player_hitbox(){
 		}
 		
 		//During glide
-		if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE)
+		if(state == ST_KNUXGLIDE || state == ST_KNUXSLIDE)
 		{
 			hitbox_h = 10;
 		}
@@ -63,7 +63,7 @@ function player_hitbox(){
 	}
 	
 	//Change floor position fix
-	if(ceiling_lock = 0 && ground || state = ST_JUMP)
+	if(ceiling_lock = 0 && ground || state == ST_JUMP && mode == 0)
 	{
 		x += (old_hitbox_h - hitbox_h) * x_dir;
 		y += (old_hitbox_h - hitbox_h) * y_dir;

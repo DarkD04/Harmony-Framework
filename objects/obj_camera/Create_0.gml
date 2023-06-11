@@ -19,6 +19,8 @@
 	knux_offset_y = 0;
 	smooth_knux_cam = false;
 	return_speed = 0;
+	look_shift = 0;
+	look_timer = 0;
 	
 	limit_right = room_width;
 	target_right = room_width;

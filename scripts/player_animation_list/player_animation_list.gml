@@ -18,7 +18,8 @@ function player_animation_list(){
 		add_animation(ANIM_DROWN, spr_sonic_drown, 0.3, 0, false, false);
 		add_animation(ANIM_BREATHE, spr_sonic_breathe, 0.3, 0, false, false);
 		add_animation(ANIM_PUSH, spr_sonic_push, 0.1, 0, true, false);
-		add_animation(ANIM_LEDGE, spr_sonic_push, 0.1, 0, true, false);
+		add_animation(ANIM_LEDGE1, spr_sonic_ledge1, 0.1, 0, true, false);
+		add_animation(ANIM_LEDGE2, spr_sonic_ledge2, 0.1, 0, true, false);
 		add_animation(ANIM_VICTORY, spr_sonic_victory, 0.1, 1, true, false);
 		break;
 		

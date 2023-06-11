@@ -14,8 +14,7 @@ function player_object_collision(){
 		while(check_object(wall_w, hitbox_h, 0, hitbox_h) && (x - wall_w) + xprevious - x >= object.bbox_right){
 			x += 1;
 		}	
-		
-	
+
 		//Ceiling collision
 		while(check_object(wall_w, hitbox_h, wall_w, 0) && y_speed <= 0 && !ground){
 			y+=1;
@@ -31,8 +30,8 @@ function player_object_collision(){
 	}
 	
 	//FIX: Extending bottom
-	var bottom_ext = 4+max(y-yprevious, 0)
-	show_debug_message(bottom_ext);
+	var bottom_ext = 8+max(y-yprevious, 0)
+
 	//Switch on object flags fix
 	if(line_check(-wall_w, hitbox_h+8) || line_check(wall_w, hitbox_h+8)) on_object = false;
 	if(check_object(wall_w, 0, wall_w, hitbox_h+2, true) && mode = 0) 

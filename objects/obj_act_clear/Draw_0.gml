@@ -27,8 +27,8 @@
 	draw_set_font(global.hud_number);
 	
 	//Draw text
-	draw_text(global.window_width/2+82 + offset_x[1], global.window_height/2, string(ring_bonus));
-	draw_text(global.window_width/2+82 + offset_x[2], global.window_height/2+16, string(time_bonus));
+	draw_text(global.window_width/2+82 + offset_x[1], global.window_height/2, string(time_bonus));
+	draw_text(global.window_width/2+82 + offset_x[2], global.window_height/2+16, string(ring_bonus));
 	draw_text(global.window_width/2+74 + offset_x[3], global.window_height/2+48, string(total_bonus));
 	
 	draw_set_halign(fa_left);

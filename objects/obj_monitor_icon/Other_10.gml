@@ -36,4 +36,13 @@
 			obj_player.speed_shoes = 1200;
 			play_music(j_speedshoe, Jingle, 0, 0, false);
 		break;
+		
+		case "Eggman":
+			obj_player.knockout_type = K_HURT;
+		break;
+		
+		case "Extra Life":
+			play_sound(j_extra_life);
+			global.life += 1;
+		break;
 	}

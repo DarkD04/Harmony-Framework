@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 13.605442,
+  "duration": 10.70839,
   "parent": {
     "name": "Jingle",
     "path": "folders/Sounds/Music/Jingle.yy",

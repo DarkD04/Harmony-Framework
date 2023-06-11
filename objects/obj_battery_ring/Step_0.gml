@@ -3,13 +3,21 @@
 	//Physics
 	y += y_speed;
 	y_speed += 0.2;
-	
+	landed = false;
+		
+
 	//Bounce physics
-	while(obj_check_point(x, bbox_bottom, true) && y_speed > 0)
+	while(obj_check_point(x, bbox_bottom, true) && y_speed >= 0)
 	{
-		y_speed = -4;
 		y -= 1;
+		landed = true;
+	}
+	
+	//Commit the bounce
+	if(landed)
+	{
 		bounce = true;
+		y_speed = -4;
 	}
 	
 	//Start adding timer after ring bounced

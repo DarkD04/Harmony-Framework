@@ -15,9 +15,10 @@
 	x += accel[animal_type]*facing;
 	y += y_speed;
 	y_speed += grav;
+	landed = false;
 	
 	//Handle collision
-	while(obj_check_point(x, floor(bbox_bottom)) && y_speed > 0){
+	while(obj_check_point(x, bbox_bottom+2) && y_speed >= 0){
 		if(!triggered){
 			//Change direction
 			if(obj_player.x != x) facing = sign(x-obj_player.x);
@@ -30,9 +31,13 @@
 			triggered = true;	
 		}
 		y -= 1;	
-		y_speed = -jump_force[animal_type];
+		landed = true;
 	}
 	
+	if(landed)
+	{
+		y_speed = -jump_force[animal_type];
+	}
 	//Capsule event
 	if(instance_exists(obj_capsule))
 	{

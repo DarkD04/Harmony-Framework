@@ -110,5 +110,8 @@
 		}
 	}
 	
+	//Stop timer
+	if(triggered) input_disable = true;
+	
 	//Create act clear object
 	if(!instance_exists(obj_act_clear) && triggered && angle = 180 && spin_speed = 0) instance_create_depth(0, 0, 0, obj_act_clear)

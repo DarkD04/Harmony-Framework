@@ -8,6 +8,13 @@
 		case "Bubble Shield": monitor_icon = spr_monitor_icon_bubble_shield; break;
 		case "Invincible": monitor_icon = spr_monitor_icon_inv; break;
 		case "Speed Shoes": monitor_icon = spr_monitor_icon_shoes; break;
-		case "Extra Life": monitor_icon = spr_monitor_icon_life_sonic; break;
+		case "Extra Life": 
+			switch(global.character)
+			{
+				case CHAR_SONIC: monitor_icon = spr_monitor_icon_life_sonic; break;
+				case CHAR_TAILS: monitor_icon = spr_monitor_icon_life_tails; break;
+				case CHAR_KNUX: monitor_icon = spr_monitor_icon_life_knuckles; break;
+			}
+		break;
 		case "Eggman": monitor_icon = spr_monitor_icon_eggman; break;
-	}
+	} 

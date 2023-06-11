@@ -2,12 +2,12 @@
 	character = global.character;
 	
 	//Movement values:
-	x_speed = 0;		//Horizontal movement speed.
-	y_speed = 0;		//Vertical movement speed.
-	ground_speed = 0;	//Player's on ground movement speed.
-	ground_angle = 0;	//Player's angle on the ground.
-	mode = 0;			//Player's floor mode. 0: Floor. 1:Left wall. 2:Ceiling. 3:Right Wall.
-	point_x = [x, x];	
+	x_speed = 0;
+	y_speed = 0;
+	ground_speed = 0;
+	ground_angle = 0;
+	mode = 0;
+	point_x = [x, x];
 	point_y = [y, y];
 	x_dir = 0;
 	y_dir = 1;
@@ -25,31 +25,32 @@
 	state = ST_NORMAL;
 	spindash_rev = 0;
 	skid_timer = 0;
+	force_roll = false;
+	death_timer = 0;
+	knockout_type = 0;
+	jump_flag = false;
+	direction_allow = true;
+	movement_allow = true;
+	attacking = false;
 	
 	//Flags:
 	ground = true;
 	landed = false;
-	jump_flag = false;
-	direction_allow = true;
-	movement_allow = true;
 	ceiling_allow = true;
 	ramp_fix = false;
 	on_object = false;
 	platform_check = true;
 	touching_ceiling = false;
-	force_roll = false;
 	underwater = false;
 	detach_allow = true;
 	collision_allow = true;
-	attacking = false;
 	gravity_allow = true;
 	ground_collision_allow = true;
 	ceiling_lock = 0;
-	knockout_type = 0;
 	facing = 1;
-	death_timer = 0;
 	debug = false;
 	input_disable = false;
+	is_time_over = false;
 	
 	//Hitbox values:
 	hitbox_w = 9;
@@ -87,3 +88,6 @@
 	animation_init();
 	player_recorder_setup();
 	player_get_input();
+	
+	//Disable title card input
+	if(instance_exists(obj_titlecard)) input_disable = true;

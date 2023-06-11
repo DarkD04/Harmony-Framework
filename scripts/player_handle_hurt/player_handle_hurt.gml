@@ -48,7 +48,8 @@ function player_handle_hurt(){
 	if(invincible_timer != 0 && knockout_type != 0 && state != ST_KNOCKOUT) knockout_type = 0;
 	
 	//Bottomless pit
-	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom && knockout_type != K_DIE && knockout_type != K_DROWN)
+	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom && knockout_type != K_DIE && knockout_type != K_DROWN ||
+	knockout_type != K_DIE && knockout_type != K_DROWN && global.stage_timer == 599999)
 	{
 		state = ST_KNOCKOUT;
 		y_speed = -7;
@@ -57,6 +58,9 @@ function player_handle_hurt(){
 		knockout_type = K_DIE;
 		obj_camera.mode = 99;
 		play_sound(sfx_hurt);
+		
+		//Exclusive to timer over
+		if(global.stage_timer == 599999) is_time_over = true;
 	}
 
 }

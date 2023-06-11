@@ -36,6 +36,8 @@
 	global.monitor_store = [];
 	global.monitor_id = 0;
 	global.act_transition = false;
+	global.score_extralife = 50000;
+	global.ring_extralife = 100;
 	
 	//Font setup:
 	global.hud_number = font_add_sprite(spr_hud_numbers, ord("0"), false, 0);
@@ -45,6 +47,7 @@
 	//Customizables
 	global.legacy_rotation = true;			//Classic megadrive games rotation, if disabled it directs to partial rotation(from Mania)
 	global.use_battery_rings = false;		//If this is disabled, destroying enemies will spawn flickies instead
+	global.chaotix_monitors = false;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
 	
 	//Create controllers:
 	instance_create_depth(0, 0, 0, obj_window);

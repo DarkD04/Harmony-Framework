@@ -19,7 +19,7 @@
 				var y_scroll_speed;
 	
 				//Get vertical y speed:
-				y_scroll_speed = max(abs(target.ground_speed * dsin(target.ground_angle)), 6)
+				y_scroll_speed = 2 + max(abs(target.ground_speed * dsin(target.ground_angle)), 4)
 		
 				//Vertical scroll on the ground:
 				if(instance_exists(obj_bubble_shield) && obj_bubble_shield.shield_state = 0 || !instance_exists(obj_bubble_shield)){
@@ -69,5 +69,30 @@
 			break;
 		}
 	}
+	
+	//Look up and down
+	if(target.state == ST_LOOKUP)
+		look_timer -= 1;
+		
+	if(target.state == ST_LOOKDOWN)
+		look_timer += 1;
+		
+	//Restart looking timer
+	if(target.state != ST_LOOKUP && look_timer < 0 || target.state != ST_LOOKDOWN && look_timer > 0)
+		look_timer = 0;
+		
+	//Shifting time
+	if(look_timer <= -120)
+		look_shift = approach(look_shift, -104, 2);
+	
+	if(look_timer >= 120)
+		look_shift = approach(look_shift, 88, 2);
+	
+	//Shift back
+	if(look_timer = 0)
+		look_shift = approach(look_shift, 0, 2);
+		
+		
+		show_debug_message(look_shift)
 	
 	

@@ -22,11 +22,11 @@ function obj_check_rect(X1, Y1, X2, Y2, SemiSolid = true){
 
 function obj_check_point(X, Y, SemiSolid = true){
 	//Trigger the collision
-	if collision_point(X,Y,par_solid,true,true){
+	if collision_point(X, Y,par_solid,true,true){
 		
 		//Get the value from the object with what youre coliding
 		var solidCollisions = ds_list_create();
-		var SolidCount = collision_point_list(X,Y,par_solid,true,true,solidCollisions,false);
+		var SolidCount = collision_point_list(X, Y,par_solid,true,true,solidCollisions,false);
 		for (var i = 0; i < SolidCount; i++)
 		{
 			var Solid =  solidCollisions[| i];

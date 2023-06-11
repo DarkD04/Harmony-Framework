@@ -39,6 +39,4 @@ function player_visual_angle(){
 	
 	//Change image angle
 	if(!global.legacy_rotation)image_angle = visual_angle; else image_angle = round(visual_angle/45)*45;
-	
-	show_debug_message(visual_angle)
 }

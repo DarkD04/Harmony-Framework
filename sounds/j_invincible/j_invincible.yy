@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 15.556304,
+  "duration": 21.933332,
   "parent": {
     "name": "Jingle",
     "path": "folders/Sounds/Music/Jingle.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "j_invincible.xgm",
+  "soundFile": "j_invincible.ogg",
   "type": 0,
   "volume": 1.0,
 }

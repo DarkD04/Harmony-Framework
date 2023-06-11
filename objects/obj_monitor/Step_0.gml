@@ -6,7 +6,6 @@
 	if(obj_player.animation = ANIM_ROLL && player_collide_object(C_BOTTOM_EXT) || obj_player.animation = ANIM_ROLL && obj_player.y_speed >= 16  || obj_player.state = ST_SPINDASH && !player_collide_object(C_BOTTOM_EXT) || obj_player.state = ST_ROLL || obj_player.state = ST_KNUXGLIDE)
 		collision_flag = false;
 	
-	
 	//Destroy the monitor
 	if(!destroyed)
 	{

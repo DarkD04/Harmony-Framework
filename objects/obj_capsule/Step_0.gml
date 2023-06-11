@@ -4,10 +4,13 @@
 	with(button){
 		//When player is on the button
 		if(player_collide_object(C_BOTTOM) && !pressed){
+			//Stop the timer
+			input_disable = true;
+			
 			//Create flickies
 			for(var i = 0; i < 10; i++){
-				var Animal = instance_create_depth(other.x + random_range(-24, 24), other.y+32, depth, obj_flicky);
-				Animal.delay = 16+(4 * i);
+				var animal = instance_create_depth(other.x + random_range(-24, 24), other.y+32, depth, obj_flicky);
+				animal.delay = 16+(4 * i);
 			}
 			
 			//Create pieces

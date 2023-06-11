@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Arboreal Agate",
-    "path": "folders/Objects/Stage/Arboreal Agate.yy",
+    "name": "Bridge Zone",
+    "path": "folders/Objects/Stage/Bridge Zone.yy",
   },
   "parentObjectId": {
     "name": "par_badnik",

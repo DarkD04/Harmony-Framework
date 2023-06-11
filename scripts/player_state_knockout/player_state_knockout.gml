@@ -50,10 +50,30 @@ function player_state_knockout(){
 			//Fade out
 			if(death_timer == 80)
 			{
-				obj_fade.fade_speed = 3;
-				obj_fade.fade_type = fade_out;
-				obj_music.fade_speed = 2
-				obj_music.fade = MusicFadeOut;
+				if(global.life != 0 || !is_time_over){
+				global.life -= 1;
+					if(global.life != 0 && !is_time_over)
+					{
+						obj_fade.fade_speed = 3;
+						obj_fade.fade_type = fade_out;
+						obj_music.fade_speed = 2
+						obj_music.fade = MusicFadeOut;
+					}
+				}
+			}
+			
+			//Create game over
+			if(death_timer == 80)
+			{
+				if(global.life = 0 || is_time_over){
+					obj_music.fade_speed = 2
+					obj_music.fade = MusicFadeOut;
+					if(!instance_exists(obj_game_over))	
+					{
+						var a = instance_create_layer(0, 0, "Utilities", obj_game_over);
+						if(global.life = 0)a.type = 0; else a.type = 1;
+					}
+				}
 			}
 			
 			//Create bunch of bubbles for drowning event
@@ -64,7 +84,7 @@ function player_state_knockout(){
 			}
 			
 			//Restart
-			if(death_timer == 140)
+			if(death_timer == 140 && global.life != 0 && !is_time_over)
 			{
 				room_restart();
 			}

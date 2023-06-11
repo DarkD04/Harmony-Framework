@@ -36,7 +36,7 @@ function player_collision(){
 			            ground_speed = (abs(x_speed) <= abs(y_speed) ? y_speed * -1 : x_speed);
 			        }
 			        else{
-			            ground_speed = (abs(x_speed) <= abs(y_speed / 2.0) ? (y_speed / 2.0) * -1 : x_speed);
+			            ground_speed = (abs(x_speed) <= abs(y_speed) ? (y_speed / 2.0) * -1 : x_speed);
 			        }
 			    }
 				
@@ -48,7 +48,7 @@ function player_collision(){
 			            ground_speed = (abs(x_speed) <= abs(y_speed) ? y_speed : x_speed);
 			        }
 			        else{
-			            ground_speed = (abs(x_speed) <= abs(y_speed / 2.0) ? (y_speed / 2.0) : x_speed);
+			            ground_speed = (abs(x_speed) <= abs(y_speed) ? (y_speed / 2.0) : x_speed);
 			        }
 			    }
 			}	
