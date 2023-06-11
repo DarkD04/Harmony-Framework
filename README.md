@@ -8,3 +8,14 @@ Accurate and stable sonic framework for GameMaker Studio 2
 
 # Documentation
 WIP
+
+# Credits
+Project: darknn
+# 
+Programming: darknn, chopp and joshyflip
+# 
+Character Art: Doc Melonhead and joshyflip
+# 
+Tile and background art: darknn and joshyflip
+# 
+Beta testing: Spitfya, Louplayer, BladeOfChaos, Axanery, ScarlyNight, SNick! and KGL
