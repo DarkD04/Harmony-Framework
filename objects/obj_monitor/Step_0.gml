@@ -27,10 +27,9 @@
 		//Bump
 		if(player_collide_object(C_TOP))
 		{
-			//y -= ((obj_player.y - obj_player.hitbox_h) - bbox_bottom)
 			collision_flag = false;
 			ground = false;
-			y_speed = -3;	
+			y_speed = -2;	
 			obj_player.y_speed = 0;
 			
 		}

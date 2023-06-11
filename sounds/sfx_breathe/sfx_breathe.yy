@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.346281,
   "parent": {
-    "name": "Shield",
-    "path": "folders/Sounds/Sound Effects/Shield.yy",
+    "name": "Player",
+    "path": "folders/Sounds/Sound Effects/Player.yy",
   },
   "preload": false,
   "sampleRate": 44100,
