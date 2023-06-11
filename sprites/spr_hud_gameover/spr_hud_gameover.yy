@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 6,
   "parent": {
-    "name": "Harmony Framework Plus",
-    "path": "Harmony Framework Plus.yyp",
+    "name": "GUI",
+    "path": "folders/Sprites/GUI.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

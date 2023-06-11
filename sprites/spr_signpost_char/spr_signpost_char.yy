@@ -28,7 +28,7 @@
   "origin": 9,
   "parent": {
     "name": "Signpost",
-    "path": "folders/Sprites/Stage/Common Objects/Signpost.yy",
+    "path": "folders/Sprites/Stage/Common Objects/End Stage/Signpost.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "End Stage",
-    "path": "folders/Sprites/Stage/Common Objects/End Stage.yy",
+    "name": "Capsule",
+    "path": "folders/Sprites/Stage/Common Objects/End Stage/Capsule.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

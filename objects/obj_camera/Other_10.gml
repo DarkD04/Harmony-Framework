@@ -91,8 +91,4 @@
 	//Shift back
 	if(look_timer = 0)
 		look_shift = approach(look_shift, 0, 2);
-		
-		
-		show_debug_message(look_shift)
-	
 	

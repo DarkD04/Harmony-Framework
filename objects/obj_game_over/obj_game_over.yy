@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Harmony Framework Plus",
-    "path": "Harmony Framework Plus.yyp",
+    "name": "HUD",
+    "path": "folders/Objects/Stage/Common Objects/HUD.yy",
   },
   "parentObjectId": null,
   "persistent": false,
