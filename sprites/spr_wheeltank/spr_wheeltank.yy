@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Badniks",
-    "path": "folders/Sprites/Stage/Arboreal Agate/Badniks.yy",
+    "name": "Bridge Zone",
+    "path": "folders/Sprites/Stage/Bridge Zone.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

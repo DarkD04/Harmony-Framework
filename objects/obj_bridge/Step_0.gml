@@ -61,7 +61,4 @@
 		
 		//Position the hitbox
 		y = log_y[floor(current_segment)];
-		
-		//Stage specific events
-		event_user(0); //Prime Pacific events
 	}
