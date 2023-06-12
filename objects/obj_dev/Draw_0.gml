@@ -1,5 +1,7 @@
 /// @description Draw debug
-
+	//Stop if player doesn't exist
+	if(!instance_exists(obj_player)) exit;
+	
 	//Draw hitboxes
 	if(show_hitbox)
 	{

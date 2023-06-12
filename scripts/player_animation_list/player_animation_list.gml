@@ -48,6 +48,9 @@ function player_animation_list(){
 		}
 		add_animation(ANIM_DROWN, spr_tails_drown, 0.3, 0, false, false);
 		add_animation(ANIM_BREATHE, spr_tails_breathe, 0.3, 0, false, false);
+		add_animation(ANIM_PUSH, spr_tails_push, 0.1, 0, true, false);
+		add_animation(ANIM_LEDGE1, spr_tails_ledge1, 0.1, 0, true, false);
+		add_animation(ANIM_LEDGE2, spr_tails_ledge2, 0.1, 0, true, false);
 		add_animation(ANIM_VICTORY, spr_tails_victory, 0.1, 0, false, false);
 		break;
 		
@@ -77,6 +80,9 @@ function player_animation_list(){
 		add_animation(ANIM_KNUXGETUP, spr_knuckles_getup, 0.2, 0, false, false);
 		add_animation(ANIM_DROWN, spr_knuckles_drown, 0.3, 0, false, false);
 		add_animation(ANIM_BREATHE, spr_knuckles_breathe, 0.3, 0, false, false);
+		add_animation(ANIM_PUSH, spr_knuckles_push, 0.1, 0, true, false);
+		add_animation(ANIM_LEDGE1, spr_knuckles_ledge1, 0.1, 0, true, false);
+		add_animation(ANIM_LEDGE2, spr_knuckles_ledge2, 0.1, 0, true, false);
 		add_animation(ANIM_VICTORY, spr_knuckles_victory, 0.1, 0, false, false);
 		break;
 	}

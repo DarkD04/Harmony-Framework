@@ -3,6 +3,9 @@
 	//No judas you will not memory hack my game asshole:blushed_emoji:
 	if(!global.dev_mode) instance_destroy();
 	
+	//Stop if player doesn't exist
+	if(!instance_exists(obj_player)) exit;
+	
 	//Toggle debug mode
 	if(keyboard_check_pressed(vk_tab)) debug = !debug;
 	if(keyboard_check_pressed(vk_f9)) show_collision = !show_collision;
