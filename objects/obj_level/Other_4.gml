@@ -2,6 +2,10 @@
 	//Play stage music
 	play_music(stage_music, BGM, loop_start, loop_end, true);
 	
+	//Reset stage data
+	global.stage_timer = 0;
+	global.rings = 0;
+	
 	//Position player to the checkpoint
 	if(global.checkpoint_id != noone)
 	{

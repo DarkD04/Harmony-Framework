@@ -7,6 +7,7 @@ function get_end_results(){
 	
 	sec = floor(global.stage_timer/1000) mod 60;
 	minute = floor(global.stage_timer/60000);
+	time_bonus = 0;
 	
 	//Time result
 	if(minute = 0 && sec <= 59) time_bonus = 50000;
@@ -16,4 +17,6 @@ function get_end_results(){
 	if(minute = 2 && sec >= 30 && sec <= 59) time_bonus = 3000;
 	if(minute = 3 && sec <= 29) time_bonus = 1000;
 	if(minute >= 3 && minute <= 9 && sec >= 30 && sec <= 59) time_bonus = 100;
+	
+	
 }

@@ -17,7 +17,7 @@ function player_visual_angle(){
 			visual_angle += (((rot - visual_angle + 540) mod 360)-180) / 2;
 			
 			//Prevent angle from going into negative
-			if(visual_angle < 0) visual_angle += 360
+            visual_angle = (visual_angle + 360) mod 360;
 		}
 		if(global.legacy_rotation)
 		{
