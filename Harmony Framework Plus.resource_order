@@ -363,6 +363,7 @@
     {"name":"obj_debris","order":4,"path":"objects/obj_debris/obj_debris.yy",},
     {"name":"player_state_ledgeclimb","order":2,"path":"scripts/player_state_ledgeclimb/player_state_ledgeclimb.yy",},
     {"name":"obj_collision13","order":19,"path":"objects/obj_collision13/obj_collision13.yy",},
+    {"name":"lerp_angle","order":24,"path":"scripts/lerp_angle/lerp_angle.yy",},
     {"name":"spr_bg_teststage_clouds","order":1,"path":"sprites/spr_bg_teststage_clouds/spr_bg_teststage_clouds.yy",},
     {"name":"spr_bridge_brick","order":4,"path":"sprites/spr_bridge_brick/spr_bridge_brick.yy",},
     {"name":"add_background","order":10,"path":"scripts/add_background/add_background.yy",},

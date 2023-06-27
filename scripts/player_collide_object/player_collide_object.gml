@@ -1,4 +1,4 @@
-function player_collide_object(side){
+function player_collide_object(side, flag = -1){
 	//Collision side macros:
 	#macro C_MAIN 0
 	#macro C_BOTTOM 1
@@ -62,25 +62,34 @@ function player_collide_object(side){
 			//Left side of the hitbox:
 			case C_LEFT: 
 				left = -player[i].wall_w - 1;
-				top = 1;
+				top = -player[i].hitbox_h;
 				right = 0;
-				bottom = 5;
+				bottom = player[i].hitbox_h;
 			break;
 		
 			//Right side of the hitbox:
 			case C_RIGHT:
 				left = 0;
-				top = 1;
+				top = -player[i].hitbox_h;
 				right = player[i].wall_w + 1;
-				bottom = 5;
+				bottom = player[i].hitbox_h;
 			break;
 		}
 
 		//player[i] events:
 		with(player[i])
 		{
+			var col_flag;
+			//Flag stuff
+			if(flag == -1) col_flag = collision_allow else col_flag = flag;
 			//Check for player[i]'s collision with the object:
-			if(collision_rectangle(floor(x)+left, floor(y)+top, floor(x)+right, floor(y)+bottom, other, true, true) && collision_allow) return id;
+			if(collision_rectangle(floor(x)+left, floor(y)+top, floor(x)+right, floor(y)+bottom, other, true, true)) 
+			{
+				if(col_flag)
+				{
+					return id;
+				}
+			}
 		}
 	}
 }

@@ -105,12 +105,15 @@
 	//Draw text in rectangle
 	draw_set_font(global.font_small);
 	draw_set_halign(fa_left);
-	draw_text(0, 0, string_upper(window_get_caption()));
+	draw_text(0, 0, window_get_caption() +" "+ string(GM_version));
+	draw_text(0, 8, "BUILD DATE: " + date_date_string(GM_build_date));
+	draw_text(0, 16, "BUILD TIME: " + date_time_string(GM_build_date));
 	
 	//Draw info
 	draw_set_halign(fa_right);
-	draw_text(global.window_width, 0,"CAMERA: " + string(floor(obj_camera.camera_x)) + " " + string(floor(obj_camera.camera_y)));
-	draw_text(global.window_width, 8,"CANVAS: " + string(room_width) + " " + string(room_height));
+	draw_text(global.window_width, 0,"PLAYER: " + string(floor(obj_player.x)) + " " + string(floor(obj_player.y)));
+	draw_text(global.window_width, 8,"CAMERA: " + string(floor(obj_camera.camera_x)) + " " + string(floor(obj_camera.camera_y)));
+	draw_text(global.window_width, 16,"CANVAS: " + string(room_width) + " " + string(room_height));
 	
 	surface_reset_target()
 	

@@ -430,6 +430,7 @@
     {"id":{"name":"fontDebug","path":"sprites/fontDebug/fontDebug.yy",},},
     {"id":{"name":"player_state_ledgeclimb","path":"scripts/player_state_ledgeclimb/player_state_ledgeclimb.yy",},},
     {"id":{"name":"obj_collision13","path":"objects/obj_collision13/obj_collision13.yy",},},
+    {"id":{"name":"lerp_angle","path":"scripts/lerp_angle/lerp_angle.yy",},},
     {"id":{"name":"spr_bg_teststage_clouds","path":"sprites/spr_bg_teststage_clouds/spr_bg_teststage_clouds.yy",},},
     {"id":{"name":"spr_bridge_brick","path":"sprites/spr_bridge_brick/spr_bridge_brick.yy",},},
     {"id":{"name":"add_background","path":"scripts/add_background/add_background.yy",},},

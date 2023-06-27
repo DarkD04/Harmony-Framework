@@ -18,8 +18,13 @@
 	}
 	
 	//Player standing on the bridge
-	if(player_collide_object(C_BOTTOM) && player.mode = 0 && player.ground && player.x > bbox_left && player.x < bbox_right)
+	if(player_collide_object(C_BOTTOM) && player.mode = 0 && player.ground)
 	{
+		//Bubble shield effect
+		if(instance_exists(obj_bubble_shield) && obj_bubble_shield.shield_state = 1 && player.ground)
+		{
+			stand_offset = 1;
+		}
 		player.y = bbox_top - player.hitbox_h - 1;
 		standing = true;
 	}else
@@ -27,11 +32,6 @@
 		standing = false;	
 	}
 	
-	//Bubble shield effect
-	if(instance_exists(obj_bubble_shield) && obj_bubble_shield.shield_state = 1 && player.ground)
-	{
-		stand_offset = 1;
-	}
 	//Make bridge dip when you land
 	stand_offset = lerp(stand_offset, standing, 0.35);
 	
