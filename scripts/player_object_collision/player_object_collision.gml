@@ -2,7 +2,7 @@ function player_object_collision(){
 	var object = check_object(wall_w, hitbox_h, wall_w, hitbox_h)
 	
 	
-	if(object && y + hitbox_h >= object.bbox_top)
+	if(object && y + hitbox_h + yprevious - y >= object.bbox_top)
 	{
 		//Left Wall
 		while(check_object(0, hitbox_h, wall_w, hitbox_h) && (x + wall_w) + xprevious - x <= object.bbox_left){
@@ -33,7 +33,6 @@ function player_object_collision(){
 	var bottom_ext = 8+max(y-yprevious, 0)
 
 	//Switch on object flags fix
-	if(line_check(-wall_w, hitbox_h+8) || line_check(wall_w, hitbox_h+8)) on_object = false;
 	if(check_object(wall_w, 0, wall_w, hitbox_h+2, true) && mode = 0) 
 	{
 		on_object = true;

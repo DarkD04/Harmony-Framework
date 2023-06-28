@@ -103,7 +103,7 @@ function check_object(x1, y1, x2, y2, semi_solid = false)
 		{
 			var Solid =  solidCollisions[| i];
 			if(Solid.collision_flag){
-				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && semi_solid)
+				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && semi_solid && y < Solid.bbox_top+(y-yprevious) && y_speed >= 0)
 				{
 					ds_list_destroy(solidCollisions);
 					return Solid;
