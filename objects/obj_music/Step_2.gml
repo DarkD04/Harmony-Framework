@@ -3,9 +3,9 @@
 	//Loop by the channel amount
 	for(var i = 0; i < 2; i++){
 		//Music loop
-		if(audio_sound_get_track_position(playing[i]) >= loop_end[i] && loop_end[i] > 0){
-			audio_sound_set_track_position(playing[i], loop_start[i]);
-			show_debug_message("Music has looped");
+		if(loop_end[i] > 0){
+			audio_sound_loop_start(playing[i], loop_start[i]);
+			audio_sound_loop_end(playing[i], loop_end[i]);
 		}
 		//Fade
 		audio_sound_gain(playing[i], global.bgm_volume * fade_offset, 0)

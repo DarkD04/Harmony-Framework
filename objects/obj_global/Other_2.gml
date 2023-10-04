@@ -1,4 +1,5 @@
 /// @description Set the value
+	
 	//Dev stuff:
 	global.dev_mode = true;
 	
@@ -8,7 +9,7 @@
 	// Screen values:
 	global.window_width  = 320;
 	global.window_height = 240;
-	global.window_size   = 1;
+	global.window_size   = 2;
 	
 	//keyboard inputs:
 	global.up = vk_up;
@@ -49,16 +50,29 @@
 	global.use_battery_rings = false;		//If this is disabled, destroying enemies will spawn flickies instead
 	global.chaotix_monitors = false;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
 	
+	//Collision layers
+	global.col_tile[0] = "CollisionMain";
+	global.col_tile[1] = "CollisionSemi";
+	global.col_tile[2] = "CollisionA";
+	global.col_tile[3] = "CollisionB";
+	
+	//Sonic abbilities
+	global.use_peelout = true;
+	global.use_dropdash = false;
+	global.use_airroll = false;
+
 	//Create controllers:
 	instance_create_depth(0, 0, 0, obj_window);
 	instance_create_depth(0, 0, 0, obj_input);
 	instance_create_depth(0, 0, 0, obj_music);
 	instance_create_depth(0, 0, -100, obj_fade);
-	if(global.dev_mode) instance_create_depth(0, 0, 0, obj_dev);
+	if(global.dev_mode) 
+	{
+		instance_create_depth(0, 0, 0, obj_dev);
+	}
 	
 	//Macros:
 	#macro Input obj_input
 	
 	//Ending event:
 	room_goto_next();
-		

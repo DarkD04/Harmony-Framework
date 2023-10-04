@@ -25,9 +25,6 @@
 		//Handle player terrain collision:
 		player_collision();
 		
-		//Handle player angle detection
-		player_angle_detection();
-		
 		//Handle player collision with solid objects:
 		player_object_collision();
 		

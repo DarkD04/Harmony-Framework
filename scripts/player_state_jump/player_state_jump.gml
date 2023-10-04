@@ -13,6 +13,18 @@ function player_state_jump(){
 		}
 	}
 	
+	//Do the air roll
+	if(press_action && !ground && global.use_airroll)
+	{
+		if(state == ST_NORMAL || state == ST_SPRING)
+		{
+			state = ST_JUMP;
+			jump_flag = false;
+			ceiling_lock = 2;
+			jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
+		}
+	}
+	
 	//Stop if its not jump state
 	if(state != ST_JUMP) exit;
 	

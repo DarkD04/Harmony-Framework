@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 1,
   "conversionMode": 0,
-  "duration": 53.333332,
+  "duration": 97.07102,
   "parent": {
     "name": "Stage Music",
     "path": "folders/Sounds/Music/Stage Music.yy",

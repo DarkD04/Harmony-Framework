@@ -1,65 +1,78 @@
 function obj_check_rect(X1, Y1, X2, Y2, SemiSolid = true){
 	//Trigger the collision
-	if collision_rectangle(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,par_solid,true,true){
+	var col = collision_rectangle(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,par_solid,true,true)
 		
-		//Get the value from the object with what youre coliding
-		var solidCollisions = ds_list_create();
-		var SolidCount = collision_rectangle_list(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,par_solid,true,true,solidCollisions,false);
-		for (var i = 0; i < SolidCount; i++)
+	if(col)
+	{
+		if(col.collision_flag)
 		{
-			var Solid =  solidCollisions[| i];
-			if(Solid.collision_flag){
-				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && SemiSolid = true)
-				{
-					ds_list_destroy(solidCollisions);
+			if (col.collision_type = "Full Solid" || col.collision_type = "Semi Solid" && SemiSolid = true)
+			{
 					return true;
-				}
 			}
 		}
-		ds_list_destroy(solidCollisions);
+	}	
+	
+	
+	//Beta
+	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]))
+	{
+		if(collision_rectangle(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,layer_tilemap_get_id(global.col_tile[0]),true,true) ||
+		collision_rectangle(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,layer_tilemap_get_id(global.col_tile[1]),true,true) && SemiSolid = true)
+		{
+			return true;
+		}
 	}
 }
 
 function obj_check_point(X, Y, SemiSolid = true){
-	//Trigger the collision
-	if collision_point(X, Y,par_solid,true,true){
-		
-		//Get the value from the object with what youre coliding
-		var solidCollisions = ds_list_create();
-		var SolidCount = collision_point_list(X, Y,par_solid,true,true,solidCollisions,false);
-		for (var i = 0; i < SolidCount; i++)
+	
+	var col = collision_point(X, Y,par_solid,true,true);
+	
+	if(col)
+	{
+		if(col.collision_flag)
 		{
-			var Solid =  solidCollisions[| i];
-			if(Solid.collision_flag){
-				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && SemiSolid = true)
-				{
-					ds_list_destroy(solidCollisions);
+			if (col.collision_type = "Full Solid" || col.collision_type = "Semi Solid" && SemiSolid = true)
+			{
 					return true;
-				}
 			}
 		}
-		ds_list_destroy(solidCollisions);
+	}
+	
+	//Beta
+	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]))
+	{
+		if(collision_point(X, Y,layer_tilemap_get_id(global.col_tile[0]),true,true) ||
+		collision_point(X, Y,layer_tilemap_get_id(global.col_tile[1]),true,true) && SemiSolid = true)
+		{
+			return true;
+		}
 	}
 }
 
 function obj_check_line(X1, Y1, X2, Y2, SemiSolid = true){
-	//Trigger the collision
-	if collision_line(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,par_solid,true,true){
-		
-		//Get the value from the object with what youre coliding
-		var solidCollisions = ds_list_create();
-		var SolidCount = collision_line_list(floor(x)+X1,floor(y)+Y1+1,floor(x)+X2,floor(y)+Y2+1,par_solid,true,true,solidCollisions,false);
-		for (var i = 0; i < SolidCount; i++)
+	
+	var col = collision_line(X1,Y1,X2,Y2,par_solid,true,true);
+	
+	if(col)
+	{
+		if(col.collision_flag)
 		{
-			var Solid =  solidCollisions[| i];
-			if(Solid.collision_flag){
-				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && SemiSolid = true)
-				{
-					ds_list_destroy(solidCollisions);
+			if (col.collision_type = "Full Solid" || col.collision_type = "Semi Solid" && SemiSolid = true)
+			{
 					return true;
-				}
 			}
 		}
-		ds_list_destroy(solidCollisions);
+	}
+	
+	//Beta
+	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]))
+	{
+		if(collision_line(X1,Y1,X2,Y2,layer_tilemap_get_id(global.col_tile[0]),true,true) ||
+		collision_line(X1,Y1,X2,Y2,layer_tilemap_get_id(global.col_tile[1]),true,true) && SemiSolid = true)
+		{
+			return true;
+		}
 	}
 }

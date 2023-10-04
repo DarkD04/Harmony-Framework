@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "angle_sensor_position",
+  "name": "player_state_dropdash",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Engine",
-    "path": "folders/Scripts/Engine.yy",
+    "name": "Sonic States",
+    "path": "folders/Scripts/Player/States/Sonic States.yy",
   },
 }

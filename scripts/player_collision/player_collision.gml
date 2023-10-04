@@ -1,4 +1,6 @@
 function player_collision(){
+	//Stop
+	if(!ground_collision_allow) exit;
 	
 	//Left wall collision
 	while(point_check(-wall_w, wall_h))
@@ -19,14 +21,14 @@ function player_collision(){
 	if(!on_object && ground_collision_allow)
 	{
 		//Check landing
-		if(y_speed >= 0 && !ground)
+		if(y_speed > 0 && !ground)
 		{
 			if(line_check(hitbox_w, hitbox_h, true) || line_check(-hitbox_w, hitbox_h, true))
 			{
 				ground = true;
 				landed = true;
 				ground_speed = x_speed;
-				player_angle_detection()
+				player_angle_detection();
 			
 				//Landing speed (From 24 to 90 degrees)
 				if(ground_angle >= 24 && ground_angle <= 90)
@@ -36,9 +38,10 @@ function player_collision(){
 			            ground_speed = (abs(x_speed) <= abs(y_speed) ? y_speed * -1 : x_speed);
 			        }
 			        else{
-			            ground_speed = (abs(x_speed) <= abs(y_speed) ? (y_speed / 2.0) * -1 : x_speed);
+			            ground_speed = (abs(x_speed) <= abs(y_speed/2) ? (y_speed / 2) * -1 : x_speed);
 			        }
-			    }
+			    }else
+				
 				
 				//Landing speed (From 24 to 90 degrees)
 				if(ground_angle <= 336 && ground_angle >= 270)
@@ -48,7 +51,7 @@ function player_collision(){
 			            ground_speed = (abs(x_speed) <= abs(y_speed) ? y_speed : x_speed);
 			        }
 			        else{
-			            ground_speed = (abs(x_speed) <= abs(y_speed) ? (y_speed / 2.0) : x_speed);
+			            ground_speed = (abs(x_speed) <= abs(y_speed/2) ? (y_speed / 2) : x_speed);
 			        }
 			    }
 			}	
@@ -56,66 +59,80 @@ function player_collision(){
 	
 		//Handle slope collision
 		if(ground){
+			//Get the detach offset
+			var detach_distance = on_edge ? 1 : 16;
+			
 			//Detach off the ground
-			if(!line_check(hitbox_w, hitbox_h+14, true) && !line_check(-hitbox_w, hitbox_h+14, true) && !force_roll && detach_allow)
+			if(!line_check(hitbox_w, hitbox_h+detach_distance, true) && !line_check(-hitbox_w, hitbox_h+detach_distance, true) && !force_roll && detach_allow)
 			{
 				ground = false;	
 			}
 		
-				//Move down slope
-				if(line_check(hitbox_w, hitbox_h+14, true) && !ramp_fix || line_check(-hitbox_w, hitbox_h+14, true) && !ramp_fix)
+			//Move down slope
+			if(line_check(hitbox_w, hitbox_h+16, true) && !on_edge || line_check(-hitbox_w, hitbox_h+16, true) && !on_edge)
+			{
+				while(!line_check(hitbox_w, hitbox_h, true) && !line_check(-hitbox_w, hitbox_h, true))
 				{
-					while(!line_check(hitbox_w, hitbox_h, true) && !line_check(-hitbox_w, hitbox_h, true))
-					{
-						x += x_dir;
-						y += y_dir;	
-					}
-				}
-		
-				//Move up the slope:
-				while(line_check(hitbox_w, hitbox_h, true) || line_check(-hitbox_w, hitbox_h, true))
-				{
-					x -= x_dir;
-					y -= y_dir;	
+					x += x_dir;
+					y += y_dir;	
 				}
 			}
-	
-			//Handle ceiling collision
-			if(!ground)
+		
+			//Move up the slope:
+			while(line_check(hitbox_w, hitbox_h, true) || line_check(-hitbox_w, hitbox_h, true))
+			{
+				x -= x_dir;
+				y -= y_dir;	
+			}
+			
+		}
+		//Handle player's angle detection
+		player_angle_detection();
+		
+		//Handle ceiling collision
+		if(!ground)
+		{
+			if(angle_mode == 0)
 			{
 				//Ceiling landing code
-				if(point_check(-hitbox_w, -hitbox_h) && !point_check(hitbox_w, -hitbox_h) && y_speed < -2.5 && ceiling_allow && !ground || point_check(hitbox_w, -hitbox_h) && !point_check(-hitbox_w, -hitbox_h) && y_speed < -2.5 && ceiling_allow && !ground){
+				if(point_check(-hitbox_w, -hitbox_h) && y_speed < -2.5 && ceiling_allow && !ground || point_check(hitbox_w, -hitbox_h) && y_speed < -2.5 && ceiling_allow && !ground){
 					ceiling_landing = 1;	
 				}
 	
 				if(ceiling_landing = 1){
-					var TempAngle = get_angle();	
-					if(TempAngle <= 180 - 25 || TempAngle >= 180 + 25) {
-						ground_angle = get_angle();
+					if(point_check(-hitbox_w, -hitbox_h))var TempAngle = get_angle(floor(x)-hitbox_w, floor(y)-hitbox_h, 2);	
+					else TempAngle = get_angle(floor(x)+hitbox_w, floor(y)-hitbox_h, 2);	
+					show_debug_message(TempAngle)
+					if(TempAngle >= 90 && TempAngle <= 180 - 45 || TempAngle >= 180 + 45 && TempAngle <= 270) {
+						ground_angle = TempAngle;
 						ceiling_landing = 2
-					} else ceiling_landing = 0;
+					} else
+					{
+						ground_angle = 0;
+						ceiling_landing = 0;
+					}
 				}
 	
 				if(ceiling_landing = 2){
 					if(ground_angle < 180) ground_speed = -y_speed; else ground_speed = y_speed;
-		
+						
 					ceiling_landing = 0;
 					control_lock = 2;
 					ceiling_lock = 16;
 					state = ST_NORMAL;
-					ground = true
-				}
-				
-				if(mode = 0)
-				{
-					while(line_check(hitbox_w, -hitbox_h) || line_check(-hitbox_w, -hitbox_h))
-					{
-						y += 1;
-			
-						//Stop vectical movement
-						if(y_speed < 0) y_speed = 0;
-					}
+					ground = true;
 				}
 			}
+			if(mode = 0)
+			{
+				while(line_check(hitbox_w, -hitbox_h) || line_check(-hitbox_w, -hitbox_h))
+				{
+					y += 1;
+			
+					//Stop vectical movement
+					if(y_speed < 0) y_speed = 0;
+				}
+			}
+		}
 	}
 }

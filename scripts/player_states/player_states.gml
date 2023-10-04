@@ -9,6 +9,7 @@ function player_states(){
 	
 	//Sonic states:
 	player_state_peelout();
+	player_state_dropdash();
 	
 	//Tails states:
 	player_state_tailsfly();

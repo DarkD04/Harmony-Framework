@@ -16,6 +16,7 @@ function player_macros(){
 	#macro ST_KNUXLEDGE 13
 	#macro ST_KNUXFALL 14
 	#macro ST_KNUXSLIDE 15
+	#macro ST_DROPDASH 16
 	
 	//Animation macros:
 	#macro ANIM_STAND 0
@@ -48,6 +49,7 @@ function player_macros(){
 	#macro ANIM_KNUXLEDGE 28
 	#macro ANIM_KNUXLAND 29
 	#macro ANIM_KNUXCLIMBIDLE 30
+	#macro ANIM_DROPDASH 31
 	
 	//Shield macros
 	#macro S_NONE -1

@@ -23,8 +23,6 @@
 	col.start_left = bbox_left;
 	col.facing = facing;
 	
-	surface_resize(application_surface, 0, 0)
-	
 	//Now destroy
 	for(var i = 0; i < size_x; i++)
 	{
@@ -47,6 +45,7 @@
 			obj.tileset = tileset;
 			obj.tile_id = tilemap_get_at_pixel(tilelayer, obj.x, obj.y);
 			obj.delay = ((size_x * i) +(size_y * j))/2
+			obj.collapse = true;
 			
 			//Remove tiles from the area
 			tile_set_empty(data);

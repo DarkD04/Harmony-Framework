@@ -12,19 +12,21 @@
 	x_dir = 0;
 	y_dir = 1;
 	steps = 1;
+	angle_mode = 0;
 	
 	//Physics values
 	x_accel = 0.046875;
 	y_accel = 0.21875;
 	friction_speed = 0.046875;
 	top_speed = 6;
-	max_speed = 20;
+	max_speed = 24;
 	jump_strenght = 6.5;
 	
 	//State related values:
 	state = ST_NORMAL;
 	spindash_rev = 0;
 	skid_timer = 0;
+	dropdash_timer = 0;
 	force_roll = false;
 	death_timer = 0;
 	knockout_type = 0;
@@ -37,7 +39,7 @@
 	ground = true;
 	landed = false;
 	ceiling_allow = true;
-	ramp_fix = false;
+	on_edge = false;
 	on_object = false;
 	platform_check = true;
 	touching_ceiling = false;
@@ -51,6 +53,10 @@
 	debug = false;
 	input_disable = false;
 	is_time_over = false;
+	speed_allow = true;
+	roll_mov = true;
+	can_collect_rings = true;
+	follower = false;
 	
 	//Hitbox values:
 	hitbox_w = 9;

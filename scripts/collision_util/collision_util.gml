@@ -14,7 +14,7 @@ function point_check(radius_x, radius_y, semi_solid = false){
 				if (Solid.collision_type = "Full Solid" && Solid.collision_layer = "Both Layers"||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer A" && plane = 0 ||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer B" && plane = 1 ||
-				Solid.collision_type = "Semi Solid" && Solid.platform_check && semi_solid && platform_check)
+				Solid.collision_type = "Semi Solid" && Solid.platform_check && semi_solid)
 				{
 					ds_list_destroy(solidCollisions);
 					return true;
@@ -23,6 +23,24 @@ function point_check(radius_x, radius_y, semi_solid = false){
 		}
 		ds_list_destroy(solidCollisions);
 	}
+	
+	//Tile collision
+	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]) ||
+	layer_exists(global.col_tile[2]) || layer_exists(global.col_tile[3]))
+	{
+		if(collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[0]), true, true) ||
+		collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[1]), true, true) && platform_check && semi_solid||
+		collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[2]), true, true) && plane = 0||
+		collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[3]), true, true) && plane = 1) 
+		{
+			return true;
+		}
+	}
+	
+	//Debug sensor draw
+	draw_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir);
+	
+	
 }
 
 function angle_sensor(X, Y){
@@ -41,7 +59,7 @@ function angle_sensor(X, Y){
 				if (Solid.collision_type = "Full Solid" && Solid.collision_layer = "Both Layers"||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer A" && plane = 0 ||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer B" && plane = 1 ||
-				Solid.collision_type = "Semi Solid" && Solid.platform_check && platform_check)
+				Solid.collision_type = "Semi Solid" && Solid.platform_check)
 				{
 					ds_list_destroy(solidCollisions);
 					return true;
@@ -49,6 +67,18 @@ function angle_sensor(X, Y){
 			}
 		}
 		ds_list_destroy(solidCollisions);
+	}
+	//Tile collision
+	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]) ||
+	layer_exists(global.col_tile[2]) || layer_exists(global.col_tile[3]))
+	{
+		if(collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[0]), true, true) ||
+		collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[1]), true, true) && platform_check ||
+		collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[2]), true, true) && plane = 0||
+		collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[3]), true, true) && plane = 1) 
+		{
+			return true;
+		}
 	}
 }
 
@@ -77,7 +107,7 @@ function line_check(radius_x, radius_y, semi_solid = false){
 				if (Solid.collision_type = "Full Solid" && Solid.collision_layer = "Both Layers"||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer A" && plane = 0 ||
 				Solid.collision_type = "Full Solid" && Solid.collision_layer = "Layer B" && plane = 1 ||
-				Solid.collision_type = "Semi Solid" && semi_solid && Solid.platform_check && platform_check)
+				Solid.collision_type = "Semi Solid" && semi_solid && Solid.platform_check)
 				{
 					ds_list_destroy(solidCollisions);
 					return true;
@@ -86,6 +116,21 @@ function line_check(radius_x, radius_y, semi_solid = false){
 		}
 		ds_list_destroy(solidCollisions);
 	}
+	
+	//Tile collision
+	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]) ||
+	layer_exists(global.col_tile[2]) || layer_exists(global.col_tile[3]))
+	{
+		if(collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[0]), true, true) ||
+		collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[1]), true, true) && platform_check && semi_solid||
+		collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[2]), true, true) && plane = 0||
+		collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[3]), true, true) && plane = 1) 
+		{
+			return true;
+		}
+	}
+	
+	draw_line(floor(x)+X1,floor(y)+Y1,floor(x)+X2,floor(y)+Y2);
 }
 
 function check_object(x1, y1, x2, y2, semi_solid = false)

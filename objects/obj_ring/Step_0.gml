@@ -5,11 +5,11 @@
 	if(!ringloss)
 	{
 	    //Sync the animation
-	    image_index = global.object_timer / 5;
+	    image_index = global.object_timer / 4;
 	}
 	
     //Collect
-    if(player_collide_object(C_MAIN) && obj_player.state != ST_KNOCKOUT)
+    if(player_collide_object(C_MAIN, obj_player.can_collect_rings) && obj_player.state != ST_KNOCKOUT)
     {
 		//Play the sound
 		play_sound(sfx_ring);
@@ -18,7 +18,7 @@
         global.rings += 1;    
         
         //Create the effect
-        create_effect(x, y, spr_ring_sparkle, 0.45);
+        create_effect(x, y, spr_ring_sparkle, 0.2);
         
         //Destroy the ring
         instance_destroy();
@@ -43,10 +43,17 @@
 		
 		if(!ringloss)
 		{
-		//add to speed
-		x_speed += (ringacceleration[arrayx] * signx)
-		y_speed += (ringacceleration[arrayy] * signy)
+			//add to speed
+			x_speed += (ringacceleration[arrayx] * signx);
+			y_speed += (ringacceleration[arrayy] * signy);
 		
+		}
+		
+		//Turn into ringloss if player doesn't have magnet shield
+		if(obj_player.shield != S_ELECTRIC)
+		{
+			ringloss = true;
+			magnet = false;
 		}
 		//Ring loss physics
 		else
@@ -98,3 +105,6 @@
 
 		}
 	}
+	
+	//Temp culling
+	if(!on_screen() && !ringloss && !magnet && culling) instance_deactivate_object(id);

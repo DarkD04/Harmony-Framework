@@ -1,4 +1,7 @@
 function player_state_peelout(){
+	//If global value for peelout is diabled don't execute
+	if(!global.use_peelout) exit;
+	
 	//Trigger peel out
 	if(state == ST_LOOKUP && press_action && ground && character == CHAR_SONIC)
 	{

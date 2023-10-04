@@ -6,3 +6,7 @@
 	tileset = noone;
 	tile_id = 0;
 	delay = 0;
+	is_tile = true;
+	collapse = false;
+	ox = 0;
+	oy = 0;

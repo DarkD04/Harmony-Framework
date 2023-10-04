@@ -3,5 +3,6 @@
 	y_speed = 0;
 	magnet = false;
 	ringloss = false;
+	culling = false;
 	timer = 0;
 	animation_speed = 0.55;

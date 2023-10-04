@@ -19,7 +19,7 @@
 		obj_camera.target_right = x + obj_camera.center_x;
 		
 		//Spin
-		spin_speed = 24;
+		spin_speed = 16;
 		triggered = true;
 		
 		//Sonic be too fast!!!
@@ -64,9 +64,9 @@
 	//Add gravity
 	if(!ground) y_speed += 0.046875;
 	
-
+	
 	//Ground detection
-	while(instance_place(x, y, par_solid))
+	while(instance_place(x, y, [layer_tilemap_get_id(global.col_tile[0]), layer_tilemap_get_id(global.col_tile[1])]))
 	{
 		y -= 1;	
 		ground = true;
@@ -75,12 +75,20 @@
 		play_sound(sfx_slide);
 	}
 	
+	//Ground detection
+	if(instance_place(x + 8 * sign(x_speed), y, layer_tilemap_get_id(global.col_tile[0])))
+	{
+		x_speed *= -1;
+	}
+	
+	
 	//Sparkle effects
 	if(angle != 180 && triggered && global.object_timer mod 12 == 0)
 	{
 		create_effect(x + random_range(-24, 24), (y - 32) + random_range(-16, 16), spr_ring_sparkle, 0.2);
 		create_effect(x + random_range(-24, 24), (y - 32) + random_range(-16, 16), spr_ring_sparkle, 0.2);
 	}
+	
 	
 	//Screen sides bounce
 	if(x < obj_camera.limit_left + 32 && x_speed < 0 || x > obj_camera.limit_right - 32 && x_speed > 0)
