@@ -13,7 +13,7 @@ function player_hitbox(){
 		hitbox_h = 19;
 	
 		//Roll hitboxes
-		if(animation == ANIM_ROLL)
+		if(animation == ANIM_ROLL || animation == ANIM_DROPDASH)
 		{
 			if(ground || landed)obj_camera.roll_offset = 5;
 			hitbox_w = 7;
