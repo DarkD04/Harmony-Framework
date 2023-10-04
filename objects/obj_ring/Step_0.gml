@@ -50,7 +50,7 @@
 		}
 		
 		//Turn into ringloss if player doesn't have magnet shield
-		if(obj_player.shield != S_ELECTRIC)
+		if(obj_player.shield != S_ELECTRIC && magnet)
 		{
 			ringloss = true;
 			magnet = false;
