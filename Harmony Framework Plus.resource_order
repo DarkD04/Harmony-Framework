@@ -78,8 +78,8 @@
     {"name":"Effects","order":5,"path":"folders/Sprites/Stage/Effects.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Arboreal Agate","order":3,"path":"folders/Tile Sets/Arboreal Agate.yy",},
-    {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
     {"name":"Collision Tileset","order":4,"path":"folders/Tile Sets/Collision Tileset.yy",},
+    {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_collision18","order":25,"path":"objects/obj_collision18/obj_collision18.yy",},
@@ -468,6 +468,7 @@
     {"name":"spr_editor_eggman","order":6,"path":"sprites/spr_editor_eggman/spr_editor_eggman.yy",},
     {"name":"obj_level","order":1,"path":"objects/obj_level/obj_level.yy",},
     {"name":"add_animation","order":2,"path":"scripts/add_animation/add_animation.yy",},
+    {"name":"par_bullet","order":7,"path":"objects/par_bullet/par_bullet.yy",},
     {"name":"spr_knuckles_drown","order":23,"path":"sprites/spr_knuckles_drown/spr_knuckles_drown.yy",},
     {"name":"surface_deform","order":25,"path":"scripts/surface_deform/surface_deform.yy",},
     {"name":"player_recorder","order":7,"path":"scripts/player_recorder/player_recorder.yy",},
