@@ -1,7 +1,8 @@
 # Harmony Framework Plus
 
 # NOTICE!!
-This build is beta at the moment, you can make a fangame in this all of essential features are done, use it at your own risk
+This build is beta at the moment, you can make a fangame in this all of essential features are done, use it at your own risk. [Current version: Beta 1.1]
+[Sonic.EXE or any creepypasta developers are not going to recieve any kind of support for the framework]
 
 # What is this?
 Accurate and stable sonic framework for GameMaker Studio 2
