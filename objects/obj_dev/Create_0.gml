@@ -3,7 +3,7 @@
 	object_list = [obj_ring, obj_monitor, obj_spring_vertical, obj_spring_horizontal, obj_spring_vertical, obj_spikes_vertical, obj_spikes_horizontal, obj_checkpoint, obj_battery_ring, obj_solid_object, obj_signpost, obj_capsule, obj_flicky];
 	object_select = 0;
 	debug = false;
-	show_collision = false;
+	show_collision = true;
 	show_hitbox = false;
 	show_player = false;
 	show_fps = false;
