@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "create_effect",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Engine",
-    "path": "folders/Scripts/Engine.yy",
+  "$GMScript":"",
+  "%Name":"create_effect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"create_effect",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Engine.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "surface_deform",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Engine",
-    "path": "folders/Scripts/Engine.yy",
+  "$GMScript":"",
+  "%Name":"surface_deform",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"surface_deform",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Engine.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

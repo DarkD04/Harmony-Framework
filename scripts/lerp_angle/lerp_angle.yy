@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "lerp_angle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Engine",
-    "path": "folders/Scripts/Engine.yy",
+  "$GMScript":"",
+  "%Name":"lerp_angle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"lerp_angle",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Engine.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

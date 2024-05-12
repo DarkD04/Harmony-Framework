@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "play_sound",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Engine",
-    "path": "folders/Scripts/Engine.yy",
+  "$GMScript":"",
+  "%Name":"play_sound",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"play_sound",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Engine.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

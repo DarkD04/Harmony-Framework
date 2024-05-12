@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "stop_jingle",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Engine",
-    "path": "folders/Scripts/Engine.yy",
+  "$GMScript":"",
+  "%Name":"stop_jingle",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"stop_jingle",
+  "parent":{
+    "name":"Engine",
+    "path":"folders/Scripts/Engine.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

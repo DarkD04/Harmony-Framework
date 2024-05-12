@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_collide_object",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Movement",
-    "path": "folders/Scripts/Player/Movement.yy",
+  "$GMScript":"",
+  "%Name":"player_collide_object",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_collide_object",
+  "parent":{
+    "name":"Movement",
+    "path":"folders/Scripts/Player/Movement.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

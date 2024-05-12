@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "player_recorder",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Misc",
-    "path": "folders/Scripts/Player/Misc.yy",
+  "$GMScript":"",
+  "%Name":"player_recorder",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"player_recorder",
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Scripts/Player/Misc.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
