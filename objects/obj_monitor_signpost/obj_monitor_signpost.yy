@@ -24,7 +24,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"monitor_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"","%Name":"monitor_type","filters":[],"listItems":[
         "\"10 Rings\"",
         "\"Shield\"",
         "\"Fire Shield\"",

@@ -7,7 +7,7 @@
   "managed":true,
   "name":"obj_electric_shield",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"par_shield","path":"objects/par_shield/par_shield.yy",},"propertyId":{"name":"shield_id","path":"objects/par_shield/par_shield.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":{"name":"par_shield","path":"objects/par_shield/par_shield.yy",},"propertyId":{"name":"shield_id","path":"objects/par_shield/par_shield.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
   ],
   "parent":{
     "name":"Shields",
