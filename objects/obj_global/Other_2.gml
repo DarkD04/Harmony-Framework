@@ -66,13 +66,22 @@
 	instance_create_depth(0, 0, 0, obj_input);
 	instance_create_depth(0, 0, 0, obj_music);
 	instance_create_depth(0, 0, -100, obj_fade);
+	
+	for(var i = 0; i <= room_last; ++i) 
+	{
+		global.roomlist[i] = room_get_name(i);
+	}
+	
 	if(global.dev_mode) 
 	{
 		instance_create_depth(0, 0, 0, obj_dev);
+		instance_create_depth(0, 0, 0, obj_shell);
 	}
 	
 	//Macros:
 	#macro Input obj_input
+	#macro WINDOW_WIDTH global.window_width
+	#macro WINDOW_HEIGHT global.window_height
 	
 	//Ending event:
 	room_goto_next();

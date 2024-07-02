@@ -2,11 +2,16 @@ function point_check(radius_x, radius_y, semi_solid = false){
 	//Disable collision
 	if(!collision_allow) exit;
 	
-	if(collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, par_solid, true, true))
+	//Temp values:
+	var new_x, new_y;
+	new_x = floor(clamp(x, obj_camera.limit_left, obj_camera.limit_right));
+	new_y = floor(clamp(y, obj_camera.limit_top, obj_camera.limit_bottom));
+	
+	if(collision_point(new_x+radius_x*y_dir+radius_y*x_dir, new_y+radius_y*y_dir+radius_x*-x_dir, par_solid, true, true))
 	{
 		//Get the value from the object with what youre coliding
 		var solidCollisions = ds_list_create();
-		var SolidCount = collision_point_list(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir,par_solid,true,true,solidCollisions,false);
+		var SolidCount = collision_point_list(new_x+radius_x*y_dir+radius_y*x_dir, new_y+radius_y*y_dir+radius_x*-x_dir,par_solid,true,true,solidCollisions,false);
 		for (var i = 0; i < SolidCount; i++)
 		{
 			var Solid =  solidCollisions[| i];
@@ -23,17 +28,48 @@ function point_check(radius_x, radius_y, semi_solid = false){
 		}
 		ds_list_destroy(solidCollisions);
 	}
+	//Get the size of collision layer array:
+	var a_col = array_length(global.col_tile);
 	
-	//Tile collision
-	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]) ||
-	layer_exists(global.col_tile[2]) || layer_exists(global.col_tile[3]))
+	//Handle tile collision (Native GameMaker implementation):
+	for (var i = 0; i < a_col; ++i) 
 	{
-		if(collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[0]), true, true) ||
-		collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[1]), true, true) && platform_check && semi_solid||
-		collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[2]), true, true) && plane = 0||
-		collision_point(floor(x)+radius_x*y_dir+radius_y*x_dir, floor(y)+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[3]), true, true) && plane = 1) 
+	    //Check if given layers exist(Prevents console output from spamming non existing layer):
+		if(layer_exists(global.col_tile[i]))
 		{
-			return true;
+			//Colide with the tile layer:
+			if(collision_point(new_x+radius_x*y_dir+radius_y*x_dir, new_y+radius_y*y_dir+radius_x*-x_dir, layer_tilemap_get_id(global.col_tile[i]), true, true) )
+			{
+				
+				//Different layers collide depending on different behaviour:
+				switch(i)
+				{
+					//Full solid:
+					case 0:
+						return true;
+					break;
+					
+					//Semi solid:
+					case 1:
+						if(platform_check && semi_solid) return true;
+					break;
+					
+					//Full solid layer A:
+					case 2:
+						if(plane == 0) return true;
+					break;
+					
+					//Full solid layer B:
+					case 3:
+						if(plane == 1) return true;
+					break;
+					
+					//Full solid layer C[EVIL]:
+					case 4:
+						if(plane == 2) return true;
+					break;
+				}
+			}
 		}
 	}
 	
@@ -68,26 +104,58 @@ function angle_sensor(X, Y){
 		}
 		ds_list_destroy(solidCollisions);
 	}
-	//Tile collision
-	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]) ||
-	layer_exists(global.col_tile[2]) || layer_exists(global.col_tile[3]))
+	//Get the size of collision layer array:
+	var a_col = array_length(global.col_tile);
+	
+	//Handle tile collision (Native GameMaker implementation):
+	for (var i = 0; i < a_col; ++i) 
 	{
-		if(collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[0]), true, true) ||
-		collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[1]), true, true) && platform_check ||
-		collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[2]), true, true) && plane = 0||
-		collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[3]), true, true) && plane = 1) 
+	    //Check if given layers exist(Prevents console output from spamming non existing layer):
+		if(layer_exists(global.col_tile[i]))
 		{
-			return true;
+			//Colide with the tile layer:
+			if(collision_point(floor(X), floor(Y), layer_tilemap_get_id(global.col_tile[i]), true, true))
+			{
+				
+				//Different layers collide depending on different behaviour:
+				switch(i)
+				{
+					//Full solid:
+					case 0:
+						return true;
+					break;
+					
+					//Semi solid:
+					case 1:
+						if(platform_check) return true;
+					break;
+					
+					//Full solid layer A:
+					case 2:
+						if(plane == 0) return true;
+					break;
+					
+					//Full solid layer B:
+					case 3:
+						if(plane == 1) return true;
+					break;
+					
+					//Full solid layer C[EVIL]:
+					case 4:
+						if(plane == 2) return true;
+					break;
+				}
+			}
 		}
 	}
 }
 
-function line_check(radius_x, radius_y, semi_solid = false){
+function line_check(radius_x, radius_y, semi_solid = false, true_mode = mode){
 	//Disable collision
 	if(!collision_allow) exit;
 	
 	var X1, X2, Y1, Y2;
-	switch(mode){
+	switch(true_mode){
 		case 0: X1 = radius_x Y1 = 0 X2 = radius_x Y2= radius_y break;
 		case 1: X1 = 0 Y1 = -radius_x X2 = radius_y Y2= -radius_x break;
 		case 2: X1 = radius_x Y1 = 0 X2 = radius_x Y2= -radius_y-1 break;
@@ -117,16 +185,48 @@ function line_check(radius_x, radius_y, semi_solid = false){
 		ds_list_destroy(solidCollisions);
 	}
 	
-	//Tile collision
-	if(layer_exists(global.col_tile[0]) || layer_exists(global.col_tile[1]) ||
-	layer_exists(global.col_tile[2]) || layer_exists(global.col_tile[3]))
+	//Get the size of collision layer array:
+	var a_col = array_length(global.col_tile);
+	
+	//Handle tile collision (Native GameMaker implementation):
+	for (var i = 0; i < a_col; ++i) 
 	{
-		if(collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[0]), true, true) ||
-		collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[1]), true, true) && platform_check && semi_solid||
-		collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[2]), true, true) && plane = 0||
-		collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[3]), true, true) && plane = 1) 
+	    //Check if given layers exist(Prevents console output from spamming non existing layer):
+		if(layer_exists(global.col_tile[i]))
 		{
-			return true;
+			//Colide with the tile layer:
+			if(collision_line(floor(x)+X1, floor(y)+Y1, floor(x)+X2, floor(y)+Y2, layer_tilemap_get_id(global.col_tile[i]), true, true))
+			{
+				
+				//Different layers collide depending on different behaviour:
+				switch(i)
+				{
+					//Full solid:
+					case 0:
+						return true;
+					break;
+					
+					//Semi solid:
+					case 1:
+						if(platform_check && semi_solid) return true;
+					break;
+					
+					//Full solid layer A:
+					case 2:
+						if(plane == 0) return true;
+					break;
+					
+					//Full solid layer B:
+					case 3:
+						if(plane == 1) return true;
+					break;
+					
+					//Full solid layer C[EVIL]:
+					case 4:
+						if(plane == 2) return true;
+					break;
+				}
+			}
 		}
 	}
 	
@@ -148,7 +248,7 @@ function check_object(x1, y1, x2, y2, semi_solid = false)
 		{
 			var Solid =  solidCollisions[| i];
 			if(Solid.collision_flag){
-				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && semi_solid && y < Solid.bbox_top+(y-yprevious) && y_speed >= 0)
+				if (Solid.collision_type = "Full Solid" || Solid.collision_type = "Semi Solid" && semi_solid && y < Solid.bbox_top+(y-yprevious) && mode == 0)
 				{
 					ds_list_destroy(solidCollisions);
 					return Solid;
@@ -157,4 +257,34 @@ function check_object(x1, y1, x2, y2, semi_solid = false)
 		}
 		ds_list_destroy(solidCollisions);
 	}
+}
+
+function draw_col_line(radius_x, radius_y, true_mode = mode){
+	//Disable collision
+	if(!collision_allow) exit;
+	
+	var X1, X2, Y1, Y2;
+	switch(true_mode){
+		case 0: X1 = radius_x Y1 = 0 X2 = radius_x Y2= radius_y break;
+		case 1: X1 = 0 Y1 = -radius_x X2 = radius_y Y2= -radius_x break;
+		case 2: X1 = radius_x Y1 = 0 X2 = radius_x Y2= -radius_y-1 break;
+		case 3: X1 = 0 Y1 = radius_x X2 = -radius_y-1 Y2= radius_x break;
+	}	
+	
+	draw_line(floor(x)+X1,floor(y)+Y1,floor(x)+X2,floor(y)+Y2);
+}
+
+function draw_col_line_wall(radius_x, radius_y, true_mode = mode){
+	//Disable collision
+	if(!collision_allow) exit;
+	
+	var X1, X2, Y1, Y2;
+	switch(true_mode){
+		case 3: X1 = radius_x Y1 = 0 X2 = radius_x Y2= radius_y break;
+		case 0: X1 = 0 Y1 = -radius_x X2 = radius_y Y2= -radius_x break;
+		case 1: X1 = radius_x Y1 = 0 X2 = radius_x Y2= -radius_y-1 break;
+		case 2: X1 = 0 Y1 = radius_x X2 = -radius_y-1 Y2= radius_x break;
+	}	
+	
+	draw_line(floor(x)+X1,floor(y)+Y1,floor(x)+X2,floor(y)+Y2);
 }

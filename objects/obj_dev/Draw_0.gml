@@ -1,7 +1,4 @@
 /// @description Draw debug
-	//Stop if player doesn't exist
-	if(!instance_exists(obj_player)) exit;
-	
 	//Draw hitboxes
 	if(show_hitbox)
 	{
@@ -22,11 +19,21 @@
 	//Create surface
 	if(!surface_exists(surf)) surf = surface_create(global.window_width, global.window_height);
 			
-	if(show_player && !debug)
+	if(show_player && !debug && instance_exists(obj_player))
 	{
 		//Set surface target
 		surface_set_target(surf);
 		draw_clear_alpha(c_black, 0);
+		
+		draw_set_font(global.font_small);
+		
+		/*draw_set_color(c_yellow)
+		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-floor(obj_camera.ground_offset)-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, true)
+		draw_set_color(c_white)
+		
+		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-32-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+32-16, true)
+		
+		draw_text((WINDOW_WIDTH/2)+8, (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, string(floor(obj_camera.ground_offset)))
 		
 		//Draw rectangle
 		draw_set_color(c_black);
@@ -53,6 +60,13 @@
 		draw_text(global.window_width-150, 32+(8*8), "STATE: " + string(obj_player.state));
 		draw_text(global.window_width-150, 32+(8*9), "ANIM: " + string(obj_player.animation));
 		
+		draw_set_color(c_yellow)
+		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-floor(obj_camera.ground_offset)-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, true)
+		draw_set_color(c_white)
+		
+		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-32-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+32-16, true)
+		
+		draw_text((WINDOW_WIDTH/2)+8, (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, string(floor(obj_camera.ground_offset)))*/
 		//Reset surface target
 		surface_reset_target();
 		
@@ -66,11 +80,29 @@
 		draw_set_alpha(1);
 		draw_set_color(c_white);
 		
-		//Draw angle sensors
-		draw_set_color(c_red);
-		draw_point(obj_player.point_x[0], obj_player.point_y[0]);
-		draw_point(obj_player.point_x[1], obj_player.point_y[1]);
-		draw_set_color(c_white);
+		//Draw main sensors
+		with(obj_player)
+		{
+			draw_set_color(#ff38ff);
+			draw_col_line_wall(-wall_h, -wall_w-1)
+			draw_set_color(#ff5454);
+			draw_col_line_wall(-wall_h, wall_w)
+			draw_set_color(#38ffa2);
+			draw_col_line(-hitbox_w, hitbox_h);
+			draw_set_color(#00f000);
+			draw_col_line(hitbox_w, hitbox_h);
+			draw_set_color(c_white);
+			draw_col_line(0, hitbox_h);
+			draw_set_color(#00aeef);
+			draw_col_line(-hitbox_w, -hitbox_h-1);
+			draw_set_color(#fff238);
+			draw_col_line(hitbox_w, -hitbox_h-1);
+			draw_set_color(c_white);
+			
+			draw_sprite(spr_point, 0, floor(x), floor(y));
+			
+			if(shield = S_ELECTRIC) draw_circle(floor(x), floor(y), 64, true);
+		}
 	}
 	
 	if(show_fps)
@@ -83,6 +115,7 @@
 		draw_set_font(global.font_small);
 		draw_set_halign(fa_left);
 		draw_text(0, global.window_height-8, "FPS: " + string(fps) + " " + "TRUE FPS:" +string(store_truefps));
+		draw_text(0, global.window_height-16, "INSTANCES: " + string(instance_count));
 		
 		//Reset surface target
 		surface_reset_target();
@@ -91,7 +124,7 @@
 		draw_surface(surf, camera_get_view_x(view_camera[view_current]), camera_get_view_y(view_camera[view_current]))	
 	}
 	//Disable not in debug mode
-	if(!debug) exit;
+	if(!debug || !instance_exists(obj_player)) exit;
 	
 	draw_set_alpha(0.75);
 	var sprite = object_get_sprite(object_list[object_select]);
@@ -105,7 +138,7 @@
 	//Draw text in rectangle
 	draw_set_font(global.font_small);
 	draw_set_halign(fa_left);
-	draw_text(0, 0, window_get_caption() +" "+ string(GM_version));
+	draw_text(0, 0, string_upper(window_get_caption()) +" "+ string(GM_version));
 	draw_text(0, 8, "BUILD DATE: " + date_date_string(GM_build_date));
 	draw_text(0, 16, "BUILD TIME: " + date_time_string(GM_build_date));
 	
