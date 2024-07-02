@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"add_animation",
   "isCompatibility":false,
   "isDnD":false,

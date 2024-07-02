@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_angle_detection",
   "isCompatibility":false,
   "isDnD":false,

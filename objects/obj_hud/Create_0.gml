@@ -7,3 +7,5 @@
 	{
 		if(!global.act_transition)offset[i] = -128 - (48*i); else offset[i] = 0;	
 	}
+	
+	

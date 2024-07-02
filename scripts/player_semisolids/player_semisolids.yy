@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_semisolids",
   "isCompatibility":false,
   "isDnD":false,

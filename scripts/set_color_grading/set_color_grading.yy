@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"set_color_grading",
   "isCompatibility":false,
   "isDnD":false,
