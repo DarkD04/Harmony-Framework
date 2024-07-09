@@ -60,17 +60,6 @@
 			}
 		break;
 		
-		case 2:
-			draw_set_alpha(0.7)
-			draw_rectangle(0, (sh/2), sw, (sh/2)+8, false)
-			draw_set_alpha(1)
-			draw_text(sw/2, (sh/2)-64-(8*Select),string_upper("**Select the stage**"));
-			for(var i = 0; i < array_length(Stages); i++){
-				draw_text(sw/2, (sh/2+(8*i))-(8*Select), string_upper(string(room_get_name(Stages[i]))));
-				
-			}
-		break;
-		
 		case 3:
 			draw_set_alpha(0.7)
 			draw_rectangle(0, (sh/2), sw, (sh/2)+8, false)

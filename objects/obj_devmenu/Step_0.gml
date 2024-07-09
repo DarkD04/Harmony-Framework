@@ -29,7 +29,7 @@
 	
 	switch(Section){
 		case 1: Select = clamp(Select,0,array_length(Presentation)-1) break;	
-		case 2: Select = clamp(Select,0,array_length(Stages)-1) break;	
+		case 2: instance_activate_all() room_goto(rm_stage_select) reset_stage_data() break;
 		case 3: Select = clamp(Select,0,room_last) break;	
 	}
 	//Enter Selections
@@ -45,7 +45,7 @@
 		instance_activate_all();
 		switch(Section){
 			case 1: room_goto(Presentation[Select]) reset_stage_data() break;
-			case 2: room_goto(Stages[Select]) reset_stage_data() break;
+			//case 2: room_goto(Stages[Select]) reset_stage_data() break;
 			case 3: room_goto(Select) reset_stage_data() break;
 		}
 	
