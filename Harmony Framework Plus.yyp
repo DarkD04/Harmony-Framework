@@ -192,6 +192,7 @@
     {"id":{"name":"obj_monitor","path":"objects/obj_monitor/obj_monitor.yy",},},
     {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},},
     {"id":{"name":"obj_object_rotation","path":"objects/obj_object_rotation/obj_object_rotation.yy",},},
+    {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_ramp","path":"objects/obj_ramp/obj_ramp.yy",},},
     {"id":{"name":"obj_ring","path":"objects/obj_ring/obj_ring.yy",},},

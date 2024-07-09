@@ -152,6 +152,7 @@
     {"name":"obj_monitor_icon","order":1,"path":"objects/obj_monitor_icon/obj_monitor_icon.yy",},
     {"name":"obj_monitor_signpost","order":2,"path":"objects/obj_monitor_signpost/obj_monitor_signpost.yy",},
     {"name":"obj_music","order":5,"path":"objects/obj_music/obj_music.yy",},
+    {"name":"obj_pause","order":7,"path":"objects/obj_pause/obj_pause.yy",},
     {"name":"obj_player","order":3,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_ramp","order":2,"path":"objects/obj_ramp/obj_ramp.yy",},
     {"name":"obj_s_tube","order":1,"path":"objects/obj_s_tube/obj_s_tube.yy",},
