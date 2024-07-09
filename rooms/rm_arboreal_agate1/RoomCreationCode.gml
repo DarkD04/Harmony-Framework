@@ -11,6 +11,7 @@
 		//Set stage act
 		act = 1;
 		
+		
 		//Is next level doing act transition
 		act_transition = true;
 		
