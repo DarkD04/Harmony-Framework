@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_wall_stoppers",
   "isCompatibility":false,
   "isDnD":false,

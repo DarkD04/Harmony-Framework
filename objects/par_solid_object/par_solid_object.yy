@@ -24,11 +24,11 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"collision_flag","filters":[],"listItems":[],"multiselect":false,"name":"collision_flag","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"collision_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"","%Name":"collision_flag","filters":[],"listItems":[],"multiselect":false,"name":"collision_flag","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
+    {"$GMObjectProperty":"","%Name":"collision_type","filters":[],"listItems":[
         "\"Full Solid\"",
         "\"Semi Solid\"",
-      ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
+      ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

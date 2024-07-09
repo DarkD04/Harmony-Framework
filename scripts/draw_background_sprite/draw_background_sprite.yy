@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"draw_background_sprite",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_water",
   "isCompatibility":false,
   "isDnD":false,

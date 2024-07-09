@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_state_lookdown",
   "isCompatibility":false,
   "isDnD":false,

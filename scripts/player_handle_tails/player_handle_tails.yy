@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_handle_tails",
   "isCompatibility":false,
   "isDnD":false,

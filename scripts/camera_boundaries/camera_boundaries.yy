@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"camera_boundaries",
   "isCompatibility":false,
   "isDnD":false,

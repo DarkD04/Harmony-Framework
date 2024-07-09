@@ -2,12 +2,12 @@
   "$GMObject":"",
   "%Name":"obj_bridge_seesaw_weight",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_bridge_seesaw_weight",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resource":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Full Solid\"",},
+    {"$GMOverriddenProperty":"","%Name":"","name":"","objectId":null,"propertyId":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Full Solid\"",},
   ],
   "parent":{
     "name":"Bridge Zone",

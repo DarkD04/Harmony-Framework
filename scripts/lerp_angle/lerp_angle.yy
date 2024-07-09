@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"lerp_angle",
   "isCompatibility":false,
   "isDnD":false,

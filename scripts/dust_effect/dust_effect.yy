@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"dust_effect",
   "isCompatibility":false,
   "isDnD":false,

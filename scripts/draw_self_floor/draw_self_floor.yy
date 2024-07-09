@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"draw_self_floor",
   "isCompatibility":false,
   "isDnD":false,

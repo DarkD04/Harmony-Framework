@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_inv_speed",
   "isCompatibility":false,
   "isDnD":false,

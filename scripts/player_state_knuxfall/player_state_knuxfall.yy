@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_state_knuxfall",
   "isCompatibility":false,
   "isDnD":false,

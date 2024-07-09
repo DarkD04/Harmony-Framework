@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"reset_stage_data",
   "isCompatibility":false,
   "isDnD":false,

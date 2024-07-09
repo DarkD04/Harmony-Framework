@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"stop_jingle",
   "isCompatibility":false,
   "isDnD":false,

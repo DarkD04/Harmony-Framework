@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"create_debris",
   "isCompatibility":false,
   "isDnD":false,

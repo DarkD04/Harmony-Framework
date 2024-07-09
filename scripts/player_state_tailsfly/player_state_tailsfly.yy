@@ -1,5 +1,5 @@
 {
-  "$GMScript":"v1",
+  "$GMScript":"",
   "%Name":"player_state_tailsfly",
   "isCompatibility":false,
   "isDnD":false,
