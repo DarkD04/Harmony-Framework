@@ -139,6 +139,7 @@
     {"id":{"name":"obj_capsule","path":"objects/obj_capsule/obj_capsule.yy",},},
     {"id":{"name":"obj_checkpoint","path":"objects/obj_checkpoint/obj_checkpoint.yy",},},
     {"id":{"name":"obj_col1","path":"objects/obj_col1/obj_col1.yy",},},
+    {"id":{"name":"obj_col3_1","path":"objects/obj_col3_1/obj_col3_1.yy",},},
     {"id":{"name":"obj_col3","path":"objects/obj_col3/obj_col3.yy",},},
     {"id":{"name":"obj_collapsing_tile","path":"objects/obj_collapsing_tile/obj_collapsing_tile.yy",},},
     {"id":{"name":"obj_collision_area","path":"objects/obj_collision_area/obj_collision_area.yy",},},

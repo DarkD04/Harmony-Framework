@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"palette_swap",
   "isCompatibility":false,
   "isDnD":false,

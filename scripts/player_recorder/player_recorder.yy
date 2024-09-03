@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"player_recorder",
   "isCompatibility":false,
   "isDnD":false,

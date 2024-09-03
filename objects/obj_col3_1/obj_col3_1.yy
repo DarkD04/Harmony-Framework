@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hud",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_col3_1",
+  "eventList":[],
   "managed":true,
-  "name":"obj_hud",
+  "name":"obj_col3_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"HUD",
-    "path":"folders/Objects/Stage/Common Objects/HUD.yy",
+    "name":"Collision",
+    "path":"folders/Objects/Stage/Collision.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_solid",
+    "path":"objects/par_solid/par_solid.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_tile_collision",
+    "path":"sprites/spr_tile_collision/spr_tile_collision.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

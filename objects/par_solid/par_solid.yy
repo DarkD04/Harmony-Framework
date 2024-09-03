@@ -2,7 +2,7 @@
   "$GMObject":"",
   "%Name":"par_solid",
   "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"par_solid",
@@ -26,15 +26,15 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"","%Name":"collision_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"v1","%Name":"collision_type","filters":[],"listItems":[
         "\"Full Solid\"",
         "\"Semi Solid\"",
-      ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
-    {"$GMObjectProperty":"","%Name":"collision_layer","filters":[],"listItems":[
+      ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"collision_layer","filters":[],"listItems":[
         "\"Both Layers\"",
         "\"Layer A\"",
         "\"Layer B\"",
-      ],"multiselect":false,"name":"collision_layer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Both Layers\"","varType":6,},
+      ],"multiselect":false,"name":"collision_layer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Both Layers\"","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

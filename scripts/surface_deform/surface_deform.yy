@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"surface_deform",
   "isCompatibility":false,
   "isDnD":false,

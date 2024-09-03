@@ -105,6 +105,7 @@
     {"name":"obj_capsule_button","order":5,"path":"objects/obj_capsule_button/obj_capsule_button.yy",},
     {"name":"obj_capsule_piece","order":6,"path":"objects/obj_capsule_piece/obj_capsule_piece.yy",},
     {"name":"obj_capsule","order":4,"path":"objects/obj_capsule/obj_capsule.yy",},
+    {"name":"obj_col3_1","order":29,"path":"objects/obj_col3_1/obj_col3_1.yy",},
     {"name":"obj_col3","order":2,"path":"objects/obj_col3/obj_col3.yy",},
     {"name":"obj_collapsing_tile","order":2,"path":"objects/obj_collapsing_tile/obj_collapsing_tile.yy",},
     {"name":"obj_collision_area","order":3,"path":"objects/obj_collision_area/obj_collision_area.yy",},
