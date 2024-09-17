@@ -107,11 +107,12 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.2.0.132",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Harmony Framework Plus",
   "resources":[
     {"id":{"name":"font_console","path":"fonts/font_console/font_console.yy",},},
+    {"id":{"name":"READ THIS!!!","path":"notes/READ THIS!!!/READ THIS!!!.yy",},},
     {"id":{"name":"obj_act_clear","path":"objects/obj_act_clear/obj_act_clear.yy",},},
     {"id":{"name":"obj_act_trans_marker","path":"objects/obj_act_trans_marker/obj_act_trans_marker.yy",},},
     {"id":{"name":"obj_act_transition","path":"objects/obj_act_transition/obj_act_transition.yy",},},

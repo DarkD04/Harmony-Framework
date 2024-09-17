@@ -88,6 +88,7 @@
   ],
   "ResourceOrderSettings":[
     {"name":"font_console","order":1,"path":"fonts/font_console/font_console.yy",},
+    {"name":"READ THIS!!!","order":19,"path":"notes/READ THIS!!!/READ THIS!!!.yy",},
     {"name":"obj_act_transition","order":3,"path":"objects/obj_act_transition/obj_act_transition.yy",},
     {"name":"obj_antonbald","order":1,"path":"objects/obj_antonbald/obj_antonbald.yy",},
     {"name":"obj_badnik_test","order":1,"path":"objects/obj_badnik_test/obj_badnik_test.yy",},

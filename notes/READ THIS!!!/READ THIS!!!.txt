@@ -1,0 +1,5 @@
+WIP harmony framework documentation - please add some certain things here:
+
+-how to change resolution
+-how to change first room
+-how to do some other stuff n00bs DONT KNOW (probably the stage name and music being in room creation etc)
