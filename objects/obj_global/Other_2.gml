@@ -33,6 +33,7 @@
 	global.score = 0;
 	global.rings = 0;
 	global.life = 3;
+	global.emeralds = [false, false, false, false, false, false, false];
 	global.stage_timer = 0;
 	global.monitor_store = [];
 	global.monitor_id = 0;
