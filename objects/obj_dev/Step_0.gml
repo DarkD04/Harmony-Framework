@@ -32,7 +32,7 @@
 		if(keyboard_check_pressed(vk_f1)) game_restart();
 		if(keyboard_check_pressed(vk_f10))
 		{
-			global.character = (global.character + 1) mod 4;
+			global.character = (global.character + 1) mod 3;
 		}
 		if(keyboard_check(vk_f6)) room_speed = 10 else room_speed = 60
 	

@@ -11,7 +11,7 @@
 	x = cx;
 	
 	//Draw basic rectangle with blendmode
-	draw_set_color($1f63ff);
+	draw_set_color($5b301e);
 	gpu_set_blendmode(bm_subtract);
 	draw_rectangle(cx, max(y, cy), cx+sw+64, max(y, cy)+sh, false);
 	gpu_set_blendmode(bm_normal);

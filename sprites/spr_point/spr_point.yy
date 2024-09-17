@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Harmony Framework Plus",
-    "path":"Harmony Framework Plus.yyp",
+    "name":"Debug",
+    "path":"folders/Sprites/Debug.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
