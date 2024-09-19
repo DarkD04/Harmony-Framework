@@ -36,7 +36,7 @@
 	//Storing background oh no
 	with(par_background)
 	{
-		for(var i = 0; i <= bg_id; i++)
+		for(var i = 0; i < bg_id; i++)
 		{
 			offset_x[i] = global.diff_store[i];
 			trigger[i] = true

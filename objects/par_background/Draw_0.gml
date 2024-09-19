@@ -1,5 +1,5 @@
 /// @description Draw background
-	for(var i = 0; i <= bg_id; i++)
+	for(var i = 0; i < bg_id; i++)
 	{
 		//Draw the background
 		if(line_scroll[i] = false)
