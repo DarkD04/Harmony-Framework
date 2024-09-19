@@ -49,7 +49,7 @@
 	
 	
 	//Customizables
-	global.legacy_rotation = true;			//Classic megadrive games rotation, if disabled it directs to partial rotation(from Mania)
+	global.rotation_type = 0;				//This changes player's visual rotation 
 	global.use_battery_rings = false;		//If this is disabled, destroying enemies will spawn flickies instead
 	global.chaotix_monitors = false;		//Changes monitor icons to be like chaotix, monitor icon spins and it turns into dust
 	
