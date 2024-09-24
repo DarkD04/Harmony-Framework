@@ -67,7 +67,7 @@ function player_handle_tails(){
 	
 
 		//Change image angle
-		if(!global.legacy_rotation){
+		if(global.rotation_type != 1){
 		image_angle = visual_angle;
 		}else
 		{
