@@ -500,6 +500,7 @@
     {"name":"spr_teststage_crystal3","order":6,"path":"sprites/spr_teststage_crystal3/spr_teststage_crystal3.yy",},
     {"name":"spr_teststage_platform","order":7,"path":"sprites/spr_teststage_platform/spr_teststage_platform.yy",},
     {"name":"spr_teststage_waterfall","order":8,"path":"sprites/spr_teststage_waterfall/spr_teststage_waterfall.yy",},
+    {"name":"spr_teststage_waterfalltop","order":9,"path":"sprites/spr_teststage_waterfalltop/spr_teststage_waterfalltop.yy",},
     {"name":"spr_tile_collision_semisolid","order":3,"path":"sprites/spr_tile_collision_semisolid/spr_tile_collision_semisolid.yy",},
     {"name":"spr_tile_collision","order":1,"path":"sprites/spr_tile_collision/spr_tile_collision.yy",},
     {"name":"spr_title_card_piece","order":9,"path":"sprites/spr_title_card_piece/spr_title_card_piece.yy",},

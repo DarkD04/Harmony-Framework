@@ -589,6 +589,7 @@
     {"id":{"name":"spr_teststage_crystal3","path":"sprites/spr_teststage_crystal3/spr_teststage_crystal3.yy",},},
     {"id":{"name":"spr_teststage_platform","path":"sprites/spr_teststage_platform/spr_teststage_platform.yy",},},
     {"id":{"name":"spr_teststage_waterfall","path":"sprites/spr_teststage_waterfall/spr_teststage_waterfall.yy",},},
+    {"id":{"name":"spr_teststage_waterfalltop","path":"sprites/spr_teststage_waterfalltop/spr_teststage_waterfalltop.yy",},},
     {"id":{"name":"spr_tile_collision_semisolid","path":"sprites/spr_tile_collision_semisolid/spr_tile_collision_semisolid.yy",},},
     {"id":{"name":"spr_tile_collision","path":"sprites/spr_tile_collision/spr_tile_collision.yy",},},
     {"id":{"name":"spr_title_card_piece","path":"sprites/spr_title_card_piece/spr_title_card_piece.yy",},},
