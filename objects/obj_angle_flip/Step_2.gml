@@ -5,9 +5,14 @@
 		{
 			obj_player.ground_angle += 180;
 			obj_player.visual_angle += 180;
-			obj_player.mode = 1
-			obj_player.detach_allow = false
+			obj_player.ground_angle %= 360;
 			obj_player.ground_speed *= -1;
+			with(obj_player)
+			{
+				disable_mode = true
+				player_reposition_mode()
+			}
+			
 		}
 		triggered = true;	
 	}else

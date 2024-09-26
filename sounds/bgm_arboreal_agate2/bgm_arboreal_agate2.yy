@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":97.07102,
+  "duration":130.42938,
   "name":"bgm_arboreal_agate2",
   "parent":{
     "name":"Stage Music",
