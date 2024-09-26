@@ -5,8 +5,8 @@
   "managed":true,
   "name":"obj_bridge_seesaw_launcher",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resource":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Semi Solid\"",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"par_solid_object","path":"objects/par_solid_object/par_solid_object.yy",},"propertyId":{"name":"collision_type","path":"objects/par_solid_object/par_solid_object.yy",},"resource":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Semi Solid\"",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Semi Solid\"",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"par_solid_object","path":"objects/par_solid_object/par_solid_object.yy",},"propertyId":{"name":"collision_type","path":"objects/par_solid_object/par_solid_object.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Semi Solid\"",},
   ],
   "parent":{
     "name":"Bridge Zone",

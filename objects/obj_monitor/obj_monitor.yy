@@ -42,7 +42,7 @@
         "\"Speed Shoes\"",
         "\"Extra Life\"",
         "\"Eggman\"",
-      ],"multiselect":false,"name":"monitor_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"10 Rings\"","varType":6,},
+      ],"multiselect":false,"name":"monitor_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"10 Rings\"","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

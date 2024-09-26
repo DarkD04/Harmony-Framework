@@ -37,6 +37,7 @@
     {"name":"Bridge Zone","order":1,"path":"folders/Rooms/Stages/Bridge Zone.yy",},
     {"name":"Scripts","order":4,"path":"folders/Scripts.yy",},
     {"name":"Aural Scripts","order":28,"path":"folders/Scripts/Aural Scripts.yy",},
+    {"name":"Engine Scripts","order":29,"path":"folders/Scripts/Engine Scripts.yy",},
     {"name":"Engine","order":21,"path":"folders/Scripts/Engine.yy",},
     {"name":"Player","order":25,"path":"folders/Scripts/Player.yy",},
     {"name":"Misc","order":6,"path":"folders/Scripts/Player/Misc.yy",},

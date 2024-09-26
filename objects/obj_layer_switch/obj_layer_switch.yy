@@ -31,7 +31,7 @@
         "\"Layer B\"",
         "\"From A to B\"",
         "\"From B to A\"",
-      ],"multiselect":false,"name":"layer_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Layer A\"","varType":6,},
+      ],"multiselect":false,"name":"layer_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Layer A\"","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

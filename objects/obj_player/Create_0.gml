@@ -57,6 +57,9 @@
 	roll_mov = true;
 	can_collect_rings = true;
 	follower = false;
+	ground_push_flag = true;
+	floor_delay = 0;
+	reach_range = 16;
 	
 	//Hitbox values:
 	hitbox_w = 9;

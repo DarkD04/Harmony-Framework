@@ -1,16 +1,80 @@
 function player_mode(){
-	//Change angle modes
-	if(ground_angle >= 0 && ground_angle <= 45 || ground_angle >= 315 && ground_angle <= 360) mode = 0;
-	if(ground_angle >= 46 && ground_angle <= 134) mode = 1;
-	if(ground_angle >= 135 && ground_angle <= 225) mode = 2;
-	if(ground_angle >= 226 && ground_angle <= 314) mode = 3;
+	//Mode macros
+	#macro CMODE_FLOOR 0
+	#macro CMODE_RWALL 1
+	#macro CMODE_CEILING 2
+	#macro CMODE_LWALL 3
+	
+	// Taken from mania, that's why its hex angle.
+    var last_mode = mode;
+	var s = max(16 - floor(abs(ground_speed * 2)), 0);
+	
+	floor_delay = max(floor_delay - 1, 0);
+	
+	//Change floor modes
+	if(floor_delay == 0)
+	{
+		switch(last_mode)
+		{
+			//Mode 0[On floor]:
+		    case CMODE_FLOOR:
+		        if (ground_angle > 45 && ground_angle <= 180)
+				{
+					floor_delay = s;
+		            mode = CMODE_RWALL;
+				}
+		        if (ground_angle < 315 && ground_angle >= 180)
+				{
+					floor_delay = s;
+		            mode = CMODE_LWALL;
+				}
+		    break;
+		
+			//Mode 1[On right wall]:
+		    case CMODE_RWALL:
+		        if (ground_angle <= 45)
+				{
+					floor_delay = s;
+		            mode = CMODE_FLOOR;
+				}
+		        if (ground_angle >= 135)
+				{
+					floor_delay = s;
+		            mode = CMODE_CEILING;
+				}
+		    break;
+		
+			//Mode 2[On ceiling]:
+		    case CMODE_CEILING:
+		        if (ground_angle < 135)
+				{
+					floor_delay = s;
+		            mode = CMODE_RWALL;
+				}
+		        if (ground_angle > 225)
+				{
+					floor_delay = s;
+		            mode = CMODE_LWALL;
+				}
+		    break;
+		
+			//Mode 3[On left wall]:
+		    case CMODE_LWALL:
+		        if (ground_angle < 225)
+				{
+					floor_delay = s;
+		            mode = CMODE_CEILING;
+				}
+		        if (ground_angle >= 315)
+				{
+					floor_delay = s;
+		            mode = CMODE_FLOOR;
+				}
+			break;
+		}
+	}
 	
 	//Change direction
-	switch(mode)
-	{
-		case 0: x_dir = 0; y_dir = 1; break;	
-		case 1: x_dir = 1; y_dir = 0; break;
-		case 2: x_dir = 0; y_dir = -1; break;	
-		case 3: x_dir = -1; y_dir = 0; break;	
-	}
+	x_dir = dsin(90 * mode);
+	y_dir = dcos(90 * mode);
 }

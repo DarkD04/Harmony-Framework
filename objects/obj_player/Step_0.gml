@@ -4,8 +4,17 @@
 	steps = 1 + abs(floor(x_speed/13)) + abs(floor(y_speed/13));
 	
 	//Reset landing flag
-	if(ground)landed = false;
+	if(ground)
+	{
+		landed = false;
+	}
 	
+	//Set angle sensor reach range
+	if(!landed)
+	{
+		reach_range = 16;
+	}
+
 	//Cancel when in debug mode
 	if(debug)
 	{
@@ -22,11 +31,11 @@
 		//Handle semi solid:
 		player_semisolids();
 		
-		//Handle player terrain collision:
-		player_collision();
-		
 		//Handle player collision with solid objects:
 		player_object_collision();
+		
+		//Handle player terrain collision:
+		player_collision();
 		
 		//Handle how player changes floor modes:
 		player_mode();	

@@ -1,4 +1,5 @@
 function player_collision(){
+	
 	//Stop
 	if(!ground_collision_allow) exit;
 	
@@ -7,7 +8,6 @@ function player_collision(){
 	{
 		x += y_dir;	
 		y -= x_dir;
-		
 	}
 	
 	//Right wall collision
@@ -15,10 +15,18 @@ function player_collision(){
 	{
 		x -= y_dir;	
 		y += x_dir;
-		
 	}
 	
-	if(!on_object && ground_collision_allow)
+	if(line_check(hitbox_w, hitbox_h+16, true) || line_check(0, hitbox_h+16, true) || line_check(-hitbox_w, hitbox_h+16, true))
+	{
+		on_terrain = true;
+	}
+	else
+	{
+		on_terrain = false;	
+	}
+		
+	if(ground_collision_allow)
 	{
 		//Check landing
 		if(y_speed > 0 && !ground)
@@ -28,8 +36,10 @@ function player_collision(){
 				ground = true;
 				landed = true;
 				ground_speed = x_speed;
+				reach_range = 32;
+				
 				player_angle_detection();
-			
+				
 				//Landing speed (From 24 to 90 degrees)
 				if(ground_angle >= 24 && ground_angle <= 90)
 				{
@@ -56,22 +66,17 @@ function player_collision(){
 			    }
 			}	
 		}
-	
+			
 		//Handle slope collision
 		if(ground){
 			//Get the detach offset
 			var detach_distance = on_edge ? 1 : 16;
 			
-			//Detach off the ground
-			if(!line_check(hitbox_w, hitbox_h+detach_distance, true) && !line_check(-hitbox_w, hitbox_h+detach_distance, true) && !force_roll && detach_allow)
-			{
-				ground = false;	
-			}
-		
 			//Move down slope
-			if(line_check(hitbox_w, hitbox_h+16, true) && !on_edge || line_check(-hitbox_w, hitbox_h+16, true) && !on_edge)
+			if(line_check(hitbox_w, hitbox_h+16, true) && !on_edge || line_check(0, hitbox_h+16, true) && !on_edge || line_check(-hitbox_w, hitbox_h+16, true) && !on_edge)
 			{
-				while(!line_check(hitbox_w, hitbox_h, true) && !line_check(-hitbox_w, hitbox_h, true))
+				on_terrain = true
+				while(!line_check(hitbox_w, hitbox_h, true) && !line_check(-hitbox_w, hitbox_h, true) && !line_check(0, hitbox_h, true) && ground_push_flag && !on_object)
 				{
 					x += x_dir;
 					y += y_dir;	
@@ -79,10 +84,19 @@ function player_collision(){
 			}
 		
 			//Move up the slope:
-			while(line_check(hitbox_w, hitbox_h, true) || line_check(-hitbox_w, hitbox_h, true))
+			while(line_check(hitbox_w, hitbox_h, true) && ground_push_flag || line_check(0, hitbox_h, true) && ground_push_flag || line_check(-hitbox_w, hitbox_h, true) && ground_push_flag)
 			{
 				x -= x_dir;
 				y -= y_dir;	
+			}
+			
+			//Detach off the ground
+			if(!line_check(hitbox_w, hitbox_h+detach_distance, true) && !line_check(0, hitbox_h+detach_distance, true) && !line_check(-hitbox_w, hitbox_h+detach_distance, true) &&
+			!check_object(wall_w, 0, wall_w, hitbox_h+8, true) && !force_roll && detach_allow)
+			{
+				ground = false;	
+				ground_angle = 0;
+				player_reposition_mode();
 			}
 			
 		}
@@ -105,6 +119,7 @@ function player_collision(){
 					show_debug_message(TempAngle)
 					if(TempAngle >= 90 && TempAngle <= 180 - 45 || TempAngle >= 180 + 45 && TempAngle <= 270) {
 						ground_angle = TempAngle;
+						player_reposition_mode();
 						ceiling_landing = 2
 					} else
 					{
@@ -135,4 +150,13 @@ function player_collision(){
 			}
 		}
 	}
+	
+		
+	//Reset angle when airborn
+	if(!ground)
+	{
+		ground_angle = 0;	
+		player_reposition_mode();
+	}
+	
 }

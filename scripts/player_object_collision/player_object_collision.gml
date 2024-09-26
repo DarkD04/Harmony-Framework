@@ -1,8 +1,7 @@
 function player_object_collision(){
 	var object = check_object(wall_w, hitbox_h, wall_w, hitbox_h)
-	
-	
-	if(object && y + hitbox_h + yprevious - y >= object.bbox_top)
+
+	if(object && yprevious + hitbox_h >= object.bbox_top)
 	{
 		//Left Wall
 		while(check_object(0, hitbox_h, wall_w, hitbox_h) && (x + wall_w) + xprevious - x <= object.bbox_left){
@@ -18,7 +17,10 @@ function player_object_collision(){
 		//Ceiling collision
 		while(check_object(wall_w, hitbox_h, wall_w, 0) && y_speed <= 0 && !ground){
 			y+=1;
-			if(!ground)y_speed = 0;
+			if(!ground)
+			{
+				y_speed = 0;
+			}
 		}
 	}
 	//Landing
@@ -42,21 +44,31 @@ function player_object_collision(){
 			y -= 1;	
 	}
 	
+	if(on_object)
+	{
+		ground_angle = 0;
+	}
+		
 	//Full ground collision POST
-	if(ground && on_object && mode = 0){
+	if(ground && mode = 0){
 		while(check_object(wall_w, 0, wall_w, hitbox_h+bottom_ext, true) && !check_object(wall_w, 0, wall_w, hitbox_h, true)){
 			y += 1;	
 		}
 		
-		while(check_object(wall_w, 0, wall_w, hitbox_h, true)){
+		while(check_object(wall_w, 0, wall_w, hitbox_h, true))
+		{
 			y -= 1;	
 		}
 		
-		if(!check_object(wall_w, 0, wall_w, hitbox_h+bottom_ext, true)){
+		if(!check_object(wall_w, 0, wall_w, hitbox_h+bottom_ext, true))
+		{
 			on_object = false;
 		}
 	}
 	
 	//Disable on object collision in the air
-	if(!ground) on_object = false;
+	if(!ground) 
+	{
+		on_object = false;
+	}
 }
