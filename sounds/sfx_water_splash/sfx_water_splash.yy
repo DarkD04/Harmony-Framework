@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.566621,
+  "duration":1.039206,
   "name":"sfx_water_splash",
   "parent":{
     "name":"Objects",

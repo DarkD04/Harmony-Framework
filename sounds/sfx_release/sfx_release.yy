@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.430136,
+  "duration":1.415125,
   "name":"sfx_release",
   "parent":{
     "name":"Player",

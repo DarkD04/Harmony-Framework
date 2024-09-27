@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.067664,
+  "duration":0.166803,
   "name":"sfx_beep",
   "parent":{
     "name":"Objects",

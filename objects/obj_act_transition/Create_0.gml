@@ -24,7 +24,8 @@
 	{
 		for(var i = 0; i < bg_id; i++)
 		{
-			global.diff_store[i] = diff_x[i]
+			global.diff_store_x[i] = diff_x[i]
+			global.diff_store_y[i] = diff_y[i]
 		}
 	}
 	

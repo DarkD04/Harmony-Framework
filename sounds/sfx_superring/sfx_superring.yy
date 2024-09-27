@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.548798,
+  "duration":0.618027,
   "name":"sfx_superring",
   "parent":{
     "name":"Objects",

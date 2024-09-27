@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.467891,
+  "duration":0.466984,
   "name":"sfx_skid",
   "parent":{
     "name":"Player",

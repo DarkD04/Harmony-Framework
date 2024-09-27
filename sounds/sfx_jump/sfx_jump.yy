@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.420952,
+  "duration":0.435374,
   "name":"sfx_jump",
   "parent":{
     "name":"Player",

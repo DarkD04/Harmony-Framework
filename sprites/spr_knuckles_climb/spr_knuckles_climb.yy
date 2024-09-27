@@ -16,6 +16,8 @@
     {"$GMSpriteFrame":"","%Name":"b7bfe97c-fae0-42be-88e0-fd5b02719386","name":"b7bfe97c-fae0-42be-88e0-fd5b02719386","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"b870e7fd-7d90-4cbb-be55-ab5adf3c9cae","name":"b870e7fd-7d90-4cbb-be55-ab5adf3c9cae","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"aac63df3-fe34-4911-b2b3-9925b769d253","name":"aac63df3-fe34-4911-b2b3-9925b769d253","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1bd7be31-73a4-4f6c-8165-f406cbf159a5","name":"1bd7be31-73a4-4f6c-8165-f406cbf159a5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"25e14bd0-d283-4229-9772-bf625d39ada8","name":"25e14bd0-d283-4229-9772-bf625d39ada8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -52,7 +54,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":4.0,
+    "length":6.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -62,7 +64,7 @@
     },
     "name":"spr_knuckles_climb",
     "playback":1,
-    "playbackSpeed":10.0,
+    "playbackSpeed":8.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -83,6 +85,12 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"aac63df3-fe34-4911-b2b3-9925b769d253","path":"sprites/spr_knuckles_climb/spr_knuckles_climb.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"8e19e1d2-df19-4ac1-82bc-f554d244c949","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1bd7be31-73a4-4f6c-8165-f406cbf159a5","path":"sprites/spr_knuckles_climb/spr_knuckles_climb.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"0419620f-f3b3-4ce7-90d7-579453135c28","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25e14bd0-d283-4229-9772-bf625d39ada8","path":"sprites/spr_knuckles_climb/spr_knuckles_climb.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"81cc3923-c302-4e4e-bea2-75c9c5257fc3","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

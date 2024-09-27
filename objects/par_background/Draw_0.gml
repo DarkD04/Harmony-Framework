@@ -9,6 +9,9 @@
 				var reposition_x =  ((camera_get_view_x(view_camera[view_current])*factor_x[i]) + offset_x[i])
 				diff_x[i] = reposition_x - camera_get_view_x(view_camera[view_current]);
 				offset_x[i] += offset_x[i] - diff_x[i]
+				var reposition_y =  ((camera_get_view_y(view_camera[view_current])*factor_y[i]) + offset_y[i])
+				diff_y[i] = reposition_y - camera_get_view_y(view_camera[view_current]);
+				offset_y[i] += offset_y[i] - diff_y[i]
 				trigger[i] = false;
 			}
 		
@@ -17,6 +20,7 @@
 			pos_y[i] = floor(camera_get_view_y(view_camera[view_current])*factor_y[i] + offset_y[i]);
 		
 			diff_x[i] = pos_x[i] - camera_get_view_x(view_camera[view_current]);
+			diff_y[i] = pos_y[i] - camera_get_view_y(view_camera[view_current]);
 
 
 			//Auto scrolling
@@ -30,6 +34,9 @@
 				var reposition_x = ((camera_get_view_x(view_camera[view_current])*(factor_x[i])) + offset_x[i]);
 				diff_x[i] = reposition_x - camera_get_view_x(view_camera[view_current]);
 				offset_x[i] += offset_x[i] - diff_x[i]
+				var reposition_y = ((camera_get_view_y(view_camera[view_current])*(factor_y[i])) + offset_y[i]);
+				diff_y[i] = reposition_y - camera_get_view_y(view_camera[view_current]);
+				offset_y[i] += offset_y[i] - diff_y[i]
 				trigger[i] = false;
 			}
 		
@@ -38,6 +45,7 @@
 			pos_y[i] = floor(camera_get_view_y(view_camera[view_current])*factor_y[i] + offset_y[i]);
 		
 			diff_x[i] = ((camera_get_view_x(view_camera[view_current])*factor_x[i]) + offset_x[i]) - camera_get_view_x(view_camera[view_current])
+			diff_y[i] = ((camera_get_view_y(view_camera[view_current])*factor_y[i]) + offset_y[i]) - camera_get_view_y(view_camera[view_current])
 
 
 			//Auto scrolling

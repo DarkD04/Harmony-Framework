@@ -38,7 +38,8 @@
 	{
 		for(var i = 0; i < bg_id; i++)
 		{
-			offset_x[i] = global.diff_store[i];
+			offset_x[i] = global.diff_store_x[i];
+			offset_y[i] = global.diff_store_y[i];
 			trigger[i] = true
 		}
 	}

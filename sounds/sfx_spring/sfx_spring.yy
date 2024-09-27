@@ -12,8 +12,8 @@
   "duration":0.848367,
   "name":"sfx_spring",
   "parent":{
-    "name":"Player",
-    "path":"folders/Sounds/Sound Effects/Player.yy",
+    "name":"Objects",
+    "path":"folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

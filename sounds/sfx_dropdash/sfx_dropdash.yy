@@ -12,8 +12,8 @@
   "duration":1.124989,
   "name":"sfx_dropdash",
   "parent":{
-    "name":"Objects",
-    "path":"folders/Sounds/Sound Effects/Objects.yy",
+    "name":"Player",
+    "path":"folders/Sounds/Sound Effects/Player.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

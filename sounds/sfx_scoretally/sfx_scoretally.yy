@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":1.75,
+  "duration":1.709501,
   "name":"sfx_scoretally",
   "parent":{
     "name":"Objects",

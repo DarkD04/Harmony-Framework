@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.46907,
+  "duration":0.467642,
   "name":"sfx_checkpoint",
   "parent":{
     "name":"Objects",

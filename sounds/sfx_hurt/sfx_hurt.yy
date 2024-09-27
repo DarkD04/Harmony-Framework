@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.901723,
+  "duration":0.900181,
   "name":"sfx_hurt",
   "parent":{
     "name":"Player",

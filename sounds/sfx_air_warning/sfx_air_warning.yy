@@ -12,8 +12,8 @@
   "duration":1.21068,
   "name":"sfx_air_warning",
   "parent":{
-    "name":"Player",
-    "path":"folders/Sounds/Sound Effects/Player.yy",
+    "name":"Objects",
+    "path":"folders/Sounds/Sound Effects/Objects.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
