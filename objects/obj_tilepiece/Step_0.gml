@@ -11,9 +11,11 @@
 			for (var i = 0; i <= 1; ++i) 
 			{		
 				var tilelayer = layer_tilemap_get_id(global.col_tile[i]);
-				var data = tilemap_get_at_pixel(tilelayer, 0, 0);
-				tile_set_empty(data);
-		        tilemap_set_at_pixel(tilelayer, data, x, y);
+				var tile_x = tilemap_get_cell_x_at_pixel(tilelayer,x,y)
+				var tile_y = tilemap_get_cell_y_at_pixel(tilelayer,x,y)
+				var data = tilemap_get(tilelayer, tile_x, tile_y)
+		        data = tile_set_empty(data)
+				tilemap_set(tilelayer,data,tile_x,tile_y)
 			}
 		}
 		y_speed += 0.25

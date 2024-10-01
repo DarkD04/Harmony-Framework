@@ -3,13 +3,13 @@
 	var old_x, old_y;
 	
 	//Get previous position values
-	old_x = round(x);
-	old_y = round(y);
+	old_x = floor(x);
+	old_y = floor(y);
 	
 
 	//Position the platform
-	x = round(xstart + range_x * dsin(angle_x));
-	y = round(ystart + range_y * dcos(angle_y)) + sink_offset;
+	x = floor(origin_x + (range_x * dsin(angle_x)));
+	y = floor(origin_y + (range_y * dcos(angle_y))) + sink_offset;
 	
 	//Add angle and modulate it
 	angle_x = (angle_x + x_speed) mod 360;
@@ -27,19 +27,26 @@
 	//Move the player
 	if(col && col.ground)
 	{
-		col.x += round(x - old_x);
-		col.y += round(y - old_y);
+		col.x += floor(x - old_x);
+		col.y += floor(y - old_y);
 	}
 	
 	//Move the objects
-	for(var i = 0; i < array_length(move_object); i++)
-	{
-		with(move_object[i])
+
+		for(var i = 0; i < ds_list_size(attached_list); i++)
 		{
-			if(x > other.bbox_left && x < other.bbox_right && y < other.bbox_bottom + 32 && y > other.bbox_top - other.object_range )
+			with(attached_list[| i])
 			{
-				x += round(other.x - old_x);
-				y += round(other.y - old_y);
+					if(attached)
+					{
+						if object_index != par_moving_platform {
+							x += floor(other.x - old_x);
+							y += floor(other.y - old_y);
+						} else {
+							origin_x += floor(other.x - old_x);
+							origin_y += floor(other.y - old_y);
+						}
+					}
 			}
 		}
-	}
+	

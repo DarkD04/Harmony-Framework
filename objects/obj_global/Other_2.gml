@@ -22,7 +22,7 @@
     global.start = vk_enter;
 	
 	//Setup volume:
-	global.bgm_volume = 1;
+	global.bgm_volume = 0;
 	global.sfx_volume = 1;
 	
 	//Stage values

@@ -25,9 +25,25 @@ function obj_check_rect(X1, Y1, X2, Y2, SemiSolid = true){
 	}
 }
 
-function obj_check_point(X, Y, SemiSolid = true){
+function obj_check_point(X, Y, SemiSolid = true, Object = false){
 	
-	var col = collision_point(X, Y,par_solid,true,true);
+	var col;
+	
+	if Object {
+		col = collision_point(X, Y,par_solid_object,true,true);
+	
+		if(col)
+		{
+			if(col.collision_flag)
+			{
+				if (col.collision_type = "Full Solid" || col.collision_type = "Semi Solid" && SemiSolid = true)
+				{
+						return true;
+				}
+			}
+		}
+	}
+	col = collision_point(X, Y,par_solid,true,true);
 	
 	if(col)
 	{
