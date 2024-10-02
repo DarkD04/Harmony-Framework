@@ -8,8 +8,8 @@
 	
 
 	//Position the platform
-	x = floor(origin_x + (range_x * dsin(angle_x)));
-	y = floor(origin_y + (range_y * dcos(angle_y))) + sink_offset;
+	x = floor(origin_x + range_x * dsin(angle_x));
+	y = floor(origin_y + range_y * dcos(angle_y)) + sink_offset;
 	
 	//Add angle and modulate it
 	angle_x = (angle_x + x_speed) mod 360;
@@ -39,7 +39,7 @@
 			{
 					if(attached)
 					{
-						if object_index != par_moving_platform {
+						if object_get_parent(object_index) != par_moving_platform {
 							x += floor(other.x - old_x);
 							y += floor(other.y - old_y);
 						} else {

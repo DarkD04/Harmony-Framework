@@ -17,6 +17,7 @@
 			    for (var j = 0; j < _num; ++j;)
 			    {
 			        attached_list[| j].attached = true
+					show_debug_message(object_get_name( attached_list[| j].object_index))
 			    }
 			}
 		}
