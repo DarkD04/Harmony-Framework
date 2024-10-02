@@ -3,6 +3,11 @@
 	move_object = [obj_ring, obj_spring_vertical, obj_monitor, par_moving_platform, par_badnik];
 	origin_x = xstart
 	origin_y = ystart
+	fall_timer = 60
+	fall_speed = 0
+	fall_offset = 0
+	last_x = 0
+	last_y = 0
 	
 	attached_list = ds_list_create();
 	
@@ -17,7 +22,10 @@
 			    for (var j = 0; j < _num; ++j;)
 			    {
 			        attached_list[| j].attached = true
+					attached_list[| j].attach_offset_x = xstart - attached_list[| j].xstart
+					attached_list[| j].attach_offset_y = ystart - attached_list[| j].ystart
 					show_debug_message(object_get_name( attached_list[| j].object_index))
+					show_debug_message(attached_list[| j].attach_offset_x)
 			    }
 			}
 		}
