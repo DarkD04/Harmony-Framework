@@ -1,10 +1,48 @@
 Changelogs for 21st of October 2024
-	I'll keep this brief and highlight only the most important changes made to the framework
-	
-	Utility scripts:
-		-object_collision_util has been fully removed because now collision_util which was previously reserved for player only can be used on every object.
-		-animator_util has been added for new animation system
-		-ease_util
-	
-	
-	player_collision_functions
+    I'll keep this brief and highlight only the most important changes made to the framework
+    
+    Utility scripts:
+        -'object_collision_util' has been fully removed because now collision_util which was previously reserved for player only can be used on every object.
+        -'animator_util' has been added for new animation system
+        -'ease_util' has been added for new easing function, this one is not completely finished yet, it's lacking lots of different easing methods
+        -'fade_util' has been edited to support different fade types, specifically white fade and new fuction 'fade_change' has been added for easy fade in and out
+        -'player_util' has been added to modify stuff regarding the player
+        -'music_util' has been added for new music engine
+        -'camera_util' has been added for changing stuff regarding the camera
+    
+    Player changes:
+        -Create event has been fully cleaned and every variable has been documented
+        -Every script that is being called by the player has been updated
+        -Both terrain and object collision recieved massive improvements and they are much more stable
+        -New animation system has been added to the player
+        -Every player state has been modified for cleanups, new animation system and bug fixes
+        -Knuckles recieved a new rewrite
+        -For compability sakes with changes made to 'collision_util', function names in terrain collision haven't been changed, instead moved to new script called 'player_collision_functions'
+        -Ability to offset 4 sides of hitboxes
+        -Redone how floor mode chanes so moving on inverted half-pipes isn't jittery anymore
+        
+    Effect changes:
+        -surface_deform has recieved new argument called 'mode' which allows you to distort lines vertically instead of horizontally
+        -alpha_dither function has been added, which allows you to dither out the sprite
+    
+    New animation system:
+        -New animation system is based on constructor, which allows you to use the animation system on everything you want and you can have multiple animators in one object
+        -'add_animation' function has been renamed to 'animation_add' and argument order hasn't been changed
+
+    New music engine:
+        -New music engine is based on playlist system, you initilize music in function called `init_music_list` using `music_add` function
+        -Channels are flexible now, you can change the amount of channels you wanna have in your music engine, it's set to 4 channels by default and the last channel is always reserved for jingles
+        -Each music channel has it's own properties for fade
+        -Various functions in `music_util` for modifying music channels and stuff like that
+        
+    Misc improvements:
+        -Backgrounds vertical position is being saved during the act transition now
+        -New visual angle mode has been added called `Full Rotation` which rotates the player on every angled surface
+        -Collasping platform rewrite
+        -Breakable walls improvement
+        -Object being carried on moving platforms have been improved
+        -Magnetized rings are not acting ring loss types anymore
+        -Some accuracy and visual fixes
+        -Folder names have been updated a bit
+		-Flag for using classic sonic dust effects
+        -And many more that i forgot about!
