@@ -1,22 +1,13 @@
 # Harmony Framework Plus
 
 # NOTICE!!
-This build is beta at the moment, you can make a fangame in this all of essential features are done, use it at your own risk. [Current version: Beta 1.1]
-[Sonic.EXE or any creepypasta developers are not going to recieve any kind of support for the framework]
+This build is beta at the moment, you can make a fangame in this all of essential features are done, use it at your own risk. [Current version: 0.9 - Stable]
 
 # What is this?
-Accurate and stable sonic framework for GameMaker Studio 2
-
-# Documentation
-WIP
-
-# Credits
-Project: darknn
-# 
-Programming: darknn, chopp and joshyflip
-# 
-Character Art: Doc Melonhead and joshyflip
-# 
-Tile and background art: darknn and joshyflip
-# 
-Beta testing: Spitfya, Louplayer, BladeOfChaos, Axanery, ScarlyNight, SNick! and KGL
+  Accurate and stable Sonic framework for GameMaker Studio 2 that's simple to use.
+  
+# Documentation and support
+  PDF of function sheet is currently being worked on
+  #
+  [Support server for Harmony Framework](https://discord.gg/FH4pHSEv3n). Support will not be given to Sonic.EXE or any creepypasta games!
+  
