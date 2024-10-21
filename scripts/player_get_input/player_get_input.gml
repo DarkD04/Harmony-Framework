@@ -1,4 +1,5 @@
 function player_get_input(){
+	
 	//Button holds
 	hold_up = Input.Up;
 	hold_down = Input.Down;
@@ -21,6 +22,30 @@ function player_get_input(){
 	
 	//Disable inputs
 	if(input_disable)
+	{
+		//Button holds
+		hold_up = false;
+		hold_down = false;
+		hold_left = false;
+		hold_right = false;
+		hold_a = false;
+		hold_b = false;
+		hold_c = false;
+		hold_action = false;
+	
+		//Button holds
+		press_up = false;
+		press_down = false;
+		press_left = false;
+		press_right = false;
+		press_a = false;
+		press_b = false;
+		press_c = false;
+		press_action = false;	
+	}
+	
+	//Shell related
+	if(instance_exists(obj_shell) && obj_shell.isOpen)
 	{
 		//Button holds
 		hold_up = false;
