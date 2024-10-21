@@ -30,7 +30,7 @@
   "origin":9,
   "parent":{
     "name":"Knuckles",
-    "path":"folders/Sprites/Player/Knuckles.yy",
+    "path":"folders/Sprites/Player Sprites/Knuckles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

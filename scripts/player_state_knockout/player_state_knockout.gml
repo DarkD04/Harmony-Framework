@@ -11,7 +11,7 @@ function player_state_knockout(){
 	{
 		case K_HURT:
 			//Change animation
-			animation = ANIM_HURT;
+			animation_play(animator, ANIM_HURT);
 			
 			//Exit when grounded
 			if(ground)
@@ -29,10 +29,13 @@ function player_state_knockout(){
 			depth = layer_get_depth("Utilities");
 			
 			//Remove underwater physics
-			if(knockout_type == K_DIE)underwater = false;
+			if(knockout_type == K_DIE)
+			{
+				underwater = false;
+			}
 			
 			//Change animation
-			if(knockout_type == K_DIE)animation = ANIM_DIE; else animation = ANIM_DROWN;
+			animation_play(animator, knockout_type == K_DIE ? ANIM_DIE : ANIM_DROWN);
 			
 			//Disable collision
 			collision_allow = false;
@@ -46,18 +49,19 @@ function player_state_knockout(){
 			speed_shoes = 0;
 			invincible = false;
 			speed_shoes_flag = false;
+			hitbox_allow = false;
 			
 			//Fade out
 			if(death_timer == 80)
 			{
-				if(global.life != 0 || !is_time_over){
-				global.life -= 1;
+				if(global.life != 0 || !is_time_over)
+				{
+					global.life -= 1;
 					if(global.life != 0 && !is_time_over)
 					{
 						obj_fade.fade_speed = 3;
-						obj_fade.fade_type = fade_out;
-						obj_music.fade_speed = 2
-						obj_music.fade = MusicFadeOut;
+						obj_fade.fade_type = FADE_OUT;
+						music_set_fade(FADE_OUT, 2);
 					}
 				}
 			}
@@ -65,9 +69,9 @@ function player_state_knockout(){
 			//Create game over
 			if(death_timer == 80)
 			{
-				if(global.life = 0 || is_time_over){
-					obj_music.fade_speed = 2
-					obj_music.fade = MusicFadeOut;
+				if(global.life = 0 || is_time_over)
+				{
+					music_set_fade(FADE_OUT, 2);
 					if(!instance_exists(obj_game_over))	
 					{
 						var a = instance_create_layer(0, 0, "Utilities", obj_game_over);

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Debug",
-    "path":"folders/Sprites/Debug.yy",
+    "name":"Debug Sprites",
+    "path":"folders/Sprites/Debug Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

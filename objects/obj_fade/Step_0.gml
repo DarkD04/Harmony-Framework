@@ -3,7 +3,7 @@
 	//Fade to room
 	if(fade_room != noone)
 	{
-		if(fade_timer >= 512)
+		if(fade_timer == 0)
 		{
 			//Switch the rooms
 			room_goto(fade_room);

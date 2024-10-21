@@ -3,13 +3,11 @@ function player_state_spring(){
 	if(state != ST_SPRING) exit;
 	
 	//Change animation
-	animation = ANIM_SPRING;
+	animation_play(animator, ANIM_SPRING);
 	
-	//Change to walk animation when falling
-	if(y_speed >= 0) {
+	//Change state when falling
+	if(y_speed >= 0) 
+	{
 		state = ST_NORMAL;
 	}
-	
-	//Change state when on ground
-	if(ground) state = ST_NORMAL;
 }

@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Effects",
-    "path":"folders/Sprites/Stage/Effects.yy",
+    "path":"folders/Sprites/Stage Sprites/Effects.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

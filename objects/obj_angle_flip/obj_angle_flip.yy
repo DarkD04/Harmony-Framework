@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Collision Modifiers",
-    "path":"folders/Objects/Stage/Common Objects/Collision Modifiers.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Collision Modifiers.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_trigger",
-    "path":"sprites/spr_trigger/spr_trigger.yy",
+    "name":"spr_angle_flip",
+    "path":"sprites/spr_angle_flip/spr_angle_flip.yy",
   },
   "spriteMaskId":null,
   "visible":false,

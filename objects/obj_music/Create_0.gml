@@ -1,23 +1,21 @@
 /// @description Setup
-
-	//BGM
-	playing[0] = noone;
-	loop_start[0] = 0.00;
-	loop_end[0] = 0.00;
-	play_data[0] = "";
 	
-	//Jingles
-	playing[1] = noone;
-	loop_start[1] = 0.00;
-	loop_end[1] = 0.00;
-	play_data[1] = "";
+	//The channel amount, the last channel is reserved for jingles
+	channel_size = 4;
 	
-	//General
-	fade = MusicFadeIn;
-	fade_speed = 1;
-	fade_offset = 1;
+	//Create channels
+	for (var i = 0; i < channel_size; ++i) 
+	{
+		playing[i] = noone;
+		loop_start[i] = 0.00;
+		loop_end[i] = 0.00;
+		play_data[i] = "";
+		fade_multiplier[i] = 1;
+		fade_speed[i] = 1;
+		fade_type[i] = FADE_IN;
+	}
 	
-	//Macros
-	#macro MusicFadeIn 1
-	#macro MusicFadeOut -1
-
+	//Values for general fade
+	general_fade = FADE_IN;
+	general_fade_speed = 1;
+	general_fade_multiplier = 1;

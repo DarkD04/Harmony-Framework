@@ -29,7 +29,7 @@
   "origin":9,
   "parent":{
     "name":"Super Sonic",
-    "path":"folders/Sprites/Player/Super Sonic.yy",
+    "path":"folders/Sprites/Player Sprites/Super Sonic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

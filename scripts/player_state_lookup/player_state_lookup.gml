@@ -2,7 +2,6 @@ function player_state_lookup(){
 	//Trigger look down:
 	if(state == ST_NORMAL && ground && abs(ground_speed) < 0.5 && mode = 0 && hold_up)
 	{
-		animation = ANIM_LOOKUP;
 		state = ST_LOOKUP;
 	}
 	
@@ -14,11 +13,14 @@ function player_state_lookup(){
 	direction_allow = false; 
 	
 	//Change animation
-	animation = ANIM_LOOKUP;
+	animation_play(animator, ANIM_LOOKUP);
 	
 	//Slow crouch
 	ground_speed = approach(ground_speed, 0, friction_speed);
 	
 	//Release
-	if(!hold_up) state = ST_NORMAL;
+	if(!hold_up) 
+	{
+		state = ST_NORMAL;
+	}
 }

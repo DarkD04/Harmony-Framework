@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"draw_background_sprite",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Visuals Scripts",
+    "path":"folders/Scripts/Engine Scripts/Visuals Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

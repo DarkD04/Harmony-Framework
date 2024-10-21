@@ -35,7 +35,7 @@
 		"GROUND", "STATE INDEX", "SPRITE", "ANIMATION INDEX"];
 		info_result = [string(obj_player.x), string(obj_player.y), string(obj_player.x_speed), string(obj_player.y_speed),
 		string(obj_player.ground_speed), string(obj_player.ground_angle), string(obj_player.visual_angle),
-		(obj_player.ground ? "TRUE" : "FALSE"), string(obj_player.state), string_upper(sprite_get_name(obj_player.animation_sprite)), string(obj_player.animation)];
+		(obj_player.ground ? "TRUE" : "FALSE"), string(obj_player.state), string_upper(sprite_get_name(animation_get_sprite(obj_player.animator))), string(obj_player.animator.animation_current)];
 		
 		
 		//Draw info

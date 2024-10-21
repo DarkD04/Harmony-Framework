@@ -9,8 +9,8 @@
   "name":"obj_tails_object",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"Player Objects",
+    "path":"folders/Objects/Player Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

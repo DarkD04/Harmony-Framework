@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"dust_effect",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Visuals Scripts",
+    "path":"folders/Scripts/Engine Scripts/Visuals Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

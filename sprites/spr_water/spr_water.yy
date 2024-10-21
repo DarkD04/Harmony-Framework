@@ -57,7 +57,7 @@
   "origin":3,
   "parent":{
     "name":"Water",
-    "path":"folders/Sprites/Stage/Common Objects/Water.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Water.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

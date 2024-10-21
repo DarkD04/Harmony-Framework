@@ -1,31 +1,45 @@
 function player_state_jump(){
-	//Trigger jump
-	if(state == ST_NORMAL || state == ST_ROLL || state == ST_SKID)
+	//List of states that allow for jumping
+	var can_jump_states = [ST_NORMAL, ST_ROLL, ST_SKID];
+	
+	//Run the loop on array
+	for (var i = 0; i < array_length(can_jump_states); ++i) 
 	{
-		if(press_action && ground && !touching_ceiling && !force_roll)
+		//If states match the ones on the list, allow for jumping
+	    if(state == can_jump_states[i])
 		{
-			//Jump off the terrain
-			y_speed -= jump_strenght*dcos(ground_angle);	
-			x_speed -= jump_strenght*dsin(ground_angle);
-			
-			//Trigger the jump flag
-			jump_flag = true;
-			
-			//Detach player off the ground and change state
-			ground = false;
-			state = ST_JUMP
-			
-			//Change jump animation duration
-			jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
-			
-			//Reset angle and floor mode
-			ground_angle = 0;
-			player_reposition_mode(CMODE_FLOOR);
-			
-			//Play the sound
-			play_sound(sfx_jump);
+			can_jump = true;
 		}
 	}
+	
+	//Trigger jump
+	if(press_action && ground && !touching_ceiling && !force_roll && can_jump)
+	{
+		//Change animation
+		animation_play(animator, ANIM_ROLL);
+		
+		//Jump off the terrain
+		y_speed -= jump_strength * dcos(ground_angle);	
+		x_speed -= jump_strength * dsin(ground_angle);
+			
+		//Trigger the jump flag
+		jump_flag = true;
+			
+		//Detach player off the ground and change state
+		ground = false;
+		state = ST_JUMP
+			
+		//Change jump animation duration
+		jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
+			
+		//Reset angle and floor mode
+		ground_angle = 0;
+		player_reposition_mode(CMODE_FLOOR);
+			
+		//Play the sound
+		play_sound(sfx_jump);
+	}
+	
 	
 	//Do the air roll
 	if(press_action && !ground && global.use_airroll)
@@ -40,22 +54,29 @@ function player_state_jump(){
 	}
 	
 	//Stop if its not jump state
-	if(state != ST_JUMP) exit;
+	if(state != ST_JUMP) 
+	{
+		exit;
+	}
 	
 	//Change flags
 	attacking = true;
+	
 	//Limit the jump when key is released
-	if(!hold_action && y_speed < -4 / (1 + underwater) && jump_flag)
+	if(!hold_action && y_speed < -jump_release && jump_flag)
 	{
 		jump_flag = false;
-		y_speed = -4 / (1 + underwater);
+		y_speed = -jump_release;
 	}
 
 	//Change animation
-	animation = ANIM_ROLL;
+	animation_play(animator, ANIM_ROLL);
 	
 	//Change animation speed
-	if(character != CHAR_TAILS)animation_set_speed = jump_anim_speed;
+	if(character != CHAR_TAILS)
+	{
+		animation_set_duration(animator, jump_anim_speed);
+	}
 	
 	//Reset when grounded
 	if(ground) state = ST_NORMAL;

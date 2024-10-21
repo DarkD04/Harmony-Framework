@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"Animals",
-    "path":"folders/Sprites/Stage/Common Objects/Animals.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Animals.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

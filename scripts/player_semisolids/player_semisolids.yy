@@ -6,7 +6,7 @@
   "name":"player_semisolids",
   "parent":{
     "name":"Movement",
-    "path":"folders/Scripts/Player/Movement.yy",
+    "path":"folders/Scripts/Player Scripts/Movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

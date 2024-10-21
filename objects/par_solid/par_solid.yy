@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Parents",
-    "path":"folders/Objects/Stage/Common Objects/Parents.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Parents.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,12 +29,12 @@
     {"$GMObjectProperty":"v1","%Name":"collision_type","filters":[],"listItems":[
         "\"Full Solid\"",
         "\"Semi Solid\"",
-      ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
+      ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
     {"$GMObjectProperty":"v1","%Name":"collision_layer","filters":[],"listItems":[
         "\"Both Layers\"",
         "\"Layer A\"",
         "\"Layer B\"",
-      ],"multiselect":false,"name":"collision_layer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":null,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Both Layers\"","varType":6,},
+      ],"multiselect":false,"name":"collision_layer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Both Layers\"","varType":6,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Arboreal Agate",
-    "path":"folders/Objects/Stage/Arboreal Agate.yy",
+    "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
   },
   "parentObjectId":{
     "name":"par_background",

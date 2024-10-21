@@ -27,7 +27,7 @@
   "origin":9,
   "parent":{
     "name":"Sonic",
-    "path":"folders/Sprites/Player/Sonic.yy",
+    "path":"folders/Sprites/Player Sprites/Sonic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

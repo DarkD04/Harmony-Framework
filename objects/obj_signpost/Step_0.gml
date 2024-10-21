@@ -109,6 +109,7 @@
 			new_monitor.ground = false;
 			new_monitor.y_speed = -4;
 			new_monitor.monitor_type = monitor.monitor_type;
+			new_monitor.culling = false;
 			y_speed = -2.75;
 			instance_destroy(monitor);	
 			play_sound(sfx_bubble_jump);
@@ -119,7 +120,13 @@
 	}
 	
 	//Stop timer
-	if(triggered) input_disable = true;
+	if(triggered) 
+	{
+		input_disable = true;
+	}
 	
 	//Create act clear object
-	if(!instance_exists(obj_act_clear) && triggered && angle = 180 && spin_speed = 0) instance_create_depth(0, 0, 0, obj_act_clear)
+	if(!instance_exists(obj_act_clear) && triggered && angle = 180 && spin_speed = 0) 
+	{
+		instance_create_depth(0, 0, 0, obj_act_clear);
+	}

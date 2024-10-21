@@ -2,8 +2,12 @@
 	//Inherite values
 	event_inherited();
 	
-	//Values
-	back = instance_create_depth(x, y, depth - 20, obj_fire_shield_back); //Back shield object
-	is_back = false;	//Didn't felt like making new object for this lmfao
+	//Create the new animator
+	animator = new animator_create();
 	
-	flickercount = 0; //god decided i cant use var so its here now ig
+	//Add animations
+	animation_add(0, spr_fire_shield, 1, 0, true, true);
+	animation_add(1, spr_fire_shield_dash, 1, 0, true, true);
+	
+	//Play the first animation
+	animation_play(animator, 0);

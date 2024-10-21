@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"camera_boundaries",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Stage Scripts",
+    "path":"folders/Scripts/Stage Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -10,10 +10,12 @@
 	offset[2] = global.window_width + 32;
 	offset[3] = global.window_width + 32;
 	
-	//Speed up
-	if(!act_card) timer = 32;
-	
 	//Disable flags
 	obj_player.input_disable = true;
 	obj_level.disable_timer = true;
 	
+	//Speed up
+	if(!act_card) 
+	{
+		timer = 32;
+	}

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"shell_shit",
   "parent":{
-    "name":"Aural Scripts",
-    "path":"folders/Scripts/Aural Scripts.yy",
+    "name":"Debug Scripts",
+    "path":"folders/Scripts/Engine Scripts/Debug Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

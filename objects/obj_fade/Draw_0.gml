@@ -8,33 +8,46 @@
 	sh = global.window_height;
 	
 	//==FADE CODE==//
-	r = fade_timer;
-	g = fade_timer - 128;
-    b = fade_timer - 256;
+	if(fade_white)
+	{
+		r = fade_timer - 256;
+		g = fade_timer - 128;
+	    b = fade_timer;
+	}
+	else
+	{
+		r = fade_timer - 256;
+		g = fade_timer - 128;
+	    b = fade_timer;
+	}
 	
-	if (r < 0) r = 0;
-    else if (r > 255) r = 255;
-    if (g < 0) g = 0;
-    else if (g > 255) g = 255;
-    if (b < 0) b = 0;
-    else if (b > 255) b = 255;
+	r = clamp(r, 0, 255);
+	g = clamp(g, 0, 255);
+	b = clamp(b, 0, 255);
 	
 	r ^= 0xFF;
     g ^= 0xFF;
 	b ^= 0xFF;
 	
 	//Color the fade
-	var color = make_color_rgb(r , g , b );
+	var color = make_color_rgb(r, g, b);
 	
 	//Draw the fade
-	gpu_set_blendmode_ext(bm_dest_color, bm_zero); 
+	if(fade_white)
+	{
+		gpu_set_blendmode(bm_add);
+	}
+	else
+	{
+		gpu_set_blendmode(bm_subtract);
+	}
 	draw_set_color(color);
 	draw_rectangle(cx, cy, cx + sw, cy + sh, false);
 	draw_set_color(c_white)
 	gpu_set_blendmode(bm_normal);
 	
 	//Add fade timer depending on the type
-	fade_timer -= (fade_speed * (512/100)) * fade_type;
+	fade_timer += (fade_speed * (512/100)) * fade_type;
 	
 	//Limit the fade
 	fade_timer = clamp(fade_timer, 0, 512);

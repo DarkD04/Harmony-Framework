@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Spikes",
-    "path":"folders/Objects/Stage/Common Objects/Spikes.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Spikes.yy",
   },
   "parentObjectId":{
     "name":"par_solid_object",

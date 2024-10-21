@@ -1,4 +1,5 @@
 /// @description Values
+
 	//Get important objects
 	var marker, player;
 	
@@ -17,7 +18,6 @@
 	cam_bound[3] = obj_camera.limit_bottom - marker.y;
 	sign_pos[0] = obj_signpost.x - marker.x;
 	sign_pos[1] = obj_signpost.y - marker.y;
-	if(instance_exists(par_shield))shield_frame = par_shield.image_index;
 	
 	//Storing background oh no
 	with(par_background)
@@ -31,14 +31,22 @@
 	
 	//Store monitors
 	monitor_len = array_length(global.monitor_store);
-	for (var i = 0; i < monitor_len; ++i) {
-	    monitor_x[i] = global.monitor_store[i].x - marker.x;
-		monitor_y[i] = global.monitor_store[i].y - marker.y;
-		monitor_type[i] = global.monitor_store[i].monitor_type;
-		monitor_destroy[i] = global.monitor_store[i].destroyed;
-		monitor_depth[i] = global.monitor_store[i].depth;
-	}
 	
+	for (var i = 0; i < monitor_len; ++i) 
+	{
+		if(instance_exists(global.monitor_store[i]))
+		{
+		    monitor_x[i] = global.monitor_store[i].x - marker.x;
+			monitor_y[i] = global.monitor_store[i].y - marker.y;
+			monitor_type[i] = global.monitor_store[i].monitor_type;
+			monitor_destroy[i] = global.monitor_store[i].destroyed;
+			monitor_depth[i] = global.monitor_store[i].depth;
+		}
+		else
+		{
+			monitor_destroy[i] = true;	
+		}
+	}
 	
 	//Change flag if act transition
 	global.act_transition = true;

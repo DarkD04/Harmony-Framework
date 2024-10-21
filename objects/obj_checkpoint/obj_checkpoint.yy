@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Checkpoint",
-    "path":"folders/Objects/Stage/Common Objects/Checkpoint.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Checkpoint.yy",
   },
   "parentObjectId":null,
   "persistent":false,

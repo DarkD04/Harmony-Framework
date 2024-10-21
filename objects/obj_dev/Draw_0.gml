@@ -27,46 +27,6 @@
 		
 		draw_set_font(global.font_small);
 		
-		/*draw_set_color(c_yellow)
-		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-floor(obj_camera.ground_offset)-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, true)
-		draw_set_color(c_white)
-		
-		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-32-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+32-16, true)
-		
-		draw_text((WINDOW_WIDTH/2)+8, (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, string(floor(obj_camera.ground_offset)))
-		
-		//Draw rectangle
-		draw_set_color(c_black);
-		draw_set_alpha(0.7);
-		draw_rectangle(global.window_width-152, 16, global.window_width, global.window_height-16, false);
-		draw_set_alpha(1);
-		draw_set_color(c_white);
-	
-		//Draw text in rectangle
-		draw_set_font(global.font_small);
-		draw_set_halign(fa_center);
-		draw_text(global.window_width-152/2, 16, "PLAYER DEBUG")
-		
-		//Draw info
-		draw_set_halign(fa_left);
-		draw_text(global.window_width-150, 32, "X: " + string(floor(obj_player.x)));
-		draw_text(global.window_width-150, 32+(8*1), "Y: " + string(floor(obj_player.y)));
-		draw_text(global.window_width-150, 32+(8*2), "X SPEED: " + string(obj_player.x_speed));
-		draw_text(global.window_width-150, 32+(8*3), "Y SPEED: " + string(obj_player.y_speed));
-		draw_text(global.window_width-150, 32+(8*4), "G SPEED: " + string(obj_player.ground_speed));
-		draw_text(global.window_width-150, 32+(8*5), "ANGLE: " + string(obj_player.ground_angle));
-		draw_text(global.window_width-150, 32+(8*6), "V ANGLE: " + string(obj_player.visual_angle));
-		draw_text(global.window_width-150, 32+(8*7), "GROUND: " + string(obj_player.ground));
-		draw_text(global.window_width-150, 32+(8*8), "STATE: " + string(obj_player.state));
-		draw_text(global.window_width-150, 32+(8*9), "ANIM: " + string(obj_player.animation));
-		
-		draw_set_color(c_yellow)
-		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-floor(obj_camera.ground_offset)-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, true)
-		draw_set_color(c_white)
-		
-		draw_rectangle((WINDOW_WIDTH/2)-16, (WINDOW_HEIGHT/2)-32-16, (WINDOW_WIDTH/2), (WINDOW_HEIGHT/2)+32-16, true)
-		
-		draw_text((WINDOW_WIDTH/2)+8, (WINDOW_HEIGHT/2)+floor(obj_camera.ground_offset)-16, string(floor(obj_camera.ground_offset)))*/
 		//Reset surface target
 		surface_reset_target();
 		
@@ -76,7 +36,7 @@
 		//Draw hitbox
 		draw_set_color(c_red);
 		draw_set_alpha(0.7);
-		draw_rectangle(floor(obj_player.x)-obj_player.wall_w, floor(obj_player.y)-obj_player.hitbox_h, floor(obj_player.x)+obj_player.wall_w, floor(obj_player.y)+obj_player.hitbox_h, false);
+		draw_rectangle(floor(obj_player.x)-obj_player.wall_w - obj_player.hitbox_left_offset, floor(obj_player.y)-obj_player.hitbox_h - obj_player.hitbox_top_offset, floor(obj_player.x)+obj_player.wall_w + obj_player.hitbox_right_offset, floor(obj_player.y)+obj_player.hitbox_h + obj_player.hitbox_bottom_offset, false);
 		draw_set_alpha(1);
 		draw_set_color(c_white);
 		

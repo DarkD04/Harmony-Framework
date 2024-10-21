@@ -9,7 +9,7 @@
   ],
   "parent":{
     "name":"Bridge Zone",
-    "path":"folders/Objects/Stage/Bridge Zone.yy",
+    "path":"folders/Objects/Stage Objects/Bridge Zone.yy",
   },
   "parentObjectId":null,
   "persistent":false,

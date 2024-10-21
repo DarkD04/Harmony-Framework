@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Collision",
-    "path":"folders/Sprites/Stage/Collision.yy",
+    "path":"folders/Sprites/Stage Sprites/Collision.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

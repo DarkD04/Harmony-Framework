@@ -6,6 +6,7 @@ uniform float dist[512];
 uniform float array_size;
 uniform float offset;
 uniform vec2 size;
+uniform float mode;
 
 void main()
 {
@@ -16,7 +17,24 @@ void main()
 	float offset = dist[int(mod(pixel + time + offset, array_size))];
 	
 	//All done lol
-	float result = offset*(1./size.x);
+	float dist_result = offset*(1.0/size.x);
 	
-	gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord + vec2(result, 0.0));
+	//Result values
+	float result_x = 0.0;
+	float result_y = 0.0;
+	
+	//Different distortion modes
+	if(mode == 0.0)
+	{
+		result_x = dist_result;
+		result_y = 0.0;
+	}
+	
+	if(mode == 1.0)
+	{
+		result_x = 0.0;
+		result_y = dist_result;
+	}
+	
+	gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord + vec2(result_x, result_y));
 }

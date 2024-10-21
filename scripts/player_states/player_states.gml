@@ -1,11 +1,18 @@
 function player_states(){	
 	//Default flags:
-	direction_allow = true;
-	movement_allow = true;
-	collision_allow = true;
-	attacking = false;
-	gravity_allow = true;
-	ground_collision_allow = true;
+	if(flag_override)
+	{
+		direction_allow = true;
+		movement_allow = true;
+		collision_allow = true;
+		attacking = false;
+		gravity_allow = true;
+		hitbox_allow = true;
+	}
+	
+	//State allowing flags:
+	can_jump = false;
+	can_roll = false;
 	
 	//Sonic states:
 	player_state_peelout();

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":2.019819,
+  "duration":1.833379,
   "name":"sfx_spindash",
   "parent":{
     "name":"Player",

@@ -1,20 +1,20 @@
 function player_direction(){
-	//Stop executing if flag is disabled:
-	if(!direction_allow) exit;
-	
 	//Get input difference:
 	var input_press = hold_right - hold_left;
 	
-	//On ground direction:
-	if(ground)
+	if(direction_allow)
 	{
-		//Change direction depending on the ground speed:
-		if(input_press != 0 && sign(ground_speed) = input_press && control_lock = 0) facing = sign(input_press);
-	}else
-	//Airborn events:
-	{
-		//Change direction depending on input press:
-		if(input_press != 0) facing = input_press;
+		//On ground direction:
+		if(ground)
+		{
+			//Change direction depending on the ground speed:
+			if(input_press != 0 && sign(ground_speed) = input_press && control_lock = 0) facing = sign(input_press);
+		}else
+		//Airborn events:
+		{
+			//Change direction depending on input press:
+			if(input_press != 0) facing = input_press;
+		}
 	}
 	
 	//Change image scale

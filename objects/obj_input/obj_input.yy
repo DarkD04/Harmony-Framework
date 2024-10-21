@@ -9,8 +9,8 @@
   "name":"obj_input",
   "overriddenProperties":[],
   "parent":{
-    "name":"Global",
-    "path":"folders/Objects/Global.yy",
+    "name":"Global Objects",
+    "path":"folders/Objects/Global Objects.yy",
   },
   "parentObjectId":null,
   "persistent":true,

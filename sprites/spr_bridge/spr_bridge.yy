@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"Bridge",
-    "path":"folders/Sprites/Stage/Common Objects/Bridge.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Bridge.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

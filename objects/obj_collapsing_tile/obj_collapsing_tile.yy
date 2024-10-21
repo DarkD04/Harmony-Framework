@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Breakables",
-    "path":"folders/Objects/Stage/Common Objects/Breakables.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Breakables.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,15 +28,17 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"target_layer","filters":[],"listItems":[],"multiselect":false,"name":"target_layer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"\"","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"facing","filters":[],"listItems":[],"multiselect":false,"name":"facing","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"collapsing_type","filters":[],"listItems":[],"multiselect":false,"name":"collapsing_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"collapsing_speed","filters":[],"listItems":[],"multiselect":false,"name":"collapsing_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"collapsing_delay","filters":[],"listItems":[],"multiselect":false,"name":"collapsing_delay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_trigger",
-    "path":"sprites/spr_trigger/spr_trigger.yy",
+    "name":"spr_editor_region_object",
+    "path":"sprites/spr_editor_region_object/spr_editor_region_object.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

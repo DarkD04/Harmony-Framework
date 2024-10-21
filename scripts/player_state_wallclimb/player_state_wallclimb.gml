@@ -1,6 +1,9 @@
 function player_state_wallclimb(){
 	//If state is not wall climb don't execute
-	if(state != ST_KNUXCLIMB) exit;
+	if(state != ST_KNUXCLIMB) 
+	{
+		exit;
+	}
 	
 	//Change flags
 	movement_allow = false;
@@ -11,10 +14,14 @@ function player_state_wallclimb(){
 	image_xscale = facing;
 	
 	//Change animation
-	animation = ANIM_KNUXCLIMB;
-	
-	//Standing still
-	if(y_speed == 0) animation = ANIM_KNUXCLIMBIDLE;
+	if(y_speed != 0) 
+	{
+		animation_play(animator, sign(y_speed) == 1 ? ANIM_KNUXCLIMBDOWN : ANIM_KNUXCLIMBUP);
+	}
+	else
+	{
+		animation_play(animator, ANIM_KNUXCLIMBIDLE);	
+	}
 	
 	//Get input presses
 	var mov = hold_down - hold_up;
@@ -23,19 +30,35 @@ function player_state_wallclimb(){
 	y_speed = 1 * mov;
 	x_speed = 0;
 	
+	while(!point_check(wall_w * facing, wall_h, false) && point_check((wall_w + 2) * facing, wall_h, false))
+	{
+		x += facing;
+	}
+	
+	while(point_check(wall_w  * facing, wall_h, false))
+	{
+		x -= facing;
+	}
+	
 	//When there's no more wall
 	if(!point_check((wall_w + 1) * facing, wall_h, false))
 	{
-		if(hold_up && !hold_down && !check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h) && !line_check(wall_w * facing, -hitbox_h - 16))
+		if(!check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h) && !point_check((wall_w + 1) * facing, -4))
 		{
-			if(obj_camera.smooth_knux_cam)obj_camera.mode = 2;
+			//If using smooth scroll
+			if(global.knux_camera_smooth)
+			{
+				obj_camera.mode = 2;
+			}
+			
+			animation_set_frame(animator, 0);
 			control_lock = 5;
 			clamp_storex = x
 			clamp_storey = y
 			state = ST_KNUXLEDGE;
 		}
 		
-		if(!hold_up && hold_down || check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h))
+		if(!point_check((wall_w + 1) * facing, 4) || check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h))
 		{
 			state = ST_KNUXFALL;
 		}
@@ -48,6 +71,7 @@ function player_state_wallclimb(){
 		x_speed = 4 * facing;
 		y_speed = -4;
 		state = ST_JUMP;
+		animation_play(animator, ANIM_ROLL);
 		play_sound(sfx_jump);
 	}
 	

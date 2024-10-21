@@ -12,8 +12,8 @@
   "duration":3.338413,
   "name":"j_extra_life",
   "parent":{
-    "name":"Jingle",
-    "path":"folders/Sounds/Music/Jingle.yy",
+    "name":"Jingle Music",
+    "path":"folders/Sounds/Music/Jingle Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

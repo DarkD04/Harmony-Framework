@@ -10,22 +10,21 @@
 			ground_speed = 0;
 			input_disable = true;
 			facing = 1;
-			state = -1;
-			animation = ANIM_VICTORY;
+			state = ST_NULL;
+			animation_play(animator, ANIM_VICTORY);
 		}
 	}
 	//Fade out
-	if(timer = 1 && state = 0){
-		obj_music.fade = MusicFadeOut;
-		obj_music.fade_speed = 1;
+	if(timer = 1 && state = 0)
+	{
+		music_set_fade(FADE_OUT, 1)
 	}
 	
 	//Play act clear music
-	if(timer = 100 && state = 0){
-		obj_music.fade = MusicFadeIn;
-		obj_music.fade_speed = 1;
-		obj_music.fade_offset = 1;
-		play_music(jingle_zone_complete, BGM, 0, 0, false);
+	if(timer = 100 && state = 0)
+	{
+		music_reset_fade();
+		play_music(J_ACT_CLEAR, 0);
 	}
 	
 	//Move in card stuff
@@ -81,12 +80,17 @@
 	}
 	
 	//Stop executing if extra life jingle is playing
-	if(state == 1 && audio_is_playing(j_extra_life) && timer >= 78) timer = 78;
+	if(state == 1 && audio_is_playing(j_extra_life) && timer >= 78) 
+	{
+		timer = 78;
+	}
 	
 	//Ending events
-	if(state = 1 && !obj_level.act_transition){
-		if(timer = 80){
-			obj_fade.fade_type = fade_out;
+	if(state = 1 && !obj_level.act_transition)
+	{
+		if(timer = 80)
+		{
+			obj_fade.fade_type = FADE_OUT;
 			obj_fade.fade_speed = 5;
 		}
 		

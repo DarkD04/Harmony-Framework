@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"Bridge Zone",
-    "path":"folders/Sprites/Stage/Bridge Zone.yy",
+    "path":"folders/Sprites/Stage Sprites/Bridge Zone.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,7 +6,7 @@
   "name":"player_state_spring",
   "parent":{
     "name":"Common States",
-    "path":"folders/Scripts/Player/States/Common States.yy",
+    "path":"folders/Scripts/Player Scripts/States/Common States.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

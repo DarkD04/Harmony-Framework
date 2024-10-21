@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Collision",
-    "path":"folders/Objects/Stage/Collision.yy",
+    "path":"folders/Objects/Stage Objects/Collision.yy",
   },
   "parentObjectId":{
     "name":"par_solid",

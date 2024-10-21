@@ -44,6 +44,7 @@
 
 	}
 	
-	if(Input.StartPress && obj_player.input_disable = false){
-		instance_create_depth(0, 0, depth-1000, obj_pause);
+	if(Input.StartPress && obj_player.input_disable = false)
+	{
+		instance_create_depth(0, 0, 0, obj_pause);
 	}

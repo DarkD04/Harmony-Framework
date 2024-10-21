@@ -3,8 +3,8 @@
   "%Name":"shd_line_dist",
   "name":"shd_line_dist",
   "parent":{
-    "name":"Shader",
-    "path":"folders/Shader.yy",
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

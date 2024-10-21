@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Breakables",
-    "path":"folders/Objects/Stage/Common Objects/Breakables.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Breakables.yy",
   },
   "parentObjectId":{
     "name":"par_solid_object",
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_trigger",
-    "path":"sprites/spr_trigger/spr_trigger.yy",
+    "name":"spr_editor_region_object",
+    "path":"sprites/spr_editor_region_object/spr_editor_region_object.yy",
   },
   "spriteMaskId":null,
   "visible":false,

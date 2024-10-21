@@ -1,6 +1,24 @@
 /// @description Card events
 	obj_player.input_disable = true
 	
+	//Remove the title card with debug
+	if(!global.title_card)
+	{
+		instance_destroy();	
+		if(!act_card)
+		{
+			camera_return();
+		}
+		else
+		{
+			fade_in_room(5);	
+		}
+		
+		obj_player.input_disable = false;
+		obj_level.disable_timer = false;	
+		obj_hud.slide_in = true;
+	}
+	
 	//Add title card timer
 	timer++;
 	
@@ -32,16 +50,9 @@
 	{
 		if(!act_card)
 		{
-			obj_camera.mode = 1;
-			obj_camera.target_x = obj_camera.camera_x;
-			obj_camera.target_y = obj_camera.camera_y - 16;
-			obj_camera.target_right = room_width;
-			obj_camera.target_top = 0;
-			obj_camera.target_bottom = room_height;
-			obj_camera.limit_right = room_width;
-			obj_camera.limit_top = 0;
-			obj_camera.limit_bottom = room_height;
+			camera_return();
 		}
+		
 		obj_player.input_disable = false;
 		obj_level.disable_timer = false;	
 		obj_hud.slide_in = true;

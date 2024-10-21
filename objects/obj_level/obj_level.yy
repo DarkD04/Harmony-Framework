@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Important",
-    "path":"folders/Objects/Stage/Common Objects/Important.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Important.yy",
   },
   "parentObjectId":null,
   "persistent":false,

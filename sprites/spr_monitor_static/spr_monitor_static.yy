@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Monitors",
-    "path":"folders/Sprites/Stage/Common Objects/Monitors.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Monitors.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

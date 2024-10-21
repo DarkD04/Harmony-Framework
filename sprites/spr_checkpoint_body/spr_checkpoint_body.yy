@@ -26,7 +26,7 @@
   "origin":7,
   "parent":{
     "name":"Checkpoints",
-    "path":"folders/Sprites/Stage/Common Objects/Checkpoints.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Checkpoints.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

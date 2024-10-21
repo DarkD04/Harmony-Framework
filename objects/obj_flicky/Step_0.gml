@@ -12,14 +12,16 @@
 	if(delay > 0) exit;
 	
 	//Update position
-	x += accel[animal_type]*facing;
+	x += accel[animal_type] * facing;
 	y += y_speed;
 	y_speed += grav;
 	landed = false;
 	
 	//Handle collision
-	while(obj_check_point(x, bbox_bottom+2) && y_speed >= 0){
-		if(!triggered){
+	while(collision_instance(0, 6, PLANE_A, true, true) && y_speed >= 0)
+	{
+		if(!triggered)
+		{
 			//Change direction
 			if(obj_player.x != x) facing = sign(x-obj_player.x);
 			image_xscale = facing;

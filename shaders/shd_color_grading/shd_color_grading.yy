@@ -3,8 +3,8 @@
   "%Name":"shd_color_grading",
   "name":"shd_color_grading",
   "parent":{
-    "name":"Shader",
-    "path":"folders/Shader.yy",
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

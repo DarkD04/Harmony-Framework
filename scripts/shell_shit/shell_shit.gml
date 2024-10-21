@@ -46,7 +46,7 @@ function sh_suicide(args)
 function sh_play_music(args)
 {
 	var sound = asset_get_index(args[1])
-	play_music(sound, BGM, args[2], args[3]);
+	play_music(args[1], 0);
 }
 
 function meta_play_music()
@@ -54,7 +54,7 @@ function meta_play_music()
 	 return 
     {
         description: "plays BGM",
-        arguments: ["<soundid>, <loopstart>, <loopend>"],
+        arguments: ["<music_id>"],
         //suggestions: [global.roomlist],
         //argumentDescriptions: ["set the target room"]
     };

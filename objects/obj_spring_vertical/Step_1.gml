@@ -1,20 +1,6 @@
 /// @description Script
-	//Animation speed
-	image_speed = 0.55;
-	
-	//Different spring types
-	switch(spring_type)
-	{
-		case "Yellow":
-			sprite_index = spr_spring_vertical_yellow;
-			spring_power = 10;
-		break;
-		
-		case "Red":
-			sprite_index = spr_spring_vertical_red;
-			spring_power = 16;
-		break;
-	}
+	//Update the animator
+	animator_update(animator);
 	
 	//Facing upwards
 	if(sign(image_yscale) = 1)
@@ -23,6 +9,7 @@
 		if(player_collide_object(C_BOTTOM) && obj_player.y_speed >= 0)
 		{
 			//Spring code
+			animator.animation_finished = false;
 			triggered = true;
 			play_sound(sfx_spring);
 			
@@ -33,8 +20,8 @@
 				switch(mode)
 				{
 					case 0:
+					animation_play(animator, ANIM_SPRING);
 					state = ST_SPRING;
-					animation = ANIM_SPRING;
 					y_speed = -other.spring_power;
 					ground = false;
 					break;
@@ -60,6 +47,7 @@
 		if(player_collide_object(C_TOP))
 		{
 			//Spring code
+			animator.animation_finished = false;
 			triggered = true;
 			play_sound(sfx_spring);
 			
@@ -90,7 +78,13 @@
 	}
 	
 	//Stop the animation
-	if(!triggered) image_index = 0;
+	if(!triggered) 
+	{
+		animation_set_frame(animator, 0);
+	}
 	
 	//Reset the trigger
-	if(image_index >= image_number-1) triggered = false;
+	if(animation_has_finished(animator) && triggered) 
+	{
+		triggered = false;
+	}

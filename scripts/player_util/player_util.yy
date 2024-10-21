@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"player_util",
   "parent":{
-    "name":"Engine Scripts",
-    "path":"folders/Scripts/Engine Scripts.yy",
+    "name":"Utility Scripts",
+    "path":"folders/Scripts/Utility Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

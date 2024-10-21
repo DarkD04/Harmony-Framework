@@ -1,5 +1,6 @@
 function player_macros(){
 	//State macros:
+	#macro ST_NULL -1
 	#macro ST_NORMAL 0
 	#macro ST_JUMP 1
 	#macro ST_ROLL 2
@@ -20,36 +21,40 @@ function player_macros(){
 	
 	//Animation macros:
 	#macro ANIM_STAND 0
-	#macro ANIM_WALK 1
-	#macro ANIM_RUN 2
-	#macro ANIM_MAXRUN 3
-	#macro ANIM_ROLL 4
-	#macro ANIM_LOOKUP 5
-	#macro ANIM_LOOKDOWN 6
-	#macro ANIM_SPINDASH 7
-	#macro ANIM_SPRING 8
-	#macro ANIM_SKID 9
-	#macro ANIM_SKIDTURN 10
-	#macro ANIM_HURT 11
-	#macro ANIM_DIE 12
-	#macro ANIM_DROWN 13
-	#macro ANIM_BREATHE 14
-	#macro ANIM_VICTORY 15
-	#macro ANIM_PUSH 16
-	#macro ANIM_LEDGE1 17
-	#macro ANIM_LEDGE2 18
+	#macro ANIM_WAIT 1
+	#macro ANIM_WALK 2
+	#macro ANIM_RUN 3
+	#macro ANIM_MAXRUN 4
+	#macro ANIM_ROLL 5
+	#macro ANIM_LOOKUP 6
+	#macro ANIM_LOOKDOWN 7
+	#macro ANIM_SPINDASH 8
+	#macro ANIM_SPRING 9
+	#macro ANIM_SKID 10
+	#macro ANIM_SKIDTURN 11
+	#macro ANIM_HURT 12
+	#macro ANIM_DIE 13
+	#macro ANIM_DROWN 14
+	#macro ANIM_BREATHE 15
+	#macro ANIM_VICTORY 16
+	#macro ANIM_PUSH 17
+	#macro ANIM_LEDGE1 18
+	#macro ANIM_LEDGE2 19
 	#macro ANIM_TAILSFLY 20
 	#macro ANIM_TAILSTIRED 21
-	#macro ANIM_KNUXGLIDE 22
-	#macro ANIM_KNUXGLIDETURN 23
-	#macro ANIM_KNUXCLIMB 24
-	#macro ANIM_KNUXFALL 25
-	#macro ANIM_KNUXSLIDE 26
-	#macro ANIM_KNUXGETUP 27
-	#macro ANIM_KNUXLEDGE 28
-	#macro ANIM_KNUXLAND 29
-	#macro ANIM_KNUXCLIMBIDLE 30
-	#macro ANIM_DROPDASH 31
+	#macro ANIM_TAILSSWIM 22
+	#macro ANIM_TAILSSWIMTIRED 23
+	#macro ANIM_KNUXGLIDE 24
+	#macro ANIM_KNUXGLIDETURN 25
+	#macro ANIM_KNUXCLIMBIDLE 26
+	#macro ANIM_KNUXCLIMBUP 27
+	#macro ANIM_KNUXCLIMBDOWN 28
+	#macro ANIM_KNUXFALL 29
+	#macro ANIM_KNUXSLIDE 30
+	#macro ANIM_KNUXGETUP 31
+	#macro ANIM_KNUXLEDGE 32
+	#macro ANIM_KNUXLAND 33
+	#macro ANIM_DROPDASH 34
 	
 	//Shield macros
 	#macro S_NONE -1

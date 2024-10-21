@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Editor",
-    "path":"folders/Sprites/Editor.yy",
+    "name":"Editor Sprites",
+    "path":"folders/Sprites/Editor Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

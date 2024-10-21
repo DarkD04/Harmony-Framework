@@ -19,12 +19,11 @@ function player_inv_speed(){
 	}
 	
 	//Invincible sparkles
-	if(invincible){
-		for(var i = 0; i <= 2; i++){
-			if(instance_number(obj_invinciblespark) <= 2){
-				var spark = instance_create_depth(x, y, depth-10, obj_invinciblespark);
-				spark.mode = i;
-			}
+	if(invincible)
+	{
+		if(!instance_number(obj_invinciblespark))
+		{
+			instance_create_depth(x, y, depth-10, obj_invinciblespark);
 		}
 	}
 }

@@ -1,0 +1,25 @@
+Project Lead:
+	-Darkn
+
+Framework Programming:
+	-Darkn
+	-Chopp
+	-joshyflip
+	
+Stage Art:
+	-joshyflip
+	-Darkn
+
+Level Design
+	-joshyflip
+
+Additional Programming:
+	-Louplayer
+	-SAWMPL
+	
+Special thanks:
+	-Sonic Physics Guide
+	-REMS
+	-Ultra Ring
+	-KGL
+	-MDTravis

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Rings",
-    "path":"folders/Objects/Stage/Common Objects/Rings.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Rings.yy",
   },
   "parentObjectId":null,
   "persistent":false,

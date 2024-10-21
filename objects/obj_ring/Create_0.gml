@@ -3,6 +3,7 @@
 	y_speed = 0;
 	magnet = false;
 	ringloss = false;
-	culling = false;
+	culling = true;
 	timer = 0;
 	animation_speed = 0.55;
+	plane = PLANE_A;

@@ -11,11 +11,11 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Breakables",
-    "path":"folders/Objects/Stage/Common Objects/Breakables.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Breakables.yy",
   },
   "parentObjectId":{
-    "name":"par_solid_object_1",
-    "path":"objects/par_solid_object_1/par_solid_object_1.yy",
+    "name":"par_solid_object",
+    "path":"objects/par_solid_object/par_solid_object.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

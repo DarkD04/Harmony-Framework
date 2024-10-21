@@ -2,6 +2,7 @@
 
 	surf = surface_create(global.window_width, global.window_height);
 	slide_in = false;
+	render = true;
 	
 	for(var i = 0; i <= 3; i++)
 	{

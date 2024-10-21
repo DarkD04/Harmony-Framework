@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Parents",
-    "path":"folders/Objects/Stage/Common Objects/Parents.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Parents.yy",
   },
   "parentObjectId":null,
   "persistent":false,

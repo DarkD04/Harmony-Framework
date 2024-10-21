@@ -6,7 +6,7 @@
   "name":"player_animation_list",
   "parent":{
     "name":"Misc",
-    "path":"folders/Scripts/Player/Misc.yy",
+    "path":"folders/Scripts/Player Scripts/Misc.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

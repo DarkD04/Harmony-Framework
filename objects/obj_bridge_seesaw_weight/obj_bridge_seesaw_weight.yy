@@ -7,11 +7,11 @@
   "managed":true,
   "name":"obj_bridge_seesaw_weight",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resource":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Full Solid\"",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Full Solid\"",},
   ],
   "parent":{
     "name":"Bridge Zone",
-    "path":"folders/Objects/Stage/Bridge Zone.yy",
+    "path":"folders/Objects/Stage Objects/Bridge Zone.yy",
   },
   "parentObjectId":{
     "name":"par_solid_object",

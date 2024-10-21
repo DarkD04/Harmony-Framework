@@ -7,14 +7,15 @@
 	y += y_speed;
 
 	// Check for collision on ground
-	while(obj_check_point(x, y, true) && y_speed > 0)
+	while(collision_point_check(0, 0, CMODE_FLOOR, PLANE_A, true) && y_speed > 0)
 	{
 		x_speed *= -1;
 		y_speed = -5;
 		y -= 1;
 		badnikframe = 0
 		if (on_screen()) 
-		{// Play spring sound ONLY when on screen
+		{
+			// Play spring sound ONLY when on screen
 			play_sound(sfx_spring);
 		} 
 	}

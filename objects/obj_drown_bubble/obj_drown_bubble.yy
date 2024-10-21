@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Water",
-    "path":"folders/Objects/Stage/Common Objects/Water.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Water.yy",
   },
   "parentObjectId":null,
   "persistent":false,

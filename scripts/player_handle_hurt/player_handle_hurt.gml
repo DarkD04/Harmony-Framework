@@ -1,66 +1,99 @@
-function player_handle_hurt(){
-
-	//Basic knockout
-	if(invincible_timer = 0 && state != ST_KNOCKOUT && knockout_type = K_HURT)
+function player_handle_hurt()
+{
+	if(state != ST_KNOCKOUT)
 	{
-		//Commit death
-		if(global.rings = 0 && shield = S_NONE)
+		//Reset knowckout type when you're invicible
+		if(invincible || invincible_timer > 0)
 		{
-			knockout_type = K_DIE;	
+			knockout_type = 0;	
 		}
 		
-		//Ring loss
-		if(global.rings != 0 || shield != S_NONE)
+		if(invincible_timer == 0 && !invincible)
 		{
-			x_speed = (-2 * facing) / (1 + underwater);
-			y_speed = -4 / (1 + underwater);
-			ground = false;
-			invincible_timer = 120;
+			if(knockout_type == K_HURT)
+			{
+				//Kill the player if there are no any rings or shields
+				if(global.rings == 0 && shield == S_NONE)
+				{
+					knockout_type = K_DIE;	
+				}
+				
+				//Hurt the player if they have any rings or shields
+				if(global.rings != 0 || shield != S_NONE)
+				{
+					//Get the hurt side
+					var side = 1;
+					if(sign(x - hurt_position) != 0)
+					{
+						side = sign(x - hurt_position);
+					}
+
+					//Knockout the player
+					x_speed = 2 * side;
+					y_speed = -4;
+					facing = -side;
+					ground = false;
+					
+					//Underwater cases
+					if(underwater)
+					{
+						x_speed *= 0.5;
+						y_speed /= 2;
+					}
+					
+					//Give player invincibility frames and put the player in knockout state
+					invincible_timer = 120;
+					state = ST_KNOCKOUT;
+					
+					//Commit ring loss when player gets hurt
+					if(shield == S_NONE)
+					{
+						create_ringloss(global.rings);	
+						play_sound(sfx_ringloss);
+						global.rings = 0;
+					}
+					
+					//Remove the shield when player gets hurt
+					if(shield != S_NONE)
+					{
+						shield = S_NONE;
+						play_sound(sfx_hurt);
+					}
+				}
+			}
+		}
+		
+		//Player's death event
+		if(knockout_type == K_DIE)
+		{
+			//Set player to the knockout state
 			state = ST_KNOCKOUT;
-		}
-		
-		//Ring loss
-		if(global.rings != 0 && shield = S_NONE)
-		{
-			create_ringloss(global.rings);	
-			play_sound(sfx_ringloss);
-			global.rings = 0;
-		}
-		
-		//Shield loss
-		if(shield != S_NONE)
-		{
-			shield = S_NONE;
+			
+			//Bounce the player out
+			y_speed = -7;
+			x_speed = 0;
+			ground = false;
+			
+			//Disable camera movement
+			camera_set_mode(CAM_NULL);
+			
+			//Play the hurt sound
 			play_sound(sfx_hurt);
 		}
-	}
-	//Death events
-	if(state != ST_KNOCKOUT && knockout_type = K_DIE)
-	{
-		state = ST_KNOCKOUT;
-		y_speed = -7;
-		x_speed = 0;
-		ground = false;
-		obj_camera.mode = 99;
-		play_sound(sfx_hurt);
-	}
-	
-	if(invincible_timer != 0 && knockout_type != 0 && state != ST_KNOCKOUT) knockout_type = 0;
-	
-	//Bottomless pit
-	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom && knockout_type != K_DIE && knockout_type != K_DROWN ||
-	knockout_type != K_DIE && knockout_type != K_DROWN && global.stage_timer == 599999)
-	{
-		state = ST_KNOCKOUT;
-		y_speed = -7;
-		x_speed = 0;
-		ground = false;
-		knockout_type = K_DIE;
-		obj_camera.mode = 99;
-		play_sound(sfx_hurt);
 		
-		//Exclusive to timer over
-		if(global.stage_timer == 599999) is_time_over = true;
+		//Kill the player after time has reached the limit
+		if(global.stage_timer == 599999) 
+		{
+			knockout_type = K_DIE;
+			is_time_over = true;
+		}
 	}
-
+	
+	//Bottomless pit death event
+	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom && knockout_type != K_DIE)
+	{
+		knockout_type = K_DIE;
+	}
+	
+	
 }

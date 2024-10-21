@@ -4,10 +4,9 @@
 	y += y_speed;
 	y_speed += 0.2;
 	landed = false;
-		
 
 	//Bounce physics
-	while(obj_check_point(x, bbox_bottom, true) && y_speed >= 0)
+	while(collision_line_check(0, 8, CMODE_FLOOR, PLANE_A, true, true) && y_speed >= 0)
 	{
 		y -= 1;
 		landed = true;

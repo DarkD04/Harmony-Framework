@@ -29,6 +29,6 @@
 		}else
 		{
 			//Player getting hurt
-			obj_player.knockout_type = K_HURT;
+			player_hurt();
 		}
 	}

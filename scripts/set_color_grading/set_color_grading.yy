@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"set_color_grading",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Visuals Scripts",
+    "path":"folders/Scripts/Engine Scripts/Visuals Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

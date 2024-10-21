@@ -4,15 +4,16 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_bubble_shield",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"par_shield","path":"objects/par_shield/par_shield.yy",},"propertyId":{"name":"shield_id","path":"objects/par_shield/par_shield.yy",},"resource":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"par_shield","path":"objects/par_shield/par_shield.yy",},"propertyId":{"name":"shield_id","path":"objects/par_shield/par_shield.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
   ],
   "parent":{
     "name":"Shields",
-    "path":"folders/Objects/Player/Shields.yy",
+    "path":"folders/Objects/Player Objects/Shields.yy",
   },
   "parentObjectId":{
     "name":"par_shield",

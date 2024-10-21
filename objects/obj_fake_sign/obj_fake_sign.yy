@@ -3,13 +3,15 @@
   "%Name":"obj_fake_sign",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_fake_sign",
   "overriddenProperties":[],
   "parent":{
     "name":"Stage End",
-    "path":"folders/Objects/Stage/Common Objects/Stage End.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Stage End.yy",
   },
   "parentObjectId":null,
   "persistent":false,

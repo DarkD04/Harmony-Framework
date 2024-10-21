@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Tails",
-    "path":"folders/Sprites/Player/Tails.yy",
+    "path":"folders/Sprites/Player Sprites/Tails.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

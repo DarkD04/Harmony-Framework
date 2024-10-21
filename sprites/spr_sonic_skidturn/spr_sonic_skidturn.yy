@@ -13,7 +13,6 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"","%Name":"9784bf03-0490-49df-a16c-3dae7ad118de","name":"9784bf03-0490-49df-a16c-3dae7ad118de","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f6ccad4c-88fa-422e-af10-26f47fc0d8d9","name":"f6ccad4c-88fa-422e-af10-26f47fc0d8d9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -27,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Sonic",
-    "path":"folders/Sprites/Player/Sonic.yy",
+    "path":"folders/Sprites/Player Sprites/Sonic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -50,7 +49,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":1.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -72,9 +71,6 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9784bf03-0490-49df-a16c-3dae7ad118de","path":"sprites/spr_sonic_skidturn/spr_sonic_skidturn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"51ca0f7e-0b65-4d07-9150-1edea7a27446","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f6ccad4c-88fa-422e-af10-26f47fc0d8d9","path":"sprites/spr_sonic_skidturn/spr_sonic_skidturn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e6b233d0-01bb-4876-a974-6a771f54ab72","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

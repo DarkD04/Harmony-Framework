@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"Rings",
-    "path":"folders/Sprites/Stage/Common Objects/Rings.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Rings.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

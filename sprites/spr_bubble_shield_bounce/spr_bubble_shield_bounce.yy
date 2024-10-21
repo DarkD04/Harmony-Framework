@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Shields",
-    "path":"folders/Sprites/Player/Shields.yy",
+    "path":"folders/Sprites/Player Sprites/Shields.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

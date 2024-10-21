@@ -12,8 +12,9 @@
 	{
 		if(obj_player.shield == S_NONE)
 		{
-			obj_player.knockout_type = K_HURT;
-		}else
+			player_hurt();
+		}
+		else
 		{
 			if(!bounce)
 			{
@@ -26,4 +27,7 @@
 		}
 	}
 	//Destroy off screen
-	if(!on_screen(64, 64)) instance_destroy();
+	if(!on_screen(64, 64)) 
+	{
+		instance_destroy();
+	}

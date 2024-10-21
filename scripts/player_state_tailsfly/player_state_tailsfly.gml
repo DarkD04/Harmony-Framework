@@ -15,9 +15,6 @@ function player_state_tailsfly(){
 		exit;
 	}
 	
-	//Animation
-	animation = ANIM_TAILSFLY;
-	
 	//Speed cap
 	y_speed = max(y_speed , -4);
 	
@@ -30,12 +27,19 @@ function player_state_tailsfly(){
 	tails_timer = max(tails_timer, 0);
 	
 	//Reset the state when player is grounded
-	if(ground) state = ST_NORMAL;
+	if(ground) 
+	{
+		state = ST_NORMAL;
+	}
 	
 	//Tired tails
 	if(tails_timer == 0)
 	{
-		animation = ANIM_TAILSTIRED;
+		animation_play(animator, underwater ? ANIM_TAILSSWIMTIRED : ANIM_TAILSTIRED);
+	}
+	else
+	{
+		animation_play(animator, underwater ? ANIM_TAILSSWIM : ANIM_TAILSFLY);
 	}
 	
 	//Play sound
@@ -51,11 +55,16 @@ function player_state_tailsfly(){
 			play_sound(sfx_tailstired, true);
 			audio_stop_sound(sfx_tailsfly);
 		}
-	}else
+	}
+	else
 	{
 		audio_stop_sound(sfx_tailsfly);
 		audio_stop_sound(sfx_tailstired);
 	}
+	
 	//Weird gravity fix
-	if(tails_timer == 480-1) y_accel = 0.03125;
+	if(tails_timer == 480-1) 
+	{
+		y_accel = 0.03125;
+	}
 }

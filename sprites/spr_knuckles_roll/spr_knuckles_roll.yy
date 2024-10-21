@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"Knuckles",
-    "path":"folders/Sprites/Player/Knuckles.yy",
+    "path":"folders/Sprites/Player Sprites/Knuckles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

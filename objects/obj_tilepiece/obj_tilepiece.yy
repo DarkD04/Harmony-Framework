@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Breakables",
-    "path":"folders/Objects/Stage/Common Objects/Breakables.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Breakables.yy",
   },
   "parentObjectId":null,
   "persistent":false,

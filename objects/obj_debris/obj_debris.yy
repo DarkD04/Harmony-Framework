@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Effects",
-    "path":"folders/Objects/Stage/Effects.yy",
+    "path":"folders/Objects/Stage Objects/Effects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

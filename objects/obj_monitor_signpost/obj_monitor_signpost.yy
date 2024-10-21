@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Monitor",
-    "path":"folders/Objects/Stage/Common Objects/Monitor.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Monitor.yy",
   },
   "parentObjectId":null,
   "persistent":false,

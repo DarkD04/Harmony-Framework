@@ -3,8 +3,8 @@
   "%Name":"shd_color_replacer",
   "name":"shd_color_replacer",
   "parent":{
-    "name":"Shader",
-    "path":"folders/Shader.yy",
+    "name":"Shaders",
+    "path":"folders/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

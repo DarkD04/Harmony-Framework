@@ -1,4 +1,11 @@
 /// @description Draw the HUD
+
+	//Don't render the hud
+	if(!render)
+	{
+		exit;	
+	}
+	
 	//Temp value
 	var minute, sec, milsec, c, cx, cy;
 	

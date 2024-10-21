@@ -13,3 +13,12 @@ function player_reposition_mode(force_mode = -1)
 	x_dir = dsin(90 * true_mode);
 	y_dir = dcos(90 * true_mode);
 }
+
+function player_hurt(hazard_x = x)
+{
+	with(obj_player)
+	{
+		hurt_position = hazard_x;
+		knockout_type = K_HURT;
+	}
+}

@@ -1,0 +1,10 @@
+Changelogs for 21st of October 2024
+	I'll keep this brief and highlight only the most important changes made to the framework
+	
+	Utility scripts:
+		-object_collision_util has been fully removed because now collision_util which was previously reserved for player only can be used on every object.
+		-animator_util has been added for new animation system
+		-ease_util
+	
+	
+	player_collision_functions

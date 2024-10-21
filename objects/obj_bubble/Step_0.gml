@@ -19,14 +19,15 @@
 	}
 	
 	//Suck it!
-	if(player_collide_object(C_MAIN) && image_index >= image_number-1 && sprite_index = spr_bubble_3 && obj_player.shield != S_BUBBLE){
-		with(obj_player){
+	if(player_collide_object(C_MAIN) && !obj_player.ground && image_index >= image_number-1 && sprite_index = spr_bubble_3 && obj_player.shield != S_BUBBLE){
+		with(obj_player)
+		{
 			air = 0;
 			x_speed = 0;
 			y_speed = 0;
 			ground_speed = 0;
-			animation = ANIM_BREATHE;
 			state = ST_NORMAL;
+			animation_play(animator, ANIM_BREATHE);
 			play_sound(sfx_breathe);
 		}
 		//PlaySound(Breathe);

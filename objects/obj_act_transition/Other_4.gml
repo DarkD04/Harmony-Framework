@@ -49,10 +49,11 @@
 		offset[i] = 0;	
 	}
 	
-	for (var i = 0; i < monitor_len; ++i) {
+	for (var i = 0; i < monitor_len; ++i) 
+	{
 		var new_monitor;
-		new_monitor = instance_create_depth(x, y, depth, obj_monitor)
-	    new_monitor.x = marker.x + monitor_x[i];
+		new_monitor = instance_create_depth(x, y, depth, obj_monitor);
+		new_monitor.x = marker.x + monitor_x[i];
 		new_monitor.y = marker.y + monitor_y[i];
 		new_monitor.monitor_type = monitor_type[i];
 		new_monitor.destroyed = monitor_destroy[i];

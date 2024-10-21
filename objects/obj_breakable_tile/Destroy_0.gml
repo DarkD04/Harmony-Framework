@@ -1,6 +1,6 @@
 /// @description Destroy tiles
 	//Temp values
-	var tilelayer, tileset, data, size_x, size_y, obj, dir;
+	var tilelayer, tileset, size_x, size_y, obj, dir;
 	
 	//Get layer tilemap
 	tilelayer = layer_tilemap_get_id(target_layer);
@@ -23,9 +23,6 @@
 	{
 		for(var j = 0; j < size_y; j++)
 		{
-			//Get tile data
-			data = tilemap_get_at_pixel(tilelayer, i, j);
-			
 			//Create the obj
 			obj = instance_create_depth(x+(16*i), y+(16*j), depth-300, obj_tilepiece);
 			
@@ -36,8 +33,7 @@
 			obj.y_speed = -((size_y/2)+3)+j;
 			
 			//Remove tiles from the area
-			tile_set_empty(data);
-			tilemap_set_at_pixel(tilelayer, data, x+16*i, y+16*j)
+			tilemap_set_at_pixel(tilelayer, 0, x+16*i, y+16*j)
 		}
 	}
 	

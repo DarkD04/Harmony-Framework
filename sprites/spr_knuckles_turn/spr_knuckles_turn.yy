@@ -3,8 +3,8 @@
   "%Name":"spr_knuckles_turn",
   "bboxMode":0,
   "bbox_bottom":46,
-  "bbox_left":5,
-  "bbox_right":58,
+  "bbox_left":9,
+  "bbox_right":59,
   "bbox_top":22,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,11 +12,9 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"b29747ae-71a3-4097-976a-451890cccf98","name":"b29747ae-71a3-4097-976a-451890cccf98","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"092fa779-70b8-4c77-9454-a1f58ce44c47","name":"092fa779-70b8-4c77-9454-a1f58ce44c47","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"6d18ee2b-3831-47f7-811d-a24941f93337","name":"6d18ee2b-3831-47f7-811d-a24941f93337","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"25a05bf2-1cf9-4d97-818b-96739306ff80","name":"25a05bf2-1cf9-4d97-818b-96739306ff80","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"52538e53-c788-4fe2-8dd9-5462752c75ce","name":"52538e53-c788-4fe2-8dd9-5462752c75ce","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -30,7 +28,7 @@
   "origin":9,
   "parent":{
     "name":"Knuckles",
-    "path":"folders/Sprites/Player/Knuckles.yy",
+    "path":"folders/Sprites/Player Sprites/Knuckles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -53,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":5.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -73,20 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b29747ae-71a3-4097-976a-451890cccf98","path":"sprites/spr_knuckles_turn/spr_knuckles_turn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4b8de8b5-406a-4663-b0ae-f8667df19fb5","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"092fa779-70b8-4c77-9454-a1f58ce44c47","path":"sprites/spr_knuckles_turn/spr_knuckles_turn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6c98b78b-6374-4cef-84c0-3a7872cb93a7","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"6c98b78b-6374-4cef-84c0-3a7872cb93a7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6d18ee2b-3831-47f7-811d-a24941f93337","path":"sprites/spr_knuckles_turn/spr_knuckles_turn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"95bc1879-f5b6-41f5-8c29-27072f17ff43","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"95bc1879-f5b6-41f5-8c29-27072f17ff43","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"25a05bf2-1cf9-4d97-818b-96739306ff80","path":"sprites/spr_knuckles_turn/spr_knuckles_turn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"34aaba7f-75e2-4409-b063-2d6c519d0b5e","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"52538e53-c788-4fe2-8dd9-5462752c75ce","path":"sprites/spr_knuckles_turn/spr_knuckles_turn.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a3dafd28-010a-436d-94c7-b8198e8940cc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"34aaba7f-75e2-4409-b063-2d6c519d0b5e","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

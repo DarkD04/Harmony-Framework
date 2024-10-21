@@ -1,4 +1,4 @@
-function player_collide_object(side, flag = -1){
+function player_collide_object(side){
 	//Collision side macros:
 	#macro C_MAIN 0
 	#macro C_BOTTOM 1
@@ -15,7 +15,7 @@ function player_collide_object(side, flag = -1){
 	for (var i = 0; i < instance_number(obj_player); ++i)
 	{
 		player[i] = instance_find(obj_player, i)
-	
+		
 		//Define hitbox size:
 		switch(side)
 		{
@@ -79,13 +79,10 @@ function player_collide_object(side, flag = -1){
 		//player[i] events:
 		with(player[i])
 		{
-			var col_flag;
-			//Flag stuff
-			if(flag == -1) col_flag = collision_allow else col_flag = flag;
 			//Check for player[i]'s collision with the object:
-			if(collision_rectangle(floor(x)+left, floor(y)+top, floor(x)+right, floor(y)+bottom, other, true, true)) 
+			if(collision_rectangle(floor(x) + left - hitbox_left_offset, floor(y) + top - hitbox_top_offset, floor(x) + right + hitbox_right_offset, floor(y) + bottom + hitbox_bottom_offset, other, true, true)) 
 			{
-				if(col_flag)
+				if(hitbox_allow)
 				{
 					return id;
 				}

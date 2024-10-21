@@ -26,7 +26,7 @@
   "origin":8,
   "parent":{
     "name":"Springs",
-    "path":"folders/Sprites/Stage/Common Objects/Springs.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Springs.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

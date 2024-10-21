@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Editor",
-    "path":"folders/Objects/Stage/Common Objects/Editor.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Editor.yy",
   },
   "parentObjectId":null,
   "persistent":false,

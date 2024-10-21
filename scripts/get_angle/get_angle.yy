@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"get_angle",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Misc. Scripts",
+    "path":"folders/Scripts/Engine Scripts/Misc. Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

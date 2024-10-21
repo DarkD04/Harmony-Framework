@@ -1,6 +1,6 @@
 /// @description Script
-	//Animation speed
-	image_speed = 0.55;
+	//Update the animator
+	animator_update(animator);
 	
 	//Different spring types
 	switch(spring_type)
@@ -18,9 +18,11 @@
 	
 
 	//Hit from the bottom
-	if(player_collide_object(C_MAIN) && !triggered)
+	if(player_collide_object(C_MAIN) && !triggered && !inside_trigger)
 	{
 		//Spring code
+		animator.animation_finished = false;
+		inside_trigger = true;
 		triggered = true;
 		play_sound(sfx_spring);
 			
@@ -28,9 +30,7 @@
 		var player = instance_nearest(x, y, obj_player)
 		with(player)
 		{
-
 			state = ST_SPRING;
-			animation = ANIM_SPRING;
 			x_speed = -other.spring_power * sign(other.image_xscale);
 			y_speed = -other.spring_power * sign(other.image_yscale);
 			ground = false;
@@ -39,9 +39,20 @@
 		}
 	}
 	
-	
 	//Stop the animation
-	if(!triggered) image_index = 0;
+	if(!triggered) 
+	{
+		animation_set_frame(animator, 0);
+	}
+	
+	//Reset the inside trigger
+	if(!player_collide_object(C_MAIN))
+	{
+		inside_trigger = false;
+	}
 	
 	//Reset the trigger
-	if(image_index >= image_number-1) triggered = false;
+	if(animation_has_finished(animator) && triggered) 
+	{
+		triggered = false;
+	}

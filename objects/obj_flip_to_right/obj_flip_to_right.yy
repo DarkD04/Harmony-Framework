@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Collision Modifiers",
-    "path":"folders/Objects/Stage/Common Objects/Collision Modifiers.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Collision Modifiers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

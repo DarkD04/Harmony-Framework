@@ -14,6 +14,12 @@
 	ceiling_allow = true;
 	detach_allow = true;
 	
+	//Hitbox variables
+	hitbox_top_offset = 0;
+	hitbox_left_offset = 0;
+	hitbox_bottom_offset = 0;
+	hitbox_right_offset = 0;
+	
 	//Player input scripts
 	player_get_input();
 	

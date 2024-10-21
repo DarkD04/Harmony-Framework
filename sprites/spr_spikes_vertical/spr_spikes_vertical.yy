@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Spikes",
-    "path":"folders/Sprites/Stage/Common Objects/Spikes.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/Spikes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

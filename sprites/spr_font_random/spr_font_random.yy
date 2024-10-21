@@ -65,7 +65,7 @@
   "origin":0,
   "parent":{
     "name":"Stage Select",
-    "path":"folders/Sprites/Menus/Stage Select.yy",
+    "path":"folders/Sprites/Menus Sprites/Stage Select.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

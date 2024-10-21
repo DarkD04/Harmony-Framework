@@ -8,7 +8,8 @@
 		shield_state = 0;
 		use_allow = false;
 		visible = false
-	}else
+	}
+	else
 	{
 		use_allow = true;
 	}

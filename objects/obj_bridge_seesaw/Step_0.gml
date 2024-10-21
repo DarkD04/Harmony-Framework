@@ -64,7 +64,7 @@
 			else
 			{
 				obj_player.state = ST_SPRING;
-				obj_player.animation = ANIM_SPRING;
+				animation_play(obj_player.animator, ANIM_SPRING);
 				obj_player.y_speed = -10;
 				obj_player.ground = false;
 				if(on_screen()) play_sound(sfx_spring);

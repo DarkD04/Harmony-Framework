@@ -3,12 +3,14 @@ function player_state_dropdash(){
 	if(!global.use_dropdash) exit;
 	
 	//Add dropdash timer
-	if(press_action && dropdash_timer < 1 && state = ST_JUMP ||
-	hold_action && dropdash_timer != 0 && state = ST_JUMP)
+	if(character == CHAR_SONIC)
 	{
-		dropdash_timer++;
+		if(press_action && dropdash_timer < 1 && state = ST_JUMP ||
+		hold_action && dropdash_timer != 0 && state = ST_JUMP)
+		{
+			dropdash_timer++;
+		}
 	}
-	
 	//Trigger the dropdash state
 	if(dropdash_timer >= 8 && state != ST_DROPDASH)
 	{
@@ -25,10 +27,13 @@ function player_state_dropdash(){
 		
 	
 	//If not dropdash stop
-	if(state != ST_DROPDASH) exit;
+	if(state != ST_DROPDASH) 
+	{
+		exit;
+	}
 	
 	//Animate dropdash
-	animation = ANIM_DROPDASH;
+	animation_play(animator, ANIM_DROPDASH);
 	
 	//Make it attack
 	attacking = true;
@@ -72,9 +77,17 @@ function player_state_dropdash(){
 		obj_camera.h_lag = 8;
 		
 		//Create effect
-		for (var i = 0; i < 8; ++i) 
+		if(global.chaotix_dust_effect)
 		{
-		     create_effect(x - hitbox_w * facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, (2.5 * facing) * dcos(random_range(180, 270)), 2.5 * dsin(random_range(180, 270)));
+			for (var i = 0; i < 8; ++i) 
+			{
+			     create_effect(x - hitbox_w * facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, (2.5 * facing) * dcos(random_range(180, 270)), 2.5 * dsin(random_range(180, 270)));
+			}
+		}
+		else
+		{
+			var o = create_effect(floor(x) - hitbox_w * facing, floor(y) + hitbox_h, spr_effects_dropdash_dust, 0.4, depth-1);
+			o.image_xscale = facing;
 		}
 	}
 	

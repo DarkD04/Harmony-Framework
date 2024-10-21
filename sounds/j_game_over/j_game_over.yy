@@ -12,8 +12,8 @@
   "duration":8.203719,
   "name":"j_game_over",
   "parent":{
-    "name":"Jingle",
-    "path":"folders/Sounds/Music/Jingle.yy",
+    "name":"Jingle Music",
+    "path":"folders/Sounds/Music/Jingle Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

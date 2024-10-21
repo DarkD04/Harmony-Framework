@@ -1,7 +1,4 @@
 function player_angle_detection(){
-	//Disable angle detection if ground collision is not allowed
-	if(!ground_collision_allow) exit;
-	
 	//Temp values
 	var posx, posy;
 	

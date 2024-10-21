@@ -28,7 +28,7 @@
   "origin":4,
   "parent":{
     "name":"Capsule",
-    "path":"folders/Sprites/Stage/Common Objects/End Stage/Capsule.yy",
+    "path":"folders/Sprites/Stage Sprites/Common Objects/End Stage/Capsule.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

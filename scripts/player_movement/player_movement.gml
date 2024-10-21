@@ -17,16 +17,18 @@ function player_movement(){
 	{
 		//Add gravity to y speed:
 		y_speed += y_accel/steps;	
-		
 	}
 	
 	//Update position with speed:
 	x += x_speed/steps;
 	y += y_speed/steps;
 	
+	//Get the speed
+	var spd = ground ? ground_speed : x_speed;
+	
 	//Don't allow player to go off screen
 	x = clamp(x, obj_camera.limit_left + 16, obj_camera.limit_right - 16)
-	if(x <= obj_camera.limit_left + 16 && ground_speed < 0 || x >= obj_camera.limit_right - 16 && ground_speed > 0)
+	if(x <= obj_camera.limit_left + 16 && spd < 0 || x >= obj_camera.limit_right - 16 && spd > 0)
 	{
 		ground_speed = 0;
 		x_speed = 0;
@@ -40,14 +42,8 @@ function player_movement(){
 	wall_h = 0;
 	
 	//Offset wall offset on flat ground
-	if(ground && ground_angle = 0) wall_h = 4;
-	
-	//Reset ceiling flag
-	touching_ceiling = false;
-	
-	//If player is inside ceiling
-	if(line_check(-hitbox_w, -hitbox_h-8) || line_check(hitbox_w, -hitbox_h-8))
+	if(ground && ground_angle = 0) 
 	{
-		touching_ceiling = true
+		wall_h = 4;
 	}
 }

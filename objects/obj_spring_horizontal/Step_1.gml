@@ -1,33 +1,24 @@
 /// @description Script
-	//Animation speed
-	image_speed = 0.55;
+	//Update the animator
+	animator_update(animator);
 	
-	//Different spring types
-	switch(spring_type)
-	{
-		case "Yellow":
-			sprite_index = spr_spring_horizontal_yellow;
-			spring_power = 10;
-		break;
-		
-		case "Red":
-			sprite_index = spr_spring_horizontal_red;
-			spring_power = 16;
-		break;
-	}
+	//Get player's instance
+	var player = instance_nearest(x, y, obj_player);
+	
+	//Get player's speed
+	var player_speed = player.ground ? player.ground_speed : player.x_speed;
 	
 	//Facing upwards
 	if(sign(image_xscale) = 1)
 	{
 		//Hit from the bottom
-		if(player_collide_object(C_RIGHT))
+		if(player_collide_object(C_RIGHT) && player_speed >= 0)
 		{
 			//Spring code
 			triggered = true;
+			animator.animation_finished = false;
 			play_sound(sfx_spring);
 			
-			//Player stuff
-			var player = instance_nearest(x, y, obj_player)
 			with(player)
 			{
 				switch(mode)
@@ -40,7 +31,10 @@
 					control_lock = 20;
 					
 					//Knuckles fix
-					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) state = ST_NORMAL;
+					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) 
+					{
+						state = ST_NORMAL;
+					}
 					break;
 					
 					case 2:
@@ -56,14 +50,13 @@
 	if(sign(image_xscale) = -1)
 	{		
 		//Hit from the bottom
-		if(player_collide_object(C_LEFT))
+		if(player_collide_object(C_LEFT) && player_speed <= 0)
 		{
 			//Spring code
 			triggered = true;
+			animator.animation_finished = false;
 			play_sound(sfx_spring);
 			
-			//Player stuff
-			var player = instance_nearest(x, y, obj_player)
 			with(player)
 			{
 				switch(mode)
@@ -75,7 +68,10 @@
 					control_lock = 20;
 					
 					//Knuckles fix
-					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) state = ST_NORMAL;
+					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) 
+					{
+						state = ST_NORMAL;
+					}
 					break;
 					
 					case 2:
@@ -88,7 +84,13 @@
 	}
 	
 	//Stop the animation
-	if(!triggered) image_index = 0;
+	if(!triggered) 
+	{
+		animation_set_frame(animator, 0);
+	}
 	
 	//Reset the trigger
-	if(image_index >= image_number-1) triggered = false;
+	if(animation_has_finished(animator) && triggered) 
+	{
+		triggered = false;
+	}

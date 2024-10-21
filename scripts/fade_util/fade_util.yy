@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"fade_util",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Utility Scripts",
+    "path":"folders/Scripts/Utility Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

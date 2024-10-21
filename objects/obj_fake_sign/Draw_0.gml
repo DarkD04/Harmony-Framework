@@ -1,4 +1,4 @@
-/// @description Draw the faker
+/// @description Draw the signpost
 	//Dont animate the shadows
 	image_speed = 0;
 	image_index = 0;

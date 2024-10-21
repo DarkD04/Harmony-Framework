@@ -5,10 +5,13 @@ function player_recorder(){
 	//Record position
 	record_x[record_timer mod 60] = floor(x);
 	record_y[record_timer mod 60] = floor(y);
+	record_old_x[record_timer mod 60] = floor(xprevious);
+	record_old_y[record_timer mod 60] = floor(yprevious);
+	
 	
 	//Record animation
-	record_sprite[record_timer mod 60] = animation_sprite;
-	record_frame[record_timer mod 60] = animation_frame;
+	record_sprite[record_timer mod 60] = animation_get_sprite(animator);
+	record_frame[record_timer mod 60] = animation_get_frame(animator);
 	
 	//Recording visual
 	record_direction[record_timer mod 60] = image_xscale;

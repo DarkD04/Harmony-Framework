@@ -39,9 +39,25 @@ function player_control(){
 		    }
 		}
 		
+		//Control lock quirk
+		if(control_lock != 0)
+		{
+			if(ground_speed > 0 && ground_speed <= 2.5 && ground_angle >= 45 && ground_angle <= 90 && movement = -1)
+			{
+				ground_speed = -0.5;
+				facing = -1;
+			}
+			if(ground_speed < 0 && ground_speed >= 2.5 && ground_angle <= 315 && ground_angle >= 270 && movement = 1)
+			{
+				ground_speed = 0.5;
+				facing = 1;
+			}
+		}
+		
 		//Decelerate when not holding anything:
 		if (movement = 0 && control_lock = 0)
 		    ground_speed -= min(abs(ground_speed), friction_speed) * sign(ground_speed);
+			
 	}
 	
 	//Air movement

@@ -47,17 +47,14 @@
 	//Handle player's hurt system
 	player_handle_hurt()
 	
+	//Update player's animator
+	animator_update(animator);
+	
 	//Handle player states
 	player_states();
 	
 	//Player facing direction
 	player_direction();
-	
-	//Players animation list
-	player_animation_list();
-	
-	//Handle animation system
-	animation_system();
 	
 	//Handle partial visual rotation
 	player_visual_angle();

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"approach",
   "parent":{
-    "name":"Engine",
-    "path":"folders/Scripts/Engine.yy",
+    "name":"Math Scripts",
+    "path":"folders/Scripts/Engine Scripts/Math Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

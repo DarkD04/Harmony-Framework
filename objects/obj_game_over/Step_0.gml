@@ -6,9 +6,8 @@
 	//Play music
 	if(timer == 48)
 	{
-		obj_music.fade_speed = 100;
-		obj_music.fade = MusicFadeIn;	
-		play_music(j_game_over, BGM, 0, 0, false);
+		music_reset_fade();	
+		play_music(J_GAME_OVER, 0);
 	}
 	
 	//Slide in the thing
@@ -20,7 +19,7 @@
 	//Fade out
 	if(timer == 560)
 	{
-		obj_fade.fade_type = fade_out;
+		obj_fade.fade_type = FADE_OUT;
 		obj_fade.fade_speed = 2;
 	}
 	
@@ -29,8 +28,7 @@
 	{
 		if(Input.ActionPress || Input.StartPress)
 		{
-			obj_music.fade_speed = 2;
-			obj_music.fade = MusicFadeOut;
+			music_set_fade(FADE_OUT, 2);
 			timer = 560-1;
 		}
 	}

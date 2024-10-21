@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Misc",
-    "path":"folders/Objects/Stage/Common Objects/Misc.yy",
+    "path":"folders/Objects/Stage Objects/Common Objects/Misc.yy",
   },
   "parentObjectId":{
     "name":"par_solid_object",
