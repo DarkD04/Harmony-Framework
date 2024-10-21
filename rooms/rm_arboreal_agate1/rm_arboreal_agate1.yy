@@ -382,7 +382,6 @@
     {"name":"inst_4823A04B","path":"rooms/rm_arboreal_agate1/rm_arboreal_agate1.yy",},
     {"name":"inst_24F30CD9","path":"rooms/rm_arboreal_agate1/rm_arboreal_agate1.yy",},
     {"name":"inst_6C1F6CBB","path":"rooms/rm_arboreal_agate1/rm_arboreal_agate1.yy",},
-    {"name":"inst_14FD019D","path":"rooms/rm_arboreal_agate1/rm_arboreal_agate1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -2815,9 +2814,6 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":10912.0,"y":704.0,},
         {"$GMRInstance":"v1","%Name":"inst_47A38A19","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47A38A19","objectId":{"name":"obj_badnik_ribbot","path":"objects/obj_badnik_ribbot/obj_badnik_ribbot.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1888.0,"y":512.0,},
         {"$GMRInstance":"v1","%Name":"inst_24F30CD9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_24F30CD9","objectId":{"name":"obj_monitor_signpost","path":"objects/obj_monitor_signpost/obj_monitor_signpost.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":11648.0,"y":1480.0,},
-        {"$GMRInstance":"v1","%Name":"inst_14FD019D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_14FD019D","objectId":{"name":"obj_monitor","path":"objects/obj_monitor/obj_monitor.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_monitor","path":"objects/obj_monitor/obj_monitor.yy",},"propertyId":{"name":"monitor_type","path":"objects/obj_monitor/obj_monitor.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Electric Shield\"",},
-          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":88.0,"y":800.0,},
       ],"layers":[],"name":"Objects","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_13C60B49","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_13C60B49","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_teststage_crystal1","path":"sprites/spr_teststage_crystal1/spr_teststage_crystal1.yy",},"x":992.0,"y":784.0,},
