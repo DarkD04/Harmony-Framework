@@ -208,7 +208,7 @@
     {"name":"dust_effect","order":9,"path":"scripts/dust_effect/dust_effect.yy",},
     {"name":"ease_util","order":7,"path":"scripts/ease_util/ease_util.yy",},
     {"name":"fade_util","order":4,"path":"scripts/fade_util/fade_util.yy",},
-    {"name":"gamepad_rumble","order":17,"path":"scripts/gamepad_rumble/gamepad_rumble.yy",},
+    {"name":"gamepad_rumble","order":4,"path":"scripts/gamepad_rumble/gamepad_rumble.yy",},
     {"name":"get_angle","order":1,"path":"scripts/get_angle/get_angle.yy",},
     {"name":"lerp_angle","order":1,"path":"scripts/lerp_angle/lerp_angle.yy",},
     {"name":"music_util","order":2,"path":"scripts/music_util/music_util.yy",},

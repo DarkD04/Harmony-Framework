@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"gamepad_rumble",
   "parent":{
-    "name":"Harmony Framework Plus",
-    "path":"Harmony Framework Plus.yyp",
+    "name":"Misc. Scripts",
+    "path":"folders/Scripts/Engine Scripts/Misc. Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

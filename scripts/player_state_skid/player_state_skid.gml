@@ -61,20 +61,25 @@ function player_state_skid(){
 		ground_speed = approach(ground_speed, -1 * facing, friction_speed);
 	}
 	
+	//Change the animation to skid turn
+	if(!animation_is_playing(animator, ANIM_SKIDTURN))
+	{
+		if(ground_speed >= -1 && ground_speed <= -0.5 && animation_is_playing(animator, ANIM_SKID) && facing == 1||
+		ground_speed >= 0.5 && ground_speed <= 1 && animation_is_playing(animator, ANIM_SKID) && facing == -1) 
+		{
+			animation_play(animator, ANIM_SKIDTURN);
+		}
+	}
 	//Done
 	if(animation_is_playing(animator, ANIM_SKIDTURN) && animation_has_finished(animator))
 	{
-		facing *= -1;
+		animation_play(animator, ANIM_WALK);
 		state = ST_NORMAL;
+		facing *= -1;
 		ground_speed = 1 * facing;
 	}
 	
-	//Change the animation to skid turn
-	if(ground_speed >= -1 && ground_speed <= -0.5 && animation_is_playing(animator, ANIM_SKID) && facing == 1||
-	ground_speed >= 0.5 && ground_speed <= 1 && animation_is_playing(animator, ANIM_SKID) && facing == -1) 
-	{
-		animation_play(animator, ANIM_SKIDTURN);
-	}
+
 	
 
 }
