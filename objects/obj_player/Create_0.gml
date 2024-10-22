@@ -28,6 +28,7 @@
 	jump_release = 4;					//Value used for speed when player releases the jump button
 	roll_influence_up = 0.078125;		//Value that influences rolling up slopes
 	roll_influence_down = 0.3125;		//Value that influences rolling down slopes
+	roll_speed_cap = 18;				//Value for rolling's maximum speed
 	
 	//State related values:
 	state = ST_NORMAL;					//Player's state machine

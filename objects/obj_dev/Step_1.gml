@@ -1,11 +1,16 @@
 /// @description Dev menu
 
-	if(keyboard_check_pressed(vk_escape) && !instance_exists(obj_devmenu) && !obj_shell.isOpen){
+	if(keyboard_check_pressed(vk_escape) && !instance_exists(obj_devmenu) && !obj_shell.isOpen)
+	{
 		var Menu = instance_create_depth(0, 0, -99999, obj_devmenu)
 		Menu.CoolDown = 5;
 	}
-	//No judas you will not memory hack my game asshole:blushed_emoji:
-	if(!global.dev_mode) instance_destroy();
+	
+	//Destroy just in case
+	if(!global.dev_mode) 
+	{
+		instance_destroy();
+	}
 	
 	//Go to level select
 	if(keyboard_check_pressed(ord("M")) && !obj_shell.isOpen)

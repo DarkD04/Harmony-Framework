@@ -96,4 +96,7 @@ function player_state_roll(){
 			ground_speed = 2 * facing;
 		}
 	}
+	
+	//Rolling speed cap
+	ground_speed = clamp(ground_speed, -roll_speed_cap, roll_speed_cap);
 }

@@ -63,10 +63,13 @@
 			}
 			else
 			{
-				obj_player.state = ST_SPRING;
-				animation_play(obj_player.animator, ANIM_SPRING);
-				obj_player.y_speed = -10;
-				obj_player.ground = false;
+				with(obj_player)
+				{
+					animation_play(animator, ANIM_SPRING);
+					state = ST_SPRING;
+					y_speed = -10;
+					ground = false;
+				}
 				if(on_screen()) play_sound(sfx_spring);
 			} 
 		}

@@ -265,6 +265,7 @@
     {"id":{"name":"dust_effect","path":"scripts/dust_effect/dust_effect.yy",},},
     {"id":{"name":"ease_util","path":"scripts/ease_util/ease_util.yy",},},
     {"id":{"name":"fade_util","path":"scripts/fade_util/fade_util.yy",},},
+    {"id":{"name":"gamepad_rumble","path":"scripts/gamepad_rumble/gamepad_rumble.yy",},},
     {"id":{"name":"get_angle","path":"scripts/get_angle/get_angle.yy",},},
     {"id":{"name":"get_end_results","path":"scripts/get_end_results/get_end_results.yy",},},
     {"id":{"name":"init_music_list","path":"scripts/init_music_list/init_music_list.yy",},},
