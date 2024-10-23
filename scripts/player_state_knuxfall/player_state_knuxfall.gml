@@ -12,7 +12,7 @@ function player_state_knuxfall(){
 	}
 	
 	//Play landing sound
-	if(landed) 
+	if(ground && animation_is_playing(animator, ANIM_KNUXFALL)) 
 	{
 		play_sound(sfx_land);
 	}

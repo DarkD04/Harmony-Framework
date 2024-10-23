@@ -92,6 +92,7 @@
 				ground = true;
 			}
 			y -= 1;
+			y = floor(y);
 			y_speed = 0;
 		}
 		

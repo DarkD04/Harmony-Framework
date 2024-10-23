@@ -78,8 +78,4 @@ function player_state_skid(){
 		facing *= -1;
 		ground_speed = 1 * facing;
 	}
-	
-
-	
-
 }
