@@ -97,7 +97,10 @@
 		}
 		
 	}
-	
+	else
+	{
+		y = floor(y);	
+	}
 	//User event for icon
 	event_user(0);
 
