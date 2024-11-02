@@ -388,6 +388,7 @@
     {"id":{"name":"spr_bg_teststage_bottom","path":"sprites/spr_bg_teststage_bottom/spr_bg_teststage_bottom.yy",},},
     {"id":{"name":"spr_bg_teststage_clouds","path":"sprites/spr_bg_teststage_clouds/spr_bg_teststage_clouds.yy",},},
     {"id":{"name":"spr_bg_teststage_mountains","path":"sprites/spr_bg_teststage_mountains/spr_bg_teststage_mountains.yy",},},
+    {"id":{"name":"spr_bg_teststage_ruins","path":"sprites/spr_bg_teststage_ruins/spr_bg_teststage_ruins.yy",},},
     {"id":{"name":"spr_bg_teststage_water","path":"sprites/spr_bg_teststage_water/spr_bg_teststage_water.yy",},},
     {"id":{"name":"spr_bounds_marker","path":"sprites/spr_bounds_marker/spr_bounds_marker.yy",},},
     {"id":{"name":"spr_bridge_brick","path":"sprites/spr_bridge_brick/spr_bridge_brick.yy",},},

@@ -20,3 +20,5 @@
 	add_background(spr_bg_teststage_bottom, 0, 0.8, v_scroll, 0, 0, 0, 144);
 	add_background(spr_bg_teststage_bottom, 1, 0.78, v_scroll, 0, 0, 0, 144);
 	add_background(spr_bg_teststage_bottom, 3, 0.72, v_scroll, 0, 0, 0, 144);
+	add_background(spr_bg_teststage_bottom, 5, 1, 1, 0, 0, 0, 0, false);
+	add_background(spr_bg_teststage_ruins, 0, 0.66, 0.66, 0, 0, 0, 354, false);
