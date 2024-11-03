@@ -10,6 +10,7 @@ function add_background(sprite, frame, scroll_x, scroll_y, spd_x=0, spd_y=0, off
 	background_vertical[bg_id] = vertical_loop;
 	line_scroll[bg_id] = false;
 	trigger[bg_id] = false;
+	visibility[bg_id] = true;
 	bg_id++;
 }
 
@@ -28,5 +29,6 @@ function add_background_line(sprite, frame, scroll_x, scroll_y, spd_x, spd_y, of
 	line_steps[bg_id] = steps;
 	bg_scale[bg_id] = y_scale;
 	trigger[bg_id] = false;
+	visibility[bg_id] = true;
 	bg_id++;
 }

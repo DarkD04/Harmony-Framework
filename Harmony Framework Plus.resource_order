@@ -177,6 +177,7 @@
     {"name":"obj_spring_diagonal","order":2,"path":"objects/obj_spring_diagonal/obj_spring_diagonal.yy",},
     {"name":"obj_spring_horizontal","order":1,"path":"objects/obj_spring_horizontal/obj_spring_horizontal.yy",},
     {"name":"obj_stage_select","order":1,"path":"objects/obj_stage_select/obj_stage_select.yy",},
+    {"name":"obj_teststage_bg_switch","order":2,"path":"objects/obj_teststage_bg_switch/obj_teststage_bg_switch.yy",},
     {"name":"obj_teststage_platform","order":1,"path":"objects/obj_teststage_platform/obj_teststage_platform.yy",},
     {"name":"obj_tilepiece","order":1,"path":"objects/obj_tilepiece/obj_tilepiece.yy",},
     {"name":"obj_titlecard","order":2,"path":"objects/obj_titlecard/obj_titlecard.yy",},

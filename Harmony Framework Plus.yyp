@@ -225,6 +225,7 @@
     {"id":{"name":"obj_spring_vertical","path":"objects/obj_spring_vertical/obj_spring_vertical.yy",},},
     {"id":{"name":"obj_stage_select","path":"objects/obj_stage_select/obj_stage_select.yy",},},
     {"id":{"name":"obj_tails_object","path":"objects/obj_tails_object/obj_tails_object.yy",},},
+    {"id":{"name":"obj_teststage_bg_switch","path":"objects/obj_teststage_bg_switch/obj_teststage_bg_switch.yy",},},
     {"id":{"name":"obj_teststage_bg","path":"objects/obj_teststage_bg/obj_teststage_bg.yy",},},
     {"id":{"name":"obj_teststage_platform","path":"objects/obj_teststage_platform/obj_teststage_platform.yy",},},
     {"id":{"name":"obj_tilepiece","path":"objects/obj_tilepiece/obj_tilepiece.yy",},},

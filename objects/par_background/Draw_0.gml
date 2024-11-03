@@ -28,7 +28,7 @@
 			//Auto scrolling
 			offset_x[i] += speed_x[i];
 			offset_y[i] += speed_y[i];
-			draw_sprite_tiled_horizontal(background_sprite[i], background_frame[i], floor(pos_x[i]), floor(pos_y[i]), background_vertical[i]);
+			if (visibility[i] == true) draw_sprite_tiled_horizontal(background_sprite[i], background_frame[i], floor(pos_x[i]), floor(pos_y[i]), background_vertical[i]);
 		}else
 		{
 			if(trigger[i])
@@ -78,7 +78,7 @@
 			shader_set_uniform_f(ScaleY, bg_scale[i]); 
 			shader_set_uniform_f(ShdHeight, sprite_get_height(background_sprite[i])); 
 			
-			draw_sprite_ext(background_sprite[i], background_frame[i], camera_get_view_x(view_camera[view_current]), floor(pos_y[i]) , 1, bg_scale[i], 0, c_white, 1);
+			if (visibility[i] == true) draw_sprite_ext(background_sprite[i], background_frame[i], camera_get_view_x(view_camera[view_current]), floor(pos_y[i]) , 1, bg_scale[i], 0, c_white, 1);
 		}
 		shader_reset()
 	}

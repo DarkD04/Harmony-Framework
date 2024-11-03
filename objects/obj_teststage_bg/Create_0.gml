@@ -6,6 +6,9 @@
 	//Vertical scroll factor
 	var v_scroll = 0.88;
 	
+	//Background mode
+	bg_mode = 0;
+	
 	//Add backgrounds
 	add_background(spr_bg_teststage_clouds, 0, 0.9, v_scroll, -0.2, 0, 0, 0);
 	add_background(spr_bg_teststage_clouds, 1, 0.93, v_scroll, -0.15, 0, 0, 0);
