@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ramp",
+  "%Name":"obj_force_angle",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ramp",
+  "name":"obj_force_angle",
   "overriddenProperties":[],
   "parent":{
     "name":"Collision Modifiers",
@@ -26,8 +26,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"angle_start","filters":[],"listItems":[],"multiselect":false,"name":"angle_start","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"angle_end","filters":[],"listItems":[],"multiselect":false,"name":"angle_end","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"360","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"target_angle","filters":[],"listItems":[],"multiselect":false,"name":"target_angle","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

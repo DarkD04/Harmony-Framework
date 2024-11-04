@@ -4,5 +4,7 @@
 	{
 		//If angle is in the range
 		if(obj_player.ground_angle >= angle_start && obj_player.ground_angle <= angle_end)
-			obj_player.ramp_fix = true;
+		{
+			obj_player.on_edge = true;
+		}
 	}

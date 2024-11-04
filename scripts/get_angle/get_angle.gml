@@ -11,8 +11,8 @@ function get_angle(pos_x, pos_y, floor_mode = 0, reach_range = 16){
 		case 0:
 			off_x[0] = floor(pos_x / 16) * 16;
 			off_x[1] = floor(pos_x / 16) * 16 + 15;
-			off_y[0] = pos_y;
-			off_y[1] = pos_y;
+			off_y[0] = floor(pos_y);
+			off_y[1] = floor(pos_y);
 		break;
 			
 		//Find right wall angle:
