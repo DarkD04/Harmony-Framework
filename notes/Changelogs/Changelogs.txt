@@ -1,4 +1,10 @@
-Changelogs for 21st of October 2024
+Changelogs for 8th of November 2024 (Version 1.0)
+    Misc improvements:
+        -Background system includes visibility flag, the "step" value in the line parallax is now global rather than relative to the scroll_x value, and added an example for a HCZ-like scaling water parallax!
+		!!IMPORTANT!! Changes were done to the line parallax system and previously made parallax has to have its "step" value changed. Fortunately, you can simply use this formula for it: steps*(1-scroll_x)
+		-Added a rudimentary BG switch based on the camera's potition rather than the player's
+
+Changelogs for 21st of October 2024 (Version 0.9)
     I'll keep this brief and highlight only the most important changes made to the framework
     
     Utility scripts:

@@ -73,7 +73,7 @@
 			shader_set_uniform_f(BGTexel, texture_get_texel_width(sprite_get_texture(background_sprite[i], 0)));
 			shader_set_uniform_f(OffX, pos_x[i]);
 			shader_set_uniform_f(PosX, camera_get_view_x(view_camera[view_current]), pos_y[i]);
-			shader_set_uniform_f(StepY, line_steps[i]);
+			shader_set_uniform_f(StepY, line_steps[i]/(1-factor_x[i]));
 			shader_set_uniform_f(HeightY, line_gap[i]);
 			shader_set_uniform_f(ScaleY, bg_scale[i]); 
 			shader_set_uniform_f(ShdHeight, sprite_get_height(background_sprite[i])); 
