@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_bg_aaz_ruins",
   "bboxMode":0,
-  "bbox_bottom":543,
+  "bbox_bottom":591,
   "bbox_left":0,
   "bbox_right":511,
   "bbox_top":0,
