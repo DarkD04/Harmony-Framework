@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_badnik_ribbot",
+  "%Name":"obj_aaz_seesaw_weight",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_badnik_ribbot",
-  "overriddenProperties":[],
+  "name":"obj_aaz_seesaw_weight",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":null,"propertyId":null,"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Full Solid\"",},
+  ],
   "parent":{
     "name":"Arboreal Agate",
     "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
   },
   "parentObjectId":{
-    "name":"par_badnik",
-    "path":"objects/par_badnik/par_badnik.yy",
+    "name":"par_solid_object",
+    "path":"objects/par_solid_object/par_solid_object.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ribbot",
-    "path":"sprites/spr_ribbot/spr_ribbot.yy",
+    "name":"spr_seesaw_weight",
+    "path":"sprites/spr_seesaw_weight/spr_seesaw_weight.yy",
   },
   "spriteMaskId":null,
   "visible":true,

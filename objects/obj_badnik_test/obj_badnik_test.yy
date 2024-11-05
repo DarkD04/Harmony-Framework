@@ -8,8 +8,8 @@
   "name":"obj_badnik_test",
   "overriddenProperties":[],
   "parent":{
-    "name":"Bridge Zone",
-    "path":"folders/Objects/Stage Objects/Bridge Zone.yy",
+    "name":"Arboreal Agate",
+    "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
   },
   "parentObjectId":{
     "name":"par_badnik",

@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_swing_editor",
-    "path":"sprites/spr_swing_editor/spr_swing_editor.yy",
+    "name":"spr_aaz_swing_editor",
+    "path":"sprites/spr_aaz_swing_editor/spr_aaz_swing_editor.yy",
   },
   "spriteMaskId":null,
   "visible":true,

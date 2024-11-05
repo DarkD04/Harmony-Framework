@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_badnik_ribbot",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_aaz_platform",
+  "eventList":[],
   "managed":true,
-  "name":"obj_badnik_ribbot",
+  "name":"obj_aaz_platform",
   "overriddenProperties":[],
   "parent":{
     "name":"Arboreal Agate",
     "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
   },
   "parentObjectId":{
-    "name":"par_badnik",
-    "path":"objects/par_badnik/par_badnik.yy",
+    "name":"par_moving_platform",
+    "path":"objects/par_moving_platform/par_moving_platform.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ribbot",
-    "path":"sprites/spr_ribbot/spr_ribbot.yy",
+    "name":"spr_aaz_platform",
+    "path":"sprites/spr_aaz_platform/spr_aaz_platform.yy",
   },
   "spriteMaskId":null,
   "visible":true,

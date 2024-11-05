@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_badnik_ribbot",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_aaz_seesaw_bead",
+  "eventList":[],
   "managed":true,
-  "name":"obj_badnik_ribbot",
+  "name":"obj_aaz_seesaw_bead",
   "overriddenProperties":[],
   "parent":{
     "name":"Arboreal Agate",
     "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
   },
-  "parentObjectId":{
-    "name":"par_badnik",
-    "path":"objects/par_badnik/par_badnik.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ribbot",
-    "path":"sprites/spr_ribbot/spr_ribbot.yy",
+    "name":"spr_seesaw_bead",
+    "path":"sprites/spr_seesaw_bead/spr_seesaw_bead.yy",
   },
   "spriteMaskId":null,
   "visible":true,
