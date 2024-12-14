@@ -2,12 +2,6 @@ function player_handle_hurt()
 {
 	if(state != ST_KNOCKOUT)
 	{
-		//Reset knowckout type when you're invicible
-		if(invincible || invincible_timer > 0)
-		{
-			knockout_type = 0;	
-		}
-		
 		if(invincible_timer == 0 && !invincible)
 		{
 			if(knockout_type == K_HURT)
@@ -62,33 +56,50 @@ function player_handle_hurt()
 				}
 			}
 		}
-		
-		//Player's death event
-		if(knockout_type == K_DIE)
-		{
-			//Set player to the knockout state
-			state = ST_KNOCKOUT;
-			
-			//Bounce the player out
-			y_speed = -7;
-			x_speed = 0;
-			ground = false;
-			
-			//Disable camera movement
-			camera_set_mode(CAM_NULL);
-			
-			//Play the hurt sound
-			play_sound(sfx_hurt);
-		}
-		
-		//Kill the player after time has reached the limit
-		if(global.stage_timer == 599999) 
-		{
-			knockout_type = K_DIE;
-			is_time_over = true;
-		}
 	}
 	
+	//Fix so player can die at any time
+	static has_died = false;
+	
+	//Reset the flag
+	if(state != ST_KNOCKOUT)
+	{
+		has_died = false;	
+	}
+	
+	//Player's death event
+	if(knockout_type == K_DIE && !has_died)
+	{
+		//Set the die flag
+		has_died = true;
+		
+		//Set player to the knockout state
+		state = ST_KNOCKOUT;
+			
+		//Bounce the player out
+		y_speed = -7;
+		x_speed = 0;
+		ground = false;
+			
+		//Disable camera movement
+		camera_set_mode(CAM_NULL);
+			
+		//Play the hurt sound
+		play_sound(sfx_hurt);
+	}
+		
+	//Kill the player after time has reached the limit
+	if(global.stage_timer == 599999) 
+	{
+		knockout_type = K_DIE;
+		is_time_over = true;
+	}
+	
+	if(state != ST_KNOCKOUT)
+	{
+		knockout_type = 0;	
+	}
+			
 	//Bottomless pit death event
 	if(y > obj_camera.target_bottom && y > obj_camera.limit_bottom && knockout_type != K_DIE)
 	{
