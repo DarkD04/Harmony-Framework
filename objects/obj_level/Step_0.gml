@@ -43,8 +43,3 @@
 		global.score_extralife -= 50000;
 
 	}
-	
-	if(Input.StartPress && obj_player.input_disable = false)
-	{
-		instance_create_depth(0, 0, 0, obj_pause);
-	}

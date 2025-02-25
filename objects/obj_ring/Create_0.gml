@@ -7,3 +7,4 @@
 	timer = 0;
 	animation_speed = 0.55;
 	plane = PLANE_A;
+	image_speed = 0;

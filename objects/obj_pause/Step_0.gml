@@ -1,12 +1,11 @@
 /// @description pause
-
-
+	audio_pause_all();
+	global.process_objects = false;
 	if(Input.StartPress || Input.ActionPress){
 		if delay > 2 
 		{
-			//play_sound(sfx_pause);
+			global.process_objects = true;
 			audio_resume_all();
-			instance_activate_all();
 			surface_free(pausemenu);
 			pausemenu = -1;
 			instance_destroy();

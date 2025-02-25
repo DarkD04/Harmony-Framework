@@ -1,9 +1,9 @@
 /// @description Dev menu
-
+	room_speed = 60;
+	
 	if(keyboard_check_pressed(vk_escape) && !instance_exists(obj_devmenu) && !obj_shell.isOpen)
 	{
-		var Menu = instance_create_depth(0, 0, -99999, obj_devmenu)
-		Menu.CoolDown = 5;
+		instance_create_depth(0, 0, -99999, obj_devmenu)
 	}
 	
 	//Destroy just in case
@@ -48,7 +48,9 @@
 				
 			}
 		}
-		if(keyboard_check(vk_f6)) room_speed = 5 else room_speed = 60
+		
+		if(keyboard_check(vk_f6)) room_speed = 5;
+		if(keyboard_check(vk_backspace)) room_speed = 240;
 	
 		//Stop if player doesn't exist
 		if(!instance_exists(obj_player)) exit;

@@ -1,6 +1,6 @@
 function player_state_spindash(){
 	//Trigger the spindash
-	if(state == ST_LOOKDOWN && press_action)
+	if(state == ST_LOOKDOWN && press_action && global.use_spindash)
 	{
 		//Reset the spindash pitch
 		audio_sound_pitch(sfx_spindash, 1);

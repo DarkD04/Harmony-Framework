@@ -12,6 +12,12 @@ function player_state_jump(){
 		}
 	}
 	
+	//If some of these flags are disabled, make an exception for some of the states
+	if(state == ST_LOOKUP && !global.use_peelout|| state == ST_LOOKDOWN && !global.use_spindash)
+	{
+		can_jump = true;
+	}
+	
 	//Trigger jump
 	if(press_action && ground && !touching_ceiling && !force_roll && can_jump)
 	{

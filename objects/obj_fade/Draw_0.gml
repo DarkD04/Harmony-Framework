@@ -45,9 +45,3 @@
 	draw_rectangle(cx, cy, cx + sw, cy + sh, false);
 	draw_set_color(c_white)
 	gpu_set_blendmode(bm_normal);
-	
-	//Add fade timer depending on the type
-	fade_timer += (fade_speed * (512/100)) * fade_type;
-	
-	//Limit the fade
-	fade_timer = clamp(fade_timer, 0, 512);
