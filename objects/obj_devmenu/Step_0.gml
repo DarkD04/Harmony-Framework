@@ -1,7 +1,7 @@
 /// @description Script
 
 	//Exit the dev menu
-	if(keyboard_check_pressed(vk_escape) && cool_down = 0 || Input.BPress && cool_down = 0)
+	if(keyboard_check_pressed(vk_escape) && cool_down = 0 || Input.BPress && cool_down = 0 && state == dev_menu_state.normal)
 	{
 		//Trigger the window event
 		with(obj_window)
