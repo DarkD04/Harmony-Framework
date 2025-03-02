@@ -149,3 +149,43 @@
 	{
 		look_shift = approach(look_shift, 0, 2);
 	}
+	
+	//Camera panning
+	switch(global.camera_pan_type)
+	{
+		//Sonic CD camera panning
+		case 1:	
+			//Make a flag of when the camera should shift
+			var can_shift = abs(target.ground_speed) >= 6 || target.state == ST_SPINDASH || target.state == ST_PEELOUT;
+			
+			//Shift the camera
+			if(can_shift)
+			{
+				//If sonic is running at top speed, pan the camera
+				if(abs(target.ground_speed) >= 6)
+				{
+					shift_x = approach(shift_x, 64 * sign(target.ground_speed), 2);
+				}
+				else	//Otherwise make it be based on the state and facing direction
+				{
+					shift_x = approach(shift_x, 64 * target.facing, 2);
+				}
+			}
+			else	//Pan the camera back
+			{
+				shift_x = approach(shift_x, 0, 2);	
+			}
+		break;
+		
+		case 2:
+			//If the player is not spindashing or dropdashing, pan the camera based on player's speed
+			if(target.state != ST_SPINDASH && target.state != ST_PEELOUT)
+			{
+				shift_x = lerp(shift_x, (target.ground ? target.ground_speed * 4 : target.x_speed * 4) * dcos(target.ground_angle), 0.1);			
+			}
+			else	//Otherwise, based on direction
+			{
+				shift_x = lerp(shift_x, 64 * target.facing, 0.05);		
+			}
+		break;
+	}

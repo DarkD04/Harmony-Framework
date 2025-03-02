@@ -13,6 +13,9 @@
 	
 	//Timers
 	camera_shake = 0;					//Camera shake, it's being subtracted by a multiplier
+	shake_x = 0;						//Timer and distance offset used for horizontal camera shake
+	shake_y = 0;						//Timer and distance offset used for vertical camera shake
+	shake_speed = 1;					//Speed used for subtracting the camera shake
 	look_timer = 0;						//Timer value for when player looks up or down
 	h_lag = 0;							//Lag timer for horizontal scrolling of the camera
 	v_lag = 0;							//Lag timer for vertical scrolling of the camera
