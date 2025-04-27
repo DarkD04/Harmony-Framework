@@ -30,8 +30,8 @@
 	//Get position only for the breakable floor
 	if(breakable_type >= 1)
 	{
-		var startX	= x + (sprite_width / 2);
-		var startY	= bbox_bottom;
+		startX	= x + (sprite_width / 2);
+		startY	= bbox_bottom;
 	}
 		
 	var curY = endY - startY;
@@ -77,7 +77,7 @@
 				case 1:
 				case 2:
 				case 3:
-					var angle		= darctan2(angleX, curY);
+					angle		= darctan2(angleX, curY);
 					var velocity	= (abs(curX) + 2.0 * abs(curY)) / 4.0;
 					
 					// TODO: Check this

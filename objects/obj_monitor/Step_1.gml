@@ -72,6 +72,19 @@
 		//Flip it back
 		image_yscale = 1;
 	}
+	
+	//Check if monitor is not colliding the ground anymore
+	
+	if (ground)
+	{
+	if (!collision_instance(0, 1, 0, true, true))
+		{
+		// Floor is gone, make it fall again
+		ground = false;
+		y_speed = 0.1;
+		}
+	}
+
 	if(!ground)
 	{
 		//Update position by speed

@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"Harmony Framework Plus",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -110,11 +110,12 @@
     {"$GMFolder":"","%Name":"Collision Tileset","folderPath":"folders/Tile Sets/Collision Tileset.yy","name":"Collision Tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"Harmony Framework Plus",
   "resources":[
@@ -654,11 +655,11 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
-    {"roomId":{"name":"rm_splash_screen","path":"rooms/rm_splash_screen/rm_splash_screen.yy",},},
     {"roomId":{"name":"rm_arboreal_agate1","path":"rooms/rm_arboreal_agate1/rm_arboreal_agate1.yy",},},
-    {"roomId":{"name":"rm_arboreal_agate2","path":"rooms/rm_arboreal_agate2/rm_arboreal_agate2.yy",},},
+    {"roomId":{"name":"rm_splash_screen","path":"rooms/rm_splash_screen/rm_splash_screen.yy",},},
     {"roomId":{"name":"rm_empty_zone","path":"rooms/rm_empty_zone/rm_empty_zone.yy",},},
     {"roomId":{"name":"rm_stage_select","path":"rooms/rm_stage_select/rm_stage_select.yy",},},
+    {"roomId":{"name":"rm_arboreal_agate2","path":"rooms/rm_arboreal_agate2/rm_arboreal_agate2.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
