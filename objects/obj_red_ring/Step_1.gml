@@ -1,6 +1,6 @@
 
 if !setup {
-	if (ds_map_exists(global.red_ring_map, obj_level.stage_name)) {
+	if (ds_map_exists(global.red_ring_map, obj_level.stage_name) && global.red_ring_map[? obj_level.stage_name][index]) {
 			if (global.red_ring_map[? obj_level.stage_name][index] == 1) {
 				already_collected = true;
 				alpha_death = 0.5;
