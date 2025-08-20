@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.166236,
+  "duration":0.16623583,
   "name":"sfx_land",
   "parent":{
     "name":"Player",

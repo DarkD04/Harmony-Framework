@@ -42,6 +42,7 @@
         "\"Speed Shoes\"",
         "\"Extra Life\"",
         "\"Eggman\"",
+        "\"Combine Ring\"",
       ],"multiselect":false,"name":"monitor_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"10 Rings\"","varType":6,},
     {"$GMObjectProperty":"v1","%Name":"layer_bump","filters":[],"listItems":[],"multiselect":false,"name":"layer_bump","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],

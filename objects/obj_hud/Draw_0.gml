@@ -60,6 +60,18 @@
 			i++;
 		}
 	}
+
+
+	if (obj_player.combinering == 1){
+		
+	draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[2], 64);	
+	}
+	
+	if (obj_player.combineloss == 1){
+		if (global.object_timer mod 2 = 0){
+			draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[2], 64);	
+		}
+	}
 	
 	if instance_exists(obj_emerald_shard) {
 		var ico_sx = global.window_width / 2

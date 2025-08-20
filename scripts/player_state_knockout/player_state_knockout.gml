@@ -21,6 +21,19 @@ function player_state_knockout(){
 			}
 		break;
 		
+			case K_STUNNED:
+			//Change animation
+			animation_play(animator, ANIM.HURT);
+			
+			//Exit when grounded
+			if(ground)
+			{
+				state = player_state_normal;
+				ground_speed = 0;
+				knockout_type = 0;
+			}
+		break;
+		
 		case K_DIE:
 		
 		case K_DROWN:

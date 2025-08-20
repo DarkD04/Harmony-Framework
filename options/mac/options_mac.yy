@@ -19,7 +19,7 @@
   "option_mac_enable_steam":false,
   "option_mac_icon_png":"${base_options_dir}/mac/icons/1024.png",
   "option_mac_installer_background_png":"${base_options_dir}/mac/splash/installer_background.png",
-  "option_mac_interpolate_pixels":true,
+  "option_mac_interpolate_pixels":false,
   "option_mac_menu_dock":false,
   "option_mac_min_version":"10.10",
   "option_mac_output_dir":"~/gamemakerstudio2",

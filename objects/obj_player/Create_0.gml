@@ -98,6 +98,8 @@
 	//Shields:
 	shield = S_NONE;					//Shield that player is currently using
 	shield_list = [obj_shield, obj_fire_shield, obj_electric_shield, obj_bubble_shield];	//The shield list
+	combinering = 0;
+	combineloss = 0;
 	
 	//Hitbox variables
 	hitbox_top_offset = 0;				//Hitbox offset of the top side

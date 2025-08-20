@@ -45,14 +45,49 @@ function player_handle_hurt()
 					invincible_timer = 120;
 					state = player_state_knockout;
 					
-					//Commit ring loss when player gets hurt
-					if(shield == S_NONE)
+                    //Commit ring loss when player gets hurt
+					if(shield == S_NONE && combinering == 0)
 					{
 						create_ringloss(global.rings);	
 						play_sound(sfx_ringloss);
 						global.rings = 0;
 					}
 					
+					//Combine Ring
+					if(shield == S_NONE && combinering != 0)
+					{
+						//Chaotix combine ring
+						if(combinering == 1)
+						{
+							var combi = instance_create_depth(x, y, depth-1, obj_combine_ring);
+							combi.rings = global.rings;
+							combi.x_speed = 1 * facing;
+							play_sound(sfx_hurt);
+							global.rings = 0;
+							combineloss = 1;
+						    combinering = 0;
+							
+						}
+					}
+					
+					//Basic knockout
+			if(knockout_type = K_STUNNED)
+			{
+				//Get the hurt side
+				var side = 1;
+				if(sign(x - hurt_position) != 0)
+				{
+					side = sign(x - hurt_position);
+				}
+				
+				x_speed = (2 * side) / (1 + underwater);
+				y_speed = -4 / (1 + underwater);
+				ground = false;
+				invincible_timer = 120;
+                state = player_state_knockout;
+				play_sound(sfx_hurt);
+			}
+	
 					//Remove the shield when player gets hurt
 					if(shield != S_NONE)
 					{

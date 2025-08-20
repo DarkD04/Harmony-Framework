@@ -42,7 +42,13 @@
 		break;
 		
 		case "Extra Life":
-			play_sound(j_extra_life);
+			play_sound(sfx_extralife);
 			global.life += 1;
 		break;
+		
+		case "Combine Ring":
+			obj_player.combinering = 1;
+			play_sound(sfx_combiring);
+		break;
+		
 	}

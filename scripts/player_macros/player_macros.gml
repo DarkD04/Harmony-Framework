@@ -16,4 +16,5 @@ function player_macros(){
 	#macro K_HURT 1
 	#macro K_DIE 2
 	#macro K_DROWN 3
+	#macro K_STUNNED 4
 }

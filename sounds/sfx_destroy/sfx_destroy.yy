@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":1,
   "conversionMode":0,
-  "duration":0.365646,
+  "duration":0.36564627,
   "name":"sfx_destroy",
   "parent":{
     "name":"Objects",

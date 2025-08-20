@@ -1,10 +1,10 @@
-	music_add("Weapon Wing Test", bgm_weaponwing_test, 7.625)
+	music_add("WEAPON WING ZONE - SEAN EVANS", bgm_weaponwing_test, 7.625)
 	
 	//NOTE: Dublicate this room to make levels!
 	with(obj_level)
 	{
 		//Set stage music and loop points
-		stage_music = "Weapon Wing Test";
+		stage_music = "WEAPON WING ZONE - SEAN EVANS";
 		
 		//Set level name
 		stage_name = "Empty Room";

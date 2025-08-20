@@ -6,7 +6,7 @@
 	var player = instance_nearest(x, y, obj_player);
 	
 	//Get player's speed
-	var player_speed = player.ground ? player.ground_speed : player.x_speed;
+	var player_speed = player.x_speed;
 	
 	//Facing upwards
 	if(sign(image_xscale) = 1)
@@ -33,7 +33,7 @@
 					//Knuckles fix
 					if(state = player_state_glide || state = player_state_knuxslide || state = player_state_wallclimb) 
 					{
-						state = player_state_normal;
+						state = player_state_normal();
 					}
 					break;
 					

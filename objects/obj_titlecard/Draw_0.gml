@@ -39,7 +39,7 @@
 	//Clear alpha
 	draw_clear_alpha(c_black, 0)
 	
-	var act_text = "Act " + string(obj_level.act)
+	var act_text = "Zone " + string(obj_level.act)
 	if (obj_level.act == 0) {
 		act_text = "Zone"	
 	}
@@ -60,13 +60,13 @@
 	
 	
 	draw_set_color(c_black);
-	draw_text(offset[4] +2, offset[2]+2, string(obj_level.stage_name));
+	draw_text(offset[4] +10, offset[2]+2, string(obj_level.stage_name));
 	//draw_text(152 - offset[2], 96, "ACT " + string(obj_level.act));
 	draw_set_color(c_white);
-	draw_text(offset[4], offset[2], string(obj_level.stage_name));
+	draw_text(offset[4]+8, offset[2], string(obj_level.stage_name));
 	
 	draw_set_font(global.font_small);
-	draw_text(offset[4]+4, offset[2]-4, string(obj_level.author_name));
+	draw_text(offset[4]+12, offset[2]-4, string(obj_level.author_name));
 	
 	//Draw the left part of the sprite
 	
@@ -78,7 +78,7 @@
 	
 	//Draw the red part of title card
 	draw_set_color(#fc0000);
-	draw_rectangle(0, 16 +  offset[1], offset[0] / 3, 16+16 + +  offset[1], false);
+	draw_rectangle(0, 16 +  offset[1], (offset[0]+ 48) / 3, 16+16 + +  offset[1], false);
 	
 	
 	//Set font numbers
@@ -86,10 +86,10 @@
 	draw_set_font(fon_titlecard);
 	draw_set_halign(fa_left);
 	draw_set_color(c_black);
-	draw_text(offset[6] +2, offset[1]+2, act_text);
+	draw_text(offset[6] +10, offset[1]+2, act_text);
 	//draw_text(152 - offset[2], 96, "ACT " + string(obj_level.act));
 	draw_set_color(c_white);
-	draw_text(offset[6], offset[1], act_text);
+	draw_text(offset[6]+8, offset[1], act_text);
 	
 	
 	//Done

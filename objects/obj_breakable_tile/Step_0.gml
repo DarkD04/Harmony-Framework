@@ -8,8 +8,16 @@
 		//Change collision flag
 		if(obj_player.state = player_state_roll && abs(obj_player.ground_speed) >= 1 && obj_player.ground || obj_player.state = player_state_spindash || obj_player.character == CHAR_KNUX)
 		{
-			collision_flag = false;	
-		}
+		    if(obj_player.character == CHAR_KNUX && knuckles_wall)
+			{
+				collision_flag = false;	
+				
+		}else if (knuckles_wall = false)
+			{
+			
+				collision_flag = false;	
+			}
+		}	
 	
 		//Check if fire shield exists
 		if(instance_exists(obj_fire_shield))
@@ -34,8 +42,9 @@
 			{
 				collision_flag = false;	
 			}
-		break;
+		break;	
 	}
+	
 	
 	//Destroy the wall
 	if(player_collide_object(C_MAIN))
