@@ -2,7 +2,7 @@ function player_handle_hurt()
 {
 	if(state != player_state_knockout)
 	{
-		//Reset knowckout type when you're invicible
+		//Reset knockout type when you're invicible
 		if(invincible || invincible_timer > 0)
 		{
 			knockout_type = 0;	
@@ -70,24 +70,6 @@ function player_handle_hurt()
 						}
 					}
 					
-					//Basic knockout
-			if(knockout_type = K_STUNNED)
-			{
-				//Get the hurt side
-				var side = 1;
-				if(sign(x - hurt_position) != 0)
-				{
-					side = sign(x - hurt_position);
-				}
-				
-				x_speed = (2 * side) / (1 + underwater);
-				y_speed = -4 / (1 + underwater);
-				ground = false;
-				invincible_timer = 120;
-                state = player_state_knockout;
-				play_sound(sfx_hurt);
-			}
-	
 					//Remove the shield when player gets hurt
 					if(shield != S_NONE)
 					{
@@ -96,6 +78,24 @@ function player_handle_hurt()
 					}
 				}
 			}
+		}
+		
+		//Basic knockout
+		if(knockout_type = K_STUNNED)
+		{
+			//Get the hurt side
+			var side = 1;
+			if(sign(x - hurt_position) != 0)
+			{
+				side = sign(x - hurt_position);
+			}
+			
+			x_speed = (2 * side) / (1 + underwater);
+			y_speed = -4 / (1 + underwater);
+			ground = false;
+			invincible_timer = 120;
+			state = player_state_knockout;
+			play_sound(sfx_hurt);
 		}
 		
 		//Player's death event

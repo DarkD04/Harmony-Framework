@@ -10,8 +10,8 @@
   "name":"obj_aaz_swing",
   "overriddenProperties":[],
   "parent":{
-    "name":"Arboreal Agate",
-    "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
+    "name":"Base Stage",
+    "path":"folders/Objects/Stage Objects/Base Stage.yy",
   },
   "parentObjectId":null,
   "persistent":false,

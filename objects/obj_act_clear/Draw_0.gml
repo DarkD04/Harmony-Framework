@@ -15,7 +15,7 @@
 	
 	//Draw the end card text
 	draw_sprite(spr_hud_actclear_character, global.character, global.window_width/2 - offset_x[0], global.window_height/2 - 50);
-	draw_sprite(spr_hud_actclear_thru_act, obj_level.act - 1, global.window_width/2 + offset_x[0], global.window_height/2 - 32);
+	draw_sprite(spr_hud_actclear_thru_act, obj_level.act, global.window_width/2 + offset_x[0], global.window_height/2 - 32);
 	
 	draw_sprite(spr_hud_actclear_time_bonus, 0, global.window_width/2-98 + offset_x[1], global.window_height/2);
 	draw_sprite(spr_hud_actclear_ring_bonus, 1, global.window_width/2-98 + offset_x[2], global.window_height/2 + 16);

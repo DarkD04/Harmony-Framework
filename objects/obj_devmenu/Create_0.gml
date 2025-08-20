@@ -76,12 +76,11 @@
 	
 	//Add the presentation category
 	dev_menu_add_category("PRESENTATION");
-	dev_menu_add_entry("STAGE SELECT", rm_stage_select);
+	dev_menu_add_entry("STAGE SELECT", rm_splash);
 	
 	//Add the presentation category
 	dev_menu_add_category("REGULAR STAGES");
-	dev_menu_add_entry("ARBOREAL AGATE ACT 1", rm_arboreal_agate1);
-	dev_menu_add_entry("2", rm_arboreal_agate2);
+	dev_menu_add_entry("YOUR LEVEL", rm_your_zone);
 	
 	//Add all of the rooms
 	dev_menu_add_category("EVERY SCENE");

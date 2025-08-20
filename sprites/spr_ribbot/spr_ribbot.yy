@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Bridge Zone",
-    "path":"folders/Sprites/Stage Sprites/Bridge Zone.yy",
+    "name":"Base Stage",
+    "path":"folders/Sprites/Stage Sprites/Base Stage.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -13,11 +13,11 @@
 	}
 	
 	//Go to level select
-	if(keyboard_check_pressed(ord("M")) && !obj_shell.isOpen)
-	{
-		fade_to_room(rm_stage_select, 4);
-		music_set_fade(FADE_OUT, 5);
-	}
+	//if(keyboard_check_pressed(ord("M")) && !obj_shell.isOpen)
+	//{
+	//	fade_to_room(rm_stage_select, 4);
+	//	music_set_fade(FADE_OUT, 5);
+	//}
 	
 	//Toggle debug mode
 	if(keyboard_check_pressed(vk_f5) && instance_exists(obj_shell)) obj_shell.isOpen = !obj_shell.isOpen;
@@ -99,6 +99,13 @@
 			obj_player.speed_shoes_flag = true;
 			obj_player.speed_shoes = 1200;
 			play_music(MUSIC.J_SPEEDSHOE, Jingle);
+		}
+		
+		//Combine Rings
+		if(keyboard_check_pressed(ord("6")))
+		{
+			obj_player.combinering = 1;
+			play_sound(sfx_combinering);
 		}
 		
 		//Hurt the player

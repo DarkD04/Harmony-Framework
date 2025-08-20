@@ -9,8 +9,8 @@
   "name":"obj_badnik_ribbot",
   "overriddenProperties":[],
   "parent":{
-    "name":"Arboreal Agate",
-    "path":"folders/Objects/Stage Objects/Arboreal Agate.yy",
+    "name":"Base Stage",
+    "path":"folders/Objects/Stage Objects/Base Stage.yy",
   },
   "parentObjectId":{
     "name":"par_badnik",

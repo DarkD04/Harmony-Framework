@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Arboreal Agate",
-    "path":"folders/Sprites/Stage Sprites/Arboreal Agate.yy",
+    "name":"Base Stage",
+    "path":"folders/Sprites/Stage Sprites/Base Stage.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

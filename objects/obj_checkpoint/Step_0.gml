@@ -10,8 +10,8 @@
 		
 		//if global.rings >= 30
 		//{
-			showing_stars = true
-			star_type = 4
+			//showing_stars = true
+			//star_type = 4
 		//}
 		
 		//Store checkpoint ID
@@ -54,7 +54,6 @@
 		
 		if (star_timer > 60 && obj_player.x > x-xoffset && obj_player.x < x+xoffset && obj_player.y > y-yoffset-star_ydiff+6 && obj_player.y < y+yoffset-star_ydiff+6)
 		{
-			show_debug_message("Hello! You should be in the Bonus/Special stage now.")
-			//Please add it dark..
+			show_debug_message("Hello! You should be in the... What? What are you doing here?")
 		}
 	}

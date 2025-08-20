@@ -48,7 +48,7 @@
 		
 		case "Combine Ring":
 			obj_player.combinering = 1;
-			play_sound(sfx_combiring);
+			play_sound(sfx_combinering);
 		break;
 		
 	}
