@@ -29,6 +29,8 @@
     {"name":"inst_73624EA","path":"rooms/rm_your_zone/rm_your_zone.yy",},
     {"name":"inst_13404515","path":"rooms/rm_your_zone/rm_your_zone.yy",},
     {"name":"inst_478C7E43","path":"rooms/rm_your_zone/rm_your_zone.yy",},
+    {"name":"inst_6C4983A9","path":"rooms/rm_your_zone/rm_your_zone.yy",},
+    {"name":"inst_3FD1BBD1","path":"rooms/rm_your_zone/rm_your_zone.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -43,6 +45,10 @@
         {"$GMRInstance":"v2","%Name":"inst_73624EA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_73624EA","objectId":{"name":"obj_bounds_marker_h","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_bounds_marker_h","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"propertyId":{"name":"flip","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":1.0,"x":0.0,"y":512.0,},
+        {"$GMRInstance":"v2","%Name":"inst_6C4983A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6C4983A9","objectId":{"name":"obj_bounds_marker_h","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":10.25,"scaleY":1.0,"x":336.0,"y":1024.0,},
+        {"$GMRInstance":"v2","%Name":"inst_3FD1BBD1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3FD1BBD1","objectId":{"name":"obj_bounds_marker_h","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_bounds_marker_h","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"propertyId":{"name":"flip","path":"objects/obj_bounds_marker_h/obj_bounds_marker_h.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0,"scaleY":1.0,"x":448.0,"y":0.0,},
       ],"layers":[],"name":"Triggers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRLayer":"","%Name":"Collision","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"$GMRInstanceLayer":"","%Name":"CollisionObject","depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"CollisionObject","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
