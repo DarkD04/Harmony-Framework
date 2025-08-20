@@ -421,6 +421,7 @@
     {"name":"spr_hud_gameover","order":10,"path":"sprites/spr_hud_gameover/spr_hud_gameover.yy",},
     {"name":"spr_hud_life_icons","order":1,"path":"sprites/spr_hud_life_icons/spr_hud_life_icons.yy",},
     {"name":"spr_hud_numbers","order":2,"path":"sprites/spr_hud_numbers/spr_hud_numbers.yy",},
+    {"name":"spr_hud_shard_icon","order":14,"path":"sprites/spr_hud_shard_icon/spr_hud_shard_icon.yy",},
     {"name":"spr_inv_sparkle","order":4,"path":"sprites/spr_inv_sparkle/spr_inv_sparkle.yy",},
     {"name":"spr_knuckles_breathe","order":24,"path":"sprites/spr_knuckles_breathe/spr_knuckles_breathe.yy",},
     {"name":"spr_knuckles_climb_down","order":21,"path":"sprites/spr_knuckles_climb_down/spr_knuckles_climb_down.yy",},

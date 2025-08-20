@@ -1,4 +1,5 @@
 /// @description Script
+
 	//Timers
 	if(!disable_timer) global.stage_timer += 1000/60
 	

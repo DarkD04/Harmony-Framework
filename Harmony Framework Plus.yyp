@@ -506,6 +506,7 @@
     {"id":{"name":"spr_hud_gameover","path":"sprites/spr_hud_gameover/spr_hud_gameover.yy",},},
     {"id":{"name":"spr_hud_life_icons","path":"sprites/spr_hud_life_icons/spr_hud_life_icons.yy",},},
     {"id":{"name":"spr_hud_numbers","path":"sprites/spr_hud_numbers/spr_hud_numbers.yy",},},
+    {"id":{"name":"spr_hud_shard_icon","path":"sprites/spr_hud_shard_icon/spr_hud_shard_icon.yy",},},
     {"id":{"name":"spr_hudtext","path":"sprites/spr_hudtext/spr_hudtext.yy",},},
     {"id":{"name":"spr_inv_sparkle","path":"sprites/spr_inv_sparkle/spr_inv_sparkle.yy",},},
     {"id":{"name":"spr_knuckles_breathe","path":"sprites/spr_knuckles_breathe/spr_knuckles_breathe.yy",},},

@@ -20,8 +20,12 @@
 				else	//Create flickies instead
 					instance_create_depth(x, y, depth, obj_flicky);
 			} else {
-				shard.hidden_within = false
-				shard.collected = true	
+				shard.hidden_within = false;
+				shard.collected = true;	
+				shard.scale = 1;
+				array_push(obj_level.emerald_array, 128)
+				audio_stop_sound(sfx_radar_ding)
+				play_sound(sfx_shard_collect)
 			}
 		
 			//Player bounce

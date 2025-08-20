@@ -3,6 +3,7 @@
 	disable_timer = false;
 	badnik_chain = 0;
 	scattered_emerald_shards = false
+	emerald_array = []
 	
 	//====================================================//
 	//				 **DEFAULT STAGE SETUP**			  //
@@ -14,10 +15,10 @@
 	loop_end = 0.00;
 		
 	//Set level name
-	stage_name = "EMPTY LEVEL";
+	stage_name = "Empty Level";
 	
 	//Set Author  name
-	author_name = "REPLACE ME";
+	author_name = "Replace Me!";
 		
 	//Set stage act
 	act = 1;

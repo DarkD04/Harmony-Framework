@@ -9,8 +9,8 @@
 	offset[1] = 0
 	offset[2] = 0
 	offset[3] = 0
-	offset[4] = 0
-	offset[5] = 0
+	offset[4] = -512
+	offset[5] = -512
 	offset[6] = 0
 	
 	//Disable flags

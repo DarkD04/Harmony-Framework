@@ -78,44 +78,20 @@
 		 
 		     var dx = ico_sx + j * (ico_size+ico_padding) + ico_offset;
 			 var ico_posy = ico_sy
-			 draw_sprite(spr_emerald_radar, obj.distance_stages, dx, ico_posy - offset[3])
-		}
-		
-		var closest = instance_nearest(obj_player.x, obj_player.y, obj_emerald_shard)
-		
-		if (!closest.collected && !obj_player.input_disable) {
-			switch closest.distance_stages{
-				case 1:
-					if (global.object_timer mod 60 == 0) {
-						play_sound(sfx_radar_ding);
-					}
-				break;
-				case 2:
-					if (global.object_timer mod 30 == 0) {
-						play_sound(sfx_radar_ding);
-					}
-				break;
-				case 3:
-					if (global.object_timer mod 15 == 0) {
-						play_sound(sfx_radar_ding);
-					}
-				break;
-				case 4:
-					if (global.object_timer mod 10 == 0) {
-						play_sound(sfx_radar_ding);
-					}
-				break;
-				case 5:
-					if (global.object_timer mod 5 == 0) {
-						play_sound(sfx_radar_ding);
-					}
-				break;
-				default:
-				
-				break;
+			 
+			 draw_sprite_ext(spr_emerald_radar, obj.distance_stages, dx + obj.hud_x, ico_posy - offset[3],
+				obj.scale, obj.scale, 0, c_white, obj.distance_stages == 0 ? 0.75: 1)
+		}	
+	}
+	
+	if (obj_level.is_emerald_hunt) {
+		for(var j=0; j<array_length(obj_level.emerald_array); j++) {
+			if (obj_level.emerald_array[j] mod 18 < 8) {
+				draw_sprite(spr_hud_shard_icon,0,global.window_width - 8 - (27 * j) - offset[0] + max(((obj_level.emerald_array[j]* 4) - 352), 0)  , 8);
 			}
 		}
 	}
+	
 	
 	surface_reset_target();
 	

@@ -50,8 +50,8 @@
 		var curve = animcurve_get(curve_titlecard)
 		var c_channel_3 = animcurve_get_channel(curve,"curve3")
 		var c_channel_4 = animcurve_get_channel(curve,"curve4")
-		offset[4] = -string_width(string(obj_level.stage_name)) + (animcurve_channel_evaluate(c_channel_3, min(timer / 100,1)) * (string_width(string(obj_level.stage_name))+ 71))
-		offset[6] = -string_width(act_text) + (animcurve_channel_evaluate(c_channel_4, min(timer / 100,1)) * (string_width(act_text)+ 71))
+		offset[4] = (-string_width(string(obj_level.stage_name))) - 24 + (animcurve_channel_evaluate(c_channel_3, min(timer / 100,1)) * (string_width(string(obj_level.stage_name))+ 71 + 24))
+		offset[6] = -string_width(act_text) - 24 + (animcurve_channel_evaluate(c_channel_4, min(timer / 100,1)) * (string_width(act_text)+ 71 + 24))
 	}
 	
 	//Draw the red part of title card
@@ -66,7 +66,7 @@
 	draw_text(offset[4], offset[2], string(obj_level.stage_name));
 	
 	draw_set_font(global.font_small);
-	draw_text(offset[4], offset[2]-8, string(obj_level.author_name));
+	draw_text(offset[4]+4, offset[2]-4, string(obj_level.author_name));
 	
 	//Draw the left part of the sprite
 	
