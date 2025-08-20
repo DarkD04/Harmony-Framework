@@ -134,10 +134,7 @@
   "sdfSpread":8,
   "size":12.0,
   "styleName":"SemiExpanded Regular",
-  "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
-  },
+  "textureGroupId":null,
   "TTFName":"${project_dir}\\fonts\\font_console\\font_console.png",
   "usesSDF":false,
 }

@@ -22,7 +22,7 @@ function player_handle_physics(){
 	roll_influence_down = physics_table.slope_down[character];
 	
 	//For gravity it's different case
-	if(state != ST_TAILSFLY)
+	if(state != player_state_tailsfly)
 	{
 		//Apply the gravity
 		y_accel = physics_table.grav[character];

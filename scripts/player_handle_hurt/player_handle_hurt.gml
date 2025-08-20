@@ -1,6 +1,6 @@
 function player_handle_hurt()
 {
-	if(state != ST_KNOCKOUT)
+	if(state != player_state_knockout)
 	{
 		//Reset knowckout type when you're invicible
 		if(invincible || invincible_timer > 0)
@@ -43,7 +43,7 @@ function player_handle_hurt()
 					
 					//Give player invincibility frames and put the player in knockout state
 					invincible_timer = 120;
-					state = ST_KNOCKOUT;
+					state = player_state_knockout;
 					
 					//Commit ring loss when player gets hurt
 					if(shield == S_NONE)
@@ -67,7 +67,7 @@ function player_handle_hurt()
 		if(knockout_type == K_DIE)
 		{
 			//Set player to the knockout state
-			state = ST_KNOCKOUT;
+			state = player_state_knockout;
 			
 			//Bounce the player out
 			y_speed = -7;

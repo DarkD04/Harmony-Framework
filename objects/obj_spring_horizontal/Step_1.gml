@@ -31,9 +31,9 @@
 					control_lock = 20;
 					
 					//Knuckles fix
-					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) 
+					if(state = player_state_glide || state = player_state_knuxslide || state = player_state_wallclimb) 
 					{
-						state = ST_NORMAL;
+						state = player_state_normal;
 					}
 					break;
 					
@@ -68,9 +68,9 @@
 					control_lock = 20;
 					
 					//Knuckles fix
-					if(state = ST_KNUXGLIDE || state = ST_KNUXSLIDE || state = ST_KNUXCLIMB) 
+					if(state = player_state_glide || state = player_state_knuxslide || state = player_state_wallclimb) 
 					{
-						state = ST_NORMAL;
+						state = player_state_normal;
 					}
 					break;
 					

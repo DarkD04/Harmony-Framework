@@ -1,18 +1,13 @@
 function player_state_knuxfall(){
-	//If state is not falling stop
-	if(state != ST_KNUXFALL) 
-	{
-		exit;
-	}
 	
 	//Change animations
 	if(!ground)
 	{
-		animation_play(animator, ANIM_KNUXFALL);
+		animation_play(animator, ANIM.KNUXFALL);
 	}
 	
 	//Play landing sound
-	if(ground && animation_is_playing(animator, ANIM_KNUXFALL)) 
+	if(ground && animation_is_playing(animator, ANIM.KNUXFALL)) 
 	{
 		play_sound(sfx_land);
 	}
@@ -20,13 +15,13 @@ function player_state_knuxfall(){
 	//Landed
 	if(ground)
 	{
-		animation_play(animator, ANIM_KNUXLAND);
+		animation_play(animator, ANIM.KNUXLAND);
 		ground_speed = 0;
 	}
 	
 	//The end of animation
-	if(animation_is_playing(animator, ANIM_KNUXLAND) && animation_has_finished(animator) && !landed) 
+	if(animation_is_playing(animator, ANIM.KNUXLAND) && animation_has_finished(animator) && !landed) 
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
 	}
 }

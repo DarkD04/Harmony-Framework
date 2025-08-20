@@ -6,7 +6,7 @@
 	{
 		case 0:
 		//Change collision flag
-		if(obj_player.state = ST_ROLL && abs(obj_player.ground_speed) >= 1 && obj_player.ground || obj_player.state = ST_SPINDASH || obj_player.character == CHAR_KNUX)
+		if(obj_player.state = player_state_roll && abs(obj_player.ground_speed) >= 1 && obj_player.ground || obj_player.state = player_state_spindash || obj_player.character == CHAR_KNUX)
 		{
 			collision_flag = false;	
 		}
@@ -24,7 +24,7 @@
 		
 		case 1:
 		case 2:
-			if(obj_player.state != ST_SPINDASH && obj_player.attacking && obj_player.y + obj_player.hitbox_h <= y && obj_player.y_speed >= 0)
+			if(obj_player.state != player_state_spindash && obj_player.attacking && obj_player.y + obj_player.hitbox_h <= y && obj_player.y_speed >= 0)
 			{
 				collision_flag = false;	
 			}

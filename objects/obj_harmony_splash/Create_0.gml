@@ -28,5 +28,7 @@
 	
 	bar_pos = 0;
 	
+	skipped = false;
+	
 	fade_in_room(3);
 	play_sound(j_harmony_splash);

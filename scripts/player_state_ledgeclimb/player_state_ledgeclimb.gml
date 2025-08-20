@@ -1,9 +1,4 @@
 function player_state_ledgeclimb(){
-	//Stop executing if its not specific state
-	if(state != ST_KNUXLEDGE) 
-	{
-		exit;
-	}
 	
 	//Change flags
 	movement_allow = false;
@@ -12,7 +7,7 @@ function player_state_ledgeclimb(){
 	collision_allow = false;
 	
 	//Change animation
-	animation_play(animator, ANIM_KNUXLEDGE);
+	animation_play(animator, ANIM.KNUXLEDGE);
 	
 	//Temp values
 	var positionarrayx, positionarrayy, length, frame;
@@ -40,8 +35,8 @@ function player_state_ledgeclimb(){
 	{
 		ground_speed = 0;
 		ground = true;
-		animation_play(animator, ANIM_STAND);
+		animation_play(animator, ANIM.STAND);
 		collision_allow = true;
-		state = ST_NORMAL;
+		state = player_state_normal;
 	}
 }

@@ -7,24 +7,44 @@ function player_handle_tails(){
 			//Change tails' tail animation depending on players animation
 		switch(animation_get_current_animation(other.animator))
 		{
-			case ANIM_STAND:	
-			case ANIM_WAIT:
-			case ANIM_LOOKUP:
-			case ANIM_LOOKDOWN:
+			case ANIM.STAND:	
+			case ANIM.WAIT:
+			case ANIM.LOOKUP:
+			case ANIM.LOOKDOWN:
 				visual_angle = 0;
 				appear = true;
 				facing = other.facing;
 				animation_play(animator, TAIL_1);
 			break;
+			
+			case ANIM.LEDGE1:
+				visual_angle = 0;
+				appear = true;
+				facing = other.facing;
+				animation_play(animator, TAIL_4);
+			break;
+			case ANIM.LEDGE2:
+				visual_angle = 0;
+				appear = true;
+				facing = other.facing;
+				animation_play(animator, TAIL_5);
+			break;
 		
-			case ANIM_SPINDASH:
+			case ANIM.SPINDASH:
 				visual_angle = 0;
 				appear = true;
 				facing = other.facing;
 				animation_play(animator, TAIL_3);
 			break;
+			
+			case ANIM.SKID:
+				visual_angle = 0;
+				appear = true;
+				facing = other.facing;
+				animation_play(animator, TAIL_6);
+			break;
 		
-			case ANIM_ROLL:
+			case ANIM.ROLL:
 				appear = true;
 				animation_play(animator, TAIL_2);
 			
@@ -32,7 +52,7 @@ function player_handle_tails(){
 				with(obj_player)
 				{
 					//Rotating by speed
-					if(state == ST_JUMP || state == ST_ROLL && !ground)
+					if(state == player_state_jump || state == player_state_roll && !ground)
 					{
 						if(sign(x_speed) != 0)other.facing = sign(x_speed);
 						if(other.facing == 1) other.visual_angle = darctan2(y_speed, -x_speed)-180;
@@ -40,7 +60,7 @@ function player_handle_tails(){
 					}
 				
 					//Ground angle
-					if(state = ST_ROLL && ground)
+					if(state = player_state_roll && ground)
 					{
 						if(sign(ground_speed) != 0)other.facing = sign(ground_speed);
 						other.visual_angle = ground_angle;		
@@ -66,7 +86,7 @@ function player_handle_tails(){
 			image_angle = floor(visual_angle/45)*45;
 			
 			//Limit rotation
-			if(other.state = ST_ROLL && other.ground && other.ground_angle < 45 || other.state = ST_ROLL && other.ground && other.ground_angle > 360-45)  image_angle = 0;
+			if(other.state = player_state_roll && other.ground && other.ground_angle < 45 || other.state = player_state_roll && other.ground && other.ground_angle > 360-45)  image_angle = 0;
 		}
 	}
 }

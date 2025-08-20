@@ -7,7 +7,7 @@
 	current_segment = (player.x - x) / 16;
 	
 	//Limit the current segment
-	current_segment = clamp(current_segment, 0, log_amount - 1);
+	current_segment = clamp(current_segment, 0, log_amount);
 	
 	//Get max dipping
 	if(current_segment <= log_amount / 2)
@@ -49,7 +49,7 @@
 		var p_offset = 0//(player.x - x) / push_offset
 		
 		//Position the hitbox
-		y = log_y[floor(current_segment)] + (push_offset * current_segment) + p_offset;
+		y = log_y[floor(min(current_segment, log_amount-1))] + (push_offset * current_segment) + p_offset;
 	}
 	
 	//Player standing on the bridge

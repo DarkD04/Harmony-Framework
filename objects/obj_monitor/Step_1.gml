@@ -10,7 +10,7 @@
 	{
 		if(sign(image_yscale) == 1)
 		{
-			if(player.attacking && player.y_speed >= 0 && player.state != ST_SPINDASH || player.y + player.hitbox_h > bbox_top && player.state == ST_SPINDASH)
+			if(player.attacking && player.y_speed >= 0 && player.state != player_state_spindash || player.y + player.hitbox_h > bbox_top && player.state == player_state_spindash)
 			{
 				collision_flag = false;
 			}

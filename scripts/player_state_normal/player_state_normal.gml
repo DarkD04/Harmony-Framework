@@ -1,6 +1,6 @@
 function player_state_normal(){
 	//Add the idle timer
-	if(state == ST_NORMAL && ground_speed == 0 && !input_disable)
+	if(ground_speed == 0 && !input_disable)
 	{
 		idle_timer++;
 	}
@@ -9,29 +9,34 @@ function player_state_normal(){
 		idle_timer = 0;	
 	}
 	
-	//Stop executing if its not the specific state:
-	if(state != ST_NORMAL) exit;
+	//Trigger look down:
+	if(ground && abs(ground_speed) < 0.5 && mode = 0 && hold_up)
+	{
+		state = player_state_lookup;
+		idle_timer = 0
+		exit;
+	}
 	
 	//Value for the animation
-	var anim = ANIM_STAND;
+	var anim = ANIM.STAND;
 	
 	//Default animation:
 	if (ground)
 	{
-		anim = ANIM_STAND;
+		anim = ANIM.STAND;
 	}
 	else
 	{
-		if(!animation_is_playing(animator, ANIM_BREATHE))
+		if(!animation_is_playing(animator, ANIM.BREATHE))
 		{
-			anim = ANIM_WALK;
+			anim = ANIM.WALK;
 		}
 	}
 		
 	//Walking animation:
 	if(abs(ground_speed) > 0 && abs(ground_speed) <= 6)
 	{
-		anim = ANIM_WALK;
+		anim = ANIM.WALK;
 		
 		//Change animation duration when player is only on the ground:
 		if(ground)
@@ -44,7 +49,7 @@ function player_state_normal(){
 	if(abs(ground_speed) >= 6)
 	{
 		//Update the animation
-		anim = ANIM_RUN;
+		anim = ANIM.RUN;
 		
 		//Change animation duration when player is only on the ground:
 		if(ground)
@@ -67,7 +72,7 @@ function player_state_normal(){
 	//Running animation:
 	if(abs(ground_speed) >= 12)
 	{
-		anim = ANIM_MAXRUN;
+		anim = ANIM.MAXRUN;
 	}
 	
 	//Idle animations
@@ -76,21 +81,21 @@ function player_state_normal(){
 		case CHAR_SONIC:
 			if(idle_timer > 160)
 			{
-				anim = ANIM_WAIT;	
+				anim = ANIM.WAIT;	
 			}
 		break;
 		
 		case CHAR_TAILS:
 			if(idle_timer > 240)
 			{
-				anim = ANIM_WAIT;
+				anim = ANIM.WAIT;
 			}
 		break;
 		
 		case CHAR_KNUX:
 			if(idle_timer > 160)
 			{
-				anim = ANIM_WAIT;	
+				anim = ANIM.WAIT;	
 			}
 		break;
 	}
@@ -101,11 +106,11 @@ function player_state_normal(){
 		//Change animation
 		if(!line_check(hitbox_w, hitbox_h + 16, true) && !check_object(-wall_w, 0, wall_w, hitbox_h + 8, true))
 		{
-			anim = facing = 1 ? ANIM_LEDGE2 : ANIM_LEDGE1;
+			anim = facing = 1 ? ANIM.LEDGE2 : ANIM.LEDGE1;
 		}
 		if(!line_check(-hitbox_w, hitbox_h + 16, true) && !check_object(wall_w, 0, -wall_w, hitbox_h + 8, true))
 		{
-			anim = facing = -1 ? ANIM_LEDGE2 : ANIM_LEDGE1;
+			anim = facing = -1 ? ANIM.LEDGE2 : ANIM.LEDGE1;
 		}
 	}
 		
@@ -117,13 +122,30 @@ function player_state_normal(){
 	{
 		if(point_check((wall_w + 1) * facing, wall_h)|| check_object(-(wall_w + 1) * facing, hitbox_h, (wall_w + 1) * facing, hitbox_h))
 		{
-			anim = ANIM_PUSH;
+			anim = ANIM.PUSH;
 		}
 	}
 	
 	//Play the animations
-	if(!animation_is_playing(animator, ANIM_BREATHE) || animation_has_finished(animator) && animation_is_playing(animator, ANIM_BREATHE))
+	if(!animation_is_playing(animator, ANIM.BREATHE) || animation_has_finished(animator) && animation_is_playing(animator, ANIM.BREATHE))
 	{
 		animation_play(animator, anim);
+	}
+	
+	mov = hold_right - hold_left;
+	
+	//Trigger the state
+	if(mov = -sign(ground_speed) && ground && abs(ground_speed) > 4 && sign(ground_speed) == facing && mode == 0 && control_lock == 0)
+	{
+		//Play animation
+		animation_play(animator, ANIM.SKID);
+		
+		//Play the skid sound
+		play_sound(sfx_skid);
+		
+		//Reset the skid timer and update the state
+		skid_timer = 0;
+		state = player_state_skid;
+		exit;
 	}
 }

@@ -1,7 +1,4 @@
 function player_state_knuxslide(){
-	//If not sliding stop executing
-	if(state != ST_KNUXSLIDE) exit;
-	
 	//Change flags
 	direction_allow = false;
 	movement_allow = false;
@@ -9,14 +6,15 @@ function player_state_knuxslide(){
 	//Change animation
 	if(ground_speed != 0)
 	{
-		animation_play(animator, ANIM_KNUXSLIDE);
+		animation_play(animator, ANIM.KNUXSLIDE);
 	}
 	
 	//Get grounded
 	if(ground && ground_angle > 45 && ground_angle < 315)
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
 		control_lock = 4;
+		exit;
 	}
 	
 	//Ground event
@@ -36,18 +34,20 @@ function player_state_knuxslide(){
 	//Make knuckles fall if detached
 	if(!ground)
 	{
-		state = ST_KNUXFALL;	
+		state = player_state_knuxfall;	
+		exit;
 	}
 	
 	//Change animation
 	if(ground_speed == 0) 
 	{
-		animation_play(animator, ANIM_KNUXGETUP);
+		animation_play(animator, ANIM.KNUXGETUP);
 	}
 	
 	//Reset the state
-	if(animation_is_playing(animator, ANIM_KNUXGETUP) && animation_has_finished(animator)) 
+	if(animation_is_playing(animator, ANIM.KNUXGETUP) && animation_has_finished(animator)) 
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
+		exit;
 	}
 }

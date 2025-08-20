@@ -9,7 +9,7 @@
 	}
 	
     //Collect
-    if(player_collide_object(C_MAIN) && obj_player.state != ST_KNOCKOUT)
+    if(player_collide_object(C_MAIN) && obj_player.state != player_state_knockout)
     {
 		//Play the sound
 		play_sound(sfx_ring);
@@ -68,11 +68,13 @@
 		//Change ringloss animation speed
 		if(timer > 32)
 		{
-			animation_speed -= 0.0045;
-		}
+			animation_speed = 1 - (timer / 298);
+		} else {
+			animation_speed = 0.8
+		}	
 			
 		//Limit the speed
-		animation_speed = max(animation_speed, 0.01);
+		animation_speed = max(animation_speed, 0.02);
 			
 		//Add timer
 		timer += 1;

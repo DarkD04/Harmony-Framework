@@ -1,4 +1,5 @@
 /// @description Script
+	
 	//Render behind the player
 	depth = obj_player.depth + 10
 	

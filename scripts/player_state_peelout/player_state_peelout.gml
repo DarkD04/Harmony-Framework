@@ -1,20 +1,4 @@
 function player_state_peelout(){
-	//If global value for peelout is diabled don't execute
-	if(!global.use_peelout) 
-	{
-		exit;
-	}
-	
-	//Trigger peel out
-	if(state == ST_LOOKUP && press_action && ground && character == CHAR_SONIC)
-	{
-		play_sound(sfx_peelout_charge);
-		state = ST_PEELOUT
-		spindash_rev = 0;
-	}
-	
-	//if its not peel out stop
-	if(state != ST_PEELOUT) exit;
 	
 	//Create dust effect
 	if(global.object_timer mod 3 == 0 && global.chaotix_dust_effect) 
@@ -34,17 +18,17 @@ function player_state_peelout(){
 	spindash_rev = min(spindash_rev, 30);
 	
 	//Temp value for animation
-	var anim = ANIM_WALK;
+	var anim = ANIM.WALK;
 	
 	//Change animations
-	anim = ANIM_WALK;
+	anim = ANIM.WALK;
 	if(spindash_rev >= 15) 
 	{
-		anim = ANIM_RUN;
+		anim = ANIM.RUN;
 	}
 	if(spindash_rev = 30) 
 	{
-		anim = ANIM_MAXRUN;
+		anim = ANIM.MAXRUN;
 	}
 	
 	//Play the animations
@@ -65,6 +49,6 @@ function player_state_peelout(){
 		{
 			x_speed = (2+(spindash_rev / 2.9)) * facing;
 		}
-		state = ST_NORMAL;	
+		state = player_state_normal;	
 	}
 }

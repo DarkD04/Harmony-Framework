@@ -85,6 +85,8 @@
 		instance_create_depth(0, 0, 0, obj_shell);
 	}
 	
+	global.music_map = ds_map_create();
+	
 	//Initilize the music list
 	init_music_list();
 	
@@ -93,6 +95,9 @@
 	#macro WINDOW_WIDTH global.window_width
 	#macro WINDOW_HEIGHT global.window_height
 	#macro FRAME_TIMER global.object_timer
+	
+	global.red_ring_map = ds_map_create();
+	
 	
 	//Ending event:
 	room_goto_next();

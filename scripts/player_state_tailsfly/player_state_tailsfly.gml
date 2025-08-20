@@ -1,19 +1,4 @@
 function player_state_tailsfly(){
-	//Trigger fly
-	if(state == ST_JUMP && press_action && character == CHAR_TAILS)
-	{
-		tails_timer = 480;
-		y_accel = 0.03125;
-		state = ST_TAILSFLY;	
-	}
-	
-	//Stop if not specific state
-	if(state != ST_TAILSFLY)
-	{
-		audio_stop_sound(sfx_tailsfly);
-		audio_stop_sound(sfx_tailstired);
-		exit;
-	}
 	
 	//Speed cap
 	y_speed = max(y_speed , -4);
@@ -29,17 +14,18 @@ function player_state_tailsfly(){
 	//Reset the state when player is grounded
 	if(ground) 
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
+		exit;
 	}
 	
 	//Tired tails
 	if(tails_timer == 0)
 	{
-		animation_play(animator, underwater ? ANIM_TAILSSWIMTIRED : ANIM_TAILSTIRED);
+		animation_play(animator, underwater ? ANIM.TAILSSWIMTIRED : ANIM.TAILSTIRED);
 	}
 	else
 	{
-		animation_play(animator, underwater ? ANIM_TAILSSWIM : ANIM_TAILSFLY);
+		animation_play(animator, underwater ? ANIM.TAILSSWIM : ANIM.TAILSFLY);
 	}
 	
 	//Play sound

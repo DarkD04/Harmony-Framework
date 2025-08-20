@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_red_ring_all",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":1.4181179,
+  "name":"sfx_red_ring_all",
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Sounds/Sound Effects/Objects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_red_ring_all.wav",
+  "type":0,
+  "volume":1.0,
+}

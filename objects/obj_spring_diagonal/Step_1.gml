@@ -30,7 +30,7 @@
 		var player = instance_nearest(x, y, obj_player)
 		with(player)
 		{
-			state = ST_SPRING;
+			state = player_state_spring;
 			x_speed = -other.spring_power * sign(other.image_xscale);
 			y_speed = -other.spring_power * sign(other.image_yscale);
 			ground = false;

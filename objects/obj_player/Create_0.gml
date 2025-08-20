@@ -31,7 +31,7 @@
 	roll_speed_cap = 18;				//Value for rolling's maximum speed
 	
 	//State related values:
-	state = ST_NORMAL;					//Player's state machine
+	state = player_state_normal;					//Player's state machine
 	spindash_rev = 0;					//Spindash charge value
 	skid_timer = 0;						//Timer that is used to cancel the skid when input is not being held
 	dropdash_timer = 0;					//Dropdash charge delay timer
@@ -42,6 +42,7 @@
 	movement_allow = true;				//Flag used for allowing movement
 	attacking = false;					//Check used for when sonic is in attacking state or not
 	air = 0;							//Used for underwater timer for drowning
+	bubble_delay = 0;					//Used to determine the delay for when to spawn the small bubble
 	hurt_position = 0;					//Horizontal position of hazard that player has touched
 	spindash_pitch = 0;					//Separate rev value used for spindash pitch
 	idle_timer = 0;						//Timer used for idle animation

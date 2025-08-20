@@ -1,0 +1,38 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"curve_titlecard",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"curve1","colour":4290799884,"name":"curve1","points":[
+        {"th0":-0.1,"th1":0.0,"tv0":0.0,"tv1":0.0050359583,"x":0.0,"y":0.0,},
+        {"th0":-0.013358778,"th1":0.16588771,"tv0":-0.0008593869,"tv1":0.010671765,"x":0.013358778,"y":0.0,},
+        {"th0":-0.017862916,"th1":0.09086871,"tv0":-0.0014407039,"tv1":0.007328687,"x":0.2938931,"y":1.0,},
+        {"th0":-0.06014675,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"curve2","colour":4281083598,"name":"curve2","points":[
+        {"th0":-0.1,"th1":0.043752696,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.19452424,"th1":0.018854469,"tv0":-0.0,"tv1":0.0,"x":0.39122137,"y":0.0,},
+        {"th0":-0.33015272,"th1":0.019269785,"tv0":0.00085175666,"tv1":-4.9713875E-05,"x":0.79771,"y":1.0,},
+        {"th0":-0.0240978,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"curve3","colour":4279025727,"name":"curve3","points":[
+        {"th0":-0.1,"th1":0.0403353,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.021641493,"th1":0.018258177,"tv0":0.0017219293,"tv1":-0.001452732,"x":0.49618322,"y":0.0,},
+        {"th0":-0.019778907,"th1":0.20966095,"tv0":0.0,"tv1":-0.0,"x":0.60305345,"y":1.0,},
+        {"th0":-0.046744943,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"curve4","colour":4279234797,"name":"curve4","points":[
+        {"th0":-0.1,"th1":0.0538246,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.24108139,"th1":0.019223988,"tv0":0.0,"tv1":0.0,"x":0.5992366,"y":0.0,},
+        {"th0":-0.018902779,"th1":0.18465108,"tv0":0.0,"tv1":0.0,"x":0.6984733,"y":1.0,},
+        {"th0":-0.041884422,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"curve_titlecard",
+  "parent":{
+    "name":"HUD",
+    "path":"folders/Objects/Stage Objects/Common Objects/HUD.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

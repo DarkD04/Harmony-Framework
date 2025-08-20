@@ -2,6 +2,10 @@
 	zone_sel = 0;
 	act_sel = 0;
 	sound_sel = 0;
+	sound_arr = ds_map_keys_to_array(global.music_map);
+	
+	show_debug_message("key for map 0")
+	show_debug_message(sound_arr[0])
 	
 	//The lists
 	zone_list = [["ARBOREAL AGATE", rm_arboreal_agate1, rm_arboreal_agate2]];
@@ -18,7 +22,7 @@
 	image_index = 0//irandom(image_number);
 	
 	fade_in_room(5);
-	play_music(BGM_MENU);
+	play_music(MUSIC.MENU);
 	
 	//Create stage data
 	for (var i = 0; i < 128; ++i) 

@@ -42,13 +42,13 @@
 				if(instance_exists(obj_bubble_shield) && obj_bubble_shield.shield_state = 0 || !instance_exists(obj_bubble_shield))
 				{
 					//Scroll camera upwards:
-					if(target.y < target_y && target.ground && target.state != ST_KNUXSLIDE) 
+					if(target.y < target_y && target.ground && target.state != player_state_knuxslide) 
 					{
 						target_y = max(target_y - min(y_scroll_speed, y_speed), target.y - roll_offset);
 					}
 					
 					//Scroll camera downwards:
-					if(target.y > target_y && target.ground && target.state != ST_KNUXSLIDE) 
+					if(target.y > target_y && target.ground && target.state != player_state_knuxslide) 
 					{
 						target_y = min(target_y + min(y_scroll_speed, y_speed), target.y - roll_offset);
 					}
@@ -57,7 +57,7 @@
 				//Scroll camera upwards:
 				if(target.y < target_y - 32)
 				{
-					if(!target.ground || target.state = ST_KNUXSLIDE)
+					if(!target.ground || target.state = player_state_knuxslide)
 					{
 						target_y = max(target_y - y_speed, target.y + 32);
 					}
@@ -66,7 +66,7 @@
 				//Scroll camera downwards:
 				if(target.y > target_y + 32)
 				{
-					if(!target.ground || target.state = ST_KNUXSLIDE)
+					if(!target.ground || target.state = player_state_knuxslide)
 					{
 						target_y = min(target_y + y_speed, target.y - 32);
 					}
@@ -77,7 +77,7 @@
 			case 1: 
 				//Sonic mania camera
 				//That mania smooth focusing
-				if(!target.ground || target.state = ST_KNUXSLIDE)
+				if(!target.ground || target.state = player_state_knuxslide)
 				{
 					//Reset the ground offset
 					ground_offset = 32;
@@ -95,7 +95,7 @@
 					}
 				}
 				
-				if(target.ground && target.state != ST_KNUXSLIDE)
+				if(target.ground && target.state != player_state_knuxslide)
 				{
 					//Ease down the camera offset
 					ground_offset = ground_offset - ground_offset / 8;
@@ -117,18 +117,18 @@
 	}
 	
 	//Look up and down
-	if(target.state == ST_LOOKUP)
+	if(target.state == player_state_lookup)
 	{
 		look_timer -= 1;
 	}
 		
-	if(target.state == ST_LOOKDOWN)
+	if(target.state == player_state_lookdown)
 	{
 		look_timer += 1;
 	}
 		
 	//Restart looking timer
-	if(target.state != ST_LOOKUP && look_timer < 0 || target.state != ST_LOOKDOWN && look_timer > 0)
+	if(target.state != player_state_lookup && look_timer < 0 || target.state != player_state_lookdown && look_timer > 0)
 	{
 		look_timer = 0;
 	}
@@ -156,7 +156,7 @@
 		//Sonic CD camera panning
 		case 1:	
 			//Make a flag of when the camera should shift
-			var can_shift = abs(target.ground_speed) >= 6 || target.state == ST_SPINDASH || target.state == ST_PEELOUT;
+			var can_shift = abs(target.ground_speed) >= 6 || target.state == player_state_spindash || target.state == player_state_peelout;
 			
 			//Shift the camera
 			if(can_shift)
@@ -179,7 +179,7 @@
 		
 		case 2:
 			//If the player is not spindashing or dropdashing, pan the camera based on player's speed
-			if(target.state != ST_SPINDASH && target.state != ST_PEELOUT)
+			if(target.state != player_state_spindash && target.state != player_state_peelout)
 			{
 				shift_x = lerp(shift_x, (target.ground ? target.ground_speed * 4 : target.x_speed * 4) * dcos(target.ground_angle), 0.1);			
 			}

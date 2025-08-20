@@ -1,9 +1,4 @@
 function player_state_wallclimb(){
-	//If state is not wall climb don't execute
-	if(state != ST_KNUXCLIMB) 
-	{
-		exit;
-	}
 	
 	//Change flags
 	movement_allow = false;
@@ -16,11 +11,11 @@ function player_state_wallclimb(){
 	//Change animation
 	if(y_speed != 0) 
 	{
-		animation_play(animator, sign(y_speed) == 1 ? ANIM_KNUXCLIMBDOWN : ANIM_KNUXCLIMBUP);
+		animation_play(animator, sign(y_speed) == 1 ? ANIM.KNUXCLIMBDOWN : ANIM.KNUXCLIMBUP);
 	}
 	else
 	{
-		animation_play(animator, ANIM_KNUXCLIMBIDLE);	
+		animation_play(animator, ANIM.KNUXCLIMBIDLE);	
 	}
 	
 	//Get input presses
@@ -55,12 +50,14 @@ function player_state_wallclimb(){
 			control_lock = 5;
 			clamp_storex = x
 			clamp_storey = y
-			state = ST_KNUXLEDGE;
+			state = player_state_ledgeclimb;
+			exit;
 		}
 		
 		if(!point_check((wall_w + 1) * facing, 4) || check_object(wall_w + 2, hitbox_h, wall_w + 2, hitbox_h))
 		{
-			state = ST_KNUXFALL;
+			state = player_state_knuxfall;
+			exit;
 		}
 	}
 	
@@ -70,9 +67,10 @@ function player_state_wallclimb(){
 		facing *= -1;
 		x_speed = 4 * facing;
 		y_speed = -4;
-		state = ST_JUMP;
-		animation_play(animator, ANIM_ROLL);
+		state = player_state_jump;
+		animation_play(animator, ANIM.ROLL);
 		play_sound(sfx_jump);
+		exit;
 	}
 	
 	//Has reached the ground
@@ -81,6 +79,7 @@ function player_state_wallclimb(){
 		control_lock = 4;
 		player_angle_detection()
 		ground_speed = -2.5 * dsin(ground_angle)
-		state = ST_NORMAL;
+		state = player_state_normal;
+		exit;
 	}
 }

@@ -17,7 +17,7 @@
 	
 
 	//Execute the double jump
-	if(obj_player.press_action && !obj_player.ground && obj_player.state == ST_JUMP
+	if(obj_player.press_action && !obj_player.ground && obj_player.state == player_state_jump
 	&& shield_state == 0 && use_allow) 
 	{
 		//Dash the player
@@ -41,7 +41,7 @@
 		animation_play(animator, 1);
 		
 		//Reset shield state
-		if(obj_player.ground || obj_player.state != ST_JUMP)
+		if(obj_player.ground || obj_player.state != player_state_jump)
 		{
 			animation_play(animator, 0);
 			shield_state = 0;	

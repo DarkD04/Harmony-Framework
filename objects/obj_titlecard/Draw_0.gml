@@ -6,6 +6,30 @@
 	cx = camera_get_view_x(c);
 	cy = camera_get_view_y(c);
 	
+	if (act_card) {
+		var r = offset[5] - 256;
+		var g = offset[5] - 128;
+	    var b = offset[5];
+	
+	
+		r = clamp(r, 0, 255);
+		g = clamp(g, 0, 255);
+		b = clamp(b, 0, 255);
+	
+		r ^= 0xFF;
+	    g ^= 0xFF;
+		b ^= 0xFF;
+	
+		//Color the fade
+		var color = make_color_rgb(r, g, b);
+	
+		gpu_set_blendmode(bm_subtract);
+		draw_set_color(color);
+		draw_rectangle(cx, cy, cx+ global.window_width,  cy +global.window_height, false);
+		draw_set_color(c_white)
+		gpu_set_blendmode(bm_normal);	
+	}
+	
 	//Draw whole ass water
 	if(!surface_exists(surf_bg)) surf_bg = surface_create(global.window_width, global.window_height);
 	
@@ -15,51 +39,58 @@
 	//Clear alpha
 	draw_clear_alpha(c_black, 0)
 	
-	if(act_card)
-	{
-		//Draw black part of the rectanle
-		if(timer < 64)
-		{
-			draw_set_color(c_black);
-			draw_rectangle(0,0, global.window_width, global.window_height, false);
-		}
+	var act_text = "Act " + string(obj_level.act)
+	if (obj_level.act == 0) {
+		act_text = "Zone"	
+	}
 	
-		//Draw background of the title card
-		draw_set_color(#48486c);
-		draw_rectangle(0,0, global.window_width, global.window_height-offset[0], false);
-	
-		//Draw top part of the card
-		draw_set_color(#9090b4);
-		draw_rectangle(offset[3], 0, global.window_width, 48, false);
-	
-		//Draw bottom part of the card
-		draw_set_color(#9090b4);
-		draw_rectangle(0, global.window_height-48, global.window_width-offset[3], global.window_height, false);
+	draw_set_font(fon_titlecard);
+	draw_set_halign(fa_left);
+	if(timer < 100) {
+		var curve = animcurve_get(curve_titlecard)
+		var c_channel_3 = animcurve_get_channel(curve,"curve3")
+		var c_channel_4 = animcurve_get_channel(curve,"curve4")
+		offset[4] = -string_width(string(obj_level.stage_name)) + (animcurve_channel_evaluate(c_channel_3, min(timer / 100,1)) * (string_width(string(obj_level.stage_name))+ 71))
+		offset[6] = -string_width(act_text) + (animcurve_channel_evaluate(c_channel_4, min(timer / 100,1)) * (string_width(act_text)+ 71))
 	}
 	
 	//Draw the red part of title card
 	draw_set_color(#fc0000);
-	draw_rectangle(64+offset[2], 64, global.window_width, 64+16, false);
+	draw_rectangle(0, 16 + offset[2], offset[0], 16+16 + +  offset[2], false);
+	
+	
+	draw_set_color(c_black);
+	draw_text(offset[4] +2, offset[2]+2, string(obj_level.stage_name));
+	//draw_text(152 - offset[2], 96, "ACT " + string(obj_level.act));
+	draw_set_color(c_white);
+	draw_text(offset[4], offset[2], string(obj_level.stage_name));
+	
+	draw_set_font(global.font_small);
+	draw_text(offset[4], offset[2]-8, string(obj_level.author_name));
 	
 	//Draw the left part of the sprite
+	
 	draw_set_color(c_white);
 	for (var i = 0; i < 4; ++i) {
-	   draw_sprite(spr_title_card_piece,0, -offset[1], 64*i)
+	   draw_sprite_part(spr_title_card_piece,0,0,0,64,224, -offset[3], (-64*i) + timer)
+	   draw_sprite_part(spr_title_card_piece,0,64,0,8,224, -offset[3] + 64, (64*i) - (timer /2))
 	}
 	
 	//Draw the red part of title card
 	draw_set_color(#fc0000);
-	draw_rectangle(0, 96, global.window_width-offset[2]-112, 96+16, false);
+	draw_rectangle(0, 16 +  offset[1], offset[0] / 3, 16+16 + +  offset[1], false);
 	
-	//Reset color
-	draw_set_color(c_white);
 	
 	//Set font numbers
-	draw_set_font(global.text_font);
-	draw_set_halign(fa_left);
 	
-	draw_text(128 + offset[2], 64, string(obj_level.stage_name));
-	draw_text(152 - offset[2], 96, "ACT " + string(obj_level.act));
+	draw_set_font(fon_titlecard);
+	draw_set_halign(fa_left);
+	draw_set_color(c_black);
+	draw_text(offset[6] +2, offset[1]+2, act_text);
+	//draw_text(152 - offset[2], 96, "ACT " + string(obj_level.act));
+	draw_set_color(c_white);
+	draw_text(offset[6], offset[1], act_text);
+	
 	
 	//Done
 	surface_reset_target();

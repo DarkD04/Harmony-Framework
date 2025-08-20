@@ -17,8 +17,8 @@
 			var player = instance_nearest(x, y, obj_player)
 			with(player)
 			{
-				animation_play(animator, ANIM_SPRING);
-				state = ST_SPRING;
+				animation_play(animator, ANIM.SPRING);
+				state = player_state_spring;
 				y_speed = -other.spring_power;
 				ground = false;
 			}
@@ -40,7 +40,7 @@
 			var player = instance_nearest(x, y, obj_player)
 			with(player)
 			{
-				state = ST_SPRING;
+				state = player_state_spring;
 				y_speed = other.spring_power;
 				ground = false;
 			}

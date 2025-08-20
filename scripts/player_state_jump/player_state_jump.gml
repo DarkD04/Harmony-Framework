@@ -1,69 +1,4 @@
 function player_state_jump(){
-	//List of states that allow for jumping
-	var can_jump_states = [ST_NORMAL, ST_ROLL, ST_SKID];
-	
-	//Run the loop on array
-	for (var i = 0; i < array_length(can_jump_states); ++i) 
-	{
-		//If states match the ones on the list, allow for jumping
-	    if(state == can_jump_states[i])
-		{
-			can_jump = true;
-		}
-	}
-	
-	//If some of these flags are disabled, make an exception for some of the states
-	if(state == ST_LOOKUP && !global.use_peelout|| state == ST_LOOKDOWN && !global.use_spindash)
-	{
-		can_jump = true;
-	}
-	
-	//Trigger jump
-	if(press_action && ground && !touching_ceiling && !force_roll && can_jump)
-	{
-		//Change animation
-		animation_play(animator, ANIM_ROLL);
-		
-		//Jump off the terrain
-		y_speed -= jump_strength * dcos(ground_angle);	
-		x_speed -= jump_strength * dsin(ground_angle);
-			
-		//Trigger the jump flag
-		jump_flag = true;
-			
-		//Detach player off the ground and change state
-		ground = false;
-		state = ST_JUMP
-			
-		//Change jump animation duration
-		jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
-			
-		//Reset angle and floor mode
-		ground_angle = 0;
-		player_reposition_mode(CMODE_FLOOR);
-			
-		//Play the sound
-		play_sound(sfx_jump);
-	}
-	
-	
-	//Do the air roll
-	if(press_action && !ground && global.use_airroll)
-	{
-		if(state == ST_NORMAL || state == ST_SPRING)
-		{
-			state = ST_JUMP;
-			jump_flag = false;
-			ceiling_lock = 2;
-			jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
-		}
-	}
-	
-	//Stop if its not jump state
-	if(state != ST_JUMP) 
-	{
-		exit;
-	}
 	
 	//Change flags
 	attacking = true;
@@ -76,7 +11,7 @@ function player_state_jump(){
 	}
 
 	//Change animation
-	animation_play(animator, ANIM_ROLL);
+	animation_play(animator, ANIM.ROLL);
 	
 	//Change animation speed
 	if(character != CHAR_TAILS)
@@ -84,6 +19,50 @@ function player_state_jump(){
 		animation_set_duration(animator, jump_anim_speed);
 	}
 	
+	//If global value for dropdash is diabled don't execute
+	if(global.use_dropdash) {
+	
+		//Add dropdash timer
+		if(character == CHAR_SONIC)
+		{
+			if(press_action && dropdash_timer < 1 && y_speed > -jump_release ||
+			hold_action && dropdash_timer != 0)
+			{
+				dropdash_timer++;
+			}
+		}
+		//Trigger the dropdash state
+		if(dropdash_timer >= 8 && state != player_state_dropdash)
+		{
+			play_sound(sfx_dropdash);
+			state = player_state_dropdash;
+			exit;
+		}
+	
+	}
+	
+	//Trigger fly
+	if(press_action && character == CHAR_TAILS && y_speed > -jump_release)
+	{
+		tails_timer = 480;
+		y_accel = 0.03125;
+		state = player_state_tailsfly;
+		exit;
+	}
+	
+	//Trigger the glide
+	if(character == CHAR_KNUX && press_action && y_speed > -jump_release)
+	{
+		control_lock = 4;
+		glide_speed = 4;
+		knuckles_angle = 90 * facing;
+		y_speed = max(y_speed, 0.5);
+		state = player_state_glide;
+		facing = facing;
+		animation_play(animator, ANIM.KNUXGLIDE);
+		exit;
+	}
+	
 	//Reset when grounded
-	if(ground) state = ST_NORMAL;
+	if(ground) state = player_state_normal;
 }

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_shard_collect",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":0,
+  "duration":2.7545125,
+  "name":"sfx_shard_collect",
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Sounds/Sound Effects/Objects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_shard_collect.WAV",
+  "type":0,
+  "volume":1.0,
+}

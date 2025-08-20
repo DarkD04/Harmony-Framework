@@ -1,6 +1,4 @@
 function player_state_knockout(){
-	//Stop executing
-	if(state != ST_KNOCKOUT) exit;
 	
 	//Change flags
 	direction_allow = false;
@@ -11,14 +9,15 @@ function player_state_knockout(){
 	{
 		case K_HURT:
 			//Change animation
-			animation_play(animator, ANIM_HURT);
+			animation_play(animator, ANIM.HURT);
 			
 			//Exit when grounded
 			if(ground)
 			{
-				state = ST_NORMAL;
+				state = player_state_normal;
 				ground_speed = 0;
 				knockout_type = 0;
+				exit;
 			}
 		break;
 		
@@ -35,7 +34,7 @@ function player_state_knockout(){
 			}
 			
 			//Change animation
-			animation_play(animator, knockout_type == K_DIE ? ANIM_DIE : ANIM_DROWN);
+			animation_play(animator, knockout_type == K_DIE ? ANIM.DIE : ANIM.DROWN);
 			
 			//Disable collision
 			collision_allow = false;
@@ -52,15 +51,14 @@ function player_state_knockout(){
 			hitbox_allow = false;
 			
 			//Fade out
-			if(death_timer == 80)
+			if(death_timer == 120)
 			{
 				if(global.life != 0 || !is_time_over)
 				{
 					global.life -= 1;
 					if(global.life != 0 && !is_time_over)
 					{
-						obj_fade.fade_speed = 3;
-						obj_fade.fade_type = FADE_OUT;
+						fade_change(FADE_OUT, 3,FADE_BLACK)
 						music_set_fade(FADE_OUT, 2);
 					}
 				}
@@ -88,7 +86,7 @@ function player_state_knockout(){
 			}
 			
 			//Restart
-			if(death_timer == 140 && global.life != 0 && !is_time_over)
+			if(death_timer == 160 && global.life != 0 && !is_time_over)
 			{
 				room_restart();
 			}

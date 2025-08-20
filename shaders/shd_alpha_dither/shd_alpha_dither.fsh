@@ -51,12 +51,11 @@ mat4 patCalc(float opacity)
     return retval;
 }
 
-mat4 dPattern = patCalc(dAlpha); //We use this variable to store our actual 4x4 pattern
-
 void main()
 {
     gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
-    
+    mat4 dPattern = patCalc(dAlpha);  //We use this variable to store our actual 4x4 pattern
+	
     //We find the corresponding pattern position to our screens x and y
     //So we essentially "screen wrap" the screen coordinates between 0 and 3.
     int xPos = int(v_vPosition.x - floor(v_vPosition.x/4.0)*4.0);

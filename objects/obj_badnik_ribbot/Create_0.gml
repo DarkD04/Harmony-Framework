@@ -1,5 +1,5 @@
 // Bounce badnik by joshyflip
-
+	event_inherited()
 	// This is an example of a simple bounce badnik.
 
 	// Set up badnik's values

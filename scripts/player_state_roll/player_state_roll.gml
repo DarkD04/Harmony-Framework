@@ -1,42 +1,7 @@
 function player_state_roll(){
-	//List of states that allow for jumping
-	var can_roll_states = [ST_NORMAL, ST_JUMP, ST_LOOKDOWN, ST_SKID];
-	
-	//Run the loop on array
-	for (var i = 0; i < array_length(can_roll_states); ++i) 
-	{
-		//If states match the ones on the list, allow for jumping
-	    if(state == can_roll_states[i])
-		{
-			can_roll = true;
-		}
-	}
-	
-	//Trigger rolling
-	if(can_roll && hold_down && abs(ground_speed) > 1 && ground)
-	{
-
-		//Play the rolling animation
-		animation_play(animator, ANIM_ROLL);
-		
-		//Update the state
-		if(!landed)
-		{
-			state = ST_ROLL;
-			
-			//Play the sound
-			play_sound(sfx_roll);
-		}
-	}
-	
-	//Stop executing if not rolling
-	if(state != ST_ROLL) 
-	{
-		exit;
-	}
 	
 	//Change animation and speed
-	animation_play(animator, ANIM_ROLL);
+	animation_play(animator, ANIM.ROLL);
 	if(ground && character != CHAR_TAILS)
 	{
 		animation_set_duration(animator, floor(max(0, 4-abs(ground_speed))));
@@ -69,14 +34,16 @@ function player_state_roll(){
 	{
 		if(ground_speed == 0 && !force_roll && ground) 
 		{
-			state = ST_NORMAL;
+			state = player_state_normal;
+			exit;
 		}
 	}
 	
 	//Reset state back to normal when landing
 	if(landed) 
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
+		exit;
 	}
 	
 	//Get input

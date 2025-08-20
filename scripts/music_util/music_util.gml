@@ -1,9 +1,14 @@
 function music_add(music_id, sound_id, loop_start = 0.00, loop_end = 0.00, loop = true)
 {
-	global.list_sound_id[music_id] = sound_id;			//Add sound ID to the list.
-	global.list_loop_start[music_id] = loop_start;		//Add music loop start to the list, if value is 0.00 the loop will be set at the start of the music.
-	global.list_loop_end[music_id] = loop_end;			//Add music loop end to the list, if value is 0.00 the loop will be set to the end of the music.
-	global.list_loop[music_id] = loop;					//Add music loop flag to the list, it's used to make music loop or not
+	if !ds_map_exists(global.music_map, music_id){
+		ds_map_add(global.music_map, music_id, array_create(4))	
+		global.music_map[? music_id][0] = sound_id
+		global.music_map[? music_id][1] = loop_start
+		global.music_map[? music_id][2] = loop_end
+		global.music_map[? music_id][3] = loop
+	} else {
+		//trace("ALERT: Your are trying to add a music track that already exsits.")
+	}
 }
 
 function music_fade_channel(channel, fade_type, fade_speed)
@@ -58,14 +63,19 @@ function play_music(music_id, channel = 0){
 		
 		//Restore jingle channel value
 		playing[Jingle] = noone;
-
+		
+		//show_debug_message( global.music_map[? music_id][0])
+		//show_debug_message( global.music_map[? music_id][1])
+		//show_debug_message( global.music_map[? music_id][2])
+		//show_debug_message( global.music_map[? music_id][3])
+		
 		//Set the loop points
-		loop_start[channel] = global.list_loop_start[music_id];
-		loop_end[channel] = global.list_loop_end[music_id];
+		loop_start[channel] = global.music_map[? music_id][1];
+		loop_end[channel] = global.music_map[? music_id][2];
 		
 		//Play the sound
-		play_data[channel] = audio_get_name(global.list_sound_id[music_id]);
-		playing[channel] = audio_play_sound(global.list_sound_id[music_id], 0, global.list_loop[music_id]);
+		play_data[channel] = audio_get_name(global.music_map[? music_id][0]);
+		playing[channel] = audio_play_sound(global.music_map[? music_id][0], 0, global.music_map[? music_id][3]);
 	}
 }
 

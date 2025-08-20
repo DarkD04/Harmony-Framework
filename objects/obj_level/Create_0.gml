@@ -2,6 +2,7 @@
 
 	disable_timer = false;
 	badnik_chain = 0;
+	scattered_emerald_shards = false
 	
 	//====================================================//
 	//				 **DEFAULT STAGE SETUP**			  //
@@ -14,9 +15,15 @@
 		
 	//Set level name
 	stage_name = "EMPTY LEVEL";
+	
+	//Set Author  name
+	author_name = "REPLACE ME";
 		
 	//Set stage act
 	act = 1;
+	is_emerald_hunt = false;
+	emerald_hunt_randoms = 3;
+	emerald_hunt_total = 0;
 		
 	//Is next level doing act transition
 	act_transition = false;
@@ -26,3 +33,6 @@
 		
 	//Next level
 	next_level = room;
+	
+	//Setup red rings
+	red_ring_count = 0

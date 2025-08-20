@@ -22,31 +22,38 @@
 	//Add title card timer
 	timer++;
 	
-	//Transition in
+	
+	
 	if(timer < 100)
 	{
-		if(timer > 8)  offset[0] = max(offset[0] - 16, 0);
-		if(timer > 28)  offset[1] = max(offset[1] - 16, 0);
-		if(timer > 46)  offset[2] = max(offset[2] - 16, 0);
-		if(timer > 28)  offset[3] = max(offset[3] - 16, 0);
+		var curve = animcurve_get(curve_titlecard)
+		var c_channel_1 = animcurve_get_channel(curve,"curve1")
+		var c_channel_2 = animcurve_get_channel(curve,"curve2")
+		var c_channel_3 = animcurve_get_channel(curve,"curve3")
+		var c_channel_4 = animcurve_get_channel(curve,"curve4")
+		
+		offset[0] = animcurve_channel_evaluate(c_channel_1, min(timer / 80,1)) * global.window_width
+		offset[1] = animcurve_channel_evaluate(c_channel_2, min(timer / 80,1)) * (58 + 48)
+		offset[2] = animcurve_channel_evaluate(c_channel_2, min(timer / 80,1)) * 58
+		offset[3] = 71 - (animcurve_channel_evaluate(c_channel_3, min(timer / 100,1)) * 71)
+		offset[5] = animcurve_channel_evaluate(c_channel_1, min(timer / 80,1)) * 256
 	}
-	
-	//Transition out
-	if(timer > 120)
+	if(timer > 160)
 	{
-		offset[0] += 16;	
-		offset[3] += 16;	
-	}
-	
-	//Transition out
-	if(timer > 140)
-	{
-		offset[1] += 16;	
-		offset[2] += 16;	
+		var curve = animcurve_get(curve_titlecard_leave)
+		var c_channel_1 = animcurve_get_channel(curve,"curve1")
+		var c_channel_2 = animcurve_get_channel(curve,"curve2")
+		var c_channel_3 = animcurve_get_channel(curve,"curve3")
+		var c_channel_4 = animcurve_get_channel(curve,"curve4")
+		
+		offset[1] = (58 + 48) + (animcurve_channel_evaluate(c_channel_2, min((timer-160) / 40,1)) * 240)
+		offset[2] = 58 + (animcurve_channel_evaluate(c_channel_2, min((timer-160) / 40,1)) * 200)
+		offset[3] = (animcurve_channel_evaluate(c_channel_3, min((timer-160) / 40,1)) * 82)
+		offset[5] += 20
 	}
 	
 	//Enable flags
-	if(timer > 160)
+	if(timer > 180)
 	{
 		if(!act_card)
 		{
@@ -58,5 +65,15 @@
 		obj_hud.slide_in = true;
 		
 		//End card
-		if(timer = 170) instance_destroy();
+		if(timer = 200) {
+			offset[0] = 0
+			offset[1] = 0
+			offset[2] = 0
+			offset[3] = 0
+			offset[4] = 0
+			offset[5] = 0
+			offset[6] = 0
+			timer = 0;
+			instance_destroy();
+		}
 	}

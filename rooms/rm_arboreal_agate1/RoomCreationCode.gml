@@ -1,10 +1,12 @@
 	with(obj_level)
 	{
 		//Set stage music and loop points
-		stage_music = BGM_ARBOREAL_1;
+		stage_music = MUSIC.ARBOREAL_1;
 		
 		//Set level name
-		stage_name = "ARBOREAL AGATE";
+		stage_name = "Arboreal Agate";
+		
+		author_name = "JOSHYFLIP, DARK"
 		
 		//Set stage act
 		act = 1;
@@ -17,4 +19,6 @@
 		
 		//Next level
 		next_level = rm_arboreal_agate2;
+		
+		red_ring_count = 3
 	}

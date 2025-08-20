@@ -1,14 +1,18 @@
+	music_add("Weapon Wing Test", bgm_weaponwing_test, 7.625)
+	
 	//NOTE: Dublicate this room to make levels!
 	with(obj_level)
 	{
 		//Set stage music and loop points
-		stage_music = BGM_ARBOREAL_1;
+		stage_music = "Weapon Wing Test";
 		
 		//Set level name
-		stage_name = "EMPTY ROOM";
+		stage_name = "Empty Room";
+		
+		author_name = "NO ONE"
 		
 		//Set stage act
-		act = 1;
+		act = 0;
 		
 		//Is next level doing act transition
 		act_transition = false;

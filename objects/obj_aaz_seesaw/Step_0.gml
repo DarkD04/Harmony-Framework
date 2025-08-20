@@ -65,8 +65,8 @@
 			{
 				with(obj_player)
 				{
-					animation_play(animator, ANIM_SPRING);
-					state = ST_SPRING;
+					animation_play(animator, ANIM.SPRING);
+					state = player_state_spring;
 					y_speed = -10;
 					ground = false;
 				}

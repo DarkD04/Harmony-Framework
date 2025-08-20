@@ -1,39 +1,7 @@
 function player_state_dropdash(){
-	//If global value for dropdash is diabled don't execute
-	if(!global.use_dropdash) exit;
-	
-	//Add dropdash timer
-	if(character == CHAR_SONIC)
-	{
-		if(press_action && dropdash_timer < 1 && state = ST_JUMP ||
-		hold_action && dropdash_timer != 0 && state = ST_JUMP)
-		{
-			dropdash_timer++;
-		}
-	}
-	//Trigger the dropdash state
-	if(dropdash_timer >= 8 && state != ST_DROPDASH)
-	{
-		play_sound(sfx_dropdash);
-		state = ST_DROPDASH;
-	}
-	
-	//Reset the timer
-	if(state != ST_JUMP || state == ST_DROPDASH || shield != S_NONE && shield != S_NORMAL)
-	{
-		
-		dropdash_timer = 0;
-	}
-		
-	
-	//If not dropdash stop
-	if(state != ST_DROPDASH) 
-	{
-		exit;
-	}
 	
 	//Animate dropdash
-	animation_play(animator, ANIM_DROPDASH);
+	animation_play(animator, ANIM.DROPDASH);
 	
 	//Make it attack
 	attacking = true;
@@ -42,7 +10,7 @@ function player_state_dropdash(){
 	if(!hold_action)
 	{
 		dropdash_timer = -1;
-		state = ST_JUMP;
+		state = player_state_jump;
 	}
 	
 	//Land the dropdash
@@ -70,7 +38,8 @@ function player_state_dropdash(){
         }
 		
 		//Roll state
-		state = ST_ROLL; 
+		state = player_state_roll;
+		dropdash_timer = 0;
 		play_sound(sfx_release);
 		
 		//Camera lag

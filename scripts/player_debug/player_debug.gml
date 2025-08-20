@@ -53,9 +53,9 @@ function player_debug(){
 		
 	
 	//Become alive again
-	if(state == ST_KNOCKOUT && knockout_type == K_DIE || state == ST_KNOCKOUT && knockout_type == K_DROWN)
+	if(state == player_state_knockout && knockout_type == K_DIE || state == player_state_knockout && knockout_type == K_DROWN)
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
 		knockout_type = 0;
 		death_timer = 0;
 		obj_camera.mode = CAM_RETURN;

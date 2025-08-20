@@ -1,27 +1,4 @@
 function player_state_spindash(){
-	//Trigger the spindash
-	if(state == ST_LOOKDOWN && press_action && global.use_spindash)
-	{
-		//Reset the spindash pitch
-		audio_sound_pitch(sfx_spindash, 1);
-		
-		//Change animation
-		animation_play(animator, ANIM_SPINDASH);
-	
-		//Reset variables
-		spindash_rev = 0;
-		spindash_pitch = 0;
-		spindash_dust_frames = 0;
-		
-		//Update the state
-		state = ST_SPINDASH;
-	}
-	
-	//Stop executing if not spindashing
-	if(state != ST_SPINDASH) 
-	{
-		exit;
-	}
 	
 	//Create dust effect
 	if(global.object_timer mod 4 == 0 && global.chaotix_dust_effect) 
@@ -42,7 +19,7 @@ function player_state_spindash(){
 	attacking = true;
 	
 	//Change animation
-	animation_play(animator, ANIM_SPINDASH);
+	animation_play(animator, ANIM.SPINDASH);
 	
 	//Subtract the spindash rev
 	spindash_rev -= spindash_rev / 32;
@@ -55,7 +32,7 @@ function player_state_spindash(){
 		play_sound(sfx_spindash);
 		
 		//Reset the spindash frame
-		if(animation_is_playing(animator, ANIM_SPINDASH))
+		if(animation_is_playing(animator, ANIM.SPINDASH))
 		{
 			animation_set_frame(animator, 0);
 		}
@@ -92,6 +69,6 @@ function player_state_spindash(){
 		{
 			x_speed = (8+(floor(spindash_rev)/2)) * facing;
 		}
-		state = ST_ROLL;
+		state = player_state_roll;
 	}
 }

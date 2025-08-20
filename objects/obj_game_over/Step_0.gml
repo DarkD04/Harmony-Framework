@@ -7,7 +7,7 @@
 	if(timer == 48)
 	{
 		music_reset_fade();	
-		play_music(J_GAME_OVER, 0);
+		play_music(MUSIC.J_GAME_OVER, 0);
 	}
 	
 	//Slide in the thing
@@ -19,8 +19,7 @@
 	//Fade out
 	if(timer == 560)
 	{
-		obj_fade.fade_type = FADE_OUT;
-		obj_fade.fade_speed = 2;
+		fade_change(FADE_OUT, 2,FADE_BLACK)
 	}
 	
 	//Do the skip

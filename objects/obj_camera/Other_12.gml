@@ -8,7 +8,7 @@
 	target_y = approach(target_y, knux_offset_y, 2 * abs(dsin(angle)));
 	
 	//If state is not the ledge climb return
-	if(target.state != ST_KNUXLEDGE) 
+	if(target.state != player_state_ledgeclimb) 
 	{
 		mode = 0;
 	}

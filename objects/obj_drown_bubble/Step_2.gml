@@ -17,6 +17,13 @@
 	
 	//Position the bubble 
 	if(image_index < 4){
+		//Movement
+		y -= 0.5;
+		x = xstart + 3*dsin(angle)
+	
+		//Add and modulate angle
+		angle = (angle + 2) mod 360;
+		
 		screen_x = x - cx;	
 		screen_y = y - cy;	
 	}else{

@@ -1,21 +1,4 @@
 function player_state_glide(){
-	//Trigger the glide
-	if(state == ST_JUMP && character == CHAR_KNUX && press_action)
-	{
-		control_lock = 4;
-		glide_speed = 4;
-		knuckles_angle = 90 * facing;
-		y_speed = max(y_speed, 0.5);
-		state = ST_KNUXGLIDE;
-		facing = facing;
-		animation_play(animator, ANIM_KNUXGLIDE);
-	}
-	
-	//If not gliding then stop
-	if(state != ST_KNUXGLIDE) 
-	{
-		exit;
-	}
 	
 	//Change flags
 	movement_allow = false;
@@ -26,7 +9,8 @@ function player_state_glide(){
 	//Trigger the slide
 	if(ground)
 	{
-		state = ST_KNUXSLIDE;	
+		state = player_state_knuxslide;
+		exit;
 	}
 	
 	//Adjust y speed
@@ -59,7 +43,8 @@ function player_state_glide(){
 	{
 		facing *= -1;
 		animation_set_frame(animator, 0);
-		animation_play(animator, ANIM_KNUXGLIDETURN);
+
+		animation_play(animator, ANIM.KNUXGLIDETURN);
 	}
 	
 	//Turn glide
@@ -71,10 +56,18 @@ function player_state_glide(){
 	//Adjust angle
 	knuckles_angle = approach(knuckles_angle, 90 * facing, 2.8125);
 	
-	if(animation_has_finished(animator) && animation_is_playing(animator, ANIM_KNUXGLIDETURN))
+	if (animation_is_playing(animator, ANIM.KNUXGLIDETURN)) {
+		if (facing == 1){
+			animation_set_frame(animator, 2 + (knuckles_angle/ 45));
+		} else {
+			animation_set_frame(animator, 5 - (2 + (knuckles_angle/ 45)));
+		}
+	}
+	
+	if(animation_has_finished(animator) && animation_is_playing(animator, ANIM.KNUXGLIDETURN))
 	{
 		
-		animation_play(animator, ANIM_KNUXGLIDE);	
+		animation_play(animator, ANIM.KNUXGLIDE);	
 	}
 	
 	//Attach to the wall
@@ -82,14 +75,16 @@ function player_state_glide(){
 	{
 		//Change direction
 		play_sound(sfx_grab);
-		state = ST_KNUXCLIMB;
+		state = player_state_wallclimb;
+		exit;
 	}
 	
 	//Get grounded
 	if(ground && ground_angle > 45 && ground_angle < 315)
 	{
-		state = ST_NORMAL;
+		state = player_state_normal;
 		control_lock = 4;
+		exit;
 	}
 	
 	//Trigger falling if player is not pressing action button
@@ -98,7 +93,8 @@ function player_state_glide(){
 		ceiling_lock = 4;
 		x_speed *= 0.25;
 		y_speed = 0;
-		state = ST_KNUXFALL;
+		state = player_state_knuxfall;
+		exit;
 	}
 	
 }

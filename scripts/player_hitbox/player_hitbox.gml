@@ -3,7 +3,7 @@ function player_hitbox(){
 	var old_hitbox_h = hitbox_h;
 	
 	//Reset camera offset if player is not playing rolling animation
-	if(!animation_is_playing(animator, ANIM_ROLL)) 
+	if(!animation_is_playing(animator, ANIM.ROLL)) 
 	{
 		obj_camera.roll_offset = 0;
 	}
@@ -13,7 +13,7 @@ function player_hitbox(){
 	hitbox_h = hitbox_normal[global.character][1];
 	
 	//Roll hitboxes
-	if(animation_is_playing(animator, ANIM_ROLL) || animation_is_playing(animator, ANIM_DROPDASH) || state == ST_JUMP)
+	if(animation_is_playing(animator, ANIM.ROLL) || animation_is_playing(animator, ANIM.DROPDASH) || state == player_state_jump)
 	{
 		//Change the camera offset for rolling
 		if(ground || landed)
@@ -27,20 +27,20 @@ function player_hitbox(){
 	}
 	
 	//Knuckles specific hitboxes
-	if(state == ST_KNUXGLIDE || state == ST_KNUXSLIDE)
+	if(state == player_state_glide || state == player_state_knuxslide)
 	{
 		hitbox_h = 10;
 	}
 	
 	//Change floor position when jumping or when on ground
-	if(ceiling_lock = 0 && ground || state == ST_JUMP && mode == 0)
+	if(ceiling_lock = 0 && ground || state == player_state_jump && mode == 0)
 	{
 		x += (old_hitbox_h - hitbox_h) * x_dir;
 		y += (old_hitbox_h - hitbox_h) * y_dir;
 	}
 	
 	//Crouch hitbox offset
-	if(animation_is_playing(animator, ANIM_LOOKDOWN))
+	if(animation_is_playing(animator, ANIM.LOOKDOWN))
 	{
 		hitbox_top_offset = -hitbox_normal[global.character][1];
 	}

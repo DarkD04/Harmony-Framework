@@ -160,7 +160,7 @@ function player_collision(){
 			ceiling_landing = 0;
 			control_lock = 2;
 			ceiling_lock = 16;
-			state = ST_NORMAL;
+			state = player_state_normal;
 			ground = true;
 		}
 

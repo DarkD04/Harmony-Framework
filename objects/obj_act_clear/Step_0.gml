@@ -10,8 +10,8 @@
 			ground_speed = 0;
 			input_disable = true;
 			facing = 1;
-			state = ST_NULL;
-			animation_play(animator, ANIM_VICTORY);
+			state = player_state_null;
+			animation_play(animator, ANIM.VICTORY);
 		}
 	}
 	//Fade out
@@ -24,7 +24,7 @@
 	if(timer = 100 && state = 0)
 	{
 		music_reset_fade();
-		play_music(J_ACT_CLEAR, 0);
+		play_music(MUSIC.J_ACT_CLEAR, 0);
 	}
 	
 	//Move in card stuff
@@ -90,8 +90,7 @@
 	{
 		if(timer = 80)
 		{
-			obj_fade.fade_type = FADE_OUT;
-			obj_fade.fade_speed = 5;
+			fade_change(FADE_OUT, 5,FADE_BLACK)
 		}
 		
 		//Go to the next stage
