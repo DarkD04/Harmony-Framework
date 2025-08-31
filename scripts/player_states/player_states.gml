@@ -26,6 +26,14 @@ function player_states(){
 
 function player_state_conditions(){
 	
+	if(state == player_state_normal){
+		if (ground_speed != 0 || x_speed != 0 || y_speed != 0) {
+			idle_timer = 0;	
+		}
+	} else {
+		idle_timer = 0;	
+	}
+	
 	//Reset the timer
 	if(state != player_state_jump || state == player_state_dropdash || shield != S_NONE && shield != S_NORMAL)
 	{
