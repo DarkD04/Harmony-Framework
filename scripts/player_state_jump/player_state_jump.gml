@@ -63,6 +63,25 @@ function player_state_jump(){
 		exit;
 	}
 	
+	//Trigger rolling
+	if(hold_down && abs(ground_speed) > 1 && ground)
+	{
+
+		//Play the rolling animation
+		animation_play(animator, ANIM.ROLL);
+		
+		//Update the state
+		if(!landed)
+		{
+			state = player_state_roll;
+			idle_timer = 0;
+			
+			//Play the sound
+			play_sound(sfx_roll);
+		}
+		exit;
+	}
+	
 	//Reset when grounded
 	if(ground) state = player_state_normal;
 }

@@ -40,57 +40,6 @@ function player_state_conditions(){
 		dropdash_timer = 0;
 	}
 	
-	//JUMP
-	
-	//List of states that allow for jumping
-	var can_jump_states = [player_state_normal, player_state_roll, player_state_skid];
-	
-	//Run the loop on array
-	for (var i = 0; i < array_length(can_jump_states); ++i) 
-	{
-		//If states match the ones on the list, allow for jumping
-	    if(state == can_jump_states[i])
-		{
-			can_jump = true;
-		}
-	}
-	
-	//If some of these flags are disabled, make an exception for some of the states
-	if(state == player_state_lookup && !global.use_peelout|| state == player_state_lookdown && !global.use_spindash)
-	{
-		can_jump = true;
-	}
-	
-	//Trigger jump
-	if(press_action && ground && !touching_ceiling && !force_roll && can_jump)
-	{
-		//Change animation
-		animation_play(animator, ANIM.ROLL);
-		
-		//Jump off the terrain
-		y_speed -= jump_strength * dcos(ground_angle);	
-		x_speed -= jump_strength * dsin(ground_angle);
-			
-		//Trigger the jump flag
-		jump_flag = true;
-			
-		//Detach player off the ground and change state
-		ground = false;
-		state = player_state_jump
-		dropdash_timer = 0;
-		idle_timer = 0;
-		//Change jump animation duration
-		jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
-			
-		//Reset angle and floor mode
-		ground_angle = 0;
-		player_reposition_mode(CMODE_FLOOR);
-			
-		//Play the sound
-		play_sound(sfx_jump);
-	}
-	
-	
 	//Do the air roll
 	if(press_action && !ground && global.use_airroll)
 	{
@@ -113,36 +62,6 @@ function player_state_conditions(){
 		}
 	}
 	
-	//List of states that allow for jumping
-	var can_roll_states = [player_state_normal, player_state_jump, player_state_lookdown, player_state_skid];
-	
-	//Run the loop on array
-	for (var i = 0; i < array_length(can_roll_states); ++i) 
-	{
-		//If states match the ones on the list, allow for jumping
-	    if(state == can_roll_states[i])
-		{
-			can_roll = true;
-		}
-	}
-	
-	//Trigger rolling
-	if(can_roll && hold_down && abs(ground_speed) > 1 && ground)
-	{
-
-		//Play the rolling animation
-		animation_play(animator, ANIM.ROLL);
-		
-		//Update the state
-		if(!landed)
-		{
-			state = player_state_roll;
-			idle_timer = 0;
-			
-			//Play the sound
-			play_sound(sfx_roll);
-		}
-	}
 	
 	//Stop if not specific state
 	if(state != player_state_tailsfly)

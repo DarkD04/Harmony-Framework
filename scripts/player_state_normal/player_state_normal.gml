@@ -148,4 +148,52 @@ function player_state_normal(){
 		state = player_state_skid;
 		exit;
 	}
+	//Trigger rolling
+	if(hold_down && abs(ground_speed) > 1 && ground)
+	{
+
+		//Play the rolling animation
+		animation_play(animator, ANIM.ROLL);
+		
+		//Update the state
+		if(!landed)
+		{
+			state = player_state_roll;
+			idle_timer = 0;
+			
+			//Play the sound
+			play_sound(sfx_roll);
+		}
+		exit;
+	}
+	
+	//Trigger jump
+	if(press_action && ground && !touching_ceiling && !force_roll)
+	{
+		//Change animation
+		animation_play(animator, ANIM.ROLL);
+		
+		//Jump off the terrain
+		y_speed -= jump_strength * dcos(ground_angle);	
+		x_speed -= jump_strength * dsin(ground_angle);
+			
+		//Trigger the jump flag
+		jump_flag = true;
+			
+		//Detach player off the ground and change state
+		ground = false;
+		state = player_state_jump
+		dropdash_timer = 0;
+		idle_timer = 0;
+		//Change jump animation duration
+		jump_anim_speed = floor(max(0, 4-abs(ground_speed)));
+			
+		//Reset angle and floor mode
+		ground_angle = 0;
+		player_reposition_mode(CMODE_FLOOR);
+			
+		//Play the sound
+		play_sound(sfx_jump);
+		exit;
+	}
 }
