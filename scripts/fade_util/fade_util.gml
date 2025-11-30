@@ -26,7 +26,7 @@ function fade_to_room_next(fade_speed, fade_color = FADE_BLACK){
 	fade = obj_fade;
 	
 	//Set room target
-	fade.fade_room = real(room)+1;
+	fade.fade_room = room_next(room);
 	
 	//Set fade speed
 	fade.fade_speed = fade_speed;
