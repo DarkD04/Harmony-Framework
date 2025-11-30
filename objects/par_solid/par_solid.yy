@@ -26,11 +26,11 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"collision_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"v2","%Name":"collision_type","filters":[],"listItems":[
         "\"Full Solid\"",
         "\"Semi Solid\"",
       ],"multiselect":false,"name":"collision_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Full Solid\"","varType":6,},
-    {"$GMObjectProperty":"v1","%Name":"collision_layer","filters":[],"listItems":[
+    {"$GMObjectProperty":"v2","%Name":"collision_layer","filters":[],"listItems":[
         "\"Both Layers\"",
         "\"Layer A\"",
         "\"Layer B\"",

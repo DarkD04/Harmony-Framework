@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sfx_scoretally",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":1.709501,
+  "exportDir":"",
   "name":"sfx_scoretally",
   "parent":{
     "name":"Objects",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_scoretally.wav",
-  "type":1,
   "volume":1.0,
 }

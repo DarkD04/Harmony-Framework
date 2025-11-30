@@ -33,8 +33,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"dip_multiplier","filters":[],"listItems":[],"multiselect":false,"name":"dip_multiplier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"push_offset","filters":[],"listItems":[],"multiselect":false,"name":"push_offset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"dip_multiplier","filters":[],"listItems":[],"multiselect":false,"name":"dip_multiplier","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"push_offset","filters":[],"listItems":[],"multiselect":false,"name":"push_offset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

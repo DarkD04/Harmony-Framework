@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"sfx_shield",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":0,
   "duration":0.720249,
+  "exportDir":"",
   "name":"sfx_shield",
   "parent":{
     "name":"Shield",
@@ -20,6 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_shield.wav",
-  "type":1,
   "volume":1.0,
 }

@@ -31,7 +31,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"spring_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"v2","%Name":"spring_type","filters":[],"listItems":[
         "\"Yellow\"",
         "\"Red\"",
       ],"multiselect":false,"name":"spring_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Yellow\"","varType":6,},

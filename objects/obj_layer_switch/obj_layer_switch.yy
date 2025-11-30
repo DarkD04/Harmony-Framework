@@ -26,7 +26,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"layer_type","filters":[],"listItems":[
+    {"$GMObjectProperty":"v2","%Name":"layer_type","filters":[],"listItems":[
         "\"Layer A\"",
         "\"Layer B\"",
         "\"From A to B\"",

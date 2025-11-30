@@ -27,7 +27,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"emit_big","filters":[],"listItems":[
+    {"$GMObjectProperty":"v2","%Name":"emit_big","filters":[],"listItems":[
         "\"Every Cycle\"",
         "\"Every Other Cycle\"",
         "\"Every Third Cycle\"",
