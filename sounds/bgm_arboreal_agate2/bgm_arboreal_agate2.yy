@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"jingle_zone_complete",
+  "%Name":"bgm_arboreal_agate2",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":8.256508,
+  "duration":148.82498,
   "exportDir":"",
-  "name":"jingle_zone_complete",
+  "name":"bgm_arboreal_agate2",
   "parent":{
-    "name":"Jingle Music",
-    "path":"folders/Sounds/Music/Jingle Music.yy",
+    "name":"Stage Music",
+    "path":"folders/Sounds/Music/Stage Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"jingle_zone_complete.ogg",
+  "soundFile":"bgm_arboreal_agate2.mp3",
   "volume":1.0,
 }

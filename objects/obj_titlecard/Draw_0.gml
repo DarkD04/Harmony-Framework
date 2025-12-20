@@ -65,9 +65,6 @@
 	draw_set_color(c_white);
 	draw_text(offset[4]+8, offset[2], string(obj_level.stage_name));
 	
-	draw_set_font(global.font_small);
-	draw_text(offset[4]+12, offset[2]-4, string(obj_level.author_name));
-	
 	//Draw the left part of the sprite
 	
 	draw_set_color(c_white);

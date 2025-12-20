@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"jingle_zone_complete",
+  "%Name":"bgm_menu",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -8,19 +8,19 @@
   "bitDepth":1,
   "channelFormat":1,
   "compression":1,
-  "compressionQuality":4,
+  "compressionQuality":5,
   "conversionMode":0,
-  "duration":8.256508,
+  "duration":13.468322,
   "exportDir":"",
-  "name":"jingle_zone_complete",
+  "name":"bgm_menu",
   "parent":{
-    "name":"Jingle Music",
-    "path":"folders/Sounds/Music/Jingle Music.yy",
+    "name":"Menu Music",
+    "path":"folders/Sounds/Music/Menu Music.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"jingle_zone_complete.ogg",
+  "soundFile":"bgm_menu.ogg",
   "volume":1.0,
 }

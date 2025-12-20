@@ -1,5 +1,4 @@
-	
-	music_add("FOREGONE DESTRUCTION - MICHIEL VAN DEN BOS", bgm_foregone, 0.000) //Loop is in seconds and miliseconds
+
 	
 	//You may modify these values for your level:
 	global.use_airroll = false;
