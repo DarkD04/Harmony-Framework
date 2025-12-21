@@ -93,6 +93,8 @@ function player_water(){
 		obj_camera.mode = 99;
 		state = player_state_knockout;
 		knockout_type = K_DROWN;
+		x_speed = 0
+		y_speed = 0
 	}
 	//Create the countdown
 	switch(air){

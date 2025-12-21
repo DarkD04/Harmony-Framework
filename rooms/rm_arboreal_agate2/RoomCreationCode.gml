@@ -4,7 +4,7 @@
 		stage_music = "ARBOREAL 2";
 		
 		//Set level name
-		stage_name = "ARBOREAL AGATE";
+		stage_name = "Arboreal Agate";
 		
 		//Set stage act
 		act = 2;

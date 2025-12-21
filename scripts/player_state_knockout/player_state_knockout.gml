@@ -54,7 +54,8 @@ function player_state_knockout(){
 			
 			//Add death timer
 			death_timer += 1;
-			
+			x_speed = 0
+			ground_speed = 0
 			//Remove effects
 			shield = S_NONE;
 			invincible_timer = 0;

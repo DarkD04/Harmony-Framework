@@ -1,5 +1,6 @@
 function player_handle_hurt()
 {
+	
 	if(state != player_state_knockout)
 	{
 		//Reset knockout type when you're invicible
