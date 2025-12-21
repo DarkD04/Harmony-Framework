@@ -81,15 +81,17 @@
 	//Add the presentation category
 	dev_menu_add_category("REGULAR STAGES");
 	dev_menu_add_entry("YOUR LEVEL", rm_your_zone);
+	dev_menu_add_entry("ARBOREAL AGATE 1", rm_arboreal_agate1);
+	dev_menu_add_entry("ARBOREAL AGATE 2", rm_arboreal_agate2);
 	
 	//Add all of the rooms
 	dev_menu_add_category("EVERY SCENE");
 	var r = room_first;
 	var i=0;
-	dev_menu_add_entry(room_get_name(r), i);
+	dev_menu_add_entry(room_get_name(r), r);
 	while(r!=room_last)
 	{
 		r = room_next(r);
 		i++;
-		dev_menu_add_entry(room_get_name(r), i);
+		dev_menu_add_entry(room_get_name(r), r);
 	}
