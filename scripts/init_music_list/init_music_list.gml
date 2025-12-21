@@ -13,6 +13,8 @@ function init_music_list()
 	music_add(MUSIC.J_SPEEDSHOE, j_speedshoe, 0.00, 0.00, false);
 	music_add(MUSIC.J_ACT_CLEAR, jingle_zone_complete, 0.00, 0.00, false);
 	music_add("FOREGONE DESTRUCTION - MICHIEL VAN DEN BOS", bgm_foregone, 0.000);
+	music_add("ARBOREAL 1", bgm_arboreal_agate1, 0.000);
+	music_add("ARBOREAL 2", bgm_arboreal_agate2, 0.000);
 }
 
 	//Setup enum for music ID
