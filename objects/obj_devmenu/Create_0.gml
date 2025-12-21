@@ -84,7 +84,12 @@
 	
 	//Add all of the rooms
 	dev_menu_add_category("EVERY SCENE");
-	for (var i = 0; i < room_last; ++i) 
+	var r = room_first;
+	var i=0;
+	dev_menu_add_entry(room_get_name(r), i);
+	while(r!=room_last)
 	{
-	    dev_menu_add_entry(room_get_name(i), i);
+		r = room_next(r);
+		i++;
+		dev_menu_add_entry(room_get_name(r), i);
 	}

@@ -1,12 +1,5 @@
 
 	
-	//You may modify these values for your level:
-	global.use_airroll = false;
-	global.use_battery_rings = false;
-	global.use_dropdash = true;
-	global.use_peelout = true;
-	global.use_spindash = true;
-	
 	//NOTE: Duplicate this room to make levels!
 	with(obj_level)
 	{
@@ -15,8 +8,6 @@
 		
 		//Set level name
 		stage_name = "Your Level Here";
-		
-		author_name = "INSERT YOUR NAME HERE"
 		
 		//Set stage act
 		act = 0;
