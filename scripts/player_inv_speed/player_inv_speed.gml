@@ -78,6 +78,20 @@ function player_inv_speed(){
 			}
 		}
 		
+		//particle effects
+		if (transform_timer < 25) {
+			if (abs(ground_speed) >= 6) {
+				if (FRAME_TIMER mod 15 == 0){
+					create_effect(x,y,spr_super_sparkle_2,0.25,depth)	
+				}
+			}
+		
+			if (FRAME_TIMER mod 10 == 0){
+				create_effect(x + random_range(-16,16),y + random_range(-16,16),spr_super_sparkle_1,0.5,depth -1,0,-1)	
+			}
+		}
+		
+		
 		if (transform_timer == 0 && FRAME_TIMER mod 60 == 0){
 			global.rings--
 			

@@ -633,6 +633,8 @@
     {"id":{"name":"spr_super_sonic_skidturn","path":"sprites/spr_super_sonic_skidturn/spr_super_sonic_skidturn.yy",},},
     {"id":{"name":"spr_super_sonic_wait","path":"sprites/spr_super_sonic_wait/spr_super_sonic_wait.yy",},},
     {"id":{"name":"spr_super_sonic_walk","path":"sprites/spr_super_sonic_walk/spr_super_sonic_walk.yy",},},
+    {"id":{"name":"spr_super_sparkle_1","path":"sprites/spr_super_sparkle_1/spr_super_sparkle_1.yy",},},
+    {"id":{"name":"spr_super_sparkle_2","path":"sprites/spr_super_sparkle_2/spr_super_sparkle_2.yy",},},
     {"id":{"name":"spr_tails_breathe","path":"sprites/spr_tails_breathe/spr_tails_breathe.yy",},},
     {"id":{"name":"spr_tails_die","path":"sprites/spr_tails_die/spr_tails_die.yy",},},
     {"id":{"name":"spr_tails_drown","path":"sprites/spr_tails_drown/spr_tails_drown.yy",},},

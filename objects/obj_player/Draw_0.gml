@@ -6,11 +6,11 @@
 	
 	if(state = player_state_knockout || invincible_timer mod 12 >= 6 || invincible_timer = 0 || invincible)
 	{
-		if(speed_shoes)
+		if(speed_shoes || super)
 		{
 			for (var i = 0; i < 3; ++i) 
 			{
-				if((FRAME_TIMER mod 4) = i )
+				if((FRAME_TIMER mod 3) = i )
 				{
 					if(x_speed != 0 || y_speed != 0)
 					{

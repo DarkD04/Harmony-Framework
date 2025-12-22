@@ -13,6 +13,8 @@
     {"name":"spr_hydroplaning","order":1,"path":"sprites/spr_hydroplaning/spr_hydroplaning.yy",},
     {"name":"spr_seesaw_launcher","order":1,"path":"sprites/spr_seesaw_launcher/spr_seesaw_launcher.yy",},
     {"name":"spr_seesaw_weight","order":2,"path":"sprites/spr_seesaw_weight/spr_seesaw_weight.yy",},
+    {"name":"spr_super_sparkle_1","order":1,"path":"sprites/spr_super_sparkle_1/spr_super_sparkle_1.yy",},
+    {"name":"spr_super_sparkle_2","order":2,"path":"sprites/spr_super_sparkle_2/spr_super_sparkle_2.yy",},
     {"name":"tex_pal_superknux","order":3,"path":"sprites/tex_pal_superknux/tex_pal_superknux.yy",},
     {"name":"tex_pal_supersonic","order":1,"path":"sprites/tex_pal_supersonic/tex_pal_supersonic.yy",},
     {"name":"tex_pal_supertails","order":2,"path":"sprites/tex_pal_supertails/tex_pal_supertails.yy",},
