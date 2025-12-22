@@ -42,7 +42,7 @@
 		break;
 		
 		case "Extra Life":
-			play_sound(sfx_extralife);
+			SOUND_EXTRA_LIFE;
 			global.life += 1;
 		break;
 		

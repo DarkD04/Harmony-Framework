@@ -14,7 +14,7 @@
 		collision_flag = true;
 		
 	//Player effect
-	if(player_collide_object(C_BOTTOM) && collision_flag && global.object_timer mod 4 = 0)
+	if(player_collide_object(C_BOTTOM) && collision_flag && FRAME_TIMER mod 4 = 0)
 	{
 		//Create effects
 		create_effect(obj_player.x, obj_water.y, spr_water_splash, 0.35, obj_player.depth+1);

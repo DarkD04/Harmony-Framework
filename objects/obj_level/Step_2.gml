@@ -14,31 +14,31 @@
 			if (!closest.collected && !obj_player.input_disable) {
 				switch closest.distance_stages{
 					case 1:
-						if (global.object_timer mod 60 == 0) {
+						if (FRAME_TIMER mod 60 == 0) {
 							closest.scale = 1.2
 							play_sound(sfx_radar_ding);
 						}
 					break;
 					case 2:
-						if (global.object_timer mod 30 == 0) {
+						if (FRAME_TIMER mod 30 == 0) {
 							closest.scale = 1.2
 							play_sound(sfx_radar_ding);
 						}
 					break;
 					case 3:
-						if (global.object_timer mod 15 == 0) {
+						if (FRAME_TIMER mod 15 == 0) {
 							closest.scale = 1.3
 							play_sound(sfx_radar_ding);
 						}
 					break;
 					case 4:
-						if (global.object_timer mod 10 == 0) {
+						if (FRAME_TIMER mod 10 == 0) {
 							closest.scale = 1.4
 							play_sound(sfx_radar_ding);
 						}
 					break;
 					case 5:
-						if (global.object_timer mod 5 == 0) {
+						if (FRAME_TIMER mod 5 == 0) {
 							closest.scale = 1.42
 							play_sound(sfx_radar_ding);
 						}

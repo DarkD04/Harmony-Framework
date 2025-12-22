@@ -3,7 +3,7 @@ function player_state_skid(){
 	var mov = hold_right - hold_left;
 	
 	//Create dust effect
-	if(global.object_timer mod 4 = 0 && animation_is_playing(animator, ANIM.SKID)) 
+	if(FRAME_TIMER mod 4 = 0 && animation_is_playing(animator, ANIM.SKID)) 
 	{
 		if(global.chaotix_dust_effect)
 		{

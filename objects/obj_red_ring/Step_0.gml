@@ -5,7 +5,7 @@
 	if(!ringloss && !collected)
 	{
 	    //Sync the animation
-	    image_index = global.object_timer / 4;
+	    image_index = FRAME_TIMER / 4;
 	}
 	
     //Collect
@@ -66,7 +66,7 @@
     }
 	
 	if (collected) {
-		image_index = global.object_timer / 2;
+		image_index = FRAME_TIMER / 2;
 		
 		alpha_death -= 0.032;
 		if (alpha_death < 0) {

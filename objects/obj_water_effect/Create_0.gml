@@ -33,7 +33,7 @@
 		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-		surface_deform(global.window_width, global.window_height, distort_data, cy + global.object_timer / 3)
+		surface_deform(WINDOW_WIDTH,WINDOW_HEIGHT, distort_data, cy + FRAME_TIMER / 3)
 	   
 		draw_surface_part(global.pal_surf, -8, obj_water.y-cy, WINDOW_WIDTH + 32, cy, cx-8, obj_water.y);
 	    shader_reset();

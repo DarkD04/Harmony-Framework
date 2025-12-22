@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":3.338413,
+  "duration":3.3384128,
   "exportDir":"",
   "name":"j_extra_life",
   "parent":{

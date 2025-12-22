@@ -5,7 +5,7 @@
 	if(!ringloss)
 	{
 	    //Sync the animation
-	    image_index = global.object_timer / 4;
+	    image_index = FRAME_TIMER / 4;
 	}
 	
     //Collect

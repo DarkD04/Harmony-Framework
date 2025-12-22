@@ -1,9 +1,9 @@
-	surface_deform(WINDOW_WIDTH, WINDOW_HEIGHT, deform_data, global.object_timer, 1);
+	surface_deform(WINDOW_WIDTH, WINDOW_HEIGHT, deform_data, FRAME_TIMER, 1);
 	draw_sprite(spr_splash_bg, 0, 0, 0);
 	shader_reset();
 	
-	draw_sprite_tiled_horizontal(spr_splash_border_top, 0, -global.object_timer, -bar_pos);
-	draw_sprite_tiled_horizontal(spr_splash_border_bottom, 0, global.object_timer, WINDOW_HEIGHT+bar_pos);
+	draw_sprite_tiled_horizontal(spr_splash_border_top, 0, -FRAME_TIMER, -bar_pos);
+	draw_sprite_tiled_horizontal(spr_splash_border_bottom, 0, FRAME_TIMER, WINDOW_HEIGHT+bar_pos);
 	
 	for (var i = 0; i < 3; ++i) 
 	{
@@ -24,7 +24,7 @@
 	
 	surface_set_target(logo_surface[1]);
 	
-	surface_deform(WINDOW_WIDTH, WINDOW_HEIGHT, distortion_y, global.object_timer * 3, 1);
+	surface_deform(WINDOW_WIDTH, WINDOW_HEIGHT, distortion_y, FRAME_TIMER * 3, 1);
 	surface_copy(logo_surface[1], 0, 0, logo_surface[0]);
 	shader_reset();
 	
@@ -32,7 +32,7 @@
 	
 	surface_set_target(logo_surface[2]);
 	
-	surface_deform(WINDOW_WIDTH, WINDOW_HEIGHT, distortion_x, global.object_timer);
+	surface_deform(WINDOW_WIDTH, WINDOW_HEIGHT, distortion_x, FRAME_TIMER);
 	surface_copy(logo_surface[2], 0, 0, logo_surface[1]);
 	shader_reset();
 	

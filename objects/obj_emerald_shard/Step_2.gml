@@ -12,7 +12,7 @@ if (collected) {
 	
 	collected_counter ++;
 	if (collected_counter >= 50){
-		if (global.object_timer mod 2 == 0) {
+		if (FRAME_TIMER mod 2 == 0) {
 			visible = false;
 		} else {
 			visible = true;

@@ -5,7 +5,7 @@
 		{
 			for (var i = 0; i < 3; ++i) 
 			{
-				if((global.object_timer) mod 4 = i )
+				if((FRAME_TIMER mod 4) = i )
 				{
 					if(x_speed != 0 || y_speed != 0)
 					{

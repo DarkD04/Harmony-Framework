@@ -53,7 +53,7 @@
 		}
 		
 		//Play sound
-		if(global.object_timer mod 4 = 0 && time_bonus > 0 || global.object_timer mod 4 = 0 && ring_bonus > 0)
+		if(FRAME_TIMER mod 4 = 0 && time_bonus > 0 || FRAME_TIMER mod 4 = 0 && ring_bonus > 0)
 			play_sound(sfx_scoreadd);
 		
 		//Skip the count down

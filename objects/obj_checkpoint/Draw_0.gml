@@ -6,7 +6,7 @@
 	//Draw checkpoint ball (IDLE)
 	if(angle != -720)draw_sprite(spr_checkpoint_ball, 0, x + 11 * dsin(angle), (y - 45) - 11 * dcos(angle));
 	else //Draw checkpoint ball (Flashing)
-	draw_sprite(spr_checkpoint_ball_flash, global.object_timer / 3, x + 11 * dsin(angle), (y - 45) - 11 * dcos(angle));
+	draw_sprite(spr_checkpoint_ball_flash, FRAME_TIMER / 3, x + 11 * dsin(angle), (y - 45) - 11 * dcos(angle));
 	
 	if star_type > 0 //Draw the stars
 	{

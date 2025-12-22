@@ -51,11 +51,12 @@ function player_state_knockout(){
 			
 			//Disable collision
 			collision_allow = false;
+			x_speed = 0;
+			ground_speed = 0;
 			
 			//Add death timer
 			death_timer += 1;
-			x_speed = 0
-			ground_speed = 0
+			
 			//Remove effects
 			shield = S_NONE;
 			invincible_timer = 0;
@@ -93,7 +94,7 @@ function player_state_knockout(){
 			}
 			
 			//Create bunch of bubbles for drowning event
-			if(global.object_timer mod 4 == 0 && knockout_type == K_DROWN){
+			if(FRAME_TIMER mod 4 == 0 && knockout_type == K_DROWN){
 				var bubble = instance_create_depth(x, y-12, depth-1, obj_bubble);
 				bubble.type = 0;	
 				bubble.angle = random(360);

@@ -84,7 +84,7 @@
 	
 	
 	//Sparkle effects
-	if(angle != 180 && triggered && global.object_timer mod 12 == 0)
+	if(angle != 180 && triggered && FRAME_TIMER mod 12 == 0)
 	{
 		create_effect(x + random_range(-24, 24), (y - 32) + random_range(-16, 16), spr_ring_sparkle, 0.2);
 		create_effect(x + random_range(-24, 24), (y - 32) + random_range(-16, 16), spr_ring_sparkle, 0.2);

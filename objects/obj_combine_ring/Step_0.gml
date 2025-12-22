@@ -31,7 +31,7 @@
 	}
 	
 	//Create effects
-	if(global.object_timer mod 8 == 0)
+	if(FRAME_TIMER mod 8 == 0)
 	{
 		create_effect(x + random_range(-16, 16), y + random_range(-16, 16), spr_ring_sparkle, 0.2);	
 		create_effect(x + random_range(-16, 16), y + random_range(-16, 16), spr_ring_sparkle, 0.2);	
