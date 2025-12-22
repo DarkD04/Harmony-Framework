@@ -97,7 +97,7 @@ function stop_jingle(fade_music_in, fade_speed = 1){
 
 	with(obj_music)
 	{
-		if(playing[Jingle])
+		if(playing[Jingle] && general_fade_multiplier == 1)
 		{
 			//Fade into BGM (optional)
 			if(fade_music_in = true)

@@ -46,7 +46,7 @@
 	global.rings = 0;						//Global variable for rings
 	global.life = 3;						//Global variable for life
 	global.title_card = true;				//Flag that allows title card to be triggered, used in dev
-	global.emeralds = [false, false, false, false, false, false, false];				//List of active emeralds
+	global.emeralds = [true, true, true, true, true, true, true];				//List of active emeralds
 	global.col_tile = ["CollisionMain", "CollisionSemi", "CollisionA", "CollisionB"];	//List of collision layers
 	global.extra_life_jingle = true;		//flag that plays a jingle that cuts out the music when true, plays a sound effect if false
 	
@@ -73,6 +73,7 @@
 	global.chaotix_dust_effect = false;		//Flag that disables classic spindash/skid dust effect
 	global.camera_type = 1;					//Vertical camera scrolling type, 0 = Megadrive, 1 = Mania
 	global.knux_camera_smooth = false;		//Flag for using smooth ledge climb camera movement
+	global.water_running_effect = 0;		//0 for the hydrocity effect, 1 for repeating splashes
 	
 	//Font setup:
 	global.hud_number = font_add_sprite(spr_hud_numbers, ord("0"), false, 0);

@@ -29,7 +29,11 @@ function player_state_glide(){
 	//Accelerate
 	if(knuckles_angle == 90 || knuckles_angle == -90)
 	{
-		glide_speed += 0.015625;
+		if (!super) {
+			glide_speed += 0.015625;
+		} else {
+			glide_speed += 0.046875;
+		}
 	}
 	
 	//Limit the glide speed

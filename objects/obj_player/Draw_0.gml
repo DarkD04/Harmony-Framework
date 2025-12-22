@@ -1,4 +1,9 @@
 /// @description Draw the player
+	
+	//character palettes for super form
+	palette_swap(super_palettes[character],super_color);
+	
+	
 	if(state = player_state_knockout || invincible_timer mod 12 >= 6 || invincible_timer = 0 || invincible)
 	{
 		if(speed_shoes)
@@ -37,7 +42,7 @@
 		//Draw the player:
 		draw_animator(animator, floor(x), floor(y), image_xscale, 1, image_angle, c_white, 1);
 	}
-	
+	shader_reset()
 	//Draw spindash dust effect
 	if(!global.chaotix_dust_effect && state = player_state_spindash && ground)
 	{

@@ -37,13 +37,12 @@ function player_state_knockout(){
 		case K_DIE:
 		
 		case K_DROWN:
-			//Change player depth
-			depth = layer_get_depth("Utilities");
-			
 			//Remove underwater physics
 			if(knockout_type == K_DIE)
 			{
 				underwater = false;
+				//Change player depth
+				depth = layer_get_depth("Utilities");
 			}
 			
 			//Change animation

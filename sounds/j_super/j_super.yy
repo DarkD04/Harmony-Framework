@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"jingle_zone_complete",
+  "%Name":"j_super",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":8.256508,
+  "duration":152.08,
   "exportDir":"",
-  "name":"jingle_zone_complete",
+  "name":"j_super",
   "parent":{
     "name":"Jingle Music",
     "path":"folders/Sounds/Music/Jingle Music.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"jingle_zone_complete.ogg",
+  "soundFile":"j_super.ogg",
   "volume":1.0,
 }

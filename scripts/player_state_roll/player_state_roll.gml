@@ -27,7 +27,7 @@ function player_state_roll(){
 	}
 	
 	//Rolling driction
-	ground_speed = approach(ground_speed, 0, 0.046875 / 2);
+	ground_speed = approach(ground_speed, 0, roll_friction);
 	
 	//Trigger jump
 	if(press_action && ground && !touching_ceiling && !force_roll)

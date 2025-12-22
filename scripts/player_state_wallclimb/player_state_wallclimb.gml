@@ -22,7 +22,7 @@ function player_state_wallclimb(){
 	var mov = hold_down - hold_up;
 	
 	//Move up and down
-	y_speed = 1 * mov;
+	y_speed = (1 + super) * mov;
 	x_speed = 0;
 	
 	while(!point_check(wall_w * facing, wall_h, false) && point_check((wall_w + 2) * facing, wall_h, false))

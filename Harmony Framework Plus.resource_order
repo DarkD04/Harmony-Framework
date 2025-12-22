@@ -6,7 +6,13 @@
     {"name":"obj_aaz_seesaw_bead","order":1,"path":"objects/obj_aaz_seesaw_bead/obj_aaz_seesaw_bead.yy",},
     {"name":"obj_aaz_seesaw_launcher","order":2,"path":"objects/obj_aaz_seesaw_launcher/obj_aaz_seesaw_launcher.yy",},
     {"name":"obj_aaz_seesaw_weight","order":3,"path":"objects/obj_aaz_seesaw_weight/obj_aaz_seesaw_weight.yy",},
+    {"name":"player_state_transform","order":1,"path":"scripts/player_state_transform/player_state_transform.yy",},
+    {"name":"j_super","order":1,"path":"sounds/j_super/j_super.yy",},
+    {"name":"sfx_hydroplaning","order":2,"path":"sounds/sfx_hydroplaning/sfx_hydroplaning.yy",},
+    {"name":"sfx_transform","order":1,"path":"sounds/sfx_transform/sfx_transform.yy",},
+    {"name":"spr_hydroplaning","order":1,"path":"sprites/spr_hydroplaning/spr_hydroplaning.yy",},
     {"name":"spr_seesaw_launcher","order":1,"path":"sprites/spr_seesaw_launcher/spr_seesaw_launcher.yy",},
     {"name":"spr_seesaw_weight","order":2,"path":"sprites/spr_seesaw_weight/spr_seesaw_weight.yy",},
+    {"name":"tex_pal_supersonic","order":1,"path":"sprites/tex_pal_supersonic/tex_pal_supersonic.yy",},
   ],
 }

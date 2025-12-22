@@ -17,6 +17,15 @@ function player_state_jump(){
 	if(character != CHAR_TAILS)
 	{
 		animation_set_duration(animator, jump_anim_speed);
+	}	
+	
+	
+	if (!super && allow_super && global.rings >= 50 && player_has_all_emeralds() && press_action && y_speed > -jump_release)
+	{
+		state = player_state_transform
+		x_speed = 0;
+		y_speed = 0;
+		exit;
 	}
 	
 	//If global value for dropdash is diabled don't execute

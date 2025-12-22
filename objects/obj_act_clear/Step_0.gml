@@ -7,6 +7,15 @@
 	{
 		if(ground)
 		{
+			if (super) {
+				super = false
+				speed_shoes = 0
+				invincible_timer = 0
+				invincible = false
+				super_color = SUPER_PALETTE_LOOP
+				player_animation_list();
+				animator_reset(animator);	
+			}
 			ground_speed = 0;
 			input_disable = true;
 			facing = 1;

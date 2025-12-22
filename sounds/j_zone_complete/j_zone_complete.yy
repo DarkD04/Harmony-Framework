@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"j_zone_complete",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":8.256508,
+  "exportDir":"",
+  "name":"j_zone_complete",
+  "parent":{
+    "name":"Jingle Music",
+    "path":"folders/Sounds/Music/Jingle Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"j_zone_complete.ogg",
+  "volume":1.0,
+}

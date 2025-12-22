@@ -20,12 +20,14 @@
 	
 	//Physics values
 	x_accel = 0.046875;					//Value used for player's horizontal acceleration
+	x_deaccel = 0.5;
 	y_accel = 0.21875;					//Value used for player's vertical acceleration, specifically gravirt
 	friction_speed = 0.046875;			//Value used for player's friction when input is not being held
 	top_speed = 6;						//Value used for player's top running speed
 	max_speed = 24;						//Player's horizontal speed cap
 	jump_strength = 6.5;				//Value used for player's jump strength 
 	jump_release = 4;					//Value used for speed when player releases the jump button
+	roll_friction = 0.0234375;
 	roll_influence_up = 0.078125;		//Value that influences rolling up slopes
 	roll_influence_down = 0.3125;		//Value that influences rolling down slopes
 	roll_speed_cap = 18;				//Value for rolling's maximum speed
@@ -61,6 +63,7 @@
 	ground_push_flag = true;			//Check used when angle is out of tolerance range on the ledges, this disables push out of the ground
 	can_jump = false;					//Check used for if player is able to perform a jump
 	can_roll = false;					//Check used for if player is able to perform rolling
+	allow_super = false;				//Check used for if player is able to transform into their super form
 	
 	//Flags:
 	ceiling_allow = true;				//Flag for allowing ceiling landing
@@ -83,6 +86,8 @@
 	speed_shoes_flag = false;			//Check used to check if player has speed shoes or not
 	invincible_timer = 0;				//Timer used for invincibility
 	invincible = false;					//Check used to check if player has invincibility or not
+	super = false;						//Check used to check if player is in super form
+	transform_timer = 0;				//Timer for how long to stay in the transformation state
 	
 	//Character specifics:
 	tails_timer = 480;					//Timer used for tails flight
@@ -125,6 +130,12 @@
 	
 	//Camera rolling offset unique to each character
 	camera_rolling_offset = [5, 1, 5];
+	
+	//the index for the players super form palette
+	super_color = 0;
+	super_palettes = [tex_pal_supersonic, tex_pal_supersonic, tex_pal_supersonic]
+	#macro SUPER_PALETTE_SIZE 16
+	#macro SUPER_PALETTE_LOOP 7
 	
 	//Setup scripts
 	player_recorder_setup();			//Setup player visuals recorder

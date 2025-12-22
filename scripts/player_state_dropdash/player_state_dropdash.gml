@@ -19,6 +19,10 @@ function player_state_dropdash(){
 		//Dropdash speeds
 		var dashspeed = 8.0;
         var maxspeed = 12.0;
+		if (super) {
+			dashspeed = 12.0;
+			maxspeed = 13.0;	
+		}
 		
 		if (facing == -1) {
             if(x_speed <= 0.0)
@@ -40,7 +44,11 @@ function player_state_dropdash(){
 		//Roll state
 		state = player_state_roll;
 		dropdash_timer = 0;
-		play_sound(sfx_release);
+		if (!super){
+			play_sound(sfx_release);
+		} else {
+			play_sound(sfx_peelout_release);	
+		}
 		
 		//Camera lag
 		obj_camera.h_lag = 8;

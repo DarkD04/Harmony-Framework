@@ -26,5 +26,11 @@
 	//Hande player physics values
 	player_handle_physics();
 	
+	//check if player should be able to turn super
+	allow_super = true
+	if (input_disable || obj_level.disable_timer){
+		allow_super = false	
+	}
+	
 	//Handle invincibility and speed shoes
 	player_inv_speed();
