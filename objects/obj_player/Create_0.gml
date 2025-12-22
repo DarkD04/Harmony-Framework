@@ -133,7 +133,7 @@
 	
 	//the index for the players super form palette
 	super_color = 0;
-	super_palettes = [tex_pal_supersonic, tex_pal_supersonic, tex_pal_supersonic]
+	super_palettes = [tex_pal_supersonic, tex_pal_supertails, tex_pal_superknux]
 	#macro SUPER_PALETTE_SIZE 16
 	#macro SUPER_PALETTE_LOOP 7
 	

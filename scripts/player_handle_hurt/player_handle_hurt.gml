@@ -6,10 +6,12 @@ function player_handle_hurt()
 		//Reset knockout type when you're invicible
 		if(invincible || invincible_timer > 0)
 		{
-			knockout_type = 0;	
+			if (knockout_type == K_HURT) {
+				knockout_type = 0;	
+			}
 		}
 		
-		if(invincible_timer == 0 && !invincible)
+		if(knockout_type != 0)
 		{
 			if(knockout_type == K_HURT)
 			{

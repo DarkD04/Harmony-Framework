@@ -16,6 +16,11 @@
 	{
 		if(!ground) yspeed += 0.22;
 		y += yspeed;
+		if(place_meeting(x, y + yspeed, obj_player) && obj_player.ground && !ground)
+		{
+			obj_player.knockout_type = K_DIE;
+		}
+		
 		while(instance_place(x,y,other.child_right) && !ground && yspeed > 0)
 		{
 			yspeed = 0;
@@ -41,11 +46,8 @@
 		}
 		if(!other.weightoff) other.weight = min(other.weight+6,16);
 		if(other.weightoff) other.weight = max(other.weight-6,-16);
-	
-		if(player_collide_object(C_TOP) && obj_player.ground)
-		{
-			obj_player.knockout_type = K_DIE;
-		}
+		
+		
 	}
 
 	right_override = false
