@@ -1,4 +1,4 @@
-function fade_to_room(room_target, fade_speed, fade_color = FADE_BLACK){
+function fade_to_room(room_target, fade_speed, fade_color = FADE_BLACK, fade_buffer = 0){
 	//Temp value
 	var fade;
 	
@@ -10,6 +10,7 @@ function fade_to_room(room_target, fade_speed, fade_color = FADE_BLACK){
 	
 	//Set fade speed
 	fade.fade_speed = fade_speed;
+	fade.fade_buffer = fade_buffer;
 	
 	//Set to correct fade mode
 	fade.fade_type = FADE_OUT;
@@ -18,7 +19,7 @@ function fade_to_room(room_target, fade_speed, fade_color = FADE_BLACK){
 	fade.fade_white = fade_color;
 }
 
-function fade_to_room_next(fade_speed, fade_color = FADE_BLACK){
+function fade_to_room_next(fade_speed, fade_color = FADE_BLACK, fade_buffer = 0){
 	//Temp value
 	var fade;
 	
@@ -30,6 +31,7 @@ function fade_to_room_next(fade_speed, fade_color = FADE_BLACK){
 	
 	//Set fade speed
 	fade.fade_speed = fade_speed;
+	fade.fade_buffer = fade_buffer;
 	
 	//Set to correct fade mode
 	fade.fade_type = FADE_OUT;
@@ -39,7 +41,7 @@ function fade_to_room_next(fade_speed, fade_color = FADE_BLACK){
 }
 
 
-function fade_in_room(fade_speed, fade_color = FADE_BLACK){
+function fade_in_room(fade_speed, fade_color = FADE_BLACK, fade_buffer = 0){
 	//Temp value
 	var fade;
 	
@@ -54,6 +56,7 @@ function fade_in_room(fade_speed, fade_color = FADE_BLACK){
 	
 	//Set fade speed
 	fade.fade_speed = fade_speed;
+	fade.fade_buffer = fade_buffer;
 	
 	//Set to correct fade mode
 	fade.fade_type = FADE_IN;
@@ -62,7 +65,7 @@ function fade_in_room(fade_speed, fade_color = FADE_BLACK){
 	fade.fade_white = fade_color;
 }
 
-function fade_change(fade_mode, fade_speed, fade_color = FADE_BLACK){
+function fade_change(fade_mode, fade_speed, fade_color = FADE_BLACK, fade_buffer = 0){
 	//Temp value
 	var fade;
 	
@@ -71,6 +74,7 @@ function fade_change(fade_mode, fade_speed, fade_color = FADE_BLACK){
 	
 	//Set fade speed
 	fade.fade_speed = fade_speed;
+	fade.fade_buffer = fade_buffer;
 	
 	//Set to correct fade mode
 	fade.fade_type = fade_mode;

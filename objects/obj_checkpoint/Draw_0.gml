@@ -22,12 +22,4 @@
 			draw_sprite(spr_checkpoint_star,star_frame,floor(x+xoffset),floor(y+yoffset-star_ydiff))
 		}
 		
-		if star_timer > 60
-		{
-			//draw_set_alpha(0.5);
-			//draw_set_colour(c_red);
-			//draw_rectangle(x-((star_radius >> 1)/2),(y-4)-star_ydiff+6,x+((star_radius >> 1)/2),(y+4)-star_ydiff+6,0);
-			//draw_set_alpha(1);
-			//draw_set_colour(c_white);
-		}
 	}

@@ -107,12 +107,7 @@ function animator_update(animator)
 }
 
 function draw_animator(animator, pos_x = floor(x), pos_y = floor(y), x_scale = image_xscale, y_scale = image_yscale, angle = image_angle, color = c_white, alpha = 1)
-{
-	if(!global.process_objects)
-	{
-		exit
-	}
-	
+{	
 	draw_sprite_ext(animator.animation_sprite, animator.animation_frame, pos_x, pos_y, x_scale, y_scale, angle, color, alpha);
 }
 

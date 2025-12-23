@@ -10,11 +10,13 @@
 	star_radius = 0;
 	star_frame = 0;
 	
-	star_ydiff = 72; //accurate is 60
+	star_ydiff = 72; 
+	
+	#macro MIN_BONUS_STAGE 30
 	
 	//Set all checkpoints to be triggered
 	if(ds_list_find_index(global.checkpoint, id) != -1)
 	{
 		triggered = true;
-		angle = 720;
+		angle = -720;
 	}

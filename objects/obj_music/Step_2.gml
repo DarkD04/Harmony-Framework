@@ -33,7 +33,9 @@
 			fade_multiplier[i] = clamp(fade_multiplier[i], 0, 1);
 			
 			//Resume the channels
-			audio_resume_sound(playing[i]);
+			if (!instance_exists(obj_pause)) {
+				audio_resume_sound(playing[i]);
+			}
 		
 			//Pause BGM when jingle is playing
 			if(playing[Jingle] != noone)

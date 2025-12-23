@@ -83,6 +83,10 @@ function player_state_knockout(){
 			{
 				if(global.life = 0 || is_time_over)
 				{
+					global.store_player_state.combinering = 0
+					global.store_player_state.shield = S_NONE
+					global.store_player_state.rings = 0
+					ds_list_clear(global.store_object_state)
 					music_set_fade(FADE_OUT, 2);
 					if(!instance_exists(obj_game_over))	
 					{
@@ -102,6 +106,10 @@ function player_state_knockout(){
 			//Restart
 			if(death_timer == 160 && global.life != 0 && !is_time_over)
 			{
+				global.store_player_state.combinering = 0
+				global.store_player_state.shield = S_NONE
+				global.store_player_state.rings = 0
+				ds_list_clear(global.store_object_state)
 				room_restart();
 			}
 		break;

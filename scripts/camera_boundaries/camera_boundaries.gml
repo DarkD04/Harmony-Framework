@@ -4,9 +4,12 @@ function camera_boundaries(){
 	c = view_camera[view_current]
 	cx = camera_get_view_x(c)
 	cy = camera_get_view_y(c)
-	sw = global.window_width;
-	sh = global.window_height;
-		
+	sw = camera_get_view_width(view_camera[view_current]);
+	sh = camera_get_view_height(view_camera[view_current]);
+	
+	var by = abs(floor(target_y - previous_y));
+	
+	
 	//Limit bottom
 	if(limit_bottom > target_bottom)
 	{
@@ -17,7 +20,7 @@ function camera_boundaries(){
 	
 	if(limit_bottom < target_bottom)
 	{
-		limit_bottom += 2;
+		limit_bottom += max(by, 2);
 		limit_bottom = min(target_bottom, limit_bottom);
 	}
 	

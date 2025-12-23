@@ -16,9 +16,6 @@
 		
 	//Set level name
 	stage_name = "Empty Level";
-	
-	//Set Author  name
-	author_name = "Replace Me!";
 		
 	//Set stage act
 	act = 1;

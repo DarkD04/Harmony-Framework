@@ -5,3 +5,4 @@
 	fade_type = FADE_IN;
 	fade_room = noone;
 	fade_white = false;
+	fade_buffer = 0;

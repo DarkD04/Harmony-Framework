@@ -54,6 +54,10 @@
 			create_effect(x, y, spr_effect_explosion01, 0.3);
 			play_sound(sfx_destroy);
 			
+			if (!instance_exists(obj_bonus_level)) {
+				global.store_object_state[| id] = true
+			}
+			
 			//Create icons
 			var icon = instance_create_depth(x, y, depth, obj_monitor_icon);
 			icon.monitor_type = monitor_type;

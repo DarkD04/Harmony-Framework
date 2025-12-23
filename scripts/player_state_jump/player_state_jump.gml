@@ -20,7 +20,7 @@ function player_state_jump(){
 	}	
 	
 	
-	if (!super && allow_super && global.rings >= 50 && player_has_all_emeralds() && press_action && y_speed > -jump_release)
+	if (!super && allow_super && global.rings >= 50 && has_all_emeralds() && press_action && y_speed > -jump_release)
 	{
 		state = player_state_transform
 		x_speed = 0;

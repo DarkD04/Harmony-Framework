@@ -1,5 +1,8 @@
 function player_handle_hurt()
 {
+	if (disable_death) {
+		exit;	
+	}
 	
 	if(state != player_state_knockout)
 	{

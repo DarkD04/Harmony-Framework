@@ -1,0 +1,1 @@
+draw_animator(animator)

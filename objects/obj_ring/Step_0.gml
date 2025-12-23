@@ -21,6 +21,9 @@
         create_effect(x, y, spr_ring_sparkle, 0.2);
         
         //Destroy the ring
+		if (!instance_exists(obj_bonus_level)) {
+			global.store_object_state[| id] = true
+		}
         instance_destroy();
     }
 	

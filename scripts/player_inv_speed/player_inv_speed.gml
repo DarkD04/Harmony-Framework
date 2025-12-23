@@ -27,7 +27,7 @@ function player_inv_speed(){
 		//Invincible sparkles
 		if(invincible)
 		{
-			if (obj_music.play_data[Jingle] != "j_invincible") {
+			if (obj_music.play_data[Jingle] != "j_invincible" && speed_shoes == 0) {
 				play_music(MUSIC.J_INVINCIBLE, Jingle);	
 			}
 		
@@ -118,11 +118,3 @@ function player_inv_speed(){
 	}
 }
 
-function player_has_all_emeralds(){
-	for (var i = 0; i < array_length(global.emeralds); ++i) {
-	    if (!global.emeralds[i]) {
-			return false;
-		}
-	}
-	return true;
-}

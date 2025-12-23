@@ -2,6 +2,14 @@
 	//Variables for this object only
 	process_object_list = ds_list_create();
 	
+	global.store_object_state = ds_list_create();
+	global.previous_room = room
+	global.store_player_state = {
+		shield : S_NONE,
+		combinering : 0,
+		rings : 0
+	}
+	
 	#macro DEVMODE false
 	#macro Dev:DEVMODE true
 	
@@ -38,6 +46,15 @@
 	global.checkpoint = ds_list_create();	//The list of active checkpoints
 	global.checkpoint_id = noone;			//Checkpoint that is currently active
 	global.time_store = 0;					//Store value for timer when checkpoint gets active
+	
+	enum BONUSSTAGE {
+		OUTSIDE,
+		GOING_TO,
+		INSIDE,
+		LEAVING,
+	}
+	global.bonus_stage_state = BONUSSTAGE.OUTSIDE
+	bonus_stage_trigger = false
 	
 	//Stage values
 	global.object_timer = 0;				//Object pre frame timer, every 60 frames in a 1 second

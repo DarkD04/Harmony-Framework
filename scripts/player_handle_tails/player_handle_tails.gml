@@ -11,6 +11,7 @@ function player_handle_tails(){
 			case ANIM.WAIT:
 			case ANIM.LOOKUP:
 			case ANIM.LOOKDOWN:
+			case ANIM.PUSH:
 				visual_angle = 0;
 				appear = true;
 				facing = other.facing;

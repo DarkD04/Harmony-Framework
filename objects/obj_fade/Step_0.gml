@@ -5,11 +5,13 @@
 	{
 		if(fade_timer == 0)
 		{
-			//Switch the rooms
-			room_goto(fade_room);
+			if (fade_buffer == 0) {
+				//Switch the rooms
+				room_goto(fade_room);
 			
-			//Reset room fade
-			fade_room = noone;	
+				//Reset room fade
+				fade_room = noone;	
+			}
 		}
 	}
 	
@@ -21,3 +23,8 @@
 	
 	//Limit the fade
 	fade_timer = clamp(fade_timer, 0, 512);
+	
+	if (fade_timer == 0) {
+		fade_buffer--
+		fade_buffer = clamp(fade_buffer, 0, 512);	
+	}

@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.197211,
+  "duration":1.1972109,
   "exportDir":"",
   "name":"sfx_dust",
   "parent":{

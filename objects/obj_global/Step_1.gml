@@ -4,7 +4,7 @@
 	if(!global.process_objects)
 	{
 		//List for objects that shouldn't be disabled
-		var ignore_objects = [obj_input, obj_window, obj_dev, obj_shell, obj_pause, obj_devmenu];
+		var ignore_objects = [obj_input, obj_window, obj_dev, obj_shell, obj_pause, obj_devmenu, obj_fade, obj_music];
 		
 		//Store all of the disabled objects to the list
 		with(all)

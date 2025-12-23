@@ -32,6 +32,7 @@
         "\"From A to B\"",
         "\"From B to A\"",
       ],"multiselect":false,"name":"layer_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Layer A\"","varType":6,},
+    {"$GMObjectProperty":"v2","%Name":"ground_only","filters":[],"listItems":[],"multiselect":false,"name":"ground_only","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

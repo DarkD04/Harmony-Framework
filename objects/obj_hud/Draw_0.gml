@@ -26,50 +26,68 @@
 	surface_set_target(surf);
 	draw_clear_alpha(c_black, 0);
 	
-	//Draw normal text
-	draw_sprite(spr_hudtext, 0, 16 + offset[0], 8);
-	draw_sprite(spr_hudtext, 1, 16 + offset[1], 24);
-	draw_sprite(spr_hudtext, 2, 16 + offset[2], 40);
+	if (!instance_exists(obj_bonus_level)) {
 	
-	//Red flashing text
-	if(global.rings == 0 && FRAME_TIMER mod 20 < 20/2) draw_sprite(spr_hudtext, 4, 16 + offset[2], 40);
-	if(global.stage_timer >= 540000 && FRAME_TIMER mod 20 < 20/2) draw_sprite(spr_hudtext, 3, 16 + offset[1], 24);
+		//Draw normal text
+		draw_sprite(spr_hudtext, 0, 16 + offset[0], 8);
+		draw_sprite(spr_hudtext, 1, 16 + offset[1], 24);
+		draw_sprite(spr_hudtext, 2, 16 + offset[2], 40);
 	
-	//Draw life icon
-	draw_sprite(spr_hud_life_icons, global.character, 16 + offset[3], global.window_height - 26);
+		//Red flashing text
+		if(global.rings == 0 && FRAME_TIMER mod 20 < 20/2) draw_sprite(spr_hudtext, 4, 16 + offset[2], 40);
+		if(global.stage_timer >= 540000 && FRAME_TIMER mod 20 < 20/2) draw_sprite(spr_hudtext, 3, 16 + offset[1], 24);
 	
-	//Set font numbers
-	draw_set_font(global.hud_number);
-	draw_set_halign(fa_right);
+		//Draw life icon
+		draw_sprite(spr_hud_life_icons, global.character, 16 + offset[3], global.window_height - 26);
 	
-	//Draw number
-	draw_text(120 + offset[0], 9, string(global.score));
-	draw_text(120 + offset[1], 25, string(minute)+" "+(sec > 9 ? "" : "0") + string(sec)+" "+(milsec > 9 ? "" : "0") + string(milsec));
-	draw_text(96 + offset[2], 41, string(global.rings));
-	draw_text(56 + offset[3], global.window_height - 24, (global.life > 9 ? "" : "0") + string(global.life));
+		//Set font numbers
+		draw_set_font(global.hud_number);
+		draw_set_halign(fa_right);
+	
+		//Draw number
+		draw_text(120 + offset[0], 9, string(global.score));
+		draw_text(120 + offset[1], 25, string(minute)+" "+(sec > 9 ? "" : "0") + string(sec)+" "+(milsec > 9 ? "" : "0") + string(milsec));
+		draw_text(96 + offset[2], 41, string(global.rings));
+		draw_text(56 + offset[3], global.window_height - 24, (global.life > 9 ? "" : "0") + string(global.life));
+		
+		if (obj_player.combinering == 1){
+			draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[2], 64);	
+		}
+		if (obj_player.combineloss == 1){
+			if (FRAME_TIMER mod 2 = 0){
+				draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[2], 64);	
+			}
+		}
+		
+	} else {
+		draw_sprite(spr_hudtext, 2, 16 + offset[0], 8);
+		
+		//Red flashing text
+		if(global.rings == 0 && FRAME_TIMER mod 20 < 20/2) draw_sprite(spr_hudtext, 4, 16 + offset[0], 8);
+		//Draw life icon
+		draw_sprite(spr_hud_life_icons, global.character, 16 + offset[1], global.window_height - 26);
+		
+		//Set font numbers
+		draw_set_font(global.hud_number);
+		draw_set_halign(fa_right);
+		
+		draw_text(96 + offset[0], 9, string(global.rings));
+		draw_text(56 + offset[1], global.window_height - 24, (global.life > 9 ? "" : "0") + string(global.life));
+		
+		if (obj_player.combinering == 1){
+			draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[0], 16);	
+		}
+	}
 	
 	if (ds_map_exists(global.red_ring_map, obj_level.stage_name)) {
 		var i = 0;
 		repeat(obj_level.red_ring_count) {
 			if (global.red_ring_map[? obj_level.stage_name][i] == 1){
 				draw_sprite(spr_red_ring_hud,0,global.window_width -offset[3] - 10 - (obj_level.red_ring_count * 16) + (i * 16),  global.window_height - 18);
-				//show_debug_message("happening")
 			} else {
 				draw_sprite(spr_red_ring_hud,1,global.window_width -offset[3] - 10 - (obj_level.red_ring_count * 16) + (i * 16),  global.window_height - 18);
 			}
 			i++;
-		}
-	}
-
-
-	if (obj_player.combinering == 1){
-		
-	draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[2], 64);	
-	}
-	
-	if (obj_player.combineloss == 1){
-		if (FRAME_TIMER mod 2 = 0){
-			draw_sprite(spr_monitor_icon_combine_ring, 0, 24 + offset[2], 64);	
 		}
 	}
 	

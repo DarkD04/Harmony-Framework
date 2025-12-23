@@ -8,11 +8,11 @@
 		//Trigger the checkpoint
 		triggered = true;
 		
-		//if global.rings >= 30
-		//{
-			//showing_stars = true
-			//star_type = 4
-		//}
+		if global.rings >= MIN_BONUS_STAGE
+		{
+			showing_stars = true
+			star_type = 4
+		}
 		
 		//Store checkpoint ID
 		global.checkpoint_id = id;
@@ -54,6 +54,6 @@
 		
 		if (star_timer > 60 && obj_player.x > x-xoffset && obj_player.x < x+xoffset && obj_player.y > y-yoffset-star_ydiff+6 && obj_player.y < y+yoffset-star_ydiff+6)
 		{
-			show_debug_message("Hello! You should be in the... What? What are you doing here?")
+			global.bonus_stage_state = BONUSSTAGE.GOING_TO
 		}
 	}

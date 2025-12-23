@@ -10,7 +10,7 @@
   "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":239.82547,
+  "duration":0.0,
   "exportDir":"",
   "name":"bgm_foregone",
   "parent":{

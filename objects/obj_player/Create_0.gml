@@ -74,6 +74,7 @@
 	input_disable = false;				//Flag used for disabling player input
 	hitbox_allow = true;				//Flag used for allowing hitbox collision between player and other objects
 	flag_override = true;				//This is used to prevent flags from being override in player state list script when false
+	disable_death = false;				//If true, disables the ability to die via pits or other means 
 	
 	//Hitbox values:
 	hitbox_w = 9;						//Hitbox width variable
@@ -101,10 +102,12 @@
 	start_depth = depth;				//Starting depth when object has been created
 	
 	//Shields:
-	shield = S_NONE;					//Shield that player is currently using
+	shield = global.store_player_state.shield;					//Shield that player is currently using
 	shield_list = [obj_shield, obj_fire_shield, obj_electric_shield, obj_bubble_shield];	//The shield list
-	combinering = 0;
+	combinering =  global.store_player_state.combinering;
 	combineloss = 0;
+	
+	global.rings = global.store_player_state.rings;
 	
 	//Hitbox variables
 	hitbox_top_offset = 0;				//Hitbox offset of the top side

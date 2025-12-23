@@ -1,5 +1,6 @@
 /// @description Parent script
 	
+	
 	var shard = instance_place(x,y,obj_emerald_shard);
 	
 	if (shard) {
@@ -42,6 +43,9 @@
 			play_sound(sfx_destroy);
 		
 			//Destroy badnik
+			if (!instance_exists(obj_bonus_level)) {
+				global.store_object_state[| id] = true
+			}
 			instance_destroy();	
 		}else
 		{

@@ -16,6 +16,7 @@ function init_music_list()
 	music_add("FOREGONE DESTRUCTION - MICHIEL VAN DEN BOS", bgm_foregone, 0.000);
 	music_add("ARBOREAL 1", bgm_arboreal_agate1);
 	music_add("ARBOREAL 2", bgm_arboreal_agate2);
+	music_add("BONUS", bgm_bonus, 16.657, 92.33, true);
 }
 
 	//Setup enum for music ID

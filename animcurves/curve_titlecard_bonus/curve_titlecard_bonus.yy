@@ -1,0 +1,32 @@
+{
+  "$GMAnimCurve":"",
+  "%Name":"curve_titlecard_bonus",
+  "channels":[
+    {"$GMAnimCurveChannel":"","%Name":"curve1","colour":4290799884,"name":"curve1","points":[
+        {"th0":-0.1,"th1":0.0,"tv0":0.0,"tv1":0.0050359583,"x":0.0,"y":0.0,},
+        {"th0":-0.009183079,"th1":0.09140987,"tv0":-0.026168572,"tv1":0.26048625,"x":0.4923665,"y":0.0,},
+        {"th0":-0.017862916,"th1":0.02290076,"tv0":-0.0014407039,"tv1":0.0018469779,"x":0.8015267,"y":1.0,},
+        {"th0":-0.02290076,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"curve2","colour":4281083598,"name":"curve2","points":[
+        {"th0":-0.1,"th1":0.0073727993,"tv0":0.0,"tv1":0.0,"x":0.0,"y":0.0,},
+        {"th0":-0.0023636397,"th1":0.09742641,"tv0":-0.02294883,"tv1":0.9459233,"x":0.10114504,"y":0.0,},
+        {"th0":-0.1441437,"th1":0.013881972,"tv0":-0.00071263313,"tv1":6.863259E-05,"x":0.4351145,"y":1.0,},
+        {"th0":-0.016674213,"th1":0.45878762,"tv0":-3.5132663E-05,"tv1":0.0009666681,"x":0.52862597,"y":1.0,},
+        {"th0":-0.068959475,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+    {"$GMAnimCurveChannel":"","%Name":"curve3","colour":4279025727,"name":"curve3","points":[
+        {"th0":-0.1,"th1":0.0036327555,"tv0":0.0,"tv1":0.9501661,"x":0.0,"y":0.0,},
+        {"th0":-0.07874841,"th1":0.036493152,"tv0":0.0,"tv1":0.0,"x":0.29389313,"y":1.0,},
+        {"th0":-0.066721916,"th1":0.1,"tv0":0.0,"tv1":0.0,"x":1.0,"y":1.0,},
+      ],"resourceType":"GMAnimCurveChannel","resourceVersion":"2.0","visible":true,},
+  ],
+  "function":2,
+  "name":"curve_titlecard_bonus",
+  "parent":{
+    "name":"HUD",
+    "path":"folders/Objects/Stage Objects/Common Objects/HUD.yy",
+  },
+  "resourceType":"GMAnimCurve",
+  "resourceVersion":"2.0",
+}

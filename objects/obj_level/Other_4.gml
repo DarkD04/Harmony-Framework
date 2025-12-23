@@ -4,7 +4,6 @@
 	
 	//Reset stage data
 	global.stage_timer = 0;
-	global.rings = 0;
 	
 	//Position player to the checkpoint
 	if(global.checkpoint_id != noone)
