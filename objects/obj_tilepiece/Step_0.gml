@@ -12,7 +12,7 @@
 			{		
 				var tilelayer = layer_tilemap_get_id(global.col_tile[i]);
 				var data = tilemap_get_at_pixel(tilelayer, 0, 0);
-				tile_set_empty(data);
+				data = tile_set_empty(data);
 		        tilemap_set_at_pixel(tilelayer, data, x, y);
 			}
 		}
