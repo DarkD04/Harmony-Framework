@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_gumball",
+  "%Name":"obj_gumball_lid",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_gumball",
+  "name":"obj_gumball_lid",
   "overriddenProperties":[],
   "parent":{
     "name":"Bonus Stage",
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_gumball",
-    "path":"sprites/spr_gumball/spr_gumball.yy",
+    "name":"spr_machine_lid",
+    "path":"sprites/spr_machine_lid/spr_machine_lid.yy",
   },
   "spriteMaskId":null,
   "visible":true,

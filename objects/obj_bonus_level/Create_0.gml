@@ -1,3 +1,4 @@
+	
 	//Set level name
 	stage_name = "Bonus Stage";
 		

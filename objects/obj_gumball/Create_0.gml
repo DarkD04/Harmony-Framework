@@ -1,0 +1,14 @@
+enum GUMBALL {
+	BUBBLE,
+	NORMAL,
+	AQUA,
+	ELECTRIC,
+	FLAME,
+	RINGS,
+	ONEUP,
+	REPOSITION,
+	BUMPER
+}
+reward = GUMBALL.BUBBLE
+y_speed = 0
+y_accel = 0.214 

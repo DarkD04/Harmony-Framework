@@ -3,7 +3,6 @@
 	if (!crumple) {
 		animator_update(animator);
 	
-	
 		//Hit from the bottom
 		if(player_collide_object(C_BOTTOM) && obj_player.y_speed >= 0 && collision_flag)
 		{
