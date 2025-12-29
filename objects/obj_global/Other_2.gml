@@ -3,7 +3,7 @@
 	process_object_list = ds_list_create();
 	
 	global.store_object_state = ds_list_create();
-	global.previous_room = room
+	global.previous_room = rm_splash
 	global.store_player_state = {
 		shield : S_NONE,
 		combinering : 0,

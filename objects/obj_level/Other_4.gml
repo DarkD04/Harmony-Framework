@@ -6,7 +6,7 @@
 	global.stage_timer = 0;
 	
 	//Position player to the checkpoint
-	if(global.checkpoint_id != noone)
+	if(global.checkpoint_id != noone && instance_exists(global.checkpoint_id))
 	{
 		obj_player.x = global.checkpoint_id.x;
 		obj_player.y = global.checkpoint_id.bbox_bottom - obj_player.hitbox_h;

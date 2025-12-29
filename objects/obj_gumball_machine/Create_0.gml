@@ -1,8 +1,11 @@
 y_speed = 0
 y_accel = 0.21875 * 0.75
-lid_frame = 2
+lid_frame_count = sprite_get_number(spr_machine_lid) - 1
+lid_frame = lid_frame_count
+lid_timer = 0
 handle_rot = 0
 handle_timer = 0
+handle_dir = 1
 
 depth = obj_player.depth + 10
 

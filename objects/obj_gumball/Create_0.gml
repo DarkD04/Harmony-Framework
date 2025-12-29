@@ -11,4 +11,4 @@ enum GUMBALL {
 }
 reward = GUMBALL.BUBBLE
 y_speed = 0
-y_accel = 0.214 
+y_accel = 0.21875 * 0.75

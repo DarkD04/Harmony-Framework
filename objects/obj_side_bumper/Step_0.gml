@@ -1,7 +1,7 @@
 	if(sign(image_xscale) == 1)
 	{
 		//Hit from the bottom
-		if(player_collide_object(C_LEFT) && triggered == 0 && obj_player.x_speed < 4)
+		if(player_collide_object(C_LEFT) && triggered == 0 && obj_player.x_speed < 3)
 		{
 			triggered = -1;
 			play_sound(sfx_spring);
@@ -12,8 +12,8 @@
 			{
 				animation_play(animator, ANIM.SPRING);
 				state = player_state_spring;
-				y_speed = -5;
-				x_speed = 4;
+				y_speed = -6;
+				x_speed = 3;
 				ground = false;
 			}
 		}
@@ -23,7 +23,7 @@
 	if(sign(image_xscale) == -1)
 	{		
 		//Hit from the bottom
-		if(player_collide_object(C_RIGHT) && triggered == 0 && obj_player.x_speed > -4)
+		if(player_collide_object(C_RIGHT) && triggered == 0 && obj_player.x_speed > -3)
 		{
 			triggered = 1;
 			play_sound(sfx_spring);
@@ -34,8 +34,8 @@
 			{
 				animation_play(animator, ANIM.SPRING);
 				state = player_state_spring;
-				y_speed = -5;
-				x_speed = -4;
+				y_speed = -6;
+				x_speed = -3;
 				ground = false;
 			}
 		}
