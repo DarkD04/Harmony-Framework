@@ -121,7 +121,7 @@ function animation_add(animation_id, animation_sprite, animation_speed, animatio
 	list_animation_duration[animation_id] = animation_speed;
 }
 
-function animation_play(animator, animation_id)
+function animation_play(animator, animation_id, dont_reset_frame = false)
 {
 	if(!global.process_objects)
 	{
@@ -143,7 +143,9 @@ function animation_play(animator, animation_id)
 		animator.animation_current = animation_id;
 		
 		//Reset animation's properties
-		animator.animation_frame = 0;
+		if (!dont_reset_frame) {
+			animator.animation_frame = 0;
+		}
 		animator.animation_finished = false;
 		animator.animator_reset_flag = false;
 			
@@ -154,7 +156,9 @@ function animation_play(animator, animation_id)
 		animator.animation_loop = list_animation_loop_flag[animator.animation_to_set];
 		animator.animation_use_duration = list_animation_duration_flag[animator.animation_to_set];
 		animator.animation_duration = list_animation_duration[animator.animation_to_set];
-		animator.animation_sub_image = 0;
+		if (!dont_reset_frame) {
+			animator.animation_sub_image = 0;
+		}
 	}
 }
 

@@ -57,7 +57,7 @@
 		
 		//Place info
 		info_text = ["STAGE NAME", "ACT NUMBER", "ACT TRANSITION", "TIMER TICKS"];
-		info_result = [obj_level.stage_name, string(obj_level.act), obj_level.act_transition ? "TRUE" : "FALSE", string(global.stage_timer)];
+		info_result = [string_upper(obj_level.stage_name), string(obj_level.act), obj_level.act_transition ? "TRUE" : "FALSE", string(global.stage_timer)];
 		
 		
 		//Draw info

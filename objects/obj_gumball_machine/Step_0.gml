@@ -17,13 +17,18 @@ var player = obj_player;
 
 if (handle_timer > 0) {
 	handle_timer++;
-	handle_rot = ((handle_dir * handle_timer) / 16) * 180;
+	if (handle_timer < 17) {
+		handle_rot = ((handle_dir * handle_timer) / 16) * 180;
+	}
 	
-	if (handle_timer > 16) {
+	if (handle_timer = 17) {
 		lid_frame = 0;
 		var gumball = instance_create_depth(x, y+64, depth - 1, obj_gumball)
 		gumball.reward = gumball_pool[irandom(array_length(gumball_pool)-1)]
 		handle_rot = 0;
+	}
+	
+	if (handle_timer > 32) {
 		handle_timer = 0;
 	}
 } 

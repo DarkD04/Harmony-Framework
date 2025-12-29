@@ -1,4 +1,4 @@
-	
+	event_inherited()
 	//Set level name
 	stage_name = "Bonus Stage";
 		
