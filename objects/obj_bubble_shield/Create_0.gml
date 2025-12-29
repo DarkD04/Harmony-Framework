@@ -21,3 +21,18 @@
 	animation_add(3, spr_bubble_shield_other, 4, 0, true, true);
 	
 	animation_play(animator_front, 3);
+	
+	jump = function(){
+		//Player double jump
+		obj_player.x_speed = 0;
+		obj_player.y_speed = 8;
+		
+		//Switch shield state
+		shield_state = 1;
+		
+		//Play sound
+		play_sound(sfx_bubble_jump)
+		
+		//Change animation
+		animation_play(animator, 1);	
+	}

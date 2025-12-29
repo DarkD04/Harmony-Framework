@@ -12,26 +12,6 @@
 		depth = obj_player.depth + 10;
 	}
 	
-	//Double jump
-	if(obj_player.press_action && !obj_player.ground && obj_player.state == player_state_jump
-	&& shield_state == 0 && use_allow) 
-	{
-		//Player double jump
-		obj_player.y_speed = -5.5;
-		
-		//Switch shield state
-		shield_state = 1;
-		
-		//Play sound
-		play_sound(sfx_electric_shield_jump)
-		
-		//Make shield sparkles
-		for (var i = 0; i < 4; ++i) 
-		{
-		    create_effect(x, y, spr_electric_sparks, 1, depth + 1, 2 * dsin(45+(90*i)), 2 * dcos(45+(90*i)))
-		}
-	}
-	
 	//Reset state flag
 	if(shield_state == 1 && obj_player.ground)
 	{

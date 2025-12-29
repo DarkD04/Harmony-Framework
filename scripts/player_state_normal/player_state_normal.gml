@@ -17,6 +17,34 @@ function player_state_normal(){
 		exit;
 	}
 	
+	var skid = animation_is_playing(animator, ANIM.SKID) || animation_is_playing(animator, ANIM.SKIDTURN)
+	if (!global.no_skid_state) {
+		skid = false	
+	}
+	var mov = hold_right - hold_left;
+	
+	if (skid) {
+		if(FRAME_TIMER mod 4 == 0) 
+		{
+			if(global.chaotix_dust_effect)
+			{
+				create_effect(x - hitbox_w * -facing, y + hitbox_h, spr_dust_effect, 0.4, depth-1, irandom_range(0.4, 1.2) * facing, -2, 0, 0.15);
+			}
+			else
+			{
+				create_effect(x - hitbox_w * -facing, y + hitbox_h, spr_effects_dust, 0.2, depth-1, 0, 0, 0, 0);	
+			}
+		}
+		
+		skid_timer++;
+		
+		if(skid_timer > 24 || !ground || ground_speed == 0 || mov != 0 && mov == sign(ground_speed) || mode != 0)
+		{
+			animation_play(animator, ANIM.WALK);
+		}
+	}
+	
+	
 	//Value for the animation
 	var anim = ANIM.STAND;
 	
@@ -39,7 +67,7 @@ function player_state_normal(){
 		anim = ANIM.WALK;
 		
 		//Change animation duration when player is only on the ground:
-		if(ground)
+		if(ground && !skid)
 		{
 			animation_set_duration(animator, (max(0, 8-abs(obj_player.ground_speed))));
 		}
@@ -52,7 +80,7 @@ function player_state_normal(){
 		anim = ANIM.RUN;
 		
 		//Change animation duration when player is only on the ground:
-		if(ground)
+		if(ground && !skid)
 		{
 			switch(character)
 			{
@@ -100,6 +128,7 @@ function player_state_normal(){
 		break;
 	}
 	
+	
 	//Ledge animation
 	if(!line_check(0, hitbox_h + 16, true) && !check_object(0, 0, 1, hitbox_h + 8, true) && ground && ground_speed == 0)
 	{
@@ -115,7 +144,7 @@ function player_state_normal(){
 	}
 		
 	//Get input presses
-	var mov = hold_right - hold_left;
+	mov = hold_right - hold_left;
 		
 	//Pushing animation
 	if(mov = facing && ground && abs(ground_speed) <= x_accel + 0.5)
@@ -127,12 +156,12 @@ function player_state_normal(){
 	}
 	
 	//Play the animations
-	if(!animation_is_playing(animator, ANIM.BREATHE) || animation_has_finished(animator) && animation_is_playing(animator, ANIM.BREATHE))
-	{
-		animation_play(animator, anim);
+	if (!skid) {
+		if(!animation_is_playing(animator, ANIM.BREATHE) || animation_has_finished(animator) && animation_is_playing(animator, ANIM.BREATHE))
+		{
+			animation_play(animator, anim);
+		}
 	}
-	
-	mov = hold_right - hold_left;
 	
 	//Trigger the state
 	if(mov = -sign(ground_speed) && ground && abs(ground_speed) > 4 && sign(ground_speed) == facing && mode == 0 && control_lock == 0)
@@ -145,8 +174,10 @@ function player_state_normal(){
 		
 		//Reset the skid timer and update the state
 		skid_timer = 0;
-		state = player_state_skid;
-		exit;
+		if (!global.no_skid_state) {
+			state = player_state_skid;
+			exit;
+		}
 	}
 	//Trigger rolling
 	if(hold_down && abs(ground_speed) > 1 && ground)

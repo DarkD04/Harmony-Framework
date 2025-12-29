@@ -15,25 +15,6 @@
 		depth = obj_player.depth - 10;	
 	}
 	
-
-	//Execute the double jump
-	if(obj_player.press_action && !obj_player.ground && obj_player.state == player_state_jump
-	&& shield_state == 0 && use_allow) 
-	{
-		//Dash the player
-		obj_player.x_speed = 8 * obj_player.facing;
-		obj_player.y_speed = 0;
-		
-		//The camera lag
-		camera_set_lag(12);
-		
-		//Switch shield state
-		shield_state = 1;
-		
-		//Play sound
-		play_sound(sfx_fire_dash);
-	}
-	
 	//When dashing
 	if(shield_state == 1)
 	{

@@ -91,6 +91,7 @@
 	global.camera_type = 1;					//Vertical camera scrolling type, 0 = Megadrive, 1 = Mania
 	global.knux_camera_smooth = false;		//Flag for using smooth ledge climb camera movement
 	global.water_running_effect = 0;		//0 for the hydrocity effect, 1 for repeating splashes
+	global.no_skid_state = true;			//makes skidding work closer to the genesis games, instead of a seperate state
 	
 	//Font setup:
 	global.hud_number = font_add_sprite(spr_hud_numbers, ord("0"), false, 0);

@@ -34,6 +34,24 @@
 			piece.tileset = tileset;
 			piece.tile_id = tilemap_get_at_pixel(tilelayer, piece.x, piece.y);
 			piece.collapse = true;
+			//store what it was before removing it
+			if (!permanent) {
+				ds_list_add(tile_memory,{
+					_id:piece.tile_id,
+					_x:piece.x,
+					_y:piece.y,
+				})
+				for (var z = 0; z <= 1; ++z) 
+				{		
+					var tilelayer_c = layer_tilemap_get_id(global.col_tile[z]);
+					var data_c = tilemap_get_at_pixel(tilelayer_c, piece.x, piece.y);
+					ds_list_add(collision_memory[z],{
+						_id:data_c,
+						_x:piece.x,
+						_y:piece.y,
+					})
+				}
+			}
 			
 			//Remove tiles from the area
 			tilemap_set_at_pixel(tilelayer, 0, piece.x, piece.y);

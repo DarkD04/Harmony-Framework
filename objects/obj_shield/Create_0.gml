@@ -11,3 +11,7 @@
 	
 	//Play the first animation
 	animation_play(animator, 0);
+	
+	jump = function(){
+		//do nothing. It's the blue shield.	
+	}

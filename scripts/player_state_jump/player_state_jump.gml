@@ -1,5 +1,9 @@
 function player_state_jump(){
-	
+	//Reset when grounded
+	if(ground) {
+		state = player_state_normal;
+		exit;
+	}
 	//Change flags
 	attacking = true;
 	
@@ -19,7 +23,18 @@ function player_state_jump(){
 		animation_set_duration(animator, jump_anim_speed);
 	}	
 	
+	//execute shield ability
+	if (press_action && character == CHAR_SONIC){
+		if (instance_exists(par_shield)) {
+			with (par_shield) {
+				if (use_allow && shield_state == 0) {
+					script_execute(jump) 
+				}
+			}
+		}
+	}
 	
+	//super transformation
 	if (!super && allow_super && global.rings >= 50 && has_all_emeralds() && press_action && y_speed > -jump_release)
 	{
 		state = player_state_transform
@@ -90,7 +105,4 @@ function player_state_jump(){
 		}
 		exit;
 	}
-	
-	//Reset when grounded
-	if(ground) state = player_state_normal;
 }

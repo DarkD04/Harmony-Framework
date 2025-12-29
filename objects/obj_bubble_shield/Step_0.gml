@@ -9,24 +9,6 @@
 		animation_play(animator, 0);
 	}
 	
-	//Double jump
-	if(obj_player.press_action && !obj_player.ground && obj_player.state == player_state_jump 
-	&& shield_state == 0 && use_allow) 
-	{
-		//Player double jump
-		obj_player.x_speed = 0;
-		obj_player.y_speed = 8;
-		
-		//Switch shield state
-		shield_state = 1;
-		
-		//Play sound
-		play_sound(sfx_bubble_jump)
-		
-		//Change animation
-		animation_play(animator, 1);
-	}
-	
 	//Reset state flag
 	if(shield_state == 1 && obj_player.ground || shield_state == 1 && obj_player.y_speed < 0)
 	{
