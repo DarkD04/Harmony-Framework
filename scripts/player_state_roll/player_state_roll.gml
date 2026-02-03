@@ -70,7 +70,7 @@ function player_state_roll(){
 	}
 	
 	//Reset state back to normal when landing
-	if(landed) 
+	if(landed && !force_roll) 
 	{
 		state = player_state_normal;
 		exit;
