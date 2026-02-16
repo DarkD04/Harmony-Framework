@@ -8,5 +8,6 @@
 	delay = 0;
 	is_tile = true;
 	collapse = false;
+	permanent = false;
 	ox = 0;
 	oy = 0;

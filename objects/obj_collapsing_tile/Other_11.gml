@@ -1,15 +1,12 @@
 /// @description Generate Memory
-	var tilelayer, tileset, data, size_x, size_y, obj, l_depth, min_x, max_x, min_y, max_y;
-	
-	//Get layer tilemap
-	tilelayer = layer_tilemap_get_id(target_layer);
-	
-	//Get the used tileset
-	tileset = tilemap_get_tileset(tilelayer);
+	var tilelayer, size_x, size_y, min_x, max_x, min_y, max_y;
 	
 	//Get sprite size
 	size_x = sprite_width / 16;
 	size_y = sprite_height / 16;
+	
+	//Get layer tilemap
+	tilelayer = layer_tilemap_get_id(target_layer);
 	
 	//Collapsing platform's bounding box in 16x16 size
 	min_x = floor(x / 16.0);
@@ -33,7 +30,6 @@
 				{		
 					var tilelayer_c = layer_tilemap_get_id(global.col_tile[z]);
 					var data_c = tilemap_get(tilelayer_c, i, j);
-					show_debug_message(data_c)
 					ds_list_add(collision_memory[z],{
 						_id:data_c,
 						_x:i,
