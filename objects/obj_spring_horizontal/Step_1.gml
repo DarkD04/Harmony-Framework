@@ -33,7 +33,7 @@
 					//Knuckles fix
 					if(state = player_state_glide || state = player_state_knuxslide || state = player_state_wallclimb) 
 					{
-						state = player_state_normal();
+						state = player_state_normal;
 					}
 					break;
 					
