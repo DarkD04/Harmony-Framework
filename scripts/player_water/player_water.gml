@@ -46,28 +46,29 @@ function player_water(){
 	//Aquaphobia
 	if(underwater)
 	{
-		//bubbles
-		if (bubble_delay > 0 && (air mod bubble_delay == 0)){
-			bubble_delay = 0
-			var bubble = instance_create_depth(x+6*facing, y-4, depth-1, obj_bubble);
-			bubble.type = 0;	
-			bubble.angle = facing == -1 ? 180 : 0;
-		}
-		
-		if(air mod 60 == 0 ){
-			var rand = round(random(1));
-			show_debug_message(rand);
-			if (rand == 0){
-				bubble_delay = irandom_range(6,16)*2
-			}
-			if (air < 20*60) {
+		if (shield != S_BUBBLE) {
+			//bubbles
+			if (bubble_delay > 0 && (air mod bubble_delay == 0)){
+				bubble_delay = 0
 				var bubble = instance_create_depth(x+6*facing, y-4, depth-1, obj_bubble);
 				bubble.type = 0;	
 				bubble.angle = facing == -1 ? 180 : 0;
 			}
-			
-		}
 		
+			if(air mod 60 == 0 ){
+				var rand = round(random(1));
+				show_debug_message(rand);
+				if (rand == 0){
+					bubble_delay = irandom_range(6,16)*2
+				}
+				if (air < 20*60) {
+					var bubble = instance_create_depth(x+6*facing, y-4, depth-1, obj_bubble);
+					bubble.type = 0;	
+					bubble.angle = facing == -1 ? 180 : 0;
+				}
+			
+			}
+		}
 		//Add air timer
 		air += 1;
 			

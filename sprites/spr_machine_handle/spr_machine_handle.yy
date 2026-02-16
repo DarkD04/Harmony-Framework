@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_machine_handle",
-  "bboxMode":0,
-  "bbox_bottom":55,
-  "bbox_left":0,
-  "bbox_right":55,
-  "bbox_top":0,
+  "bboxMode":2,
+  "bbox_bottom":29,
+  "bbox_left":1,
+  "bbox_right":54,
+  "bbox_top":26,
   "collisionKind":1,
   "collisionTolerance":0,
   "ConfigValues":{

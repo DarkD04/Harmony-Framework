@@ -2,10 +2,10 @@
   "$GMSprite":"v2",
   "%Name":"spr_side_bumper",
   "bboxMode":2,
-  "bbox_bottom":23,
+  "bbox_bottom":27,
   "bbox_left":0,
-  "bbox_right":6,
-  "bbox_top":8,
+  "bbox_right":7,
+  "bbox_top":4,
   "collisionKind":1,
   "collisionTolerance":0,
   "ConfigValues":{
@@ -110,5 +110,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":8,
+  "width":9,
 }

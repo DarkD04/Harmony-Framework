@@ -9,6 +9,6 @@ enum GUMBALL {
 	REPOSITION,
 	BUMPER
 }
-reward = GUMBALL.BUBBLE
-y_speed = 0
-y_accel = 0.21875 * 0.75
+reward = GUMBALL.BUBBLE;
+y_speed = 0;
+y_accel = 0.21875 * 0.75;

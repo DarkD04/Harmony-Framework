@@ -23,8 +23,8 @@
   },
   "spriteNoExport":true,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"ArborealAgate",
+    "path":"texturegroups/ArborealAgate",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,
