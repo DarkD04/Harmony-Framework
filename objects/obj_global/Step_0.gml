@@ -28,7 +28,7 @@
 	if (global.bonus_stage_state == BONUSSTAGE.LEAVING){
 		if (!bonus_stage_trigger){
 			obj_player.input_disable = true
-			fade_change(FADE_OUT, 2, FADE_BLACK, 10)
+			fade_change(FADE_OUT, 2, FADE_BLACK, 30)
 			music_fade_channel(BGM, FADE_OUT, 3)
 			
 			global.store_player_state.combinering = obj_player.combinering

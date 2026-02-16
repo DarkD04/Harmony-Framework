@@ -3,7 +3,7 @@ if (!place_meeting(x,y + 1,par_gumball_solid)){
 	y_speed += y_accel;	
 	y += y_speed;
 	
-	var obj = instance_place(x,y,par_gumball_solid) 
+	var obj = instance_place(x,y,par_gumball_solid) ;
 	if (obj) {
 		y = obj.bbox_top - (sprite_height /2);
 	}
@@ -23,8 +23,8 @@ if (handle_timer > 0) {
 	
 	if (handle_timer = 17) {
 		lid_frame = 0;
-		var gumball = instance_create_depth(x, y+64, depth - 1, obj_gumball)
-		gumball.reward = gumball_pool[irandom(array_length(gumball_pool)-1)]
+		var gumball = instance_create_depth(x, y+64, depth - 1, obj_gumball);
+		gumball.reward = gumball_pool[irandom(array_length(gumball_pool)-1)];
 		handle_rot = 0;
 	}
 	
@@ -47,7 +47,8 @@ if point_in_rectangle(player.x, player.y, x - 20, (y + 28) - 20,x + 20, (y + 28)
 		if (handle_dir == 0) {
 			handle_dir = 1;	
 		}
-		play_sound(sfx_handle_pull)
+		play_sound(sfx_handle_pull);
+		turns++;
 	} 
 }
 
