@@ -112,9 +112,9 @@
     {"$GMFolder":"","%Name":"Effects","folderPath":"folders/Sprites/Stage Sprites/Effects.yy","name":"Effects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Arboreal Agate","folderPath":"folders/Tile Sets/Arboreal Agate.yy","name":"Arboreal Agate","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Bonus Stage","folderPath":"folders/Tile Sets/Bonus Stage.yy","name":"Bonus Stage","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Collision Tileset","folderPath":"folders/Tile Sets/Collision Tileset.yy","name":"Collision Tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Example Tileset","folderPath":"folders/Tile Sets/Example Tileset.yy","name":"Example Tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Bonus Stage","folderPath":"folders/Tile Sets/Bonus Stage.yy","name":"Bonus Stage","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[

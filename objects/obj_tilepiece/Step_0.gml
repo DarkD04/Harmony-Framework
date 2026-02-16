@@ -3,6 +3,10 @@
 	x += x_speed;
 	y += y_speed;
 	
+	if (!on_screen()){
+		instance_destroy();	
+	}
+	
 	//Add gravity
 	if(delay = 0)
 	{
