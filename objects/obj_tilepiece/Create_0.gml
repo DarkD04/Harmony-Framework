@@ -9,5 +9,6 @@
 	is_tile = true;
 	collapse = false;
 	permanent = false;
+	refrence = noone
 	ox = 0;
 	oy = 0;

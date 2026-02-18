@@ -35,6 +35,7 @@
 			piece.tile_id = tilemap_get_at_pixel(tilelayer, piece.x, piece.y);
 			piece.collapse = true;
 			piece.permanent = permanent
+			piece.refrence = self
 			
 			//Remove tiles from the area
 			tilemap_set_at_pixel(tilelayer, 0, piece.x, piece.y);

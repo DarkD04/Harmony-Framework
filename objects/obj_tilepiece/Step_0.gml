@@ -13,13 +13,13 @@
 		
 		if(collapse && y_speed <= 0.25)
 		{
-			if (on_screen() || permanent){
+			if (refrence.triggered) {
 				for (var i = 0; i <= 1; ++i) 
 				{		
 					var tilelayer = layer_tilemap_get_id(global.col_tile[i]);
 					var data = tilemap_get_at_pixel(tilelayer, 0, 0);
 					data = tile_set_empty(data);
-			        tilemap_set_at_pixel(tilelayer, data, x, y);
+				    tilemap_set_at_pixel(tilelayer, data, x, y);
 				}
 			}
 		}
